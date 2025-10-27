@@ -191,7 +191,7 @@ const getOmOssPosition = () => {
 					>
 						<router-link
 							:to="link.path"
-							class="px-4 py-3 block text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200"
+							class="px-4 py-3 block text-neutral-700 hover:text-neutral-800 font-medium transition-colors duration-200"
 							:class="{
 								'text-primary-700 font-semibold':
 									isActive(link.path) ||
@@ -219,7 +219,7 @@ const getOmOssPosition = () => {
 								>
 									<router-link
 										:to="item.path"
-										class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors duration-200"
+										class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
 										:class="{
 											'bg-primary-50 text-primary-700 font-medium':
 												isActive(item.path),
@@ -236,7 +236,7 @@ const getOmOssPosition = () => {
 						<button
 							v-if="link.hasDropdown"
 							@click="toggleDropdown(link.name)"
-							class="absolute right-0 top-3.5 px-2 text-neutral-500 hover:text-primary-700 focus:outline-none"
+							class="absolute right-0 top-3.5 px-2 text-neutral-500 hover:text-neutral-800 focus:outline-none"
 							:aria-expanded="openDropdown === link.name"
 							:aria-label="`Visa undermeny för ${link.name}`"
 						>
@@ -281,7 +281,7 @@ const getOmOssPosition = () => {
 								)?.dropdownItems || []"
 								:key="item.path"
 								:to="item.path"
-								class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
+								class="text-blue-700 hover:text-neutral-800 font-medium transition-colors duration-200"
 								:class="{
 									'text-blue-900 font-bold': isActive(
 										item.path
@@ -301,7 +301,7 @@ const getOmOssPosition = () => {
 				<span class="font-semibold text-neutral-800">Meny</span>
 				<button
 					@click="toggleMenu"
-					class="text-neutral-700 hover:text-primary-700 focus:outline-none"
+					class="text-neutral-700 hover:text-neutral-800 focus:outline-none"
 					aria-label="Öppna meny"
 					aria-expanded="false"
 				>
@@ -348,7 +348,7 @@ const getOmOssPosition = () => {
 						<div class="flex items-center justify-between">
 							<router-link
 								:to="link.path"
-								class="flex-1 px-4 py-3 block text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200"
+								class="flex-1 px-4 py-3 block text-neutral-700 hover:text-neutral-800 font-medium transition-colors duration-200"
 								:class="{
 									'text-primary-700 font-semibold':
 										isActive(link.path) ||
@@ -370,7 +370,7 @@ const getOmOssPosition = () => {
 							<button
 								v-if="link.hasDropdown"
 								@click="toggleDropdown(link.name)"
-								class="px-4 py-3 text-neutral-500 hover:text-primary-700 focus:outline-none"
+								class="px-4 py-3 text-neutral-500 hover:text-neutral-800 focus:outline-none"
 								:aria-expanded="openDropdown === link.name"
 								:aria-label="`Visa undermeny för ${link.name}`"
 							>
@@ -408,7 +408,7 @@ const getOmOssPosition = () => {
 							>
 								<router-link
 									:to="item.path"
-									class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors duration-200"
+									class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
 									:class="{
 										'bg-primary-50 text-primary-700 font-medium':
 											isActive(item.path),

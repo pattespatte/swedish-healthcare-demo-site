@@ -58,7 +58,9 @@ const currentYear = new Date().getFullYear();
 				<!-- Contact Information -->
 				<div>
 					<h3 class="text-lg font-semibold mb-4">Kontakt</h3>
-					<address class="not-italic text-neutral-300 space-y-2">
+					<address
+						class="not-italic text-neutral-300 space-y-2 text-sm"
+					>
 						<p>{{ contactInfo.address }}</p>
 						<p>
 							Telefon:
@@ -82,7 +84,7 @@ const currentYear = new Date().getFullYear();
 				<!-- Opening Hours -->
 				<div>
 					<h3 class="text-lg font-semibold mb-4">Öppettider</h3>
-					<div class="text-neutral-300 space-y-2">
+					<div class="text-neutral-300 space-y-2 text-sm">
 						<div
 							v-for="(item, index) in openingHours"
 							:key="index"
@@ -122,26 +124,26 @@ const currentYear = new Date().getFullYear();
 			<div
 				class="mt-12 pt-8 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center"
 			>
-				<div class="text-neutral-400 text-sm mb-4 md:mb-0">
+				<div class="text-neutral-400 text-xs mb-4 md:mb-0">
 					&copy; {{ currentYear }} Vårdcentralen. Alla rättigheter
 					förbehålls.
 				</div>
 				<div class="flex space-x-6">
 					<a
 						href="#"
-						class="text-neutral-400 hover:text-white text-sm transition-colors duration-200"
+						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Integritetspolicy
 					</a>
 					<a
 						href="#"
-						class="text-neutral-400 hover:text-white text-sm transition-colors duration-200"
+						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Cookies
 					</a>
 					<a
 						href="#"
-						class="text-neutral-400 hover:text-white text-sm transition-colors duration-200"
+						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Tillgänglighet
 					</a>

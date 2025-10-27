@@ -85,11 +85,11 @@ const buttonText = computed(() => {
 const variantClasses = computed(() => {
 	switch (props.variant) {
 		case "primary":
-			return "text-white bg-blue-600 focus:ring-blue-500";
+			return "text-white bg-blue-500 focus:ring-blue-500";
 		case "secondary":
 			return "text-gray-700 bg-white border-gray-300 focus:ring-blue-500";
 		default:
-			return "text-white bg-blue-600 focus:ring-blue-500";
+			return "text-white bg-blue-500 focus:ring-blue-500";
 	}
 });
 </script>

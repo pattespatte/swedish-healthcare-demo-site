@@ -9,9 +9,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 
 		<main class="flex-grow container mx-auto px-4 py-8">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="text-3xl font-bold text-primary-700 mb-6">
-					Kontakt
-				</h1>
+				<h1 class="text-3xl font-bold text-gray-800 mb-6">Kontakt</h1>
 				<p class="text-lg text-neutral-800 mb-8">
 					Här hittar du kontaktinformation till vår vårdcentral.
 					Välkommen att kontakta oss för frågor eller för att boka
