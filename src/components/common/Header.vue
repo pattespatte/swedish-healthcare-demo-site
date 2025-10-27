@@ -92,7 +92,7 @@ const getOmOssPosition = () => {
 						<span class="text-white font-bold text-xl">VÅ</span>
 					</div>
 					<span class="ml-3 text-xl font-bold text-neutral-800"
-						>Vårdcentralen</span
+						>Vårdportalen</span
 					>
 				</router-link>
 
@@ -162,7 +162,9 @@ const getOmOssPosition = () => {
 				</nav>
 
 				<!-- Right side: Search and Language -->
-				<div class="hidden md:flex items-center space-x-4">
+				<div
+					class="hidden md:flex lg:hidden xl:flex items-center space-x-4"
+				>
 					<!-- Search functionality -->
 					<div class="relative">
 						<input
