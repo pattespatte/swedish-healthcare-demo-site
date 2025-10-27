@@ -15,20 +15,51 @@ interface NavItem {
 // State for mobile menu and dropdowns
 const isMenuOpen = ref(false);
 const openDropdown = ref<string | null>(null);
+const showSecondaryNav = ref(false);
+let hoverTimeout: number | null = null;
 
 // Navigation links with dropdowns
 const navLinks: NavItem[] = [
 	{
-		name: "Start",
-		path: "/",
-		hasDropdown: false,
-		dropdownItems: [],
+		name: "Om oss",
+		path: "/om-oss",
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Om oss", path: "/om-oss" },
+			{ name: "Jobba hos oss", path: "/om-oss/jobba-hos-oss" },
+			{ name: "Lediga tjänster", path: "/om-oss/lediga-tjanster" },
+			{ name: "Karriärvägar", path: "/om-oss/karriarvagar" },
+			{ name: "Förmåner", path: "/om-oss/formaner" },
+		],
 	},
 	{
 		name: "Tjänster",
 		path: "/tjanster",
-		hasDropdown: false,
-		dropdownItems: [],
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Översikt", path: "/tjanster" },
+			{ name: "Mottagningar", path: "/mottagningar" },
+			{
+				name: "Specialistmottagningar",
+				path: "/tjanster/specialistmottagningar",
+			},
+			{ name: "Labbprov", path: "/tjanster/labbprov" },
+			{ name: "Hemsjukvård", path: "/tjanster/hemsjukvard" },
+		],
+	},
+	{
+		name: "Patientinformation",
+		path: "/patientinformation",
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Översikt", path: "/patientinformation" },
+			{ name: "Vårdgaranti", path: "/patientinformation/vardgaranti" },
+			{ name: "Avgifter", path: "/patientinformation/avgifter" },
+			{
+				name: "Din vårdkontakt",
+				path: "/patientinformation/din-vardkontakt",
+			},
+		],
 	},
 	{
 		name: "Boka tid",
@@ -96,6 +127,31 @@ const isDropdownActive = (dropdownItems: any[]) => {
 const closeDropdowns = () => {
 	openDropdown.value = null;
 };
+
+// Show secondary navigation on hover
+const showSecondaryNavOnHover = () => {
+	if (hoverTimeout) {
+		clearTimeout(hoverTimeout);
+		hoverTimeout = null;
+	}
+	showSecondaryNav.value = true;
+};
+
+// Hide secondary navigation with delay
+const hideSecondaryNavOnHover = () => {
+	hoverTimeout = window.setTimeout(() => {
+		showSecondaryNav.value = false;
+	}, 200); // 200ms delay before hiding
+};
+
+// Keep secondary navigation visible when hovering over it
+const keepSecondaryNavVisible = () => {
+	if (hoverTimeout) {
+		clearTimeout(hoverTimeout);
+		hoverTimeout = null;
+	}
+	showSecondaryNav.value = true;
+};
 </script>
 
 <template>
@@ -108,6 +164,16 @@ const closeDropdowns = () => {
 						v-for="link in navLinks"
 						:key="link.name"
 						class="relative"
+						@mouseenter="
+							link.name === 'Om oss'
+								? showSecondaryNavOnHover()
+								: null
+						"
+						@mouseleave="
+							link.name === 'Om oss'
+								? hideSecondaryNavOnHover()
+								: null
+						"
 					>
 						<router-link
 							:to="link.path"
@@ -150,6 +216,38 @@ const closeDropdowns = () => {
 									</router-link>
 								</li>
 							</ul>
+						</div>
+
+						<!-- Secondary Navigation for "Om oss" -->
+						<div
+							v-if="link.name === 'Om oss'"
+							class="absolute left-0 top-full w-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
+							:class="{
+								'opacity-100 translate-y-0': showSecondaryNav,
+								'opacity-0 -translate-y-2 pointer-events-none':
+									!showSecondaryNav,
+							}"
+							@mouseenter="keepSecondaryNavVisible"
+							@mouseleave="hideSecondaryNavOnHover"
+						>
+							<div class="container mx-auto px-4 py-4">
+								<nav class="flex space-x-6">
+									<router-link
+										v-for="item in link.dropdownItems"
+										:key="item.path"
+										:to="item.path"
+										class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
+										:class="{
+											'text-blue-900 font-bold': isActive(
+												item.path
+											),
+										}"
+										@click="closeDropdowns"
+									>
+										{{ item.name }}
+									</router-link>
+								</nav>
+							</div>
 						</div>
 
 						<!-- Dropdown Toggle Button -->

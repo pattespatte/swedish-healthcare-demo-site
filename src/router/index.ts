@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/AboutView.vue')
 	},
 	{
+		path: '/om-oss/jobba-hos-oss',
+		name: 'JobbaHosOss',
+		component: () => import('@/views/JobbaHosOssPage.vue')
+	},
+	{
 		path: '/tjanster',
 		name: 'Services',
 		component: () => import('@/views/ServicesPage.vue')
@@ -56,11 +61,6 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Patientinformation',
 		component: () => import('@/views/PatientinformationPage.vue')
 	},
-	{
-		path: '/jobba-hos-oss',
-		name: 'JobbaHosOss',
-		component: () => import('@/views/JobbaHosOssPage.vue')
-	}
 ]
 
 const router = createRouter({

@@ -1,24 +1,66 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 
-// State for mobile menu
+const route = useRoute();
+
+// State for mobile menu and secondary navigation
 const isMenuOpen = ref(false);
+const showSecondaryNav = ref(false);
+let hoverTimeout: number | null = null;
 
 // Navigation links for the 8 pages
 const navLinks = [
-	{ name: "Start", path: "/" },
+	// { name: "Start", path: "/" },
 	{ name: "Om oss", path: "/om-oss" },
 	{ name: "Tjänster", path: "/tjanster" },
 	{ name: "Mottagningar", path: "/mottagningar" },
 	{ name: "Patientinformation", path: "/patientinformation" },
 	{ name: "Boka tid", path: "/boka-tid" },
 	{ name: "Kontakt", path: "/kontakt" },
-	{ name: "Jobba hos oss", path: "/jobba-hos-oss" },
+];
+
+// Om oss sub-navigation items
+const omOssSubNav = [
+	{ name: "Jobba hos oss", path: "/om-oss/jobba-hos-oss" },
+	{ name: "Lediga tjänster", path: "/om-oss/lediga-tjanster" },
+	{ name: "Karriärvägar", path: "/om-oss/karriarvagar" },
+	{ name: "Förmåner", path: "/om-oss/formaner" },
 ];
 
 // Toggle mobile menu
 const toggleMenu = () => {
 	isMenuOpen.value = !isMenuOpen.value;
+};
+
+// Show secondary navigation on hover
+const showSecondaryNavOnHover = () => {
+	if (hoverTimeout) {
+		clearTimeout(hoverTimeout);
+		hoverTimeout = null;
+	}
+	showSecondaryNav.value = true;
+};
+
+// Hide secondary navigation with delay
+const hideSecondaryNavOnHover = () => {
+	hoverTimeout = window.setTimeout(() => {
+		showSecondaryNav.value = false;
+	}, 200); // 200ms delay before hiding
+};
+
+// Keep secondary navigation visible when hovering over it
+const keepSecondaryNavVisible = () => {
+	if (hoverTimeout) {
+		clearTimeout(hoverTimeout);
+		hoverTimeout = null;
+	}
+	showSecondaryNav.value = true;
+};
+
+// Check if a link is active
+const isActive = (path: string) => {
+	return route.path === path;
 };
 </script>
 
@@ -27,7 +69,7 @@ const toggleMenu = () => {
 		<div class="container mx-auto px-4">
 			<div class="flex justify-between items-center py-4">
 				<!-- Logo placeholder -->
-				<div class="flex items-center">
+				<router-link to="/" class="flex items-center">
 					<div
 						class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center"
 					>
@@ -36,19 +78,67 @@ const toggleMenu = () => {
 					<span class="ml-3 text-xl font-bold text-neutral-800"
 						>Vårdcentralen</span
 					>
-				</div>
+				</router-link>
 
 				<!-- Desktop Navigation -->
-				<nav class="hidden md:flex space-x-8">
-					<router-link
+				<nav class="hidden md:flex space-x-8 relative">
+					<div
 						v-for="link in navLinks"
 						:key="link.path"
-						:to="link.path"
-						class="text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200"
-						active-class="text-primary-700 font-semibold"
+						class="relative"
+						@mouseenter="
+							link.name === 'Om oss'
+								? showSecondaryNavOnHover()
+								: null
+						"
+						@mouseleave="
+							link.name === 'Om oss'
+								? hideSecondaryNavOnHover()
+								: null
+						"
 					>
-						{{ link.name }}
-					</router-link>
+						<router-link
+							:to="link.path"
+							class="text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200 block py-4"
+							:class="{
+								'text-primary-700 font-semibold': isActive(
+									link.path
+								),
+							}"
+						>
+							{{ link.name }}
+						</router-link>
+					</div>
+
+					<!-- Secondary Navigation for "Om oss" -->
+					<div
+						class="absolute left-0 top-full w-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
+						:class="{
+							'opacity-100 translate-y-0': showSecondaryNav,
+							'opacity-0 -translate-y-2 pointer-events-none':
+								!showSecondaryNav,
+						}"
+						@mouseenter="keepSecondaryNavVisible"
+						@mouseleave="hideSecondaryNavOnHover"
+					>
+						<div class="container mx-auto px-4 py-4">
+							<nav class="flex space-x-6">
+								<router-link
+									v-for="item in omOssSubNav"
+									:key="item.path"
+									:to="item.path"
+									class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
+									:class="{
+										'text-blue-900 font-bold': isActive(
+											item.path
+										),
+									}"
+								>
+									{{ item.name }}
+								</router-link>
+							</nav>
+						</div>
+					</div>
 				</nav>
 
 				<!-- Right side: Search and Language -->
