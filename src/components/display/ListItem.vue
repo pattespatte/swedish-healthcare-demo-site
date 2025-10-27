@@ -60,8 +60,6 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from "vue";
-
 interface Props {
 	title?: string;
 	description?: string;
