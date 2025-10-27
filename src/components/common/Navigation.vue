@@ -191,9 +191,9 @@ const getOmOssPosition = () => {
 					>
 						<router-link
 							:to="link.path"
-							class="px-4 py-3 block text-neutral-700 hover:text-neutral-800 font-medium transition-colors duration-200"
+							class="px-4 py-3 block text-blue-600 hover:text-black font-medium transition-all duration-300 relative group"
 							:class="{
-								'text-primary-700 font-semibold':
+								'text-blue-700 font-semibold':
 									isActive(link.path) ||
 									(link.hasDropdown &&
 										isDropdownActive(link.dropdownItems)),
@@ -201,6 +201,9 @@ const getOmOssPosition = () => {
 							@click="closeDropdowns"
 						>
 							{{ link.name }}
+							<span
+								class="absolute bottom-0 left-0 w-full h-2 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
+							></span>
 						</router-link>
 
 						<!-- Dropdown Menu -->
@@ -281,15 +284,18 @@ const getOmOssPosition = () => {
 								)?.dropdownItems || []"
 								:key="item.path"
 								:to="item.path"
-								class="text-blue-700 hover:text-neutral-800 font-medium transition-colors duration-200"
+								class="text-blue-600 hover:text-black font-medium transition-all duration-300 relative group"
 								:class="{
-									'text-blue-900 font-bold': isActive(
+									'text-blue-700 font-bold': isActive(
 										item.path
 									),
 								}"
 								@click="closeDropdowns"
 							>
 								{{ item.name }}
+								<span
+									class="absolute bottom-0 left-0 w-full h-2 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
+								></span>
 							</router-link>
 						</nav>
 					</div>
@@ -348,9 +354,9 @@ const getOmOssPosition = () => {
 						<div class="flex items-center justify-between">
 							<router-link
 								:to="link.path"
-								class="flex-1 px-4 py-3 block text-neutral-700 hover:text-neutral-800 font-medium transition-colors duration-200"
+								class="flex-1 px-4 py-3 block text-blue-600 hover:text-black font-medium transition-all duration-300 relative group"
 								:class="{
-									'text-primary-700 font-semibold':
+									'text-blue-700 font-semibold':
 										isActive(link.path) ||
 										(link.hasDropdown &&
 											isDropdownActive(
@@ -364,6 +370,9 @@ const getOmOssPosition = () => {
 								"
 							>
 								{{ link.name }}
+								<span
+									class="absolute bottom-0 left-0 w-full h-2 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
+								></span>
 							</router-link>
 
 							<!-- Mobile Dropdown Toggle Button -->

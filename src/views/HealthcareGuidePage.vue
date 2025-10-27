@@ -3,191 +3,182 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 </script>
 
 <template>
-	<div class="min-h-screen bg-neutral-100 flex flex-col">
-		<Header />
-		<Breadcrumbs />
+	<Breadcrumbs />
 
-		<main class="flex-grow container mx-auto px-4 py-8">
-			<div class="max-w-4xl mx-auto">
-				<h1 class="text-3xl font-bold text-gray-800 mb-6">Vårdguide</h1>
-				<p class="text-lg text-neutral-800 mb-8">
-					I vår vårdguide hittar du information om vanliga sjukdomar
-					och besvär, samt råd om när du ska söka vård. Informationen
-					är ett komplement till 1177 Vårdguiden.
+	<div class="container mx-auto px-4 py-8">
+		<div class="max-w-4xl mx-auto">
+			<h1 class="text-3xl font-bold text-gray-800 mb-6">Vårdguide</h1>
+			<p class="text-lg text-neutral-800 mb-8">
+				I vår vårdguide hittar du information om vanliga sjukdomar och
+				besvär, samt råd om när du ska söka vård. Informationen är ett
+				komplement till 1177 Vårdguiden.
+			</p>
+
+			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					När ska jag söka vård?
+				</h2>
+				<p class="text-neutral-700 mb-4">
+					Det kan vara svårt att veta när man ska söka vård och var
+					man ska vända sig. Här är några riktlinjer:
 				</p>
+				<ul class="list-disc pl-5 text-neutral-700 space-y-2">
+					<li>
+						<span class="font-medium"
+							>Akut livshotande tillstånd:</span
+						>
+						Ring 112 direkt
+					</li>
+					<li>
+						<span class="font-medium"
+							>Akuta besvär som inte kan vänta:</span
+						>
+						Kontakta 1177 eller akutmottagning
+					</li>
+					<li>
+						<span class="font-medium"
+							>Besvär som kan vänta till nästa dag:</span
+						>
+						Kontakta vår vårdcentral
+					</li>
+					<li>
+						<span class="font-medium">Egen vård:</span> Många
+						vanliga besvär kan du behandla själv
+					</li>
+				</ul>
+			</div>
 
-				<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2 class="text-xl font-semibold text-primary-600 mb-3">
-						När ska jag söka vård?
+						Förkylning och influensa
 					</h2>
 					<p class="text-neutral-700 mb-4">
-						Det kan vara svårt att veta när man ska söka vård och
-						var man ska vända sig. Här är några riktlinjer:
+						Förkylning och influensa orsakas av virus och går oftast
+						över av sig själv. Vila och mycket vätska är den bästa
+						behandlingen.
 					</p>
-					<ul class="list-disc pl-5 text-neutral-700 space-y-2">
-						<li>
-							<span class="font-medium"
-								>Akut livshotande tillstånd:</span
-							>
-							Ring 112 direkt
-						</li>
-						<li>
-							<span class="font-medium"
-								>Akuta besvär som inte kan vänta:</span
-							>
-							Kontakta 1177 eller akutmottagning
-						</li>
-						<li>
-							<span class="font-medium"
-								>Besvär som kan vänta till nästa dag:</span
-							>
-							Kontakta vår vårdcentral
-						</li>
-						<li>
-							<span class="font-medium">Egen vård:</span> Många
-							vanliga besvär kan du behandla själv
-						</li>
+					<p class="text-neutral-700 mb-4">
+						<span class="font-medium">Sök vård om:</span>
+					</p>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-1">
+						<li>Du får hög feber som inte sjunker</li>
+						<li>Du har andningsbesvär</li>
+						<li>Du blir mycket sämre efter några dagar</li>
 					</ul>
 				</div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<h2 class="text-xl font-semibold text-primary-600 mb-3">
-							Förkylning och influensa
-						</h2>
-						<p class="text-neutral-700 mb-4">
-							Förkylning och influensa orsakas av virus och går
-							oftast över av sig själv. Vila och mycket vätska är
-							den bästa behandlingen.
-						</p>
-						<p class="text-neutral-700 mb-4">
-							<span class="font-medium">Sök vård om:</span>
-						</p>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-1">
-							<li>Du får hög feber som inte sjunker</li>
-							<li>Du har andningsbesvär</li>
-							<li>Du blir mycket sämre efter några dagar</li>
-						</ul>
-					</div>
-
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<h2 class="text-xl font-semibold text-primary-600 mb-3">
-							Mag- och tarminfektioner
-						</h2>
-						<p class="text-neutral-700 mb-4">
-							Mag- och tarminfektioner (magsjuka) orsakas oftast
-							av virus eller bakterier. Det är viktigt att dricka
-							mycket vätska för att undvika uttorkning.
-						</p>
-						<p class="text-neutral-700 mb-4">
-							<span class="font-medium">Sök vård om:</span>
-						</p>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-1">
-							<li>
-								Du har tecken på uttorkning (torr i munnen,
-								mindre urin)
-							</li>
-							<li>Du har blod i avföringen</li>
-							<li>Du har hög feber</li>
-						</ul>
-					</div>
-
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<h2 class="text-xl font-semibold text-primary-600 mb-3">
-							Hudproblem
-						</h2>
-						<p class="text-neutral-700 mb-4">
-							Eksem, psoriasis och andra hudproblem kan ofta
-							behandlas med receptfria produkter. Undvik att
-							använda starka tvålparfymer.
-						</p>
-						<p class="text-neutral-700 mb-4">
-							<span class="font-medium">Sök vård om:</span>
-						</p>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-1">
-							<li>Hudproblemet inte förbättras med egenvård</li>
-							<li>
-								Du har infektionssymptom (rodnad, svullnad,
-								värme)
-							</li>
-							<li>Du har sår som inte läker</li>
-						</ul>
-					</div>
-
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<h2 class="text-xl font-semibold text-primary-600 mb-3">
-							Smärta i leder och muskler
-						</h2>
-						<p class="text-neutral-700 mb-4">
-							Led- och muskelsmärta kan bero på många orsaker,
-							till exempel överbelastning, inflammation eller
-							ålder.
-						</p>
-						<p class="text-neutral-700 mb-4">
-							<span class="font-medium">Sök vård om:</span>
-						</p>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-1">
-							<li>Smärtan är mycket kraftig eller plötslig</li>
-							<li>Du har feber samtidigt</li>
-							<li>Leden är svullen, röd och varm</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="bg-white rounded-lg shadow-md p-6 mt-6">
+				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2 class="text-xl font-semibold text-primary-600 mb-3">
-						Egenvårdsråd
+						Mag- och tarminfektioner
 					</h2>
 					<p class="text-neutral-700 mb-4">
-						För många vanliga besvär kan du själv göra mycket för
-						att lindra symtomen:
+						Mag- och tarminfektioner (magsjuka) orsakas oftast av
+						virus eller bakterier. Det är viktigt att dricka mycket
+						vätska för att undvika uttorkning.
 					</p>
-					<ul class="list-disc pl-5 text-neutral-700 space-y-2">
+					<p class="text-neutral-700 mb-4">
+						<span class="font-medium">Sök vård om:</span>
+					</p>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-1">
 						<li>
-							<span class="font-medium">Vila:</span> Ge kroppen
-							tid att läka
+							Du har tecken på uttorkning (torr i munnen, mindre
+							urin)
 						</li>
-						<li>
-							<span class="font-medium">Vätska:</span> Drick
-							mycket vatten, särskilt vid feber
-						</li>
-						<li>
-							<span class="font-medium"
-								>Receptfria läkemedel:</span
-							>
-							Använd enligt anvisning på förpackningen
-						</li>
-						<li>
-							<span class="font-medium">Kyla eller värme:</span>
-							Kyla vid svullnad, värme vid muskelsmärta
-						</li>
-						<li>
-							<span class="font-medium">Elevera:</span> Lägg benen
-							i högläge vid svullnad
-						</li>
+						<li>Du har blod i avföringen</li>
+						<li>Du har hög feber</li>
 					</ul>
 				</div>
 
-				<div class="bg-white rounded-lg shadow-md p-6 mt-6">
+				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2 class="text-xl font-semibold text-primary-600 mb-3">
-						Mer information
+						Hudproblem
 					</h2>
 					<p class="text-neutral-700 mb-4">
-						För mer detaljerad information om sjukdomar och besvär,
-						besök 1177 Vårdguidens webbplats.
+						Eksem, psoriasis och andra hudproblem kan ofta behandlas
+						med receptfria produkter. Undvik att använda starka
+						tvålparfymer.
 					</p>
-					<a
-						href="https://www.1177.se"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
-					>
-						Besök 1177 Vårdguiden
-					</a>
+					<p class="text-neutral-700 mb-4">
+						<span class="font-medium">Sök vård om:</span>
+					</p>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-1">
+						<li>Hudproblemet inte förbättras med egenvård</li>
+						<li>
+							Du har infektionssymptom (rodnad, svullnad, värme)
+						</li>
+						<li>Du har sår som inte läker</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+						Smärta i leder och muskler
+					</h2>
+					<p class="text-neutral-700 mb-4">
+						Led- och muskelsmärta kan bero på många orsaker, till
+						exempel överbelastning, inflammation eller ålder.
+					</p>
+					<p class="text-neutral-700 mb-4">
+						<span class="font-medium">Sök vård om:</span>
+					</p>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-1">
+						<li>Smärtan är mycket kraftig eller plötslig</li>
+						<li>Du har feber samtidigt</li>
+						<li>Leden är svullen, röd och varm</li>
+					</ul>
 				</div>
 			</div>
-		</main>
 
-		<Footer />
+			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
+				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					Egenvårdsråd
+				</h2>
+				<p class="text-neutral-700 mb-4">
+					För många vanliga besvär kan du själv göra mycket för att
+					lindra symtomen:
+				</p>
+				<ul class="list-disc pl-5 text-neutral-700 space-y-2">
+					<li>
+						<span class="font-medium">Vila:</span> Ge kroppen tid
+						att läka
+					</li>
+					<li>
+						<span class="font-medium">Vätska:</span> Drick mycket
+						vatten, särskilt vid feber
+					</li>
+					<li>
+						<span class="font-medium">Receptfria läkemedel:</span>
+						Använd enligt anvisning på förpackningen
+					</li>
+					<li>
+						<span class="font-medium">Kyla eller värme:</span>
+						Kyla vid svullnad, värme vid muskelsmärta
+					</li>
+					<li>
+						<span class="font-medium">Elevera:</span> Lägg benen i
+						högläge vid svullnad
+					</li>
+				</ul>
+			</div>
+
+			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
+				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					Mer information
+				</h2>
+				<p class="text-neutral-700 mb-4">
+					För mer detaljerad information om sjukdomar och besvär,
+					besök 1177 Vårdguidens webbplats.
+				</p>
+				<a
+					href="https://www.1177.se"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
+				>
+					Besök 1177 Vårdguiden
+				</a>
+			</div>
+		</div>
 	</div>
 </template>

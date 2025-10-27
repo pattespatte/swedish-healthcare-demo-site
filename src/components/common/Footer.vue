@@ -38,12 +38,16 @@ const currentYear = new Date().getFullYear();
 
 <template>
 	<footer class="bg-neutral-800 text-white">
-		<div class="container mx-auto px-4 py-12">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+		<div class="container mx-auto px-4 py-4 sm:py-6">
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+			>
 				<!-- Site Navigation -->
 				<div>
-					<h3 class="text-lg font-semibold mb-4">Navigering</h3>
-					<nav class="flex flex-col space-y-2">
+					<h3 class="text-base font-semibold mb-1 sm:mb-2">
+						Navigering
+					</h3>
+					<nav class="flex flex-col space-y-1 sm:space-y-2">
 						<router-link
 							v-for="link in footerNavLinks"
 							:key="link.path"
@@ -57,9 +61,11 @@ const currentYear = new Date().getFullYear();
 
 				<!-- Contact Information -->
 				<div>
-					<h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+					<h3 class="text-base font-semibold mb-1 sm:mb-2">
+						Kontakt
+					</h3>
 					<address
-						class="not-italic text-neutral-300 space-y-2 text-sm"
+						class="not-italic text-neutral-300 space-y-1 sm:space-y-2 text-sm"
 					>
 						<p>{{ contactInfo.address }}</p>
 						<p>
@@ -83,8 +89,12 @@ const currentYear = new Date().getFullYear();
 
 				<!-- Opening Hours -->
 				<div>
-					<h3 class="text-lg font-semibold mb-4">Öppettider</h3>
-					<div class="text-neutral-300 space-y-2 text-sm">
+					<h3 class="text-base font-semibold mb-1 sm:mb-2">
+						Öppettider
+					</h3>
+					<div
+						class="text-neutral-300 space-y-1 sm:space-y-2 text-sm"
+					>
 						<div
 							v-for="(item, index) in openingHours"
 							:key="index"
@@ -98,8 +108,10 @@ const currentYear = new Date().getFullYear();
 
 				<!-- Social Media -->
 				<div>
-					<h3 class="text-lg font-semibold mb-4">Följ oss</h3>
-					<div class="flex space-x-4">
+					<h3 class="text-base font-semibold mb-1 sm:mb-2">
+						Följ oss
+					</h3>
+					<div class="flex space-x-3 sm:space-x-4">
 						<a
 							v-for="link in socialLinks"
 							:key="link.name"
@@ -122,9 +134,9 @@ const currentYear = new Date().getFullYear();
 
 			<!-- Bottom Section -->
 			<div
-				class="mt-12 pt-8 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center"
+				class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center"
 			>
-				<div class="text-neutral-400 text-xs mb-4 md:mb-0">
+				<div class="text-neutral-400 text-xs mb-3 md:mb-0">
 					&copy; {{ currentYear }} Vårdcentralen. Alla rättigheter
 					förbehålls.
 				</div>
