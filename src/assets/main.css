@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply Noto Sans as the default font globally */
+body {
+	font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* Apply Roboto Slab to all h1 elements */
+h1 {
+	font-family: "Roboto Slab", serif;
+}

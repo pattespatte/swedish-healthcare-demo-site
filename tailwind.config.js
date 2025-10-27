@@ -6,6 +6,10 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['Noto Sans', 'system-ui', '-apple-system', 'sans-serif'],
+				serif: ['Roboto Slab', 'serif'],
+			},
 			colors: {
 				primary: {
 					50: '#eff6ff',

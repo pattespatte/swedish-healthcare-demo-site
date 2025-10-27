@@ -17,6 +17,21 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/JobbaHosOssPage.vue')
 	},
 	{
+		path: '/om-oss/lediga-tjanster',
+		name: 'LedigaTjanster',
+		component: () => import('@/views/LedigaTjansterPage.vue')
+	},
+	{
+		path: '/om-oss/formaner',
+		name: 'Formaner',
+		component: () => import('@/views/FormanerPage.vue')
+	},
+	{
+		path: '/om-oss/karriarvagar',
+		name: 'Karriarvagar',
+		component: () => import('@/views/KarriarvagarPage.vue')
+	},
+	{
 		path: '/tjanster',
 		name: 'Services',
 		component: () => import('@/views/ServicesPage.vue')
