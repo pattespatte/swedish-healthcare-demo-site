@@ -62,6 +62,22 @@ const keepSecondaryNavVisible = () => {
 const isActive = (path: string) => {
 	return route.path === path;
 };
+
+// Calculate position of "Om oss" link for secondary navigation alignment
+const getOmOssPosition = () => {
+	const omOssIndex = navLinks.findIndex((link) => link.name === "Om oss");
+	if (omOssIndex === -1) return 0;
+
+	// Calculate the approximate position based on the index
+	// This accounts for the space-x-8 (32px) spacing between items
+	// and the average width of navigation items
+	const basePosition = omOssIndex * 120; // More realistic width per nav item
+
+	// Adjust for the container padding and move significantly more to the left
+	const finalPosition = basePosition - 40; // Further reduced offset for better alignment (additional 20px to the left)
+
+	return finalPosition;
+};
 </script>
 
 <template>
@@ -112,7 +128,11 @@ const isActive = (path: string) => {
 
 					<!-- Secondary Navigation for "Om oss" -->
 					<div
-						class="absolute left-0 top-full w-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
+						class="absolute top-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
+						:style="{
+							left: `${getOmOssPosition()}px`,
+							width: '400px',
+						}"
 						:class="{
 							'opacity-100 translate-y-0': showSecondaryNav,
 							'opacity-0 -translate-y-2 pointer-events-none':
@@ -121,7 +141,7 @@ const isActive = (path: string) => {
 						@mouseenter="keepSecondaryNavVisible"
 						@mouseleave="hideSecondaryNavOnHover"
 					>
-						<div class="container mx-auto px-4 py-4">
+						<div class="px-4 py-4">
 							<nav class="flex space-x-6">
 								<router-link
 									v-for="item in omOssSubNav"

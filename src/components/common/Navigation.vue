@@ -152,6 +152,20 @@ const keepSecondaryNavVisible = () => {
 	}
 	showSecondaryNav.value = true;
 };
+
+// Calculate position of "Om oss" link for secondary navigation alignment
+const getOmOssPosition = () => {
+	const omOssIndex = navLinks.findIndex((link) => link.name === "Om oss");
+	if (omOssIndex === -1) return 0;
+
+	// Calculate the approximate position based on the index
+	// This accounts for the space-x-1 (4px) spacing between items
+	// and the average width of navigation items
+	const basePosition = omOssIndex * 100; // More realistic width per nav item
+
+	// Adjust for the container padding and move significantly more to the left
+	return basePosition - 40; // Further reduced offset for better alignment (additional 20px to the left)
+};
 </script>
 
 <template>
@@ -218,38 +232,6 @@ const keepSecondaryNavVisible = () => {
 							</ul>
 						</div>
 
-						<!-- Secondary Navigation for "Om oss" -->
-						<div
-							v-if="link.name === 'Om oss'"
-							class="absolute left-0 top-full w-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
-							:class="{
-								'opacity-100 translate-y-0': showSecondaryNav,
-								'opacity-0 -translate-y-2 pointer-events-none':
-									!showSecondaryNav,
-							}"
-							@mouseenter="keepSecondaryNavVisible"
-							@mouseleave="hideSecondaryNavOnHover"
-						>
-							<div class="container mx-auto px-4 py-4">
-								<nav class="flex space-x-6">
-									<router-link
-										v-for="item in link.dropdownItems"
-										:key="item.path"
-										:to="item.path"
-										class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
-										:class="{
-											'text-blue-900 font-bold': isActive(
-												item.path
-											),
-										}"
-										@click="closeDropdowns"
-									>
-										{{ item.name }}
-									</router-link>
-								</nav>
-							</div>
-						</div>
-
 						<!-- Dropdown Toggle Button -->
 						<button
 							v-if="link.hasDropdown"
@@ -278,6 +260,40 @@ const keepSecondaryNavVisible = () => {
 						</button>
 					</li>
 				</ul>
+
+				<!-- Secondary Navigation for "Om oss" -->
+				<div
+					class="absolute top-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
+					:style="{ left: `${getOmOssPosition()}px`, width: '400px' }"
+					:class="{
+						'opacity-100 translate-y-0': showSecondaryNav,
+						'opacity-0 -translate-y-2 pointer-events-none':
+							!showSecondaryNav,
+					}"
+					@mouseenter="keepSecondaryNavVisible"
+					@mouseleave="hideSecondaryNavOnHover"
+				>
+					<div class="px-4 py-4">
+						<nav class="flex space-x-6">
+							<router-link
+								v-for="item in navLinks.find(
+									(link) => link.name === 'Om oss'
+								)?.dropdownItems || []"
+								:key="item.path"
+								:to="item.path"
+								class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
+								:class="{
+									'text-blue-900 font-bold': isActive(
+										item.path
+									),
+								}"
+								@click="closeDropdowns"
+							>
+								{{ item.name }}
+							</router-link>
+						</nav>
+					</div>
+				</div>
 			</div>
 
 			<!-- Mobile Navigation Toggle -->
