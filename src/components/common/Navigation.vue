@@ -4,51 +4,67 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
+// Define the navigation item interface
+interface NavItem {
+	name: string;
+	path: string;
+	hasDropdown: boolean;
+	dropdownItems: { name: string; path: string }[];
+}
+
 // State for mobile menu and dropdowns
 const isMenuOpen = ref(false);
 const openDropdown = ref<string | null>(null);
 
 // Navigation links with dropdowns
-const navLinks = [
+const navLinks: NavItem[] = [
 	{
 		name: "Start",
 		path: "/",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Tjänster",
 		path: "/tjanster",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Boka tid",
 		path: "/boka-tid",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Mina sidor",
 		path: "/mina-sidor",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Kontakt",
 		path: "/kontakt",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Frågor och svar",
 		path: "/fragor-och-svar",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Vårdguide",
 		path: "/vardguide",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 	{
 		name: "Tillgänglighet",
 		path: "/tillganglighet",
 		hasDropdown: false,
+		dropdownItems: [],
 	},
 ];
 

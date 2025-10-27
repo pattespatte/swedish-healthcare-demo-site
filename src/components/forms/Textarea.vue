@@ -20,7 +20,7 @@
 					: 'border-gray-300 focus:ring-blue-500 focus:border-blue-500',
 				disabled ? 'bg-gray-100 cursor-not-allowed' : '',
 			]"
-			@input="$emit('update:modelValue', $event.target.value)"
+			@input="handleInput"
 			@blur="$emit('blur')"
 		></textarea>
 
@@ -74,6 +74,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const emit = defineEmits<Emits>();
+
+// Handle input event with proper type casting
+const handleInput = (event: Event) => {
+	const target = event.target as HTMLTextAreaElement;
+	emit("update:modelValue", target.value);
+};
 
 // Calculate current text length
 const currentLength = computed(() => {

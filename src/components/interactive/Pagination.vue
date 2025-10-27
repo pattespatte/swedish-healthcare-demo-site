@@ -91,7 +91,9 @@
 										? 'z-10 bg-primary-50 border-primary-500 text-primary-600'
 										: 'bg-white border-neutral-300 text-neutral-500 hover:bg-neutral-50',
 								]"
-								@click="goToPage(page)"
+								@click="
+									typeof page === 'number' && goToPage(page)
+								"
 								:aria-current="
 									page === currentPage ? 'page' : undefined
 								"

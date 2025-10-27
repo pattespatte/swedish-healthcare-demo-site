@@ -17,7 +17,7 @@
 					: 'border-gray-300 focus:ring-blue-500 focus:border-blue-500',
 				disabled ? 'bg-gray-100 cursor-not-allowed' : '',
 			]"
-			@change="$emit('update:modelValue', $event.target.value)"
+			@change="handleChange"
 			@blur="$emit('blur')"
 		>
 			<option value="" disabled selected>
@@ -72,5 +72,11 @@ const props = withDefaults(defineProps<Props>(), {
 	placeholder: "Välj ett alternativ...",
 });
 
-defineEmits<Emits>();
+const emit = defineEmits<Emits>();
+
+// Handle change event with proper type casting
+const handleChange = (event: Event) => {
+	const target = event.target as HTMLSelectElement;
+	emit("update:modelValue", target.value);
+};
 </script>

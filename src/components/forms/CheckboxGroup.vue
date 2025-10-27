@@ -30,9 +30,7 @@
 							'h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded',
 							error ? 'border-red-500' : '',
 						]"
-						@change="
-							handleChange(option.value, $event.target.checked)
-						"
+						@change="handleCheckboxChange(option.value)"
 						@blur="$emit('blur')"
 					/>
 					<label
@@ -115,5 +113,13 @@ const handleChange = (value: string | number, checked: boolean) => {
 
 	// Emit the updated array
 	emit("update:modelValue", newValue);
+};
+
+// Handle checkbox change event with proper type casting
+const handleCheckboxChange = (value: string | number) => {
+	return (event: Event) => {
+		const target = event.target as HTMLInputElement;
+		handleChange(value, target.checked);
+	};
 };
 </script>
