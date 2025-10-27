@@ -1,0 +1,56 @@
+<script setup lang="ts">
+import Breadcrumbs from "../components/common/Breadcrumbs.vue";
+</script>
+
+<template>
+	<div class="min-h-screen bg-neutral-100 flex flex-col">
+		<Header />
+		<Breadcrumbs />
+
+		<main class="flex-grow container mx-auto px-4 py-8">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-3xl font-bold text-primary-700 mb-6">
+					Startsida
+				</h1>
+				<p class="text-lg text-neutral-800 mb-8">
+					Välkommen till Vårdcentralen. Här kan du enkelt boka tider,
+					kontakta vården och hantera dina vårdärenden.
+				</p>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div class="bg-white rounded-lg shadow-md p-6">
+						<h2 class="text-xl font-semibold text-primary-600 mb-3">
+							Boka tid
+						</h2>
+						<p class="text-neutral-700">
+							Boka tid hos läkare, sjuksköterska eller annan
+							vårdpersonal.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-lg shadow-md p-6">
+						<h2 class="text-xl font-semibold text-primary-600 mb-3">
+							E-tjänster
+						</h2>
+						<p class="text-neutral-700">
+							Få tillgång till dina journaler, provsvar och
+							recept.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-lg shadow-md p-6">
+						<h2 class="text-xl font-semibold text-primary-600 mb-3">
+							Kontakta oss
+						</h2>
+						<p class="text-neutral-700">
+							Ställ frågor eller kontakta vården via 1177
+							Vårdguiden.
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<Footer />
+	</div>
+</template>
