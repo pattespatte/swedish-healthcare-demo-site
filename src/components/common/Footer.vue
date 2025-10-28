@@ -153,12 +153,12 @@ const currentYear = new Date().getFullYear();
 					>
 						Cookies
 					</router-link>
-					<a
-						href="/tillganglighet"
+					<router-link
+						to="/tillganglighet"
 						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Tillgänglighet
-					</a>
+					</router-link>
 				</div>
 			</div>
 		</div>
