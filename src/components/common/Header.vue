@@ -330,10 +330,17 @@ const getOmOssPosition = () => {
 .active-nav-link::after {
 	content: "";
 	position: absolute;
-	bottom: 0.5rem; /* Position 0.5rem below the text */
+	bottom: 0; /* Default for mobile */
 	left: 0;
 	width: 100%;
 	height: 4px; /* 4px thick underline */
 	background-color: #d1d5db; /* Light gray color */
+}
+
+/* For desktop screens (lg and xl) */
+@media (min-width: 768px) {
+	.active-nav-link::after {
+		bottom: 0.5rem; /* Position 0.5rem below the text on larger screens */
+	}
 }
 </style>

@@ -28,7 +28,9 @@ const isActive = (path: string) => {
 					:to="item.path"
 					class="text-white hover:text-blue-300 font-medium transition-colors duration-200"
 					:class="{
-						'text-yellow-100 font-bold': isActive(item.path),
+						'text-yellow-100 font-bold active-nav-link': isActive(
+							item.path
+						),
 					}"
 				>
 					{{ item.name }}
@@ -37,3 +39,19 @@ const isActive = (path: string) => {
 		</div>
 	</div>
 </template>
+
+<style scoped>
+.active-nav-link {
+	position: relative;
+}
+
+.active-nav-link::after {
+	content: "";
+	position: absolute;
+	bottom: -0.4rem;
+	left: 0;
+	width: 100%;
+	height: 4px; /* 4px thick underline */
+	background-color: #797f87; /* Approximately 40% lighter than #1f2937 */
+}
+</style>

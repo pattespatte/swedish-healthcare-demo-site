@@ -7,7 +7,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 
 	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
 		<div class="max-w-4xl mx-auto">
-			<h1 class="text-3xl font-bold text-gray-800 mb-6">Boka Tid</h1>
+			<h1 class="text-3xl font-bold text-gray-800 mb-6">Boka tid</h1>
 			<p class="text-lg text-neutral-800 mb-8">
 				Här kan du boka tid för vårdbesök, vaccinationer och
 				hälsokontroller. Välj den typ av tid du behöver boka.
