@@ -127,10 +127,10 @@ const formatPhoneLink = (phone: string): string => {
 
 				<!-- Social Media -->
 				<div>
-					<h3 class="text-base font-semibold mb-1 sm:mb-2">
+					<h3 class="text-base font-semibold mb-1 sm:mb-2 text-right">
 						Följ oss
 					</h3>
-					<div class="flex space-x-3 sm:space-x-4">
+					<div class="flex justify-end space-x-3 sm:space-x-4">
 						<a
 							v-for="link in socialLinks"
 							:key="link.name"
