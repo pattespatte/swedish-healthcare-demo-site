@@ -95,7 +95,7 @@
 						/>
 					</svg>
 					<a
-						:href="`tel:${phone.replace(/\s/g, '')}`"
+						:href="formatPhoneLink(phone)"
 						class="text-sm text-primary-600 hover:text-primary-800"
 					>
 						{{ phone }}
@@ -148,4 +148,23 @@ interface Props {
 }
 
 defineProps<Props>();
+
+// Format phone number for tel: link
+const formatPhoneLink = (phone: string): string => {
+	if (!phone) return "";
+
+	// Remove all non-digit characters
+	let digits = phone.replace(/\D/g, "");
+
+	// If the number starts with 0 (Swedish domestic format), replace with +46
+	if (digits.startsWith("0")) {
+		digits = "46" + digits.substring(1);
+	}
+	// If the number doesn't start with country code, assume Swedish number
+	else if (!digits.startsWith("46")) {
+		digits = "46" + digits;
+	}
+
+	return `tel:+${digits}`;
+};
 </script>

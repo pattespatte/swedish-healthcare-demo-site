@@ -34,6 +34,25 @@ const socialLinks = [
 
 // Current year for copyright
 const currentYear = new Date().getFullYear();
+
+// Format phone number for tel: link
+const formatPhoneLink = (phone: string): string => {
+	if (!phone) return "";
+
+	// Remove all non-digit characters
+	let digits = phone.replace(/\D/g, "");
+
+	// If the number starts with 0 (Swedish domestic format), replace with +46
+	if (digits.startsWith("0")) {
+		digits = "46" + digits.substring(1);
+	}
+	// If the number doesn't start with country code, assume Swedish number
+	else if (!digits.startsWith("46")) {
+		digits = "46" + digits;
+	}
+
+	return `tel:+${digits}`;
+};
 </script>
 
 <template>
@@ -71,7 +90,7 @@ const currentYear = new Date().getFullYear();
 						<p>
 							Telefon:
 							<a
-								:href="`tel:${contactInfo.phone}`"
+								:href="formatPhoneLink(contactInfo.phone)"
 								class="hover:text-white transition-colors duration-200"
 								>{{ contactInfo.phone }}</a
 							>
