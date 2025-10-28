@@ -115,11 +115,10 @@ const getOmOssPosition = () => {
 					>
 						<router-link
 							:to="link.path"
-							class="text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200 block py-4"
+							class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4"
 							:class="{
-								'text-primary-700 font-semibold': isActive(
-									link.path
-								),
+								'text-primary-700 font-semibold active-nav-link':
+									isActive(link.path),
 							}"
 						>
 							{{ link.name }}
@@ -174,9 +173,7 @@ const getOmOssPosition = () => {
 				</nav>
 
 				<!-- Right side: Search and Language -->
-				<div
-					class="hidden md:flex lg:hidden xl:flex items-center space-x-4"
-				>
+				<div class="hidden xl:flex items-center space-x-4">
 					<!-- Search functionality -->
 					<div class="relative">
 						<input
@@ -278,7 +275,7 @@ const getOmOssPosition = () => {
 						:key="link.path"
 						:to="link.path"
 						class="text-neutral-700 hover:text-primary-700 font-medium py-2 transition-colors duration-200"
-						active-class="text-primary-700 font-semibold"
+						active-class="text-primary-700 font-semibold active-nav-link"
 						@click="isMenuOpen = false"
 					>
 						{{ link.name }}
@@ -324,3 +321,19 @@ const getOmOssPosition = () => {
 		</div>
 	</header>
 </template>
+
+<style scoped>
+.active-nav-link {
+	position: relative;
+}
+
+.active-nav-link::after {
+	content: "";
+	position: absolute;
+	bottom: 0.5rem; /* Position 0.5rem below the text */
+	left: 0;
+	width: 100%;
+	height: 4px; /* 4px thick underline */
+	background-color: #d1d5db; /* Light gray color */
+}
+</style>
