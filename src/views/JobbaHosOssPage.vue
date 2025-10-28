@@ -12,11 +12,11 @@
 					<h2 class="text-xl font-semibold mb-3 text-blue-800">
 						Varför välja oss?
 					</h2>
-					<ul class="space-y-2 text-gray-700">
-						<li>• Utvecklande arbetsmiljö</li>
-						<li>• Konkurrenskraftiga villkor</li>
-						<li>• Möjlighet till fortbildning</li>
-						<li>• Moderna lokaler och utrustning</li>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-2">
+						<li>Utvecklande arbetsmiljö</li>
+						<li>Konkurrenskraftiga villkor</li>
+						<li>Möjlighet till fortbildning</li>
+						<li>Moderna lokaler och utrustning</li>
 					</ul>
 				</div>
 				<div class="bg-green-50 rounded-lg p-6">
@@ -24,11 +24,11 @@
 						Lediga tjänster
 					</h2>
 					<p class="text-gray-700 mb-3">Just nu söker vi:</p>
-					<ul class="space-y-2 text-gray-700">
-						<li>• Specialistsjuksköterskor</li>
-						<li>• Läkare inom olika specialiteter</li>
-						<li>• Undersköterskor</li>
-						<li>• Administrativ personal</li>
+					<ul class="list-disc pl-5 text-neutral-700 space-y-2">
+						<li>Specialistsjuksköterskor</li>
+						<li>Läkare inom olika specialiteter</li>
+						<li>Undersköterskor</li>
+						<li>Administrativ personal</li>
 					</ul>
 				</div>
 			</div>

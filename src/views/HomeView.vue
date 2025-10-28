@@ -8,7 +8,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 	<div class="container mx-auto px-4 py-8">
 		<div class="max-w-4xl mx-auto">
 			<main>
-				<h1 class="text-3xl font-bold text-primary-700 mb-6">
+				<h1 class="text-3xl font-bold text-gray-800 mb-6">
 					Välkommen till Vårdportalen
 				</h1>
 				<p class="text-lg text-neutral-800 mb-8">

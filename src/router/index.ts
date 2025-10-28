@@ -76,6 +76,16 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Patientinformation',
 		component: () => import('@/views/PatientinformationPage.vue')
 	},
+	{
+		path: '/integritetspolicy',
+		name: 'Integritetspolicy',
+		component: () => import('@/views/IntegritetspolicyPage.vue')
+	},
+	{
+		path: '/cookies',
+		name: 'Cookies',
+		component: () => import('@/views/CookiesPage.vue')
+	},
 ]
 
 const router = createRouter({

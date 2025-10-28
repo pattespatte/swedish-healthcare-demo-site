@@ -145,8 +145,8 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 					Myndigheten för digital förvaltning (DIGG)
 				</p>
 				<ul class="list-disc pl-5 text-neutral-700 space-y-2">
-					<li>Box 3038</li>
-					<li>872 03 Uppsala</li>
+					<li>Box 12345</li>
+					<li>123 45 Stockholm</li>
 					<li>Telefon: 08-578 287 00</li>
 					<li>
 						Webbplats:

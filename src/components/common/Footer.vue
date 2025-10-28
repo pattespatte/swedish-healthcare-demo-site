@@ -141,20 +141,20 @@ const currentYear = new Date().getFullYear();
 					förbehålls.
 				</div>
 				<div class="flex space-x-6">
-					<a
-						href="#"
+					<router-link
+						to="/integritetspolicy"
 						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Integritetspolicy
-					</a>
-					<a
-						href="#"
+					</router-link>
+					<router-link
+						to="/cookies"
 						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Cookies
-					</a>
+					</router-link>
 					<a
-						href="#"
+						href="/tillganglighet"
 						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
 					>
 						Tillgänglighet

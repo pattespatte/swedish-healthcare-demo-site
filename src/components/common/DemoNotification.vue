@@ -13,9 +13,9 @@ const dismiss = () => {
 <template>
 	<div
 		v-if="isVisible"
-		class="bg-amber-50 border-l-4 border-amber-400 p-4 relative"
+		class="bg-amber-50 border-t border-r border-l-4 border-b border-amber-400 p-4 relative"
 		role="alert"
-		aria-labelledby="demo-notification-title"
+		aria-labelledby="demo-notification-message"
 	>
 		<div class="flex">
 			<div class="flex-shrink-0">
@@ -34,18 +34,13 @@ const dismiss = () => {
 			</div>
 			<div class="ml-3">
 				<p
-					id="demo-notification-title"
+					id="demo-notification-message"
 					class="text-sm font-medium text-amber-800"
 				>
-					Detta är en demowebbplats
+					<strong>Detta är en demowebbplats</strong> och inte en
+					faktisk vårdcentral. Ingen information på denna sida är
+					verklig och ingen medicinsk rådgivning erbjuds.
 				</p>
-				<div class="mt-2 text-sm text-amber-700">
-					<p>
-						Detta är en demonstrationswebbplats och inte en faktisk
-						vårdcentral. Ingen information på denna sida är verklig
-						och ingen medicinsk rådgivning erbjuds.
-					</p>
-				</div>
 			</div>
 			<div class="ml-auto pl-3">
 				<div class="-mx-1.5 -my-1.5">
