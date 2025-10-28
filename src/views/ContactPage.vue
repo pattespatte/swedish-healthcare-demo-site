@@ -129,10 +129,10 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 						></textarea>
 					</div>
 
-					<div>
+					<div class="text-right">
 						<button
 							type="submit"
-							class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+							class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 						>
 							Skicka meddelande
 						</button>

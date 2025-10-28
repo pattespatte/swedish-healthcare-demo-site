@@ -244,7 +244,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 					</p>
 					<p>
 						<span class="font-medium">Adress:</span>
-						Vårdcentralen, Storgatan 12, 123 45 Stockholm
+						Vårdportalen, Storgatan 12, 123 45 Stockholm
 					</p>
 				</div>
 				<p class="text-neutral-700 mt-4">

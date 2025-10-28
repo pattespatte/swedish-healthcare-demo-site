@@ -137,7 +137,7 @@ const currentYear = new Date().getFullYear();
 				class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center"
 			>
 				<div class="text-neutral-400 text-xs mb-3 md:mb-0">
-					&copy; {{ currentYear }} Vårdcentralen. Alla rättigheter
+					&copy; {{ currentYear }} Vårdportalen. Alla rättigheter
 					förbehålls.
 				</div>
 				<div class="flex space-x-6">

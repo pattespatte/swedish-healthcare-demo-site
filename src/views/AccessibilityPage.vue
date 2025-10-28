@@ -74,7 +74,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 				<ul class="list-disc pl-5 text-neutral-700 space-y-2">
 					<li>E-post: tillganglighet@vardcentralen.se</li>
 					<li>Telefon: 08-123 456 78</li>
-					<li>Post: Vårdcentralen, Storgatan 12, 123 45 Stockholm</li>
+					<li>Post: Vårdportalen, Storgatan 12, 123 45 Stockholm</li>
 				</ul>
 			</div>
 
