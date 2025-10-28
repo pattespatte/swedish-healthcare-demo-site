@@ -7,7 +7,23 @@ const route = useRoute();
 // State for mobile menu and secondary navigation
 const isMenuOpen = ref(false);
 const showSecondaryNav = ref(false);
+// Initialize with a default value for SSR, then update on client side
+const windowWidth = ref(
+	typeof window !== "undefined" ? window.innerWidth : 1200
+);
 let hoverTimeout: number | null = null;
+
+// Update window width on resize
+const updateWindowWidth = () => {
+	if (typeof window !== "undefined") {
+		windowWidth.value = window.innerWidth;
+	}
+};
+
+// Add event listener for window resize
+if (typeof window !== "undefined") {
+	window.addEventListener("resize", updateWindowWidth);
+}
 
 // Navigation links for the 8 pages
 const navLinks = [
@@ -44,9 +60,11 @@ const showSecondaryNavOnHover = () => {
 
 // Hide secondary navigation with delay
 const hideSecondaryNavOnHover = () => {
-	hoverTimeout = window.setTimeout(() => {
-		showSecondaryNav.value = false;
-	}, 200); // 200ms delay before hiding
+	if (typeof window !== "undefined") {
+		hoverTimeout = window.setTimeout(() => {
+			showSecondaryNav.value = false;
+		}, 200); // 200ms delay before hiding
+	}
 };
 
 // Keep secondary navigation visible when hovering over it
@@ -68,15 +86,34 @@ const getOmOssPosition = () => {
 	const omOssIndex = navLinks.findIndex((link) => link.name === "Om oss");
 	if (omOssIndex === -1) return 0;
 
-	// Calculate the approximate position based on the index
-	// This accounts for the space-x-8 (32px) spacing between items
-	// and the average width of navigation items
-	const basePosition = omOssIndex * 120; // More realistic width per nav item
+	// Check if we're in laptop view (where we use a 2-column grid)
+	const isLaptopView = windowWidth.value < 1024;
 
-	// Adjust for the container padding and move significantly more to the left
-	const finalPosition = basePosition - 40; // Further reduced offset for better alignment (additional 20px to the left)
+	if (isLaptopView) {
+		// For laptop view with 2-column grid
+		// Calculate position based on whether "Om oss" is in first or second column
+		const isInFirstColumn = omOssIndex % 2 === 0;
+		const rowIndex = Math.floor(omOssIndex / 2);
 
-	return finalPosition;
+		// Base position for first column items
+		const basePosition = isInFirstColumn ? 0 : 150; // Approximate width of first column
+
+		// Adjust for the container padding
+		const finalPosition = basePosition - 20;
+
+		return finalPosition;
+	} else {
+		// For larger screens with single row layout
+		// Calculate the approximate position based on the index
+		// This accounts for the space-x-8 (32px) spacing between items
+		// and the average width of navigation items
+		const basePosition = omOssIndex * 120; // More realistic width per nav item
+
+		// Adjust for the container padding and move significantly more to the left
+		const finalPosition = basePosition - 40; // Further reduced offset for better alignment (additional 20px to the left)
+
+		return finalPosition;
+	}
 };
 </script>
 
@@ -97,32 +134,65 @@ const getOmOssPosition = () => {
 				</router-link>
 
 				<!-- Desktop Navigation -->
-				<nav class="hidden md:flex space-x-8 relative">
-					<div
-						v-for="link in navLinks"
-						:key="link.path"
-						class="relative"
-						@mouseenter="
-							link.name === 'Om oss'
-								? showSecondaryNavOnHover()
-								: null
-						"
-						@mouseleave="
-							link.name === 'Om oss'
-								? hideSecondaryNavOnHover()
-								: null
-						"
-					>
-						<router-link
-							:to="link.path"
-							class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4"
-							:class="{
-								'text-primary-700 font-semibold active-nav-link':
-									isActive(link.path),
-							}"
+				<nav class="hidden md:flex relative">
+					<!-- Two-row layout for laptop screens (1024px or narrower) -->
+					<div class="lg:hidden grid grid-cols-2 gap-x-8 gap-y-2">
+						<div
+							v-for="link in navLinks"
+							:key="link.path"
+							class="relative"
+							@mouseenter="
+								link.name === 'Om oss'
+									? showSecondaryNavOnHover()
+									: null
+							"
+							@mouseleave="
+								link.name === 'Om oss'
+									? hideSecondaryNavOnHover()
+									: null
+							"
 						>
-							{{ link.name }}
-						</router-link>
+							<router-link
+								:to="link.path"
+								class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-2"
+								:class="{
+									'text-primary-700 font-semibold active-nav-link':
+										isActive(link.path),
+								}"
+							>
+								{{ link.name }}
+							</router-link>
+						</div>
+					</div>
+
+					<!-- Single row layout for larger screens -->
+					<div class="hidden lg:flex space-x-8">
+						<div
+							v-for="link in navLinks"
+							:key="link.path"
+							class="relative"
+							@mouseenter="
+								link.name === 'Om oss'
+									? showSecondaryNavOnHover()
+									: null
+							"
+							@mouseleave="
+								link.name === 'Om oss'
+									? hideSecondaryNavOnHover()
+									: null
+							"
+						>
+							<router-link
+								:to="link.path"
+								class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4"
+								:class="{
+									'text-primary-700 font-semibold active-nav-link':
+										isActive(link.path),
+								}"
+							>
+								{{ link.name }}
+							</router-link>
+						</div>
 					</div>
 
 					<!-- Secondary Navigation for "Om oss" -->
