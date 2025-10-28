@@ -1,5 +1,6 @@
 <template>
 	<SecondaryNavigation />
+	<Breadcrumbs />
 	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
 		<div class="max-w-4xl mx-auto">
 			<h1 class="text-3xl font-bold text-gray-800 mb-6">Jobba hos oss</h1>
@@ -47,11 +48,13 @@
 
 <script>
 import SecondaryNavigation from "@/components/common/SecondaryNavigation.vue";
+import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
 
 export default {
 	name: "JobbaHosOssPage",
 	components: {
 		SecondaryNavigation,
+		Breadcrumbs,
 	},
 };
 </script>

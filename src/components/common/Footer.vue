@@ -8,7 +8,7 @@ const footerNavLinks = [
 	{ name: "Patientinformation", path: "/patientinformation" },
 	{ name: "Boka tid", path: "/boka-tid" },
 	{ name: "Kontakt", path: "/kontakt" },
-	{ name: "Jobba hos oss", path: "/jobba-hos-oss" },
+	{ name: "Jobba hos oss", path: "/om-oss/jobba-hos-oss" },
 ];
 
 // Contact information
