@@ -23,7 +23,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 						telefonnummer 08-123 456 78.
 					</p>
 					<button
-						class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 					>
 						Ring oss nu
 					</button>
@@ -38,7 +38,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 						uppföljning.
 					</p>
 					<button
-						class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 					>
 						Boka tid online
 					</button>
@@ -53,7 +53,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 						COVID-19-vaccin.
 					</p>
 					<button
-						class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 					>
 						Boka vaccinationstid
 					</button>
@@ -68,7 +68,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 						kräver faste.
 					</p>
 					<button
-						class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 					>
 						Boka provtagning
 					</button>

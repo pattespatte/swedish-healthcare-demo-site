@@ -123,26 +123,26 @@
 						<h2 class="text-xl font-semibold mb-3 text-yellow-800">
 							Kompetensutveckling
 						</h2>
-						<ul class="space-y-2 text-gray-700">
-							<li>• Individuell utvecklingsplan</li>
-							<li>• Regelbundna utvecklingssamtal</li>
-							<li>• Internutbildningar</li>
-							<li>• Externa kurser och konferenser</li>
-							<li>• Mentorprogram</li>
-							<li>• Forskningsmöjligheter</li>
+						<ul class="list-disc space-y-2 text-gray-700">
+							<li>Individuell utvecklingsplan</li>
+							<li>Regelbundna utvecklingssamtal</li>
+							<li>Internutbildningar</li>
+							<li>Externa kurser och konferenser</li>
+							<li>Mentorprogram</li>
+							<li>Forskningsmöjligheter</li>
 						</ul>
 					</div>
 					<div class="bg-purple-50 rounded-lg p-6">
 						<h2 class="text-xl font-semibold mb-3 text-purple-800">
 							Ledarskapsutveckling
 						</h2>
-						<ul class="space-y-2 text-gray-700">
-							<li>• Grundläggande ledarskapsutbildning</li>
-							<li>• Avancerad ledarskapsutbildning</li>
-							<li>• Coaching och handledning</li>
-							<li>• Nätverksträffar för chefer</li>
-							<li>• Internationella utbyten</li>
-							<li>• Projektledarutbildning</li>
+						<ul class="list-disc space-y-2 text-gray-700">
+							<li>Grundläggande ledarskapsutbildning</li>
+							<li>Avancerad ledarskapsutbildning</li>
+							<li>Coaching och handledning</li>
+							<li>Nätverksträffar för chefer</li>
+							<li>Internationella utbyten</li>
+							<li>Projektledarutbildning</li>
 						</ul>
 					</div>
 				</div>

@@ -410,7 +410,7 @@ const getOmOssPosition = () => {
 /* For desktop screens (lg and xl) */
 @media (min-width: 768px) {
 	.active-nav-link::after {
-		bottom: 0.5rem; /* Position 0.5rem below the text on larger screens */
+		bottom: 0.3rem; /* Position 0.3rem below the text on larger screens */
 	}
 }
 </style>

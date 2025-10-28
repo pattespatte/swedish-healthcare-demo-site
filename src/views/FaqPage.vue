@@ -126,7 +126,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 				</p>
 				<router-link
 					to="/kontakt"
-					class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
+					class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
 				>
 					Kontakta oss
 				</router-link>

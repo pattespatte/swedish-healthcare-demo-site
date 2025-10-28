@@ -174,7 +174,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 					href="https://www.1177.se"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
+					class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
 				>
 					Besök 1177 Vårdguiden
 				</a>

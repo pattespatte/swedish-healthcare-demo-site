@@ -22,7 +22,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 					För att komma åt Mina Sidor behöver du logga in med BankID.
 				</p>
 				<button
-					class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+					class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
 				>
 					Logga in med BankID
 				</button>
