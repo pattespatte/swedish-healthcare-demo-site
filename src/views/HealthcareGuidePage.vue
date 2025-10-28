@@ -5,7 +5,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 <template>
 	<Breadcrumbs />
 
-	<div class="container mx-auto px-4 py-8">
+	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
 		<div class="max-w-4xl mx-auto">
 			<h1 class="text-3xl font-bold text-gray-800 mb-6">Vårdguide</h1>
 			<p class="text-lg text-neutral-800 mb-8">

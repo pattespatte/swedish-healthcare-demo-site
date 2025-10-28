@@ -142,20 +142,32 @@ const getOmOssPosition = () => {
 						@mouseleave="hideSecondaryNavOnHover"
 					>
 						<div class="px-4 py-4">
-							<nav class="flex space-x-6">
-								<router-link
-									v-for="item in omOssSubNav"
+							<nav
+								class="flex flex-col md:flex-row md:space-x-6 space-y-1 md:space-y-0"
+							>
+								<div
+									v-for="(item, index) in omOssSubNav"
 									:key="item.path"
-									:to="item.path"
-									class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200"
-									:class="{
-										'text-blue-900 font-bold': isActive(
-											item.path
-										),
-									}"
+									class="relative"
 								>
-									{{ item.name }}
-								</router-link>
+									<!-- Divider for mobile view -->
+									<div
+										v-if="index > 0"
+										class="absolute top-0 left-0 right-0 h-px bg-blue-300 md:hidden"
+									></div>
+									<router-link
+										:to="item.path"
+										class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200 py-3 px-3 rounded hover:bg-blue-200 md:hover:bg-transparent md:p-0 block"
+										:class="{
+											'text-blue-900 font-bold': isActive(
+												item.path
+											),
+											'pt-4': index > 0,
+										}"
+									>
+										{{ item.name }}
+									</router-link>
+								</div>
 							</nav>
 						</div>
 					</div>
