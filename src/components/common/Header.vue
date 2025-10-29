@@ -1,17 +1,24 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-// State for mobile menu and secondary navigation
+// Define the navigation item interface
+interface NavItem {
+	name: string;
+	path: string;
+	hasDropdown: boolean;
+	dropdownItems: { name: string; path: string }[];
+}
+
+// State for mobile menu and dropdowns
 const isMenuOpen = ref(false);
-const showSecondaryNav = ref(false);
+const openDropdown = ref<string | null>(null);
 // Initialize with a default value for SSR, then update on client side
 const windowWidth = ref(
 	typeof window !== "undefined" ? window.innerWidth : 1200
 );
-let hoverTimeout: number | null = null;
 
 // Update window width on resize
 const updateWindowWidth = () => {
@@ -25,23 +32,67 @@ if (typeof window !== "undefined") {
 	window.addEventListener("resize", updateWindowWidth);
 }
 
-// Navigation links for the 8 pages
-const navLinks = [
-	// { name: "Start", path: "/" },
-	{ name: "Om oss", path: "/om-oss" },
-	{ name: "Tjänster", path: "/tjanster" },
-	{ name: "Mottagningar", path: "/mottagningar" },
-	{ name: "Patientinformation", path: "/patientinformation" },
-	{ name: "Boka tid", path: "/boka-tid" },
-	{ name: "Kontakt", path: "/kontakt" },
-];
-
-// Om oss sub-navigation items
-const omOssSubNav = [
-	{ name: "Jobba hos oss", path: "/om-oss/jobba-hos-oss" },
-	{ name: "Lediga tjänster", path: "/om-oss/lediga-tjanster" },
-	{ name: "Karriärvägar", path: "/om-oss/karriarvagar" },
-	{ name: "Förmåner", path: "/om-oss/formaner" },
+// Navigation links with dropdowns (merged from Navigation.vue)
+const navLinks: NavItem[] = [
+	{
+		name: "Om oss",
+		path: "/om-oss",
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Om oss", path: "/om-oss" },
+			{ name: "Jobba hos oss", path: "/om-oss/jobba-hos-oss" },
+			{ name: "Lediga tjänster", path: "/om-oss/lediga-tjanster" },
+			{ name: "Karriärvägar", path: "/om-oss/karriarvagar" },
+			{ name: "Förmåner", path: "/om-oss/formaner" },
+		],
+	},
+	{
+		name: "Tjänster",
+		path: "/tjanster",
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Översikt", path: "/tjanster" },
+			{ name: "Mottagningar", path: "/mottagningar" },
+			{
+				name: "Specialistmottagningar",
+				path: "/tjanster/specialistmottagningar",
+			},
+			{ name: "Labbprov", path: "/tjanster/labbprov" },
+			{ name: "Hemsjukvård", path: "/tjanster/hemsjukvard" },
+		],
+	},
+	{
+		name: "Patientinformation",
+		path: "/patientinformation",
+		hasDropdown: true,
+		dropdownItems: [
+			{ name: "Översikt", path: "/patientinformation" },
+			{ name: "Vårdgaranti", path: "/patientinformation/vardgaranti" },
+			{ name: "Avgifter", path: "/patientinformation/avgifter" },
+			{
+				name: "Din vårdkontakt",
+				path: "/patientinformation/din-vardkontakt",
+			},
+		],
+	},
+	{
+		name: "Boka tid",
+		path: "/boka-tid",
+		hasDropdown: false,
+		dropdownItems: [],
+	},
+	{
+		name: "Mina sidor",
+		path: "/mina-sidor",
+		hasDropdown: false,
+		dropdownItems: [],
+	},
+	{
+		name: "Kontakt",
+		path: "/kontakt",
+		hasDropdown: false,
+		dropdownItems: [],
+	},
 ];
 
 // Toggle mobile menu
@@ -49,71 +100,70 @@ const toggleMenu = () => {
 	isMenuOpen.value = !isMenuOpen.value;
 };
 
-// Show secondary navigation on hover
-const showSecondaryNavOnHover = () => {
-	if (hoverTimeout) {
-		clearTimeout(hoverTimeout);
-		hoverTimeout = null;
+// Toggle dropdown
+const toggleDropdown = (name: string) => {
+	if (openDropdown.value === name) {
+		openDropdown.value = null;
+	} else {
+		openDropdown.value = name;
 	}
-	showSecondaryNav.value = true;
 };
 
-// Hide secondary navigation with delay
-const hideSecondaryNavOnHover = () => {
+// Close dropdowns when clicking outside
+const closeDropdowns = () => {
+	openDropdown.value = null;
+};
+
+// Handle ESC key press to close dropdowns
+const handleEscKey = (event: KeyboardEvent) => {
+	if (event.key === "Escape" && openDropdown.value !== null) {
+		closeDropdowns();
+	}
+};
+
+// Handle click outside to close dropdowns
+const handleClickOutside = (event: Event) => {
+	// Check if any dropdown is open
+	if (openDropdown.value === null) return;
+
+	// Get the target element
+	const target = event.target as Element;
+
+	// Check if the click is outside any dropdown container
+	// We need to check if the click is on a dropdown toggle button or inside a dropdown menu
+	const isClickInsideDropdown =
+		target.closest("[data-dropdown-container]") ||
+		target.closest("[data-dropdown-toggle]");
+
+	if (!isClickInsideDropdown) {
+		closeDropdowns();
+	}
+};
+
+// Add event listeners when component mounts
+onMounted(() => {
 	if (typeof window !== "undefined") {
-		hoverTimeout = window.setTimeout(() => {
-			showSecondaryNav.value = false;
-		}, 200); // 200ms delay before hiding
+		document.addEventListener("keydown", handleEscKey);
+		document.addEventListener("click", handleClickOutside);
 	}
-};
+});
 
-// Keep secondary navigation visible when hovering over it
-const keepSecondaryNavVisible = () => {
-	if (hoverTimeout) {
-		clearTimeout(hoverTimeout);
-		hoverTimeout = null;
+// Clean up event listeners when component unmounts
+onUnmounted(() => {
+	if (typeof window !== "undefined") {
+		document.removeEventListener("keydown", handleEscKey);
+		document.removeEventListener("click", handleClickOutside);
 	}
-	showSecondaryNav.value = true;
-};
+});
 
 // Check if a link is active
 const isActive = (path: string) => {
 	return route.path === path;
 };
 
-// Calculate position of "Om oss" link for secondary navigation alignment
-const getOmOssPosition = () => {
-	const omOssIndex = navLinks.findIndex((link) => link.name === "Om oss");
-	if (omOssIndex === -1) return 0;
-
-	// Check if we're in laptop view (where we use a 2-column grid)
-	const isLaptopView = windowWidth.value < 1024;
-
-	if (isLaptopView) {
-		// For laptop view with 2-column grid
-		// Calculate position based on whether "Om oss" is in first or second column
-		const isInFirstColumn = omOssIndex % 2 === 0;
-		const rowIndex = Math.floor(omOssIndex / 2);
-
-		// Base position for first column items
-		const basePosition = isInFirstColumn ? 0 : 150; // Approximate width of first column
-
-		// Adjust for the container padding
-		const finalPosition = basePosition - 20;
-
-		return finalPosition;
-	} else {
-		// For larger screens with single row layout
-		// Calculate the approximate position based on the index
-		// This accounts for the space-x-8 (32px) spacing between items
-		// and the average width of navigation items
-		const basePosition = omOssIndex * 120; // More realistic width per nav item
-
-		// Adjust for the container padding and move significantly more to the left
-		const finalPosition = basePosition - 40; // Further reduced offset for better alignment (additional 20px to the left)
-
-		return finalPosition;
-	}
+// Check if a dropdown item is active
+const isDropdownActive = (dropdownItems: any[]) => {
+	return dropdownItems.some((item) => route.path === item.path);
 };
 </script>
 
@@ -141,27 +191,85 @@ const getOmOssPosition = () => {
 							v-for="link in navLinks"
 							:key="link.path"
 							class="relative"
-							@mouseenter="
-								link.name === 'Om oss'
-									? showSecondaryNavOnHover()
-									: null
-							"
-							@mouseleave="
-								link.name === 'Om oss'
-									? hideSecondaryNavOnHover()
-									: null
-							"
+							data-dropdown-container
 						>
-							<router-link
-								:to="link.path"
-								class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-2"
+							<!-- Dropdown Menu for laptop view -->
+							<div
+								v-if="link.hasDropdown"
+								class="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-b-lg z-10"
 								:class="{
-									'text-primary-700 font-semibold active-nav-link':
-										isActive(link.path),
+									block: openDropdown === link.name,
+									hidden: openDropdown !== link.name,
 								}"
+								data-dropdown-container
 							>
-								{{ link.name }}
-							</router-link>
+								<ul>
+									<li
+										v-for="item in link.dropdownItems"
+										:key="item.path"
+									>
+										<router-link
+											:to="item.path"
+											class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
+											:class="{
+												'bg-primary-50 text-primary-700 font-medium':
+													isActive(item.path),
+											}"
+											@click="closeDropdowns"
+										>
+											{{ item.name }}
+										</router-link>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Link with inline dropdown toggle button -->
+							<div class="flex items-center">
+								<router-link
+									:to="link.path"
+									class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-2 flex-1"
+									:class="{
+										'text-primary-700 font-semibold active-nav-link':
+											isActive(link.path) ||
+											(link.hasDropdown &&
+												isDropdownActive(
+													link.dropdownItems
+												)),
+									}"
+									@click="closeDropdowns"
+								>
+									{{ link.name }}
+								</router-link>
+
+								<!-- Dropdown Toggle Button -->
+								<button
+									v-if="link.hasDropdown"
+									@click="toggleDropdown(link.name)"
+									class="ml-2 px-2 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+									:aria-expanded="openDropdown === link.name"
+									:aria-label="`Visa undermeny för ${link.name}`"
+									data-dropdown-toggle
+								>
+									<svg
+										class="w-4 h-4 transition-transform duration-200"
+										:class="{
+											'rotate-180':
+												openDropdown === link.name,
+										}"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M19 9l-7 7-7-7"
+										></path>
+									</svg>
+								</button>
+							</div>
 						</div>
 					</div>
 
@@ -171,73 +279,85 @@ const getOmOssPosition = () => {
 							v-for="link in navLinks"
 							:key="link.path"
 							class="relative"
-							@mouseenter="
-								link.name === 'Om oss'
-									? showSecondaryNavOnHover()
-									: null
-							"
-							@mouseleave="
-								link.name === 'Om oss'
-									? hideSecondaryNavOnHover()
-									: null
-							"
+							data-dropdown-container
 						>
-							<router-link
-								:to="link.path"
-								class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4"
+							<!-- Dropdown Menu for desktop view -->
+							<div
+								v-if="link.hasDropdown"
+								class="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-b-lg z-10"
 								:class="{
-									'text-primary-700 font-semibold active-nav-link':
-										isActive(link.path),
+									block: openDropdown === link.name,
+									hidden: openDropdown !== link.name,
 								}"
+								data-dropdown-container
 							>
-								{{ link.name }}
-							</router-link>
-						</div>
-					</div>
-
-					<!-- Secondary Navigation for "Om oss" -->
-					<div
-						class="absolute top-full bg-blue-100 border-b border-blue-200 transition-all duration-300 ease-in-out z-20"
-						:style="{
-							left: `${getOmOssPosition()}px`,
-							width: '400px',
-						}"
-						:class="{
-							'opacity-100 translate-y-0': showSecondaryNav,
-							'opacity-0 -translate-y-2 pointer-events-none':
-								!showSecondaryNav,
-						}"
-						@mouseenter="keepSecondaryNavVisible"
-						@mouseleave="hideSecondaryNavOnHover"
-					>
-						<div class="px-4 py-4">
-							<nav
-								class="flex flex-col md:flex-row md:space-x-6 space-y-1 md:space-y-0"
-							>
-								<div
-									v-for="(item, index) in omOssSubNav"
-									:key="item.path"
-									class="relative"
-								>
-									<!-- Divider for mobile view -->
-									<div
-										v-if="index > 0"
-										class="absolute top-0 left-0 right-0 h-px bg-blue-300 md:hidden"
-									></div>
-									<router-link
-										:to="item.path"
-										class="text-blue-700 hover:text-blue-900 font-medium transition-colors duration-200 py-3 px-3 rounded hover:bg-blue-200 md:hover:bg-transparent md:p-0 block"
-										:class="{
-											'text-blue-900 font-bold': isActive(
-												item.path
-											),
-											'pt-4': index > 0,
-										}"
+								<ul>
+									<li
+										v-for="item in link.dropdownItems"
+										:key="item.path"
 									>
-										{{ item.name }}
-									</router-link>
-								</div>
-							</nav>
+										<router-link
+											:to="item.path"
+											class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
+											:class="{
+												'bg-primary-50 text-primary-700 font-medium':
+													isActive(item.path),
+											}"
+											@click="closeDropdowns"
+										>
+											{{ item.name }}
+										</router-link>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Link with inline dropdown toggle button -->
+							<div class="flex items-center">
+								<router-link
+									:to="link.path"
+									class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4 flex-1"
+									:class="{
+										'text-primary-700 font-semibold active-nav-link':
+											isActive(link.path) ||
+											(link.hasDropdown &&
+												isDropdownActive(
+													link.dropdownItems
+												)),
+									}"
+									@click="closeDropdowns"
+								>
+									{{ link.name }}
+								</router-link>
+
+								<!-- Dropdown Toggle Button -->
+								<button
+									v-if="link.hasDropdown"
+									@click="toggleDropdown(link.name)"
+									class="ml-2 px-2 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+									:aria-expanded="openDropdown === link.name"
+									:aria-label="`Visa undermeny för ${link.name}`"
+									data-dropdown-toggle
+								>
+									<svg
+										class="w-4 h-4 transition-transform duration-200"
+										:class="{
+											'rotate-180':
+												openDropdown === link.name,
+										}"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M19 9l-7 7-7-7"
+										></path>
+									</svg>
+								</button>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -339,17 +459,90 @@ const getOmOssPosition = () => {
 				v-if="isMenuOpen"
 				class="md:hidden py-4 border-t border-neutral-200"
 			>
-				<nav class="flex flex-col space-y-3">
-					<router-link
+				<nav class="flex flex-col space-y-1">
+					<div
 						v-for="link in navLinks"
-						:key="link.path"
-						:to="link.path"
-						class="text-neutral-700 hover:text-primary-700 font-medium py-2 transition-colors duration-200"
-						active-class="text-primary-700 font-semibold active-nav-link"
-						@click="isMenuOpen = false"
+						:key="link.name"
+						data-dropdown-container
 					>
-						{{ link.name }}
-					</router-link>
+						<!-- Mobile Dropdown Menu -->
+						<ul
+							v-if="
+								link.hasDropdown && openDropdown === link.name
+							"
+							class="bg-neutral-50 pl-6"
+							data-dropdown-container
+						>
+							<li
+								v-for="item in link.dropdownItems"
+								:key="item.path"
+							>
+								<router-link
+									:to="item.path"
+									class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
+									:class="{
+										'bg-primary-50 text-primary-700 font-medium':
+											isActive(item.path),
+									}"
+									@click="isMenuOpen = false"
+								>
+									{{ item.name }}
+								</router-link>
+							</li>
+						</ul>
+
+						<!-- Link with inline dropdown toggle button -->
+						<div class="flex items-center justify-between">
+							<router-link
+								:to="link.path"
+								class="flex-1 px-4 py-3 block text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200"
+								:class="{
+									'text-primary-700 font-semibold active-nav-link':
+										isActive(link.path) ||
+										(link.hasDropdown &&
+											isDropdownActive(
+												link.dropdownItems
+											)),
+								}"
+								@click="
+									link.hasDropdown
+										? toggleDropdown(link.name)
+										: (isMenuOpen = false)
+								"
+							>
+								{{ link.name }}
+							</router-link>
+
+							<!-- Mobile Dropdown Toggle Button -->
+							<button
+								v-if="link.hasDropdown"
+								@click="toggleDropdown(link.name)"
+								class="px-4 py-3 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+								:aria-expanded="openDropdown === link.name"
+								:aria-label="`Visa undermeny för ${link.name}`"
+								data-dropdown-toggle
+							>
+								<svg
+									class="w-4 h-4 transition-transform duration-200"
+									:class="{
+										'rotate-180':
+											openDropdown === link.name,
+									}"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+						</div>
+					</div>
 				</nav>
 
 				<!-- Mobile Search -->

@@ -71,7 +71,7 @@ const formatPhoneLink = (phone: string): string => {
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="text-neutral-300 hover:text-white transition-colors duration-200"
+							class="text-neutral-300 hover:text-white transition-colors duration-200 text-sm"
 						>
 							{{ link.name }}
 						</router-link>
