@@ -453,7 +453,7 @@ const submitContact = () => {
 					label="Meddelande"
 					placeholder="Beskriv ditt behov eller dina frågor..."
 					v-model="contactForm.message"
-					rows="4"
+					:rows="4"
 				/>
 			</div>
 

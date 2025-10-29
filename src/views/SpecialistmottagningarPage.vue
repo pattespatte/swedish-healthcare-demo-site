@@ -283,7 +283,6 @@ const submitBooking = () => {
 					:key="`specialist-${index}`"
 					:title="clinic.name"
 					:name="clinic.specialists[0]"
-					:role="Specialist"
 					phone="08-123 456 90"
 					address="Specialistmottagningen, 123 45 Stockholm"
 				>
