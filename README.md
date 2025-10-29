@@ -14,7 +14,7 @@ A modern, responsive Vue.js-based website for a Swedish healthcare practice, bui
 - **FAQ Section**: Frequently asked questions about services and procedures
 - **Clinic Information**: Details about different clinics and departments (Mottagningar)
 - **Patient Information**: Educational resources and medical forms
-- **Career Opportunities**: Job listings and application information (Jobba Hos Oss)
+- **Career Opportunities**: Job listings and application information (Jobba hos oss)
 - **Contact Information**: Multiple ways to get in touch with the practice
 
 ## Technology Stack

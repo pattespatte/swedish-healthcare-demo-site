@@ -168,202 +168,33 @@ const isDropdownActive = (dropdownItems: any[]) => {
 </script>
 
 <template>
-	<header class="bg-white shadow-md">
-		<div class="container mx-auto px-4">
-			<div class="flex justify-between items-center py-4">
+	<header class="shadow-md">
+		<!-- Row 1: Logo, empty space, search and language selector - Full width -->
+		<div
+			class="flex justify-between items-center py-4 border-b border-neutral-600 bg-slate-900"
+		>
+			<div
+				class="container mx-auto px-4 flex justify-between items-center"
+			>
 				<!-- Logo placeholder -->
 				<router-link to="/" class="flex items-center">
 					<div
-						class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center"
+						class="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center"
 					>
-						<span class="text-white font-bold text-xl">VÅ</span>
+						<span class="text-neutral-300 font-bold text-xl"
+							>VÅ</span
+						>
 					</div>
-					<span class="ml-3 text-xl font-bold text-neutral-800"
+					<span class="ml-3 text-xl font-bold text-white"
 						>Vårdportalen</span
 					>
 				</router-link>
 
-				<!-- Desktop Navigation -->
-				<nav class="hidden md:flex relative">
-					<!-- Two-row layout for laptop screens (1024px or narrower) -->
-					<div class="lg:hidden grid grid-cols-2 gap-x-8 gap-y-2">
-						<div
-							v-for="link in navLinks"
-							:key="link.path"
-							class="relative"
-							data-dropdown-container
-						>
-							<!-- Dropdown Menu for laptop view -->
-							<div
-								v-if="link.hasDropdown"
-								class="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-b-lg z-10"
-								:class="{
-									block: openDropdown === link.name,
-									hidden: openDropdown !== link.name,
-								}"
-								data-dropdown-container
-							>
-								<ul>
-									<li
-										v-for="item in link.dropdownItems"
-										:key="item.path"
-									>
-										<router-link
-											:to="item.path"
-											class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
-											:class="{
-												'bg-primary-50 text-primary-700 font-medium':
-													isActive(item.path),
-											}"
-											@click="closeDropdowns"
-										>
-											{{ item.name }}
-										</router-link>
-									</li>
-								</ul>
-							</div>
-
-							<!-- Link with inline dropdown toggle button -->
-							<div class="flex items-center">
-								<router-link
-									:to="link.path"
-									class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-2 flex-1"
-									:class="{
-										'text-primary-700 font-semibold active-nav-link':
-											isActive(link.path) ||
-											(link.hasDropdown &&
-												isDropdownActive(
-													link.dropdownItems
-												)),
-									}"
-									@click="closeDropdowns"
-								>
-									{{ link.name }}
-								</router-link>
-
-								<!-- Dropdown Toggle Button -->
-								<button
-									v-if="link.hasDropdown"
-									@click="toggleDropdown(link.name)"
-									class="ml-2 px-2 text-neutral-500 hover:text-neutral-800 focus:outline-none"
-									:aria-expanded="openDropdown === link.name"
-									:aria-label="`Visa undermeny för ${link.name}`"
-									data-dropdown-toggle
-								>
-									<svg
-										class="w-4 h-4 transition-transform duration-200"
-										:class="{
-											'rotate-180':
-												openDropdown === link.name,
-										}"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<!-- Single row layout for larger screens -->
-					<div class="hidden lg:flex space-x-8">
-						<div
-							v-for="link in navLinks"
-							:key="link.path"
-							class="relative"
-							data-dropdown-container
-						>
-							<!-- Dropdown Menu for desktop view -->
-							<div
-								v-if="link.hasDropdown"
-								class="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-b-lg z-10"
-								:class="{
-									block: openDropdown === link.name,
-									hidden: openDropdown !== link.name,
-								}"
-								data-dropdown-container
-							>
-								<ul>
-									<li
-										v-for="item in link.dropdownItems"
-										:key="item.path"
-									>
-										<router-link
-											:to="item.path"
-											class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
-											:class="{
-												'bg-primary-50 text-primary-700 font-medium':
-													isActive(item.path),
-											}"
-											@click="closeDropdowns"
-										>
-											{{ item.name }}
-										</router-link>
-									</li>
-								</ul>
-							</div>
-
-							<!-- Link with inline dropdown toggle button -->
-							<div class="flex items-center">
-								<router-link
-									:to="link.path"
-									class="text-primary-700 hover:text-neutral-700 font-medium transition-colors duration-200 block py-4 flex-1"
-									:class="{
-										'text-primary-700 font-semibold active-nav-link':
-											isActive(link.path) ||
-											(link.hasDropdown &&
-												isDropdownActive(
-													link.dropdownItems
-												)),
-									}"
-									@click="closeDropdowns"
-								>
-									{{ link.name }}
-								</router-link>
-
-								<!-- Dropdown Toggle Button -->
-								<button
-									v-if="link.hasDropdown"
-									@click="toggleDropdown(link.name)"
-									class="ml-2 px-2 text-neutral-500 hover:text-neutral-800 focus:outline-none"
-									:aria-expanded="openDropdown === link.name"
-									:aria-label="`Visa undermeny för ${link.name}`"
-									data-dropdown-toggle
-								>
-									<svg
-										class="w-4 h-4 transition-transform duration-200"
-										:class="{
-											'rotate-180':
-												openDropdown === link.name,
-										}"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</nav>
+				<!-- Empty space in the middle - this will expand to push search and language to the right -->
+				<div class="flex-1"></div>
 
 				<!-- Right side: Search and Language -->
-				<div class="hidden xl:flex items-center space-x-4">
+				<div class="hidden md:flex items-center space-x-4">
 					<!-- Search functionality -->
 					<div class="relative">
 						<input
@@ -417,7 +248,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 				<!-- Mobile menu button -->
 				<button
 					@click="toggleMenu"
-					class="md:hidden text-neutral-700 hover:text-primary-700 focus:outline-none"
+					class="md:hidden text-white hover:text-primary-300 focus:outline-none"
 					aria-label="Öppna meny"
 					aria-expanded="false"
 				>
@@ -453,12 +284,198 @@ const isDropdownActive = (dropdownItems: any[]) => {
 					</svg>
 				</button>
 			</div>
+		</div>
 
-			<!-- Mobile Navigation -->
-			<div
-				v-if="isMenuOpen"
-				class="md:hidden py-4 border-t border-neutral-200"
-			>
+		<!-- Row 2: Navigation links centered - Full width -->
+		<div class="flex justify-center py-3 bg-slate-800">
+			<div class="container mx-auto px-4">
+				<!-- Desktop Navigation -->
+				<nav class="hidden md:flex relative">
+					<!-- Two-row layout for laptop screens (1024px or narrower) -->
+					<div class="lg:hidden grid grid-cols-2 gap-x-8 gap-y-2">
+						<div
+							v-for="link in navLinks"
+							:key="link.path"
+							class="relative"
+							data-dropdown-container
+						>
+							<!-- Dropdown Menu for laptop view -->
+							<div
+								v-if="link.hasDropdown"
+								class="absolute left-0 mt-0 w-56 bg-slate-600 shadow-lg rounded-b-lg z-10"
+								:class="{
+									block: openDropdown === link.name,
+									hidden: openDropdown !== link.name,
+								}"
+								data-dropdown-container
+							>
+								<ul>
+									<li
+										v-for="item in link.dropdownItems"
+										:key="item.path"
+									>
+										<router-link
+											:to="item.path"
+											class="block px-4 py-3 text-white hover:bg-slate-800 transition-colors duration-200"
+											:class="{
+												'bg-slate-800 text-white font-medium':
+													isActive(item.path),
+											}"
+											@click="closeDropdowns"
+										>
+											{{ item.name }}
+										</router-link>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Link with inline dropdown toggle button -->
+							<div class="flex items-center">
+								<router-link
+									:to="link.path"
+									class="text-slate-200 hover:text-white font-medium transition-colors duration-200 block py-2 flex-1"
+									:class="{
+										'font-semibold active-nav-link':
+											isActive(link.path) ||
+											(link.hasDropdown &&
+												isDropdownActive(
+													link.dropdownItems
+												)),
+									}"
+									@click="closeDropdowns"
+								>
+									{{ link.name }}
+								</router-link>
+
+								<!-- Dropdown Toggle Button -->
+								<button
+									v-if="link.hasDropdown"
+									@click="toggleDropdown(link.name)"
+									class="ml-2 px-2 text-white hover:text-neutral-200 focus:outline-none"
+									:aria-expanded="openDropdown === link.name"
+									:aria-label="`Visa undermeny för ${link.name}`"
+									data-dropdown-toggle
+								>
+									<svg
+										class="w-4 h-4 transition-transform duration-200"
+										:class="{
+											'rotate-180':
+												openDropdown === link.name,
+										}"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M19 9l-7 7-7-7"
+										></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Single row layout for larger screens -->
+					<div class="hidden lg:flex space-x-8">
+						<div
+							v-for="link in navLinks"
+							:key="link.path"
+							class="relative"
+							data-dropdown-container
+						>
+							<!-- Dropdown Menu for desktop view -->
+							<div
+								v-if="link.hasDropdown"
+								class="absolute left-0 mt-0 w-56 bg-slate-700 shadow-lg rounded-b-lg z-10"
+								:class="{
+									block: openDropdown === link.name,
+									hidden: openDropdown !== link.name,
+								}"
+								data-dropdown-container
+							>
+								<ul>
+									<li
+										v-for="item in link.dropdownItems"
+										:key="item.path"
+									>
+										<router-link
+											:to="item.path"
+											class="block px-4 py-3 text-white hover:bg-slate-900 transition-colors duration-200"
+											:class="{
+												'bg-slate-800 text-white font-medium':
+													isActive(item.path),
+											}"
+											@click="closeDropdowns"
+										>
+											{{ item.name }}
+										</router-link>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Link with inline dropdown toggle button -->
+							<div class="flex items-center">
+								<router-link
+									:to="link.path"
+									class="text-slate-200 hover:text-white font-medium transition-colors duration-200 block py-4 flex-1"
+									:class="{
+										'font-semibold active-nav-link':
+											isActive(link.path) ||
+											(link.hasDropdown &&
+												isDropdownActive(
+													link.dropdownItems
+												)),
+									}"
+									@click="closeDropdowns"
+								>
+									{{ link.name }}
+								</router-link>
+
+								<!-- Dropdown Toggle Button -->
+								<button
+									v-if="link.hasDropdown"
+									@click="toggleDropdown(link.name)"
+									class="ml-2 px-2 text-white hover:text-neutral-200 focus:outline-none"
+									:aria-expanded="openDropdown === link.name"
+									:aria-label="`Visa undermeny för ${link.name}`"
+									data-dropdown-toggle
+								>
+									<svg
+										class="w-4 h-4 transition-transform duration-200"
+										:class="{
+											'rotate-180':
+												openDropdown === link.name,
+										}"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M19 9l-7 7-7-7"
+										></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Mobile Navigation - Full width -->
+		<div
+			v-if="isMenuOpen"
+			class="md:hidden py-4 border-t border-neutral-600 bg-slate-800"
+		>
+			<div class="container mx-auto px-4">
 				<nav class="flex flex-col space-y-1">
 					<div
 						v-for="link in navLinks"
@@ -470,7 +487,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							v-if="
 								link.hasDropdown && openDropdown === link.name
 							"
-							class="bg-neutral-50 pl-6"
+							class="bg-slate-800 pl-6"
 							data-dropdown-container
 						>
 							<li
@@ -479,9 +496,9 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							>
 								<router-link
 									:to="item.path"
-									class="block px-4 py-3 text-neutral-700 hover:bg-primary-50 hover:text-neutral-800 transition-colors duration-200"
+									class="block px-4 py-3 text-white hover:bg-slate-800 transition-colors duration-200"
 									:class="{
-										'bg-primary-50 text-primary-700 font-medium':
+										'bg-slate-800 text-white font-medium':
 											isActive(item.path),
 									}"
 									@click="isMenuOpen = false"
@@ -495,9 +512,10 @@ const isDropdownActive = (dropdownItems: any[]) => {
 						<div class="flex items-center justify-between">
 							<router-link
 								:to="link.path"
-								class="flex-1 px-4 py-3 block text-neutral-700 hover:text-primary-700 font-medium transition-colors duration-200"
+								class="flex-1 px-4 py-3 block hover:text-primary-700 font-medium transition-colors duration-200"
+								style="color: #edf06f"
 								:class="{
-									'text-primary-700 font-semibold active-nav-link':
+									'font-semibold active-nav-link':
 										isActive(link.path) ||
 										(link.hasDropdown &&
 											isDropdownActive(
@@ -517,7 +535,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							<button
 								v-if="link.hasDropdown"
 								@click="toggleDropdown(link.name)"
-								class="px-4 py-3 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+								class="px-4 py-3 text-white hover:text-neutral-200 focus:outline-none"
 								:aria-expanded="openDropdown === link.name"
 								:aria-label="`Visa undermeny för ${link.name}`"
 								data-dropdown-toggle
@@ -597,13 +615,21 @@ const isDropdownActive = (dropdownItems: any[]) => {
 	left: 0;
 	width: 100%;
 	height: 4px; /* 4px thick underline */
-	background-color: #d1d5db; /* Light gray color */
+	background-color: #3b82f6; /* Blue color from the palette */
 }
 
-/* For desktop screens (lg and xl) */
+/* For desktop screens (md and up) */
 @media (min-width: 768px) {
 	.active-nav-link::after {
 		bottom: 0.3rem; /* Position 0.3rem below the text on larger screens */
+	}
+}
+
+/* Ensure proper spacing for the two-row layout */
+@media (min-width: 1024px) {
+	/* Adjust the active nav link positioning for the second row */
+	nav .active-nav-link::after {
+		bottom: 0.2rem; /* Slight adjustment for better visual alignment in second row */
 	}
 }
 </style>

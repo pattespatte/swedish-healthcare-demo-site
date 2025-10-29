@@ -56,7 +56,7 @@ const formatPhoneLink = (phone: string): string => {
 </script>
 
 <template>
-	<footer class="bg-neutral-800 text-white">
+	<footer class="bg-slate-800 text-white">
 		<div class="container mx-auto px-4 py-4 sm:py-6">
 			<div
 				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
@@ -140,7 +140,7 @@ const formatPhoneLink = (phone: string): string => {
 						>
 							<!-- Placeholder icons - in a real implementation, you would use actual icon components -->
 							<div
-								class="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center"
+								class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center"
 							>
 								<span class="text-xs font-semibold">{{
 									link.icon.charAt(0).toUpperCase()
