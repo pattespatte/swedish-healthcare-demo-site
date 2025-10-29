@@ -287,7 +287,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 		</div>
 
 		<!-- Row 2: Navigation links centered - Full width -->
-		<div class="flex justify-center py-3 bg-slate-800">
+		<div class="hidden md:flex justify-center py-3 bg-slate-800">
 			<div class="container mx-auto px-4">
 				<!-- Desktop Navigation -->
 				<nav class="hidden md:flex relative">
@@ -316,7 +316,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									>
 										<router-link
 											:to="item.path"
-											class="block px-4 py-3 text-white hover:bg-slate-800 transition-colors duration-200"
+											class="block px-4 py-3 text-white hover:text-slate-800 transition-colors duration-200"
 											:class="{
 												'bg-slate-800 text-white font-medium':
 													isActive(item.path),
@@ -498,7 +498,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									:to="item.path"
 									class="block px-4 py-3 text-white hover:bg-slate-800 transition-colors duration-200"
 									:class="{
-										'bg-slate-800 text-white font-medium':
+										'bg-slate-700 text-yellow-200 font-medium':
 											isActive(item.path),
 									}"
 									@click="isMenuOpen = false"
@@ -512,8 +512,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 						<div class="flex items-center justify-between">
 							<router-link
 								:to="link.path"
-								class="flex-1 px-4 py-3 block hover:text-primary-700 font-medium transition-colors duration-200"
-								style="color: #edf06f"
+								class="flex-1 px-4 py-3 block text-white hover:text-white font-medium transition-colors duration-200"
 								:class="{
 									'font-semibold active-nav-link':
 										isActive(link.path) ||

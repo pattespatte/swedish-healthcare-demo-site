@@ -21,12 +21,14 @@ const isActive = (path: string) => {
 <template>
 	<div class="bg-neutral-800 border-b border-blue-200">
 		<div class="container mx-auto px-4 py-4">
-			<nav class="flex space-x-6">
+			<nav
+				class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0"
+			>
 				<router-link
 					v-for="item in navItems"
 					:key="item.path"
 					:to="item.path"
-					class="text-white hover:text-blue-300 font-medium transition-colors duration-200"
+					class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-1"
 					:class="{
 						'text-yellow-100 font-bold active-nav-link': isActive(
 							item.path
@@ -52,6 +54,6 @@ const isActive = (path: string) => {
 	left: 0;
 	width: 100%;
 	height: 4px; /* 4px thick underline */
-	background-color: #797f87; /* Approximately 40% lighter than #1f2937 */
+	background-color: #9dc1fa;
 }
 </style>
