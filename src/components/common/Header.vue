@@ -171,7 +171,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 	<header class="shadow-md">
 		<!-- Row 1: Logo, empty space, search and language selector - Full width -->
 		<div
-			class="flex justify-between items-center py-4 border-b border-neutral-600 bg-slate-900"
+			class="flex justify-between items-center py-3 border-b border-neutral-600 bg-slate-900"
 		>
 			<div
 				class="container mx-auto px-4 flex justify-between items-center"
@@ -287,7 +287,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 		</div>
 
 		<!-- Row 2: Navigation links centered - Full width -->
-		<div class="hidden md:flex justify-center py-3 bg-slate-800">
+		<div class="hidden md:flex justify-center py-2 bg-slate-800">
 			<div class="container mx-auto px-4">
 				<!-- Desktop Navigation -->
 				<nav class="hidden md:flex relative">

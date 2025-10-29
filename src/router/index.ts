@@ -116,6 +116,17 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Cookies',
 		component: () => import('@/views/CookiesPage.vue')
 	},
+	{
+		path: '/components',
+		name: 'Components',
+		component: () => import('@/views/ComponentsPage.vue')
+	},
+	{
+		// Catch all 404 routes
+		path: '/:pathMatch(.*)*',
+		name: 'NotFound',
+		component: () => import('@/views/NotFoundPage.vue')
+	}
 ]
 
 const router = createRouter({
