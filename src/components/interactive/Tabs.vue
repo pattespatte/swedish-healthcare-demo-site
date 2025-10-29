@@ -1,22 +1,25 @@
 <template>
 	<div class="w-full">
 		<!-- Tab navigation -->
-		<div class="border-b border-neutral-200">
-			<nav
-				class="-mb-px flex space-x-8 overflow-x-auto"
-				aria-label="Flikar"
-			>
+		<div class="relative pl-1 overflow-x-auto">
+			<!-- Tab border line (behind tabs) -->
+			<div
+				class="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 z-0"
+			></div>
+
+			<nav class="flex relative z-10 min-w-max" aria-label="Flikar">
 				<button
-					v-for="tab in tabs"
+					v-for="(tab, index) in tabs"
 					:key="tab.id"
 					type="button"
-					class="py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-t-md transition-colors"
+					class="py-4 px-4 font-medium text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
 					:class="[
 						tab.id === activeTab
-							? 'border-primary-500 text-primary-600'
+							? 'bg-white border border-neutral-200 border-b-white text-primary-600 rounded-t-md -mb-px relative z-20'
 							: tab.disabled
 							? 'border-transparent text-neutral-400 cursor-not-allowed'
 							: 'border-transparent text-neutral-500 hover:text-neutral-700 hover:border-neutral-300',
+						index === 0 ? 'ml-0' : '-ml-px',
 					]"
 					:aria-selected="tab.id === activeTab"
 					:aria-controls="`tabpanel-${tab.id}`"
@@ -30,8 +33,10 @@
 			</nav>
 		</div>
 
-		<!-- Tab panels -->
-		<div class="mt-4">
+		<!-- Tab panels with border -->
+		<div
+			class="border border-t-0 border-neutral-200 rounded-b-md p-4 bg-white"
+		>
 			<div
 				v-for="tab in tabs"
 				:key="`panel-${tab.id}`"

@@ -26,72 +26,73 @@
 			leave-from-class="opacity-100 scale-100"
 			leave-to-class="opacity-0 scale-95"
 		>
-		<div
-			v-if="visible"
-			class="fixed inset-0 z-50 flex items-center justify-center p-4"
-			role="dialog"
-			aria-modal="true"
-			:aria-labelledby="titleId"
-			@keydown.esc="handleEscapeKey"
-		>
 			<div
-				:class="modalSizeClasses"
-				class="bg-white rounded-lg shadow-xl max-h-[90vh] flex flex-col overflow-hidden"
-				@click.stop
+				v-if="visible"
+				class="fixed inset-0 z-50 flex items-center justify-center p-4"
+				role="dialog"
+				aria-modal="true"
+				:aria-labelledby="titleId"
+				@keydown.esc="handleEscapeKey"
 			>
-				<!-- Modal header -->
 				<div
-					v-if="$slots.header || title"
-					class="px-6 py-4 border-b border-neutral-200"
+					:class="modalSizeClasses"
+					class="bg-white rounded-lg shadow-xl max-h-[90vh] flex flex-col overflow-hidden"
+					@click.stop
 				>
-					<div class="flex items-center justify-between">
-						<h2
-							:id="titleId"
-							class="text-xl font-semibold text-neutral-800"
-						>
-							{{ title }}
-						</h2>
-						<button
-							v-if="closable"
-							type="button"
-							class="text-neutral-500 hover:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full p-1"
-							@click="$emit('update:visible', false)"
-							aria-label="Stäng"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
+					<!-- Modal header -->
+					<div
+						v-if="$slots.header || title"
+						class="px-6 py-4 border-b border-neutral-200"
+					>
+						<div class="flex items-center justify-between">
+							<h2
+								:id="titleId"
+								class="text-xl font-semibold text-neutral-800"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M6 18L18 6M6 6l12 12"
-								/>
-							</svg>
-						</button>
+								{{ title }}
+							</h2>
+							<button
+								v-if="closable"
+								type="button"
+								class="text-neutral-500 hover:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full p-1"
+								@click="$emit('update:visible', false)"
+								aria-label="Stäng"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+							</button>
+						</div>
+						<slot name="header"></slot>
 					</div>
-					<slot name="header"></slot>
-				</div>
 
-				<!-- Modal body -->
-				<div class="flex-1 overflow-y-auto px-6 py-4">
-					<slot></slot>
-				</div>
+					<!-- Modal body -->
+					<div class="flex-1 overflow-y-auto px-6 py-4">
+						<slot></slot>
+					</div>
 
-				<!-- Modal footer -->
-				<div
-					v-if="$slots.footer"
-					class="px-6 py-4 border-t border-neutral-200 bg-neutral-50"
-				>
-					<slot name="footer"></slot>
+					<!-- Modal footer -->
+					<div
+						v-if="$slots.footer"
+						class="px-6 py-4 border-t border-neutral-200 bg-neutral-50"
+					>
+						<slot name="footer"></slot>
+					</div>
 				</div>
 			</div>
-		</div>
-	</Transition>
+		</Transition>
+	</div>
 </template>
 
 <script setup lang="ts">

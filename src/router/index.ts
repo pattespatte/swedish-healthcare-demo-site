@@ -37,6 +37,21 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/ServicesPage.vue')
 	},
 	{
+		path: '/tjanster/specialistmottagningar',
+		name: 'Specialistmottagningar',
+		component: () => import('@/views/SpecialistmottagningarPage.vue')
+	},
+	{
+		path: '/tjanster/labbprov',
+		name: 'Labbprov',
+		component: () => import('@/views/LabbprovPage.vue')
+	},
+	{
+		path: '/tjanster/hemsjukvard',
+		name: 'Hemsjukvard',
+		component: () => import('@/views/HemsjukvardPage.vue')
+	},
+	{
 		path: '/kontakt',
 		name: 'Contact',
 		component: () => import('@/views/ContactPage.vue')
@@ -75,6 +90,21 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/patientinformation',
 		name: 'Patientinformation',
 		component: () => import('@/views/PatientinformationPage.vue')
+	},
+	{
+		path: '/patientinformation/vardgaranti',
+		name: 'Vardgaranti',
+		component: () => import('@/views/VardgarantiPage.vue')
+	},
+	{
+		path: '/patientinformation/avgifter',
+		name: 'Avgifter',
+		component: () => import('@/views/AvgifterPage.vue')
+	},
+	{
+		path: '/patientinformation/din-vardkontakt',
+		name: 'DinVardkontakt',
+		component: () => import('@/views/DinVardkontaktPage.vue')
 	},
 	{
 		path: '/integritetspolicy',
