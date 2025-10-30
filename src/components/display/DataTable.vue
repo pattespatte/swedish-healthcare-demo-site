@@ -2,7 +2,12 @@
 	<div
 		class="bg-white shadow-md rounded-lg overflow-hidden border border-neutral-200"
 	>
-		<div class="overflow-x-auto">
+		<div
+			class="overflow-x-auto"
+			tabindex="0"
+			role="region"
+			aria-label="Tabell med data"
+		>
 			<table class="min-w-full divide-y divide-neutral-200">
 				<thead class="bg-neutral-50">
 					<tr>

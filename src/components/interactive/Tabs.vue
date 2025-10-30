@@ -18,10 +18,9 @@
 							? 'bg-white border border-neutral-200 border-b-white text-primary-600 rounded-t-md -mb-px relative z-20'
 							: tab.disabled
 							? 'border-transparent text-neutral-400 cursor-not-allowed'
-							: 'border-transparent text-neutral-500 hover:text-neutral-700 hover:border-neutral-300',
+							: 'border-transparent text-neutral-600 hover:text-neutral-900 hover:border-neutral-300',
 						index === 0 ? 'ml-0' : '-ml-px',
 					]"
-					:aria-selected="tab.id === activeTab"
 					:aria-controls="`tabpanel-${tab.id}`"
 					:disabled="tab.disabled"
 					:tabindex="tab.disabled ? -1 : 0"

@@ -134,12 +134,12 @@
 					</p>
 					<div class="flex space-x-4">
 						<button
-							class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+							class="bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 						>
 							Ladda ner förmånshandbok (PDF)
 						</button>
 						<button
-							class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors"
+							class="bg-neutral-600 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
 						>
 							Kontakta HR
 						</button>

@@ -15,8 +15,8 @@ export default {
 					50: '#eff6ff',
 					100: '#dbeafe',
 					300: '#93c5fd',
-					500: '#2e60ff',
-					600: '#2563eb',
+					500: '#1e40af', // Changed from #2e60ff to #1e40af for better contrast
+					600: '#1e3a8a', // Darker for better contrast
 					700: '#1d4ed8',
 					800: '#1e40af',
 				},

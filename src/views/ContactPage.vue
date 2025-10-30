@@ -151,7 +151,9 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 				<div
 					class="bg-neutral-200 h-64 rounded-lg flex items-center justify-center"
 				>
-					<p class="text-neutral-500">Karta över vår vårdcentral</p>
+					<p class="text-neutral-700 font-medium">
+						Karta över vår vårdcentral
+					</p>
 				</div>
 			</div>
 		</div>

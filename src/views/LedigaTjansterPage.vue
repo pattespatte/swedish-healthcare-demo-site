@@ -28,7 +28,7 @@
 								vårdcentral. Tillsvidareanställning med start
 								enligt överenskommelse.
 							</p>
-							<p class="text-sm text-gray-500 mt-2">
+							<p class="text-sm text-neutral-600 mt-2">
 								Sista ansökningsdag: 2025-12-15
 							</p>
 						</div>
@@ -42,7 +42,7 @@
 								specialistläkare med intresse för både planerad
 								och akut kirurgi.
 							</p>
-							<p class="text-sm text-gray-500 mt-2">
+							<p class="text-sm text-neutral-600 mt-2">
 								Sista ansökningsdag: 2025-12-20
 							</p>
 						</div>
@@ -56,7 +56,7 @@
 								nu specialistläkare till vår
 								öppenvårdsmottagning.
 							</p>
-							<p class="text-sm text-gray-500 mt-2">
+							<p class="text-sm text-neutral-600 mt-2">
 								Sista ansökningsdag: 2026-01-10
 							</p>
 						</div>
@@ -70,7 +70,7 @@
 								specialistläkare med bred kompetens inom
 								diagnostisk radiologi.
 							</p>
-							<p class="text-sm text-gray-500 mt-2">
+							<p class="text-sm text-neutral-600 mt-2">
 								Sista ansökningsdag: 2025-12-31
 							</p>
 						</div>
@@ -127,12 +127,12 @@
 
 				<div class="text-center">
 					<button
-						class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors mr-4"
+						class="bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors mr-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Kontakta oss
 					</button>
 					<button
-						class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors"
+						class="bg-neutral-600 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
 					>
 						Prenumerera på lediga jobb
 					</button>

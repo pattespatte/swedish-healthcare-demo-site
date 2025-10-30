@@ -154,7 +154,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 							href="https://digg.se"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-primary-600 hover:text-primary-700"
+							class="text-primary-600 hover:text-primary-700 underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 							>digg.se</a
 						>
 					</li>
