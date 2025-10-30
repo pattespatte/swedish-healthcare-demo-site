@@ -32,7 +32,10 @@
 						</span>
 					</div>
 
-					<div v-if="labels && labels[index]" class="ml-4 min-w-0">
+					<div
+						v-if="labels && labels[index]"
+						class="ml-4 min-w-0 relative z-10"
+					>
 						<p
 							class="text-sm font-medium"
 							:class="
@@ -48,7 +51,7 @@
 
 				<div
 					v-if="index < steps.length - 1"
-					class="absolute top-5 left-10 w-full h-0.5"
+					class="absolute top-5 left-10 w-full h-0.5 z-0"
 					:class="
 						index < currentStep
 							? 'bg-primary-600'

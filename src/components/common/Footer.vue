@@ -160,6 +160,11 @@ const formatPhoneLink = (phone: string): string => {
 					förbehålls.
 				</div>
 				<div class="flex space-x-6">
+					<a
+						href="https://github.com/pattespatte/swedish-healthcare-demo-site"
+						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
+						>Källkod</a
+					>
 					<router-link
 						to="/integritetspolicy"
 						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"

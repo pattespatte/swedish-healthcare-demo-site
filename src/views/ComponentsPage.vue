@@ -455,29 +455,29 @@ const filterByCategory = (category: string) => {
 					<h3 class="text-lg font-semibold text-blue-800 mb-3">
 						Usage Guidelines
 					</h3>
-					<ul class="space-y-2 text-sm text-blue-700">
+					<ul class="list-disc space-y-2 text-sm text-blue-700 px-4">
 						<li>
-							• All components follow the design system of the
+							All components follow the design system of the
 							Swedish Healthcare Demo Site
 						</li>
 						<li>
-							• Components use Tailwind CSS for styling and are
+							Components use Tailwind CSS for styling and are
 							fully responsive
 						</li>
 						<li>
-							• Form components support v-model for two-way data
+							Form components support v-model for two-way data
 							binding
 						</li>
 						<li>
-							• Interactive components include proper
-							accessibility attributes (ARIA)
+							Interactive components include proper accessibility
+							attributes (ARIA)
 						</li>
 						<li>
-							• Components emit appropriate events for parent
+							Components emit appropriate events for parent
 							component handling
 						</li>
 						<li>
-							• All components are TypeScript-enabled with proper
+							All components are TypeScript-enabled with proper
 							type definitions
 						</li>
 					</ul>
