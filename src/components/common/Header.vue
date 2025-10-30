@@ -290,7 +290,10 @@ const isDropdownActive = (dropdownItems: any[]) => {
 		<div class="hidden md:flex justify-center py-2 bg-slate-800">
 			<div class="container mx-auto px-4">
 				<!-- Desktop Navigation -->
-				<nav class="hidden md:flex relative">
+				<nav
+					class="hidden md:flex relative"
+					aria-label="Huvudnavigering"
+				>
 					<!-- Two-row layout for laptop screens (1024px or narrower) -->
 					<div class="lg:hidden grid grid-cols-2 gap-x-8 gap-y-2">
 						<div
@@ -476,7 +479,10 @@ const isDropdownActive = (dropdownItems: any[]) => {
 			class="md:hidden py-4 border-t border-neutral-600 bg-slate-800"
 		>
 			<div class="container mx-auto px-4">
-				<nav class="flex flex-col space-y-1">
+				<nav
+					class="flex flex-col space-y-1"
+					aria-label="Mobilnavigering"
+				>
 					<div
 						v-for="link in navLinks"
 						:key="link.name"
@@ -614,7 +620,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 	left: 0;
 	width: 100%;
 	height: 4px; /* 4px thick underline */
-	background-color: #3b82f6; /* Blue color from the palette */
+	background-color: #2e60ff; /* Blue color from the palette */
 }
 
 /* For desktop screens (md and up) */

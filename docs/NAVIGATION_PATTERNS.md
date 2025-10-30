@@ -281,27 +281,32 @@ This document outlines standard navigation patterns implemented in the Swedish h
 /* Primary colors - Professional and trustworthy */
 --primary-50: #eff6ff;
 --primary-100: #dbeafe;
---primary-500: #3b82f6;
+--primary-300: #93c5fd;
+--primary-500: #2e60ff;
 --primary-600: #2563eb;
 --primary-700: #1d4ed8;
+--primary-800: #1e40af;
 
 /* Neutral colors - Clean and professional */
 --neutral-50: #f9fafb;
 --neutral-100: #f3f4f6;
 --neutral-200: #e5e7eb;
+--neutral-300: #d1d5db;
+--neutral-400: #9ca3af;
+--neutral-500: #6b7280;
 --neutral-600: #4b5563;
 --neutral-700: #374151;
 --neutral-800: #1f2937;
+--neutral-900: #081130;
 
 /* Success colors - Health and wellness */
---success-50: #f0fdf4;
---success-500: #22c55e;
---success-600: #16a34a;
+--success: #10b981;
 
-/* Alert colors - Important information */
---alert-50: #fef2f2;
---alert-500: #ef4444;
---alert-600: #dc2626;
+/* Warning colors - Caution and attention */
+--warning: #f59e0b;
+
+/* Error colors - Important information */
+--error: #ef4444;
 ```
 
 ## Implementation Examples

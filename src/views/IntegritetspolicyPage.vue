@@ -17,7 +17,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Vilken information samlar vi in?
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -48,7 +48,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Hur använder vi din information?
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -66,7 +66,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Rättslig grund för behandling
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -97,7 +97,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Delning av information
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -130,9 +130,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Säkerhet
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Säkerhet</h2>
 				<p class="text-neutral-700 mb-4">
 					Vi vidtar lämpliga tekniska och organisatoriska åtgärder för
 					att skydda dina personuppgifter.
@@ -148,9 +146,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Dina rättigheter
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Dina rättigheter</h2>
 				<p class="text-neutral-700 mb-4">
 					Som registrerad har du flera rättigheter enligt GDPR.
 				</p>
@@ -191,9 +187,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Kakor (Cookies)
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Kakor (Cookies)</h2>
 				<p class="text-neutral-700 mb-4">
 					Vår webbplats använder kakor för att förbättra
 					användarupplevelsen och för webbanalys.
@@ -218,9 +212,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Kontaktinformation
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Kontaktinformation</h2>
 				<p class="text-neutral-700 mb-4">
 					Om du har frågor om vår integritetspolicy eller hur vi
 					behandlar dina personuppgifter är du välkommen att kontakta

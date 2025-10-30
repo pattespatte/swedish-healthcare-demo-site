@@ -15,9 +15,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Logga in
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Logga in</h2>
 				<p class="text-neutral-700 mb-4">
 					För att komma åt Mina Sidor behöver du logga in med BankID.
 				</p>

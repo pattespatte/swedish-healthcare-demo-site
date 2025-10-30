@@ -88,9 +88,7 @@ const accordionItems = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Kontaktvägar
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Kontaktvägar</h2>
 				<div class="space-y-4">
 					<div class="border-l-4 border-blue-500 pl-4">
 						<h3 class="text-lg font-semibold mb-2">
@@ -124,9 +122,7 @@ const accordionItems = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Digitala tjänster
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Digitala tjänster</h2>
 				<p class="text-neutral-700 mb-4">
 					Med BankID kan du logga in på 1177.se för att:
 				</p>
@@ -147,14 +143,14 @@ const accordionItems = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Vanliga frågor om din vårdkontakt
 				</h2>
 				<Accordion :items="accordionItems" />
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Dina rättigheter som patient
 				</h2>
 				<ul class="list-disc list-inside text-neutral-700 space-y-2">

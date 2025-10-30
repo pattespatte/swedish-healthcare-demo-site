@@ -14,9 +14,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Vad är cookies?
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Vad är cookies?</h2>
 				<p class="text-neutral-700 mb-4">
 					Cookies är små textfiler som lagras på din enhet (dator,
 					mobil eller surfplatta) när du besöker en webbplats. De
@@ -32,7 +30,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Hur vi använder cookies
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -71,7 +69,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Specifika cookies vi använder
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -135,7 +133,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Dina val och rättigheter
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -173,7 +171,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Hur du hanterar cookies i din webbläsare
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -210,7 +208,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Uppdateringar av vår cookie-policy
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -226,9 +224,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Kontaktinformation
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Kontaktinformation</h2>
 				<p class="text-neutral-700 mb-4">
 					Om du har frågor om vår användning av cookies eller denna
 					policy är du välkommen att kontakta oss.

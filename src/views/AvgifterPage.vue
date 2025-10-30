@@ -143,9 +143,7 @@ const specialistData = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Vårdcentral - Priser
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Vårdcentral - Priser</h2>
 				<p class="text-neutral-700 mb-4">
 					Nedan ser du gällande avgifter för besök på vår vårdcentral.
 					Alla priser är angivna i svenska kronor.
@@ -159,7 +157,7 @@ const specialistData = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Specialistvård - Priser
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -175,9 +173,7 @@ const specialistData = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Högkostnadsskydd
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Högkostnadsskydd</h2>
 				<p class="text-neutral-700 mb-4">
 					Högkostnadsskyddet innebär att du betalar högst en viss
 					summa under en 12-månadersperiod. När du har nått gränsen
@@ -193,9 +189,7 @@ const specialistData = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Viktigt att veta
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Viktigt att veta</h2>
 				<ul
 					class="list-disc list-inside text-neutral-700 space-y-2 px-4"
 				>

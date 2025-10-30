@@ -13,9 +13,12 @@ export default {
 			colors: {
 				primary: {
 					50: '#eff6ff',
-					500: '#3b82f6',
+					100: '#dbeafe',
+					300: '#93c5fd',
+					500: '#2e60ff',
 					600: '#2563eb',
-					700: '#232948',
+					700: '#1d4ed8',
+					800: '#1e40af',
 				},
 				success: '#10b981',
 				warning: '#f59e0b',

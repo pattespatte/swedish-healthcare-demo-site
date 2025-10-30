@@ -13,9 +13,7 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
-					Vårt uppdrag
-				</h2>
+				<h2 class="text-xl font-semibold mb-4">Vårt uppdrag</h2>
 				<p class="text-neutral-700 mb-4">
 					Vi strävar efter att göra svensk vård mer tillgänglig och
 					effektiv för alla medborgare.

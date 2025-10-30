@@ -88,7 +88,7 @@ const accordionItems = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Vad innebär vårdgarantin för dig?
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -107,14 +107,14 @@ const accordionItems = [
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Vanliga frågor om vårdgaranti
 				</h2>
 				<Accordion :items="accordionItems" />
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-4">
+				<h2 class="text-xl font-semibold mb-4">
 					Kontakt och mer information
 				</h2>
 				<p class="text-neutral-700 mb-4">

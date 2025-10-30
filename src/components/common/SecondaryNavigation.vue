@@ -23,6 +23,7 @@ const isActive = (path: string) => {
 		<div class="container mx-auto px-4 py-4">
 			<nav
 				class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0"
+				aria-label="Sekundär navigering"
 			>
 				<router-link
 					v-for="item in navItems"
