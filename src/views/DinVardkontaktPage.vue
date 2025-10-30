@@ -69,22 +69,25 @@ const accordionItems = [
 				</div>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-				<InfoCard
-					title="Telefon"
-					content="08-123 456 78"
-					variant="primary"
-				/>
-				<InfoCard
-					title="1177"
-					content="Sjukvårdsrådgivning"
-					variant="primary"
-				/>
-				<InfoCard
-					title="112"
-					content="Akuta situationer"
-					variant="primary"
-				/>
+			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+				<h2 class="text-xl font-semibold mb-4">Direktkontakt</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+					<InfoCard
+						title="Telefon"
+						content="08-123 456 78"
+						variant="primary"
+					/>
+					<InfoCard
+						title="1177"
+						content="Sjukvårdsrådgivning"
+						variant="primary"
+					/>
+					<InfoCard
+						title="112"
+						content="Akuta situationer"
+						variant="primary"
+					/>
+				</div>
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
