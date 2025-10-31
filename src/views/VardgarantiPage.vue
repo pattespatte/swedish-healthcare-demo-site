@@ -43,7 +43,7 @@ const accordionItems = [
 				och vilka rättigheter du har.
 			</p>
 
-			<div class="bg-blue-50 border-2 border-blue-100 p-4 mb-8">
+			<div class="bg-primary-100 border-2 border-l-4 p-4 mb-8">
 				<div class="flex">
 					<div class="flex-shrink-0">
 						<svg
@@ -59,7 +59,7 @@ const accordionItems = [
 						</svg>
 					</div>
 					<div class="ml-3">
-						<p class="text-sm text-blue-800">
+						<p class="text-sm text-natural-800">
 							<strong>Viktigt:</strong> Vårdgarantin gäller från
 							den dag du söker vård och fram till att du fått den
 							vård du behöver. Spara alla remisser och journaler

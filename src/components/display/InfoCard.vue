@@ -56,9 +56,9 @@ const cardClasses = computed(() => {
 
 	switch (props.variant) {
 		case "primary":
-			return `${baseClasses} bg-[#f2ede6] border-[#ded2c6]`;
+			return `${baseClasses} bg-white border-neutral-300`;
 		case "secondary":
-			return `${baseClasses} bg-neutral-100 border-neutral-200`;
+			return `${baseClasses} bg-white border-neutral-300`;
 		default:
 			return `${baseClasses} bg-white border-neutral-200 shadow-sm`;
 	}
@@ -67,7 +67,7 @@ const cardClasses = computed(() => {
 const titleClasses = computed(() => {
 	switch (props.variant) {
 		case "primary":
-			return "text-primary-800";
+			return "text-neutral-800";
 		case "secondary":
 			return "text-neutral-800";
 		default:
@@ -78,7 +78,7 @@ const titleClasses = computed(() => {
 const contentClasses = computed(() => {
 	switch (props.variant) {
 		case "primary":
-			return "text-primary-700";
+			return "text-neutral-700";
 		case "secondary":
 			return "text-neutral-700";
 		default:
@@ -89,7 +89,7 @@ const contentClasses = computed(() => {
 const iconClasses = computed(() => {
 	switch (props.variant) {
 		case "primary":
-			return "text-primary-600";
+			return "text-neutral-600";
 		case "secondary":
 			return "text-neutral-600";
 		default:
