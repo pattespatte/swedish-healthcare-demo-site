@@ -15,10 +15,21 @@ export default {
 					50: '#eff6ff',
 					100: '#dbeafe',
 					300: '#93c5fd',
-					500: '#1e40af', // Changed from #2e60ff to #1e40af for better contrast
-					600: '#1e3a8a', // Darker for better contrast
+					500: '#1e40af',
+					600: '#1e3a8a',
 					700: '#1d4ed8',
 					800: '#1e40af',
+				},
+				secondary: {
+					50: '#f6f3ee',
+					100: '#f2ede6',
+					200: '#ede7de',
+					300: '#e8e0d6',
+					400: '#e3d9ce',
+					500: '#ded2c6',
+					600: '#d9cbbd',
+					700: '#d4c4b5',
+					800: '#edf06f',
 				},
 				success: '#10b981',
 				warning: '#f59e0b',
