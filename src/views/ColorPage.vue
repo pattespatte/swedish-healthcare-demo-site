@@ -177,13 +177,13 @@ const copyToClipboard = (text: string) => {
 			<main>
 				<div class="mb-8">
 					<h1 class="text-3xl font-bold text-gray-800 mb-4">
-						Color Palette
+						Färgpalett
 					</h1>
 					<p class="text-lg text-neutral-700 mb-6">
-						This is a comprehensive reference of all available
-						colors in the Swedish Healthcare Demo Site. Colors are
-						organized by custom brand colors and standard Tailwind
-						CSS colors.
+						Detta är en komplett referens till alla tillgängliga
+						färger i Swedish Healthcare Demo Site. Färgerna är
+						organiserade efter anpassade varumärkesfärger och
+						standard Tailwind CSS färger.
 					</p>
 
 					<!-- Category Filter -->
@@ -197,7 +197,7 @@ const copyToClipboard = (text: string) => {
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
-							Custom Colors
+							Anpassade färger
 						</button>
 						<button
 							@click="filterByCategory('tailwind')"
@@ -208,7 +208,7 @@ const copyToClipboard = (text: string) => {
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
-							Tailwind Colors
+							Tailwind färger
 						</button>
 						<button
 							@click="filterByCategory('all')"
@@ -219,7 +219,7 @@ const copyToClipboard = (text: string) => {
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
-							All Colors
+							Alla färger
 						</button>
 					</div>
 				</div>
@@ -263,13 +263,13 @@ const copyToClipboard = (text: string) => {
 									<button
 										@click="copyToClipboard(shade.class)"
 										class="text-xs text-primary-600 hover:text-primary-800 transition-colors"
-										title="Copy class name"
+										title="Kopiera klassnamn"
 									>
-										Copy
+										Kopiera
 									</button>
 								</div>
 								<div class="text-xs text-neutral-600 mb-1">
-									Class:
+									Klass:
 									<span class="font-mono">{{
 										shade.class
 									}}</span>
@@ -290,32 +290,33 @@ const copyToClipboard = (text: string) => {
 					class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6"
 				>
 					<h3 class="text-lg font-semibold text-blue-800 mb-3">
-						Color Usage Guidelines
+						Användningsriktlinjer för färger
 					</h3>
 					<ul class="list-disc space-y-2 text-sm text-blue-700 px-4">
 						<li>
-							Primary colors should be used for main UI elements
-							like buttons, links, and important highlights
+							Primära färger bör användas för huvudsakliga
+							UI-element som knappar, länkar och viktiga
+							markeringar
 						</li>
 						<li>
-							Secondary colors are for supporting elements and
-							less prominent features
+							Sekundära färger är för stödjande element och mindre
+							framträdande funktioner
 						</li>
 						<li>
-							Neutral colors are ideal for text, backgrounds, and
-							borders
+							Neutrala färger är idealiska för text, bakgrunder
+							och kanter
 						</li>
 						<li>
-							Status colors (success, warning, error) should only
-							be used for their semantic meaning
+							Statusfärger (success, warning, error) bör endast
+							användas för sin semantiska betydelse
 						</li>
 						<li>
-							Ensure sufficient contrast between text and
-							background colors for accessibility
+							Säkerställ tillräcklig kontrast mellan text och
+							bakgrundsfärger för tillgänglighet
 						</li>
 						<li>
-							Use lighter shades (50-200) for backgrounds and
-							darker shades (700-900) for text
+							Använd ljusare nyanser (50-200) för bakgrunder och
+							mörkare nyanser (700-900) för text
 						</li>
 					</ul>
 				</div>
