@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { usePageTitle } from "../composables/usePageTitle";
+
+// Set page title
+const { pageTitle } = usePageTitle();
 import { useRouter } from "vue-router";
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 import SearchBox from "../components/interactive/SearchBox.vue";

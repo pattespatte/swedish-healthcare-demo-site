@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { usePageTitle } from "../composables/usePageTitle";
+
+// Set page title
+const { pageTitle } = usePageTitle();
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 import ServiceCard from "../components/display/ServiceCard.vue";
 import ContactCard from "../components/display/ContactCard.vue";

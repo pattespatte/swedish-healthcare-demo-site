@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import { usePageTitle } from "../composables/usePageTitle";
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
+
+// Set page title
+const { pageTitle } = usePageTitle();
 </script>
 
 <template>
+	<head>
+		<title>{{ pageTitle.title }}</title>
+	</head>
 	<Breadcrumbs />
 
 	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">

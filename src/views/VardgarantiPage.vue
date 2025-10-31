@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { usePageTitle } from "../composables/usePageTitle";
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
+
+// Set page title
+const { pageTitle } = usePageTitle();
 import InfoCard from "../components/display/InfoCard.vue";
 import Accordion from "../components/interactive/Accordion.vue";
 
