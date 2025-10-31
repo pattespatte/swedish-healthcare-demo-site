@@ -43,9 +43,7 @@ const accordionItems = [
 				och vilka rättigheter du har.
 			</p>
 
-			<div
-				class="bg-blue-50 border-2 border-l-4 border-blue-100 p-4 mb-8"
-			>
+			<div class="bg-blue-50 border-2 border-blue-100 p-4 mb-8">
 				<div class="flex">
 					<div class="flex-shrink-0">
 						<svg

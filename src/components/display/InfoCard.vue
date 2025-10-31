@@ -56,7 +56,7 @@ const cardClasses = computed(() => {
 
 	switch (props.variant) {
 		case "primary":
-			return `${baseClasses} bg-primary-50 border-primary-200`;
+			return `${baseClasses} bg-[#f2ede6] border-[#ded2c6]`;
 		case "secondary":
 			return `${baseClasses} bg-neutral-100 border-neutral-200`;
 		default:
