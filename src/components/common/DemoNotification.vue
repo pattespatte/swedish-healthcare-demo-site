@@ -66,4 +66,94 @@ const dismiss = () => {
 			</div>
 		</div>
 	</div>
+
+	<!-- Prototype Badge - Fixed positioned -->
+	<div v-if="isVisible" class="fixed top-24 right-8 z-50" aria-hidden="true">
+		<svg
+			viewBox="0 0 120 120"
+			xmlns="http://www.w3.org/2000/svg"
+			class="w-64 h-96"
+		>
+			<g
+				transform="matrix(.96592583 -.25881905 .25881905 .96592583 -13.484692 17.573593)"
+			>
+				<path
+					d="m25 45 1-1 2 1 2-1 2 1 63-2 2 1 1-1 2 1 1 1 1 2-1 2 1 2 1 9m0 14-1 3-1 1-1 2-2-1-2 1-66 2-2-1-2 1-2-1-1-1-1-2 1-2-1-2-1-14m0-10 1-2 1-2z"
+					fill="none"
+					stroke="#c1121f"
+					stroke-width="2"
+				/>
+				<text
+					fill="#c1121f"
+					font-family="Impact, 'Arial Black', sans-serif"
+					font-size="13"
+					text-anchor="middle"
+				>
+					<tspan
+						transform="matrix(.99965732 -.02617695 .02617695 .99965732 -1.743575 .808268)"
+						x="30"
+						y="67"
+					>
+						P
+					</tspan>
+					<tspan
+						transform="matrix(.9998477 .01745241 -.01745241 .9998477 1.175099 -.652987)"
+						x="38"
+						y="67"
+					>
+						R
+					</tspan>
+					<tspan
+						transform="matrix(.99996192 -.00872654 .00872654 .99996192 -.582926 .403972)"
+						x="46"
+						y="67"
+					>
+						O
+					</tspan>
+					<tspan
+						transform="matrix(.99965732 .02617695 -.02617695 .99965732 1.77236 -1.390596)"
+						x="54"
+						y="67"
+					>
+						T
+					</tspan>
+					<tspan
+						transform="matrix(.9998477 -.01745241 .01745241 .9998477 -1.160021 1.074801)"
+						x="61"
+						y="67"
+					>
+						O
+					</tspan>
+					<tspan
+						transform="matrix(.99996192 .00872654 -.00872654 .99996192 .587305 -.59958)"
+						x="69"
+						y="67"
+					>
+						T
+					</tspan>
+					<tspan
+						transform="matrix(.99965732 -.02617695 .02617695 .99965732 -1.727812 2.012407)"
+						x="76"
+						y="67"
+					>
+						Y
+					</tspan>
+					<tspan
+						transform="matrix(.9998477 .01745241 -.01745241 .9998477 1.182105 -1.455798)"
+						x="84"
+						y="67"
+					>
+						P
+					</tspan>
+					<tspan
+						transform="matrix(.99996192 -.00872654 .00872654 .99996192 -.581175 .805392)"
+						x="92"
+						y="67"
+					>
+						E
+					</tspan>
+				</text>
+			</g>
+		</svg>
+	</div>
 </template>
