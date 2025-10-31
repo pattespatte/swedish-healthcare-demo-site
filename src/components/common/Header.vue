@@ -168,7 +168,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 </script>
 
 <template>
-	<header class="shadow-md">
+	<header class="shadow-md" role="banner">
 		<!-- Row 1: Logo, empty space, search and language selector - Full width -->
 		<div
 			class="flex justify-between items-center py-3 border-b border-neutral-600 bg-slate-900"

@@ -56,7 +56,7 @@ const formatPhoneLink = (phone: string): string => {
 </script>
 
 <template>
-	<footer class="bg-slate-800 text-white">
+	<footer class="bg-slate-800 text-white" role="contentinfo">
 		<div class="container mx-auto px-4 py-4 sm:py-6">
 			<div
 				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"

@@ -9,7 +9,7 @@ import DemoNotification from "./components/common/DemoNotification.vue";
 	<div class="min-h-screen bg-neutral-100 flex flex-col">
 		<DemoNotification />
 		<Header />
-		<main class="flex-grow">
+		<main class="flex-grow" id="main-content">
 			<RouterView />
 		</main>
 		<Footer />
