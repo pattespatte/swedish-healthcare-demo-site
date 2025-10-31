@@ -22,30 +22,9 @@ export default {
 		// Complementary colors
 		'bg-beige', 'bg-lightblue',
 		// Functional colors
-		'bg-success', 'bg-success-50', 'bg-success-100', 'bg-success-200', 'bg-success-300', 'bg-success-400',
-		'bg-success-500', 'bg-success-600', 'bg-success-700',
-		'text-success', 'text-success-50', 'text-success-100', 'text-success-200', 'text-success-300', 'text-success-400',
-		'text-success-500', 'text-success-600', 'text-success-700',
-		'border-success', 'border-success-50', 'border-success-100', 'border-success-200', 'border-success-300', 'border-success-400',
-		'border-success-500', 'border-success-600', 'border-success-700',
-		'bg-info', 'bg-info-50', 'bg-info-100', 'bg-info-200', 'bg-info-300', 'bg-info-400',
-		'bg-info-500', 'bg-info-600', 'bg-info-700',
-		'text-info', 'text-info-50', 'text-info-100', 'text-info-200', 'text-info-300', 'text-info-400',
-		'text-info-500', 'text-info-600', 'text-info-700',
-		'border-info', 'border-info-50', 'border-info-100', 'border-info-200', 'border-info-300', 'border-info-400',
-		'border-info-500', 'border-info-600', 'border-info-700',
-		'bg-warning', 'bg-warning-50', 'bg-warning-100', 'bg-warning-200', 'bg-warning-300', 'bg-warning-400',
-		'bg-warning-500', 'bg-warning-600', 'bg-warning-700',
-		'text-warning', 'text-warning-50', 'text-warning-100', 'text-warning-200', 'text-warning-300', 'text-warning-400',
-		'text-warning-500', 'text-warning-600', 'text-warning-700', 'text-warning-strong',
-		'border-warning', 'border-warning-50', 'border-warning-100', 'border-warning-200', 'border-warning-300', 'border-warning-400',
-		'border-warning-500', 'border-warning-600', 'border-warning-700',
-		'bg-error', 'bg-error-50', 'bg-error-100', 'bg-error-200', 'bg-error-300', 'bg-error-400',
-		'bg-error-500', 'bg-error-600', 'bg-error-700',
-		'text-error', 'text-error-50', 'text-error-100', 'text-error-200', 'text-error-300', 'text-error-400',
-		'text-error-500', 'text-error-600', 'text-error-700',
-		'border-error', 'border-error-50', 'border-error-100', 'border-error-200', 'border-error-300', 'border-error-400',
-		'border-error-500', 'border-error-600', 'border-error-700',
+		'bg-success', 'bg-info', 'bg-warning', 'bg-error',
+		'text-success', 'text-info', 'text-warning', 'text-error',
+		'border-success', 'border-info', 'border-warning', 'border-error',
 		// Graphics colors
 		'bg-graphics-blue', 'bg-graphics-lightblue', 'bg-graphics-green', 'bg-graphics-lightgreen',
 		'bg-graphics-brown', 'bg-graphics-lightbrown',
@@ -98,55 +77,10 @@ export default {
 				beige: '#F0ECE4', // Beige background
 				lightblue: '#D3DEEA', // Light blue background
 				// Functional Colors
-				success: {
-					50: '#F0FDF4', // Lightest success
-					100: '#D1FAE5', // Light success
-					200: '#A7F3D0', // Medium success
-					300: '#6EE7B7', // Dark success
-					400: '#34D399', // Bright success
-					500: '#10B981', // Success (brand color)
-					600: '#059669', // Dark success
-					700: '#047857', // Darker success
-					background: '#D2F9E5', // Success background
-					text: '#077353', // Success text
-				},
-				info: {
-					50: '#EFF6FF', // Lightest info
-					100: '#DBEAFE', // Light info
-					200: '#BFDBFE', // Medium-light info
-					300: '#93C5FD', // Medium info
-					400: '#60A5FA', // Medium-dark info
-					500: '#3B82F6', // Info (brand color)
-					600: '#2563EB', // Dark info
-					700: '#1D4ED8', // Darker info
-					background: '#D1E9FF', // Info background
-					text: '#1849A9', // Info text
-				},
-				warning: {
-					50: '#FFFBEB', // Lightest warning
-					100: '#FEF3C7', // Light warning
-					200: '#FDE68A', // Medium-light warning
-					300: '#FCD34D', // Medium warning
-					400: '#FBBF24', // Medium-dark warning
-					500: '#F59E0B', // Warning (brand color)
-					600: '#D97706', // Dark warning
-					700: '#B45309', // Darker warning
-					background: '#FEFBE8', // Warning background
-					text: '#92400E', // Warning text
-					strong: '#A15C07', // Strong warning
-				},
-				error: {
-					50: '#FEF2F2', // Lightest error
-					100: '#FEE2E2', // Light error
-					200: '#FECACA', // Medium-light error
-					300: '#FCA5A5', // Medium error
-					400: '#F87171', // Medium-dark error
-					500: '#EF4444', // Error (brand color)
-					600: '#DC2626', // Dark error
-					700: '#B91C1C', // Darker error
-					background: '#FEE2E2', // Error background
-					text: '#991B1B', // Error text
-				},
+				success: '#10B981', // Success (brand color)
+				info: '#3B82F6', // Info (brand color)
+				warning: '#F59E0B', // Warning (brand color)
+				error: '#EF4444', // Error (brand color)
 				// Graphics Colors
 				graphics: {
 					blue: '#1849A9', // Graphics blue
