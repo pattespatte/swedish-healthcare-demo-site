@@ -122,6 +122,11 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/ComponentsPage.vue')
 	},
 	{
+		path: '/colors',
+		name: 'Colors',
+		component: () => import('@/views/ColorPage.vue')
+	},
+	{
 		// Catch all 404 routes
 		path: '/:pathMatch(.*)*',
 		name: 'NotFound',
