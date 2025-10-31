@@ -7,13 +7,6 @@ import { writeFileSync } from 'fs'
 export default defineConfig({
 	plugins: [
 		vue(),
-		{
-			name: 'create-nojekyll',
-			closeBundle() {
-				// Create .nojekyll file in dist folder
-				writeFileSync('dist/.nojekyll', '')
-			}
-		}
 	],
 	resolve: {
 		alias: {
