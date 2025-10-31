@@ -1,7 +1,7 @@
 <template>
 	<div class="w-full">
 		<!-- Tab navigation -->
-		<div class="relative pl-1 overflow-x-auto">
+		<div class="relative pl-1">
 			<!-- Tab border line (behind tabs) -->
 			<div
 				class="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 z-0"
