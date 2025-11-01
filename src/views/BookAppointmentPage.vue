@@ -23,7 +23,7 @@ const { pageTitle } = usePageTitle();
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2
-						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
 					>
 						Akut tid
 					</h2>
@@ -40,7 +40,7 @@ const { pageTitle } = usePageTitle();
 
 				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2
-						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
 					>
 						Planerat besök
 					</h2>
@@ -57,7 +57,7 @@ const { pageTitle } = usePageTitle();
 
 				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2
-						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
 					>
 						Vaccination
 					</h2>
@@ -74,7 +74,7 @@ const { pageTitle } = usePageTitle();
 
 				<div class="bg-white rounded-lg shadow-md p-6">
 					<h2
-						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
 					>
 						Laboratorieprov
 					</h2>
@@ -92,7 +92,7 @@ const { pageTitle } = usePageTitle();
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
 				<h2
-					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+					class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
 				>
 					Information vid bokning
 				</h2>

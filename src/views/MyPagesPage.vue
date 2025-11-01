@@ -43,7 +43,7 @@ const { pageTitle } = usePageTitle();
 						avboka dina tider.
 					</p>
 					<button
-						class="text-primary-600 hover:text-primary-700 font-medium"
+						class="text-primary-700 hover:text-primary-800 font-medium"
 					>
 						Se mina bokningar
 					</button>
@@ -57,7 +57,7 @@ const { pageTitle } = usePageTitle();
 						Läs dina journalanteckningar och se dina provsvar.
 					</p>
 					<button
-						class="text-primary-600 hover:text-primary-700 font-medium"
+						class="text-primary-700 hover:text-primary-800 font-medium"
 					>
 						Se mina journaler
 					</button>
@@ -71,7 +71,7 @@ const { pageTitle } = usePageTitle();
 						Se dina aktuella recept och förnya recept om det behövs.
 					</p>
 					<button
-						class="text-primary-600 hover:text-primary-700 font-medium"
+						class="text-primary-700 hover:text-primary-800 font-medium"
 					>
 						Se mina recept
 					</button>
@@ -86,7 +86,7 @@ const { pageTitle } = usePageTitle();
 						vårdpersonal.
 					</p>
 					<button
-						class="text-primary-600 hover:text-primary-700 font-medium"
+						class="text-primary-700 hover:text-primary-800 font-medium"
 					>
 						Kontakta vården
 					</button>
