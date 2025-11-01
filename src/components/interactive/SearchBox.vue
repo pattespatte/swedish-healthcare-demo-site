@@ -36,7 +36,7 @@
 						: 'py-2 text-sm',
 				]"
 				:placeholder="placeholder"
-				:value="modelValue"
+				:value="searchQuery"
 				@input="handleInput"
 				@keyup.enter="handleSearch"
 				@keyup.esc="handleClear"
@@ -46,7 +46,7 @@
 			/>
 
 			<div
-				v-if="modelValue && clearable"
+				v-if="searchQuery && clearable"
 				class="absolute inset-y-0 right-0 pr-3 flex items-center"
 			>
 				<button
@@ -86,124 +86,86 @@
 							: 'py-2 text-sm',
 					]"
 					@click="handleSearch"
-					:disabled="disabled || !modelValue"
+					:disabled="disabled || !searchQuery"
 				>
 					Sök
 				</button>
 			</div>
 		</div>
 
-		<!-- Search suggestions dropdown -->
-		<div
-			v-if="showSuggestions && suggestions.length > 0"
-			class="absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
-			role="listbox"
-			aria-labelledby="listbox-label"
-		>
-			<ul
-				class="max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
-			>
-				<li
-					v-for="(suggestion, index) in suggestions"
-					:key="suggestion.id || index"
-					class="text-neutral-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-primary-50"
-					:class="{ 'bg-primary-50': selectedIndex === index }"
-					role="option"
-					@click="selectSuggestion(suggestion)"
-					@mouseenter="selectedIndex = index"
-				>
-					<span class="font-normal block truncate">
-						{{ suggestion.label || suggestion }}
-					</span>
-
-					<span
-						v-if="selectedIndex === index"
-						class="text-primary-700 absolute inset-y-0 right-0 flex items-center pr-4"
-					>
-						<svg
-							class="h-5 w-5"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</span>
-				</li>
-			</ul>
-		</div>
+		<!-- Search results dropdown -->
+		<SearchResults
+			v-if="searchQuery"
+			:show-results="searchQuery.length > 0"
+			:search-results="searchResults"
+			:search-query="searchQuery"
+			:is-loading="isLoading"
+			:has-results="hasResults"
+			@result-select="handleResultSelect"
+			@view-all-results="handleViewAllResults"
+			ref="searchResultsComponent"
+		/>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, nextTick } from "vue";
-
-// Interface for suggestion item
-export interface SuggestionItem {
-	id?: string | number;
-	label: string;
-	[key: string]: any;
-}
+import { ref, nextTick } from "vue";
+import { useSearch } from "@/composables/useSearch";
+import SearchResults from "./SearchResults.vue";
+import type { SearchResult } from "@/composables/useSearch";
 
 // Props
 interface Props {
-	modelValue: string;
 	placeholder?: string;
 	size?: "small" | "medium" | "large";
 	disabled?: boolean;
 	clearable?: boolean;
 	showSearchButton?: boolean;
-	suggestions?: SuggestionItem[];
-	showSuggestions?: boolean;
 	ariaLabel?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-	modelValue: "",
 	placeholder: "Sök...",
 	size: "medium",
 	disabled: false,
 	clearable: true,
 	showSearchButton: false,
-	suggestions: () => [],
-	showSuggestions: false,
 	ariaLabel: "Sök",
 });
 
-// Emits
-const emit = defineEmits<{
-	"update:modelValue": [value: string];
-	search: [query: string];
-	clear: [];
-	"suggestion-select": [suggestion: SuggestionItem];
-}>();
+// Use search composable
+const {
+	searchQuery,
+	searchResults,
+	isLoading,
+	hasResults,
+	navigateToResult,
+	clearSearch,
+} = useSearch();
 
 // Refs
 const searchInput = ref<HTMLInputElement | null>(null);
-const selectedIndex = ref(0);
+const searchResultsComponent = ref<InstanceType<typeof SearchResults> | null>(
+	null
+);
 
 // Handle input event
 const handleInput = (event: Event) => {
 	const target = event.target as HTMLInputElement;
-	emit("update:modelValue", target.value);
+	searchQuery.value = target.value;
 };
 
 // Handle search action
 const handleSearch = () => {
-	if (props.modelValue.trim()) {
-		emit("search", props.modelValue.trim());
+	if (searchQuery.value.trim()) {
+		// Search is already performed by the composable
+		// This is just for the search button functionality
 	}
 };
 
 // Handle clear action
 const handleClear = () => {
-	emit("update:modelValue", "");
-	emit("clear");
+	clearSearch();
 	nextTick(() => {
 		if (searchInput.value) {
 			searchInput.value.focus();
@@ -211,49 +173,27 @@ const handleClear = () => {
 	});
 };
 
-// Select a suggestion
-const selectSuggestion = (suggestion: SuggestionItem) => {
-	emit("update:modelValue", suggestion.label || suggestion.toString());
-	emit("suggestion-select", suggestion);
-	emit("search", suggestion.label || suggestion.toString());
+// Handle result selection
+const handleResultSelect = (result: SearchResult | null) => {
+	if (result) {
+		navigateToResult(result);
+	} else {
+		clearSearch();
+	}
 };
 
-// Watch for changes in suggestions to reset selected index
-watch(
-	() => props.suggestions,
-	() => {
-		selectedIndex.value = 0;
-	},
-	{ deep: true }
-);
+// Handle view all results
+const handleViewAllResults = () => {
+	// This could navigate to a dedicated search results page in the future
+	// For now, just clear the search
+	clearSearch();
+};
 
-// Handle keyboard navigation for suggestions
+// Handle keyboard navigation
 const handleKeydown = (event: KeyboardEvent) => {
-	if (!props.showSuggestions || props.suggestions.length === 0) return;
-
-	switch (event.key) {
-		case "ArrowDown":
-			event.preventDefault();
-			selectedIndex.value =
-				(selectedIndex.value + 1) % props.suggestions.length;
-			break;
-		case "ArrowUp":
-			event.preventDefault();
-			selectedIndex.value =
-				selectedIndex.value <= 0
-					? props.suggestions.length - 1
-					: selectedIndex.value - 1;
-			break;
-		case "Enter":
-			event.preventDefault();
-			if (props.suggestions[selectedIndex.value]) {
-				selectSuggestion(props.suggestions[selectedIndex.value]);
-			}
-			break;
-		case "Escape":
-			event.preventDefault();
-			handleClear();
-			break;
+	// Forward keyboard events to the search results component
+	if (searchResultsComponent.value && searchQuery.value) {
+		searchResultsComponent.value.handleKeydown(event);
 	}
 };
 
