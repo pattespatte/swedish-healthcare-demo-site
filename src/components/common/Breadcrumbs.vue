@@ -67,7 +67,7 @@ const navigateTo = (path: string) => {
 					<button
 						v-if="!crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
-						class="text-primary-700 hover:text-primary-800 hover:underline transition-colors duration-200"
+						class="text-primary-700 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 hover:underline transition-colors duration-200"
 						:aria-current="crumb.isCurrent ? 'page' : undefined"
 					>
 						{{ crumb.name }}
