@@ -43,7 +43,8 @@ export function useSearch() {
 
 			// During SSR/build time, we need to handle this differently
 			if (typeof window === 'undefined') {
-				// Skip loading during SSR
+				// Skip loading during SSR, but don't mark as loaded
+				// This prevents search from trying to run on server
 				return
 			}
 
