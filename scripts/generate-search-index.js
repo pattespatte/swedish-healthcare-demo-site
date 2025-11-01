@@ -20,6 +20,17 @@ function extractTextFromTemplate(template) {
 	return cleanTemplate
 }
 
+// Strip HTML tags from content for cleaner text extraction
+function stripHtmlTags(html) {
+	// Remove HTML tags more comprehensively
+	return html
+		.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '') // Remove script tags
+		.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '') // Remove style tags
+		.replace(/<[^>]+>/g, ' ') // Remove all HTML tags
+		.replace(/\s+/g, ' ') // Normalize whitespace
+		.trim()
+}
+
 // Extract meaningful content from a Vue component
 function extractContentFromComponent(filePath, routePath, title) {
 	const content = fs.readFileSync(filePath, 'utf-8')
