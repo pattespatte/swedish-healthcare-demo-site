@@ -99,7 +99,9 @@ const accordionItems = [
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
 				<h2 class="text-xl font-semibold mb-4">Kontaktvägar</h2>
 				<div class="space-y-4">
-					<div class="border border-l-4 border-blue-500 pl-4">
+					<div
+						class="border border-l-4 border-blue-500 pl-4 pt-2 pb-4"
+					>
 						<h3 class="text-lg font-semibold mb-2">
 							Vårdcentralen
 						</h3>
@@ -109,7 +111,9 @@ const accordionItems = [
 							för uppföljning av tidigare behandlingar.
 						</p>
 					</div>
-					<div class="border border-l-4 border-green-500 pl-4">
+					<div
+						class="border border-l-4 border-green-500 pl-4 pt-2 pb-4"
+					>
 						<h3 class="text-lg font-semibold mb-2">
 							1177 Vårdguiden
 						</h3>
@@ -119,7 +123,9 @@ const accordionItems = [
 							vårdmottagning och svar på medicinska frågor.
 						</p>
 					</div>
-					<div class="border border-l-4 border-red-500 pl-4">
+					<div
+						class="border border-l-4 border-red-500 pl-4 pt-2 pb-4"
+					>
 						<h3 class="text-lg font-semibold mb-2">Akutvård</h3>
 						<p class="text-neutral-700">
 							Vid livshotande tillstånd eller allvarliga skador,

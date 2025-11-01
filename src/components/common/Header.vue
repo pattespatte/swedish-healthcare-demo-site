@@ -177,15 +177,17 @@ const isDropdownActive = (dropdownItems: any[]) => {
 				class="container mx-auto px-4 flex justify-between items-center"
 			>
 				<!-- Logo placeholder -->
-				<router-link to="/" class="flex items-center">
+				<router-link to="/" class="flex items-center group">
 					<div
-						class="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center"
+						class="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-slate-500 group-hover:scale-105"
 					>
-						<span class="text-neutral-300 font-bold text-xl"
+						<span
+							class="text-neutral-300 font-bold text-xl transition-colors duration-300 group-hover:text-white"
 							>VÅ</span
 						>
 					</div>
-					<span class="ml-3 text-xl font-bold text-white"
+					<span
+						class="ml-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary-300"
 						>Vårdportalen</span
 					>
 				</router-link>
