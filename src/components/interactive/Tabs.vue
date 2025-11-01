@@ -15,7 +15,7 @@
 					class="py-4 px-4 font-medium text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
 					:class="[
 						tab.id === activeTab
-							? 'bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-primary border-b-white dark:border-b-dark-bg-secondary text-primary-600 dark:text-primary-400 rounded-t-md -mb-px relative z-20'
+							? 'bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-primary border-b-white dark:border-b-dark-bg-secondary text-primary-700 dark:text-primary-400 rounded-t-md -mb-px relative z-20'
 							: tab.disabled
 							? 'border-transparent text-neutral-400 dark:text-dark-text-muted cursor-not-allowed'
 							: 'border-transparent text-neutral-600 dark:text-dark-text-secondary hover:text-neutral-900 dark:hover:text-dark-text-primary hover:border-neutral-300 dark:hover:border-dark-border-primary',

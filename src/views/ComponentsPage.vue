@@ -394,7 +394,7 @@ const filterByCategory = (category: string) => {
 									class="flex justify-between items-start mb-4"
 								>
 									<h3
-										class="text-xl font-semibold text-primary-600"
+										class="text-xl font-semibold text-primary-700"
 									>
 										{{ component.name }}
 									</h3>

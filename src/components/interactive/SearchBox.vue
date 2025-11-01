@@ -118,7 +118,7 @@
 
 					<span
 						v-if="selectedIndex === index"
-						class="text-primary-600 absolute inset-y-0 right-0 flex items-center pr-4"
+						class="text-primary-700 absolute inset-y-0 right-0 flex items-center pr-4"
 					>
 						<svg
 							class="h-5 w-5"

@@ -73,7 +73,7 @@
 					</svg>
 					<a
 						:href="`mailto:${email}`"
-						class="text-sm text-primary-600 hover:text-primary-800"
+						class="text-sm text-primary-700 hover:text-primary-800"
 					>
 						{{ email }}
 					</a>
@@ -96,7 +96,7 @@
 					</svg>
 					<a
 						:href="formatPhoneLink(phone)"
-						class="text-sm text-primary-600 hover:text-primary-800"
+						class="text-sm text-primary-700 hover:text-primary-800"
 					>
 						{{ phone }}
 					</a>

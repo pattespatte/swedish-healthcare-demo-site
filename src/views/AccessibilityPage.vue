@@ -161,8 +161,9 @@ const { pageTitle } = usePageTitle();
 							href="https://digg.se"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-primary-600 hover:text-primary-700 underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+							class="text-primary-700 hover:text-primary-800 underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 							>digg.se</a
+						>
 						>
 					</li>
 				</ul>

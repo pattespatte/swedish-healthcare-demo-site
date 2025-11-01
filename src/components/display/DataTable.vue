@@ -179,7 +179,7 @@
 							class="relative inline-flex items-center px-4 py-2 border text-sm font-medium"
 							:class="
 								page === currentPage
-									? 'z-10 bg-primary-50 border-primary-500 text-primary-600'
+									? 'z-10 bg-primary-50 border-primary-500 text-primary-700'
 									: 'bg-white dark:bg-dark-bg-quaternary border-neutral-300 dark:border-dark-border-primary text-neutral-500 dark:text-dark-text-muted hover:bg-neutral-50 dark:hover:bg-dark-hover-bg'
 							"
 						>

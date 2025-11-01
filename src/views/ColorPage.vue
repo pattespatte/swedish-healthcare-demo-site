@@ -266,7 +266,7 @@ const copyToClipboard = (text: string) => {
 									</h3>
 									<button
 										@click="copyToClipboard(shade.class)"
-										class="text-xs text-primary-600 hover:text-primary-800 transition-colors"
+										class="text-xs text-primary-700 hover:text-primary-800 transition-colors"
 										title="Kopiera klassnamn"
 									>
 										Kopiera

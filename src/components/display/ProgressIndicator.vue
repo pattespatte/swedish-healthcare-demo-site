@@ -40,7 +40,7 @@
 							class="text-sm font-medium"
 							:class="
 								index <= currentStep
-									? 'text-primary-600'
+									? 'text-primary-700'
 									: 'text-neutral-500'
 							"
 						>
@@ -79,7 +79,7 @@ const getStepClasses = (index: number) => {
 	if (index < props.currentStep) {
 		return "bg-primary-600 border-primary-600";
 	} else if (index === props.currentStep) {
-		return "border-primary-600 bg-white text-primary-600";
+		return "border-primary-700 bg-white text-primary-700";
 	} else {
 		return "border-neutral-300 bg-white text-neutral-500";
 	}

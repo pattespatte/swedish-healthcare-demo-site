@@ -39,7 +39,7 @@
 							<button
 								v-if="action"
 								@click="action"
-								class="text-sm font-medium text-primary-600 hover:text-primary-800"
+								class="text-sm font-medium text-primary-700 hover:text-primary-800"
 							>
 								Hantera
 							</button>

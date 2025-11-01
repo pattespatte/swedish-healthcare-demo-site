@@ -40,7 +40,7 @@
 				<div v-if="link" class="ml-4 flex-shrink-0">
 					<a
 						:href="link"
-						class="text-primary-600 hover:text-primary-800"
+						class="text-primary-700 hover:text-primary-800"
 						aria-label="Läs mer om {{ title }}"
 					>
 						<svg
@@ -84,7 +84,7 @@
 			<div v-if="link" class="mt-6">
 				<a
 					:href="link"
-					class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-800"
+					class="inline-flex items-center text-sm font-medium text-primary-700 hover:text-primary-800"
 				>
 					Läs mer
 					<svg
