@@ -22,7 +22,7 @@ const { pageTitle } = usePageTitle();
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Kontaktinformation
 					</h2>
 					<div class="space-y-3 text-neutral-700">
@@ -46,7 +46,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Akuta ärenden
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -67,7 +67,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Kontakta oss via formulär
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -139,7 +139,7 @@ const { pageTitle } = usePageTitle();
 					<div class="text-right">
 						<button
 							type="submit"
-							class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+							class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 						>
 							Skicka meddelande
 						</button>
@@ -148,7 +148,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Hitta hit
 				</h2>
 				<p class="text-neutral-700 mb-4">

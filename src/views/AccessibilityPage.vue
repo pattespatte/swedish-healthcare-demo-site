@@ -24,7 +24,7 @@ const { pageTitle } = usePageTitle();
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Tillgänglighet på webbplatsen
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -45,7 +45,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Bristande tillgänglighet
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -68,7 +68,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Rapportera brister i tillgänglighet
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -86,7 +86,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Tillgänglighet i våra lokaler
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -123,7 +123,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Tolk och hjälpmedel
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -140,7 +140,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Tillsynsmyndighet
 				</h2>
 				<p class="text-neutral-700 mb-4">

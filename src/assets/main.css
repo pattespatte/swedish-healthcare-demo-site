@@ -123,6 +123,10 @@ body {
 	color: var(--primary-400) !important;
 }
 
+.dark .text-primary-700 {
+	color: var(--primary-400) !important;
+}
+
 /* Enhanced dark mode for gray text */
 .dark .text-gray-600 {
 	color: var(--dark-text-secondary) !important;

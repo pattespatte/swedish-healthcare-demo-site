@@ -134,7 +134,7 @@
 					</p>
 					<div class="flex space-x-4">
 						<button
-							class="bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+							class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 						>
 							Ladda ner förmånshandbok (PDF)
 						</button>

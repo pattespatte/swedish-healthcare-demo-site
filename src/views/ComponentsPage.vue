@@ -345,7 +345,7 @@ const filterByCategory = (category: string) => {
 							:class="[
 								'px-4 py-2 rounded-md text-sm font-medium transition-colors',
 								filteredCategory === 'all'
-									? 'bg-primary-500 text-white'
+									? 'bg-primary-700 text-white'
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
@@ -358,7 +358,7 @@ const filterByCategory = (category: string) => {
 							:class="[
 								'px-4 py-2 rounded-md text-sm font-medium transition-colors',
 								filteredCategory === category.name
-									? 'bg-primary-500 text-white'
+									? 'bg-primary-700 text-white'
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>

@@ -24,7 +24,7 @@ const { pageTitle } = usePageTitle();
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Boka tid
 					</h2>
 					<p class="text-neutral-700">
@@ -34,7 +34,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						E-tjänster
 					</h2>
 					<p class="text-neutral-700">
@@ -43,7 +43,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Kontakta oss
 					</h2>
 					<p class="text-neutral-700">

@@ -25,7 +25,7 @@ const { pageTitle } = usePageTitle();
 
 			<div class="space-y-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Hur bokar jag en tid?
 					</h2>
 					<p class="text-neutral-700">
@@ -37,7 +37,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Vad kostar ett besök?
 					</h2>
 					<p class="text-neutral-700">
@@ -50,7 +50,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Hur avbokar jag en tid?
 					</h2>
 					<p class="text-neutral-700">
@@ -62,7 +62,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Kan jag få mina recept förnyade?
 					</h2>
 					<p class="text-neutral-700">
@@ -74,7 +74,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Hur får jag tillgång till mina journaler?
 					</h2>
 					<p class="text-neutral-700">
@@ -86,7 +86,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Erbjuder ni vaccinationer?
 					</h2>
 					<p class="text-neutral-700">
@@ -99,7 +99,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Vad gör jag om jag blir sjuk på kvällen eller helgen?
 					</h2>
 					<p class="text-neutral-700">
@@ -111,7 +111,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Kan jag byta vårdcentral?
 					</h2>
 					<p class="text-neutral-700">
@@ -125,7 +125,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Har du fler frågor?
 				</h2>
 				<p class="text-neutral-700 mb-4">
@@ -133,7 +133,7 @@ const { pageTitle } = usePageTitle();
 				</p>
 				<router-link
 					to="/kontakt"
-					class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors inline-block"
+					class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors inline-block"
 				>
 					Kontakta oss
 				</router-link>

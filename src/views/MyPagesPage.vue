@@ -27,7 +27,7 @@ const { pageTitle } = usePageTitle();
 					För att komma åt Mina Sidor behöver du logga in med BankID.
 				</p>
 				<button
-					class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+					class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 				>
 					Logga in med BankID
 				</button>
@@ -35,7 +35,7 @@ const { pageTitle } = usePageTitle();
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Mina bokningar
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -50,7 +50,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Mina journaler
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -64,7 +64,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Mina recept
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -78,7 +78,7 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2 class="text-xl font-semibold text-primary-700 mb-3">
 						Mina kontakter
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -94,7 +94,7 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2 class="text-xl font-semibold text-primary-700 mb-3">
 					Information om Mina Sidor
 				</h2>
 				<ul class="list-disc pl-5 text-neutral-700 space-y-2">

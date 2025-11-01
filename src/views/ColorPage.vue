@@ -197,7 +197,7 @@ const copyToClipboard = (text: string) => {
 							:class="[
 								'px-4 py-2 rounded-md text-sm font-medium transition-colors',
 								filteredCategory === 'custom'
-									? 'bg-primary-500 text-white'
+									? 'bg-primary-700 text-white'
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
@@ -208,7 +208,7 @@ const copyToClipboard = (text: string) => {
 							:class="[
 								'px-4 py-2 rounded-md text-sm font-medium transition-colors',
 								filteredCategory === 'tailwind'
-									? 'bg-primary-500 text-white'
+									? 'bg-primary-700 text-white'
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>
@@ -219,7 +219,7 @@ const copyToClipboard = (text: string) => {
 							:class="[
 								'px-4 py-2 rounded-md text-sm font-medium transition-colors',
 								filteredCategory === 'all'
-									? 'bg-primary-500 text-white'
+									? 'bg-primary-700 text-white'
 									: 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200',
 							]"
 						>

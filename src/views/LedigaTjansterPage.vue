@@ -129,7 +129,7 @@
 
 				<div class="text-center">
 					<button
-						class="bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors mr-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+						class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors mr-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Kontakta oss
 					</button>

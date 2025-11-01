@@ -32,7 +32,7 @@ const { pageTitle } = usePageTitle();
 						telefonnummer 08-123 456 78.
 					</p>
 					<button
-						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 					>
 						Ring oss nu
 					</button>
@@ -49,7 +49,7 @@ const { pageTitle } = usePageTitle();
 						uppföljning.
 					</p>
 					<button
-						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 					>
 						Boka tid online
 					</button>
@@ -66,7 +66,7 @@ const { pageTitle } = usePageTitle();
 						COVID-19-vaccin.
 					</p>
 					<button
-						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 					>
 						Boka vaccinationstid
 					</button>
@@ -83,7 +83,7 @@ const { pageTitle } = usePageTitle();
 						kräver faste.
 					</p>
 					<button
-						class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+						class="bg-primary-700 text-white px-4 py-2 rounded-lg hover:bg-primary-800 transition-colors"
 					>
 						Boka provtagning
 					</button>
