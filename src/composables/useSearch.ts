@@ -48,6 +48,14 @@ export function useSearch() {
 				return
 			}
 
+			// In browser environment, use absolute URL to ensure proper loading
+			if (typeof window !== 'undefined' && window.location) {
+				const baseUrl = window.location.origin
+				// Add cache-busting parameter to prevent browser caching issues
+				const timestamp = Date.now()
+				searchIndexUrl = `${baseUrl}/search-index.json?t=${timestamp}`
+			}
+
 			const response = await fetch(searchIndexUrl)
 			if (!response.ok) {
 				throw new Error('Failed to load search index')
