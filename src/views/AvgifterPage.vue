@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { usePageTitle } from "../composables/usePageTitle";
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 import DataTable from "../components/display/DataTable.vue";
 import InfoCard from "../components/display/InfoCard.vue";
-
-// Set page title
-const { pageTitle } = usePageTitle();
 
 // Define table columns
 const feeColumns = [

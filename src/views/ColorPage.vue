@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { usePageTitle } from "../composables/usePageTitle";
-
-// Set page title
-const { pageTitle } = usePageTitle();
 import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 
 // Swedish Healthcare Brand Colors
