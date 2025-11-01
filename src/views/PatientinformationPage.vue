@@ -18,7 +18,7 @@ const { pageTitle } = usePageTitle();
 				Patientinformation
 			</h1>
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<p class="text-gray-600 mb-6">
+				<p class="text-gray-600 dark:text-dark-text-secondary mb-6">
 					Här hittar du viktig information för dig som patient hos
 					oss.
 				</p>
@@ -28,7 +28,7 @@ const { pageTitle } = usePageTitle();
 						<h2 class="text-xl font-semibold mb-2">
 							Inför ditt besök
 						</h2>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-dark-text-secondary">
 							Vad du behöver tänka på innan din vårdkontakt
 						</p>
 					</div>
@@ -37,7 +37,7 @@ const { pageTitle } = usePageTitle();
 						<h2 class="text-xl font-semibold mb-2">
 							Dina rättigheter
 						</h2>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-dark-text-secondary">
 							Information om patientlagstiftning och dina
 							rättigheter
 						</p>
@@ -47,7 +47,7 @@ const { pageTitle } = usePageTitle();
 						<h2 class="text-xl font-semibold mb-2">
 							Journal och information
 						</h2>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-dark-text-secondary">
 							Hur du får tillgång till din journal och hälsodata
 						</p>
 					</div>
@@ -56,7 +56,7 @@ const { pageTitle } = usePageTitle();
 						<h2 class="text-xl font-semibold mb-2">
 							Priser och avgifter
 						</h2>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-dark-text-secondary">
 							Information om kostnader för vård och behandling
 						</p>
 					</div>

@@ -56,7 +56,10 @@ const formatPhoneLink = (phone: string): string => {
 </script>
 
 <template>
-	<footer class="bg-slate-800 text-white" role="contentinfo">
+	<footer
+		class="bg-slate-800 dark:bg-dark-bg-primary text-white dark:text-dark-text-primary"
+		role="contentinfo"
+	>
 		<div class="container mx-auto px-4 py-4 sm:py-6">
 			<div
 				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
@@ -71,7 +74,7 @@ const formatPhoneLink = (phone: string): string => {
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="text-neutral-300 hover:text-white transition-colors duration-200 text-sm"
+							class="text-neutral-300 dark:text-dark-text-secondary hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200 text-sm"
 						>
 							{{ link.name }}
 						</router-link>
@@ -84,14 +87,14 @@ const formatPhoneLink = (phone: string): string => {
 						Kontakt
 					</h3>
 					<address
-						class="not-italic text-neutral-300 space-y-1 sm:space-y-2 text-sm"
+						class="not-italic text-neutral-300 dark:text-dark-text-secondary space-y-1 sm:space-y-2 text-sm"
 					>
 						<p>{{ contactInfo.address }}</p>
 						<p>
 							Telefon:
 							<a
 								:href="formatPhoneLink(contactInfo.phone)"
-								class="hover:text-white transition-colors duration-200"
+								class="hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200"
 								>{{ contactInfo.phone }}</a
 							>
 						</p>
@@ -99,7 +102,7 @@ const formatPhoneLink = (phone: string): string => {
 							E-post:
 							<a
 								:href="`mailto:${contactInfo.email}`"
-								class="hover:text-white transition-colors duration-200"
+								class="hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200"
 								>{{ contactInfo.email }}</a
 							>
 						</p>
@@ -112,7 +115,7 @@ const formatPhoneLink = (phone: string): string => {
 						Öppettider
 					</h3>
 					<div
-						class="text-neutral-300 space-y-1 sm:space-y-2 text-sm"
+						class="text-neutral-300 dark:text-dark-text-secondary space-y-1 sm:space-y-2 text-sm"
 					>
 						<div
 							v-for="(item, index) in openingHours"
@@ -136,11 +139,11 @@ const formatPhoneLink = (phone: string): string => {
 							:key="link.name"
 							:href="link.url"
 							:aria-label="`Följ oss på ${link.name}`"
-							class="text-neutral-300 hover:text-white transition-colors duration-200"
+							class="text-neutral-300 dark:text-dark-text-secondary hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200"
 						>
 							<!-- Placeholder icons - in a real implementation, you would use actual icon components -->
 							<div
-								class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center"
+								class="w-8 h-8 rounded-full bg-slate-700 dark:bg-dark-bg-tertiary flex items-center justify-center"
 							>
 								<span class="text-xs font-semibold">{{
 									link.icon.charAt(0).toUpperCase()
@@ -153,33 +156,35 @@ const formatPhoneLink = (phone: string): string => {
 
 			<!-- Bottom Section -->
 			<div
-				class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-neutral-700 flex flex-col md:flex-row justify-between items-center"
+				class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-neutral-700 dark:border-dark-border-primary flex flex-col md:flex-row justify-between items-center"
 			>
-				<div class="text-neutral-400 text-xs mb-3 md:mb-0">
+				<div
+					class="text-neutral-400 dark:text-dark-text-muted text-xs mb-3 md:mb-0"
+				>
 					&copy; {{ currentYear }} Vårdportalen. Alla rättigheter
 					förbehålls.
 				</div>
 				<div class="flex space-x-6">
 					<a
 						href="https://github.com/pattespatte/swedish-healthcare-demo-site"
-						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
+						class="text-neutral-400 dark:text-dark-text-muted hover:text-white dark:hover:text-dark-text-primary text-xs transition-colors duration-200"
 						>Källkod</a
 					>
 					<router-link
 						to="/integritetspolicy"
-						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
+						class="text-neutral-400 dark:text-dark-text-muted hover:text-white dark:hover:text-dark-text-primary text-xs transition-colors duration-200"
 					>
 						Integritetspolicy
 					</router-link>
 					<router-link
 						to="/cookies"
-						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
+						class="text-neutral-400 dark:text-dark-text-muted hover:text-white dark:hover:text-dark-text-primary text-xs transition-colors duration-200"
 					>
 						Cookies
 					</router-link>
 					<router-link
 						to="/tillganglighet"
-						class="text-neutral-400 hover:text-white text-xs transition-colors duration-200"
+						class="text-neutral-400 dark:text-dark-text-muted hover:text-white dark:hover:text-dark-text-primary text-xs transition-colors duration-200"
 					>
 						Tillgänglighet
 					</router-link>

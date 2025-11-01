@@ -14,7 +14,9 @@
 					specialistläkare och annan vårdpersonal.
 				</p>
 
-				<div class="bg-blue-50 rounded-lg p-6 mb-6">
+				<div
+					class="bg-blue-50 dark:bg-dark-bg-tertiary rounded-lg p-6 mb-6"
+				>
 					<h2 class="text-xl font-semibold mb-3 text-blue-800">
 						Aktuella tjänster
 					</h2>

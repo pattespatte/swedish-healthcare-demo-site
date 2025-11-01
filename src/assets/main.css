@@ -14,3 +14,164 @@ body {
 h1 {
 	font-family: "Roboto Slab", serif;
 }
+
+/* Dark mode transitions and custom properties */
+html {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom dark mode CSS variables */
+:root {
+	--dark-bg-primary: #0f172a;
+	--dark-bg-secondary: #1e293b;
+	--dark-bg-tertiary: #334155;
+	--dark-bg-quaternary: #475569;
+	--dark-text-primary: #f8fafc;
+	--dark-text-secondary: #e2e8f0;
+	--dark-text-muted: #94a3b8;
+	--dark-border-primary: #334155;
+	--dark-border-secondary: #475569;
+	--dark-hover-bg: #1e293b;
+}
+
+/* Dark mode styles */
+.dark {
+	background-color: var(--dark-bg-primary);
+	color: var(--dark-text-primary);
+}
+
+/* Smooth transitions for all interactive elements */
+.dark * {
+	transition: background-color 0.3s ease, border-color 0.3s ease,
+		color 0.3s ease;
+}
+
+/* Ensure proper contrast for form elements in dark mode */
+.dark input,
+.dark select,
+.dark textarea {
+	background-color: var(--dark-bg-tertiary);
+	color: var(--dark-text-primary);
+	border-color: var(--dark-border-primary);
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+	border-color: var(--primary-500);
+	outline-color: var(--primary-500);
+}
+
+/* Dark mode for router-link active states */
+.dark .active-nav-link::after {
+	background-color: var(--primary-400);
+}
+
+/* Enhanced dark mode text contrast */
+.dark .text-neutral-900 {
+	color: var(--dark-text-primary) !important;
+}
+
+.dark .text-neutral-800 {
+	color: var(--dark-text-primary) !important;
+}
+
+.dark .text-neutral-700 {
+	color: var(--dark-text-secondary) !important;
+}
+
+.dark .text-neutral-600 {
+	color: var(--dark-text-secondary) !important;
+}
+
+/* Dark mode for cards and containers */
+.dark .bg-white {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+.dark .bg-neutral-100 {
+	background-color: var(--dark-bg-secondary) !important;
+}
+
+.dark .bg-neutral-50 {
+	background-color: var(--dark-bg-secondary) !important;
+}
+
+/* Dark mode for colored backgrounds */
+.dark .bg-blue-50 {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+.dark .bg-green-50 {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+.dark .bg-yellow-50 {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+.dark .bg-gray-50 {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+/* Enhanced dark mode for primary colors */
+.dark .text-primary-600 {
+	color: var(--primary-400) !important;
+}
+
+/* Enhanced dark mode for gray text */
+.dark .text-gray-600 {
+	color: var(--dark-text-secondary) !important;
+}
+
+.dark .text-gray-700 {
+	color: var(--dark-text-secondary) !important;
+}
+
+.dark .text-gray-800 {
+	color: var(--dark-text-primary) !important;
+}
+
+/* Enhanced dark mode for colored text */
+.dark .text-blue-800 {
+	color: var(--primary-300) !important;
+}
+
+.dark .text-green-800 {
+	color: var(--primary-300) !important;
+}
+
+.dark .text-yellow-800 {
+	color: var(--primary-300) !important;
+}
+
+/* Dark mode borders */
+.dark .border-neutral-200 {
+	border-color: var(--dark-border-primary) !important;
+}
+
+.dark .border-neutral-300 {
+	border-color: var(--dark-border-primary) !important;
+}
+
+/* Scrollbar styling for dark mode */
+.dark::-webkit-scrollbar {
+	width: 8px;
+}
+
+.dark::-webkit-scrollbar-track {
+	background: var(--dark-bg-secondary);
+}
+
+.dark::-webkit-scrollbar-thumb {
+	background: var(--dark-bg-quaternary);
+	border-radius: 4px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+	background: var(--dark-border-secondary);
+}

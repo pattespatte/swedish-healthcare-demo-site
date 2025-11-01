@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
+import { useDarkMode } from "@/composables/useDarkMode";
 
 const route = useRoute();
+const { isDarkMode, toggleDarkMode } = useDarkMode();
 
 // Define the navigation item interface
 interface NavItem {
@@ -171,7 +173,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 	<header class="shadow-md" role="banner">
 		<!-- Row 1: Logo, empty space, search and language selector - Full width -->
 		<div
-			class="flex justify-between items-center py-3 border-b border-neutral-600 bg-slate-900"
+			class="flex justify-between items-center py-3 border-b border-neutral-600 bg-slate-900 dark:bg-dark-bg-primary dark:border-dark-border-primary"
 		>
 			<div
 				class="container mx-auto px-4 flex justify-between items-center"
@@ -202,11 +204,11 @@ const isDropdownActive = (dropdownItems: any[]) => {
 						<input
 							type="text"
 							placeholder="Sök..."
-							class="pl-10 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+							class="pl-10 pr-4 py-2 border border-neutral-300 bg-white dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
 							aria-label="Sök på webbplatsen"
 						/>
 						<svg
-							class="absolute left-3 top-2.5 w-5 h-5 text-neutral-400"
+							class="absolute left-3 top-2.5 w-5 h-5 text-neutral-400 dark:text-dark-text-muted"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -224,7 +226,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 					<!-- Language selector placeholder -->
 					<div class="relative">
 						<select
-							class="appearance-none bg-white border border-neutral-300 rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+							class="appearance-none bg-white border border-neutral-300 dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
 							aria-label="Välj språk"
 						>
 							<option value="sv">Svenska</option>
@@ -232,7 +234,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							<option value="fi">Suomi</option>
 						</select>
 						<div
-							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700"
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700 dark:text-dark-text-muted"
 						>
 							<svg
 								class="fill-current h-4 w-4"
@@ -289,7 +291,9 @@ const isDropdownActive = (dropdownItems: any[]) => {
 		</div>
 
 		<!-- Row 2: Navigation links centered - Full width -->
-		<div class="hidden md:flex justify-center py-2 bg-slate-800">
+		<div
+			class="hidden md:flex justify-center py-2 bg-slate-800 dark:bg-slate-800"
+		>
 			<div class="container mx-auto px-4">
 				<!-- Desktop Navigation -->
 				<nav
@@ -307,7 +311,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							<!-- Dropdown Menu for laptop view -->
 							<div
 								v-if="link.hasDropdown"
-								class="absolute left-0 mt-0 w-56 bg-slate-600 shadow-lg rounded-b-lg z-10"
+								class="absolute left-0 mt-0 w-56 bg-slate-600 dark:bg-dark-bg-tertiary shadow-lg rounded-b-lg z-10"
 								:class="{
 									block: openDropdown === link.name,
 									hidden: openDropdown !== link.name,
@@ -321,9 +325,9 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									>
 										<router-link
 											:to="item.path"
-											class="block px-4 py-3 text-white hover:text-slate-800 transition-colors duration-200"
+											class="block px-4 py-3 text-white dark:text-dark-text-primary hover:text-slate-800 dark:hover:bg-dark-hover-bg transition-colors duration-200"
 											:class="{
-												'bg-slate-800 text-white font-medium':
+												'bg-slate-800 dark:bg-dark-bg-quaternary text-white dark:text-dark-text-primary font-medium':
 													isActive(item.path),
 											}"
 											@click="closeDropdowns"
@@ -395,7 +399,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 							<!-- Dropdown Menu for desktop view -->
 							<div
 								v-if="link.hasDropdown"
-								class="absolute left-0 mt-0 w-56 bg-slate-700 shadow-lg rounded-b-lg z-10"
+								class="absolute left-0 mt-0 w-56 bg-slate-700 dark:bg-dark-bg-tertiary shadow-lg rounded-b-lg z-10"
 								:class="{
 									block: openDropdown === link.name,
 									hidden: openDropdown !== link.name,
@@ -409,9 +413,9 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									>
 										<router-link
 											:to="item.path"
-											class="block px-4 py-3 text-white hover:bg-slate-900 transition-colors duration-200"
+											class="block px-4 py-3 text-white dark:text-dark-text-primary hover:bg-slate-900 dark:hover:bg-dark-hover-bg transition-colors duration-200"
 											:class="{
-												'bg-slate-800 text-white font-medium':
+												'bg-slate-800 dark:bg-dark-bg-quaternary text-white dark:text-dark-text-primary font-medium':
 													isActive(item.path),
 											}"
 											@click="closeDropdowns"
@@ -470,6 +474,51 @@ const isDropdownActive = (dropdownItems: any[]) => {
 								</button>
 							</div>
 						</div>
+
+						<!-- Dark Mode Toggle Button -->
+						<button
+							@click="toggleDarkMode"
+							class="ml-4 p-2 text-slate-200 hover:text-white focus:outline-none transition-colors duration-200"
+							:aria-label="
+								isDarkMode
+									? 'Växla till ljust läge'
+									: 'Växla till mörkt läge'
+							"
+							title="Växla tema"
+						>
+							<!-- Sun icon for light mode -->
+							<svg
+								v-if="!isDarkMode"
+								class="w-5 h-5"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+								></path>
+							</svg>
+							<!-- Moon icon for dark mode -->
+							<svg
+								v-else
+								class="w-5 h-5"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+								></path>
+							</svg>
+						</button>
 					</div>
 				</nav>
 			</div>
@@ -575,11 +624,11 @@ const isDropdownActive = (dropdownItems: any[]) => {
 					<input
 						type="text"
 						placeholder="Sök..."
-						class="w-full pl-10 pr-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+						class="w-full pl-10 pr-4 py-2 border border-neutral-300 bg-white dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
 						aria-label="Sök på webbplatsen"
 					/>
 					<svg
-						class="absolute left-3 top-2.5 w-5 h-5 text-neutral-400"
+						class="absolute left-3 top-2.5 w-5 h-5 text-neutral-400 dark:text-dark-text-muted"
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
@@ -597,13 +646,61 @@ const isDropdownActive = (dropdownItems: any[]) => {
 				<!-- Mobile Language Selector -->
 				<div class="mt-4">
 					<select
-						class="w-full appearance-none bg-white border border-neutral-300 rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+						class="w-full appearance-none bg-white border border-neutral-300 dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
 						aria-label="Välj språk"
 					>
 						<option value="sv">Svenska</option>
 						<option value="en">English</option>
 						<option value="fi">Suomi</option>
 					</select>
+				</div>
+
+				<!-- Mobile Dark Mode Toggle -->
+				<div class="mt-4 flex items-center justify-between">
+					<span class="text-white font-medium">Tema</span>
+					<button
+						@click="toggleDarkMode"
+						class="p-2 text-slate-200 hover:text-white focus:outline-none transition-colors duration-200"
+						:aria-label="
+							isDarkMode
+								? 'Växla till ljust läge'
+								: 'Växla till mörkt läge'
+						"
+						title="Växla tema"
+					>
+						<!-- Sun icon for light mode -->
+						<svg
+							v-if="!isDarkMode"
+							class="w-5 h-5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+							></path>
+						</svg>
+						<!-- Moon icon for dark mode -->
+						<svg
+							v-else
+							class="w-5 h-5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+							></path>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</div>

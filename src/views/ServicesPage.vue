@@ -21,7 +21,9 @@ const { pageTitle } = usePageTitle();
 			</p>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					Allmänmedicin
 				</h2>
 				<p class="text-neutral-700">
@@ -32,7 +34,9 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					Barnmorskemottagning
 				</h2>
 				<p class="text-neutral-700">
@@ -42,7 +46,9 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					BVC (Barnavårdscentral)
 				</h2>
 				<p class="text-neutral-700">
@@ -53,7 +59,9 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mb-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					Laboratorium
 				</h2>
 				<p class="text-neutral-700">
@@ -64,7 +72,9 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					Psykiatri
 				</h2>
 				<p class="text-neutral-700">

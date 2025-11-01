@@ -4,6 +4,7 @@ export default {
 		"./index.html",
 		"./src/**/*.{vue,js,ts,jsx,tsx}",
 	],
+	darkMode: 'class',
 	safelist: [
 		// Primary colors
 		'bg-primary-50', 'bg-primary-100', 'bg-primary-200', 'bg-primary-300', 'bg-primary-400',
@@ -110,6 +111,28 @@ export default {
 					light: '#6B7280', // Light text
 					muted: '#9CA3AF', // Muted text
 					inverse: '#FFFFFF', // Inverse text (for dark backgrounds)
+				},
+				// Dark mode specific colors
+				dark: {
+					bg: {
+						primary: '#0f172a', // slate-900 - Main dark background
+						secondary: '#1e293b', // slate-800 - Secondary dark background
+						tertiary: '#334155', // slate-700 - Tertiary dark background
+						quaternary: '#475569', // slate-600 - Quaternary dark background
+					},
+					text: {
+						primary: '#f8fafc', // slate-50 - Primary dark text
+						secondary: '#e2e8f0', // slate-200 - Secondary dark text
+						muted: '#94a3b8', // slate-400 - Muted dark text
+						inverse: '#0f172a', // slate-900 - Inverse dark text
+					},
+					border: {
+						primary: '#334155', // slate-700 - Primary dark border
+						secondary: '#475569', // slate-600 - Secondary dark border
+					},
+					hover: {
+						bg: '#1e293b', // slate-800 - Hover background in dark mode
+					}
 				}
 			}
 		},

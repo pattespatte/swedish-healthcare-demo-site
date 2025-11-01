@@ -22,7 +22,9 @@ const { pageTitle } = usePageTitle();
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2
+						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+					>
 						Akut tid
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -37,7 +39,9 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2
+						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+					>
 						Planerat besök
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -52,7 +56,9 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2
+						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+					>
 						Vaccination
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -67,7 +73,9 @@ const { pageTitle } = usePageTitle();
 				</div>
 
 				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-600 mb-3">
+					<h2
+						class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+					>
 						Laboratorieprov
 					</h2>
 					<p class="text-neutral-700 mb-4">
@@ -83,7 +91,9 @@ const { pageTitle } = usePageTitle();
 			</div>
 
 			<div class="bg-white rounded-lg shadow-md p-6 mt-6">
-				<h2 class="text-xl font-semibold text-primary-600 mb-3">
+				<h2
+					class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3"
+				>
 					Information vid bokning
 				</h2>
 				<ul class="list-disc pl-5 text-neutral-700 space-y-2">
