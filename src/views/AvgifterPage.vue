@@ -130,17 +130,17 @@ const specialistData = [
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
 				<InfoCard
-					title="1 250 kr"
+					title="1 450 kr"
 					content="Högkostnadsskydd för vård"
 					variant="primary"
 				/>
 				<InfoCard
-					title="2 400 kr"
+					title="3 800 kr"
 					content="Högkostnadsskydd för läkemedel"
 					variant="primary"
 				/>
 				<InfoCard
-					title="1 150 kr"
+					title="2 000 kr"
 					content="Högkostnadsskydd för resor"
 					variant="primary"
 				/>

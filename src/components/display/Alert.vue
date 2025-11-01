@@ -65,9 +65,13 @@
 				</svg>
 			</div>
 			<div class="ml-3 flex-1">
-				<h3 v-if="title" class="text-sm font-medium">
+				<component
+					v-if="title"
+					:is="headingTag"
+					class="text-sm font-medium"
+				>
 					{{ title }}
-				</h3>
+				</component>
 				<div v-if="message" :class="title ? 'mt-2 text-sm' : 'text-sm'">
 					<p>{{ message }}</p>
 				</div>
@@ -109,14 +113,18 @@ interface Props {
 	title?: string;
 	message?: string;
 	dismissible?: boolean;
+	headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
 const props = withDefaults(defineProps<Props>(), {
 	type: "info",
 	dismissible: false,
+	headingLevel: "h3",
 });
 
 const isVisible = ref(true);
+
+const headingTag = computed(() => props.headingLevel);
 
 const alertClasses = computed(() => {
 	const baseClasses = "p-4 rounded-md";

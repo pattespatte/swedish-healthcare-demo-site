@@ -164,15 +164,13 @@ const submitBooking = () => {
 		<h1 class="text-3xl font-bold text-gray-800 mb-6">
 			Specialistmottagningar
 		</h1>
-		<h2 class="text-2xl font-bold text-gray-800 mb-6">
-			Prioriteringsgrund
-		</h2>
 		<!-- Alert for referral information -->
 		<Alert
 			type="info"
 			title="Remiss krävs"
 			message="För att besöka våra specialistmottagningar krävs i de flesta fall remiss från din vårdcentral eller annan läkare. Vissa akuta fall kan undantas."
 			class="mb-6"
+			headingLevel="h2"
 		/>
 
 		<!-- Tabs for different views -->

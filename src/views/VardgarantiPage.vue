@@ -75,10 +75,15 @@ const accordionItems = [
 				</div>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
 				<InfoCard
-					title="7 dagar"
+					title="Noll dagar"
 					content="Kontakt med vårdcentral"
+					variant="primary"
+				/>
+				<InfoCard
+					title="3 dagar"
+					content="Medicinsk bedömning"
 					variant="primary"
 				/>
 				<InfoCard
