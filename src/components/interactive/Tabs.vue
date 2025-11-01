@@ -11,6 +11,7 @@
 				<button
 					v-for="(tab, index) in tabs"
 					:key="tab.id"
+					:id="`tab-${tab.id}`"
 					type="button"
 					class="py-4 px-4 font-medium text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
 					:class="[

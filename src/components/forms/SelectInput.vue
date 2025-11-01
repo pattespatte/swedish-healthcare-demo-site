@@ -7,7 +7,6 @@
 		<select
 			:id="id"
 			:name="name"
-			:value="modelValue"
 			:required="required"
 			:disabled="disabled"
 			:class="[
@@ -20,13 +19,14 @@
 			@change="handleChange"
 			@blur="$emit('blur')"
 		>
-			<option value="" disabled selected>
+			<option value="" disabled>
 				{{ placeholder || "Välj ett alternativ..." }}
 			</option>
 			<option
 				v-for="option in options"
 				:key="option.value"
 				:value="option.value"
+				:selected="modelValue === option.value"
 			>
 				{{ option.label }}
 			</option>

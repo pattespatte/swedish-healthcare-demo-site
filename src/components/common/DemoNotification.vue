@@ -69,11 +69,7 @@ const dismiss = () => {
 
 	<!-- Prototype Badge - Fixed positioned -->
 	<div v-if="isVisible" class="fixed top-24 right-8 z-50" aria-hidden="true">
-		<svg
-			viewBox="0 0 120 120"
-			xmlns="http://www.w3.org/2000/svg"
-			class="w-64 h-96"
-		>
+		<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
 			<g
 				transform="matrix(.96592583 -.25881905 .25881905 .96592583 -13.484692 17.573593)"
 			>
