@@ -241,7 +241,9 @@ const submitContact = () => {
 		<Tabs :tabs="tabs" v-model:activeTab="activeTab" class="mb-6" />
 
 		<!-- Search and filter section -->
-		<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+		<div
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6 mb-6"
+		>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 				<TextInput
 					id="search"
@@ -249,6 +251,7 @@ const submitContact = () => {
 					label="Sök tjänst"
 					placeholder="Sök efter hemsjukvårdstjänst..."
 					v-model="searchQuery"
+					class="dark:border-dark-border-primary"
 				/>
 				<SelectInput
 					id="category"
@@ -263,7 +266,7 @@ const submitContact = () => {
 		<!-- Main content based on active tab -->
 		<div
 			v-if="activeTab === 'overview'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<p class="text-gray-600 mb-6">
 				Vår hemsjukvård erbjuder professionell vård och behandling i
@@ -319,7 +322,7 @@ const submitContact = () => {
 		<!-- Eligibility view -->
 		<div
 			v-else-if="activeTab === 'eligibility'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<h2 class="text-xl font-semibold mb-4">Behov & rättigheter</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -374,7 +377,7 @@ const submitContact = () => {
 		<!-- Contact view -->
 		<div
 			v-else-if="activeTab === 'contact'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<h2 class="text-xl font-semibold mb-4">Kontakta oss</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

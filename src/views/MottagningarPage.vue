@@ -199,7 +199,9 @@ const submitBooking = () => {
 		<Tabs :tabs="tabs" v-model:activeTab="activeTab" class="mb-6" />
 
 		<!-- Search and filter section -->
-		<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+		<div
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6 mb-6"
+		>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 				<TextInput
 					id="search"
@@ -221,7 +223,7 @@ const submitBooking = () => {
 		<!-- Main content based on active tab -->
 		<div
 			v-if="activeTab === 'overview'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<p class="text-gray-600 mb-6">
 				Här hittar du information om våra olika mottagningar och
@@ -281,7 +283,7 @@ const submitBooking = () => {
 		<!-- Waiting times view -->
 		<div
 			v-else-if="activeTab === 'waiting-times'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<h2 class="text-xl font-semibold mb-4">Aktuella väntetider</h2>
 			<div class="space-y-3">
@@ -308,7 +310,7 @@ const submitBooking = () => {
 		<!-- Contact view -->
 		<div
 			v-else-if="activeTab === 'contact'"
-			class="bg-white rounded-lg shadow-md p-6"
+			class="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6"
 		>
 			<h2 class="text-xl font-semibold mb-4">Kontaktinformation</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

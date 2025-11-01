@@ -27,7 +27,7 @@
 			<input
 				ref="searchInput"
 				type="text"
-				class="block w-full pl-10 pr-3 py-2 border border-neutral-300 rounded-md leading-5 bg-white placeholder-neutral-500 focus:outline-none focus:placeholder-neutral-400 focus:ring-1 focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+				class="block w-full pl-10 pr-3 py-2 border border-neutral-300 dark:border-dark-border-primary rounded-md leading-5 bg-white dark:bg-dark-bg-tertiary placeholder-neutral-500 focus:outline-none focus:placeholder-neutral-400 focus:ring-1 focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
 				:class="[
 					size === 'small'
 						? 'py-1 text-sm'

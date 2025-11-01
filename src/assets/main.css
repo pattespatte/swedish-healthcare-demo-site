@@ -54,9 +54,9 @@ body {
 .dark input,
 .dark select,
 .dark textarea {
-	background-color: var(--dark-bg-tertiary);
+	background-color: var(--dark-bg-quaternary);
 	color: var(--dark-text-primary);
-	border-color: var(--dark-border-primary);
+	border-color: var(--dark-border-secondary);
 }
 
 .dark input:focus,
@@ -90,7 +90,7 @@ body {
 
 /* Dark mode for cards and containers */
 .dark .bg-white {
-	background-color: var(--dark-bg-tertiary) !important;
+	background-color: var(--dark-bg-secondary) !important;
 }
 
 .dark .bg-neutral-100 {
@@ -156,6 +156,58 @@ body {
 
 .dark .border-neutral-300 {
 	border-color: var(--dark-border-primary) !important;
+}
+
+/* High contrast dark mode for tabs */
+.dark button.bg-white {
+	background-color: var(--dark-bg-secondary) !important;
+	border-color: var(--dark-border-primary) !important;
+}
+
+.dark button.border-b-white {
+	border-bottom-color: var(--dark-bg-secondary) !important;
+}
+
+.dark .text-primary-600 {
+	color: var(--primary-400) !important;
+}
+
+/* Enhanced tab visibility in dark mode */
+.dark button[class*="border"] {
+	border-color: var(--dark-border-primary) !important;
+}
+
+.dark button[class*="bg-white"] {
+	background-color: var(--dark-bg-secondary) !important;
+}
+
+/* Force tab styling in dark mode - most specific selectors */
+.dark .bg-white.border.border-neutral-200 {
+	background-color: var(--dark-bg-secondary) !important;
+	border-color: var(--dark-border-secondary) !important;
+}
+
+.dark .bg-white.border.border-neutral-200.border-b-white {
+	background-color: var(--dark-bg-secondary) !important;
+	border-color: var(--dark-border-secondary) !important;
+	border-bottom-color: var(--dark-bg-secondary) !important;
+}
+
+/* Target tabs specifically */
+.dark button[aria-controls*="tabpanel-"] {
+	background-color: var(--dark-bg-secondary) !important;
+	border-color: var(--dark-border-secondary) !important;
+}
+
+.dark button[aria-controls*="tabpanel-"]:hover {
+	background-color: var(--dark-bg-tertiary) !important;
+}
+
+.dark button[aria-controls*="tabpanel-"][aria-selected="true"] {
+	background-color: var(--dark-bg-secondary) !important;
+	border-color: var(--dark-border-secondary) !important;
+	border-bottom-color: var(--dark-bg-secondary) !important;
+	color: var(--primary-400) !important;
 }
 
 /* Scrollbar styling for dark mode */

@@ -4,7 +4,7 @@
 		<div class="relative pl-1">
 			<!-- Tab border line (behind tabs) -->
 			<div
-				class="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 z-0"
+				class="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 dark:bg-dark-border-primary z-0"
 			></div>
 
 			<nav class="flex relative z-10 min-w-max" aria-label="Flikar">
@@ -15,10 +15,10 @@
 					class="py-4 px-4 font-medium text-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
 					:class="[
 						tab.id === activeTab
-							? 'bg-white border border-neutral-200 border-b-white text-primary-600 rounded-t-md -mb-px relative z-20'
+							? 'bg-white dark:bg-dark-bg-secondary border border-neutral-200 dark:border-dark-border-primary border-b-white dark:border-b-dark-bg-secondary text-primary-600 dark:text-primary-400 rounded-t-md -mb-px relative z-20'
 							: tab.disabled
-							? 'border-transparent text-neutral-400 cursor-not-allowed'
-							: 'border-transparent text-neutral-600 hover:text-neutral-900 hover:border-neutral-300',
+							? 'border-transparent text-neutral-400 dark:text-dark-text-muted cursor-not-allowed'
+							: 'border-transparent text-neutral-600 dark:text-dark-text-secondary hover:text-neutral-900 dark:hover:text-dark-text-primary hover:border-neutral-300 dark:hover:border-dark-border-primary',
 						index === 0 ? 'ml-0' : '-ml-px',
 					]"
 					:aria-controls="`tabpanel-${tab.id}`"
@@ -34,7 +34,7 @@
 
 		<!-- Tab panels with border -->
 		<div
-			class="border border-t-0 border-neutral-200 rounded-b-md p-4 bg-white"
+			class="border border-t-0 border-neutral-200 dark:border-dark-border-primary rounded-b-md p-4 bg-white dark:bg-dark-bg-secondary"
 		>
 			<div
 				v-for="tab in tabs"
