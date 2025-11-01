@@ -164,7 +164,9 @@ const submitBooking = () => {
 		<h1 class="text-3xl font-bold text-gray-800 mb-6">
 			Specialistmottagningar
 		</h1>
-
+		<h2 class="text-2xl font-bold text-gray-800 mb-6">
+			Prioriteringsgrund
+		</h2>
 		<!-- Alert for referral information -->
 		<Alert
 			type="info"
