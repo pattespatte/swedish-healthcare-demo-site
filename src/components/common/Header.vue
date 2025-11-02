@@ -204,14 +204,14 @@ const isDropdownActive = (dropdownItems: any[]) => {
 					<SearchBox
 						size="medium"
 						:clearable="true"
-						:show-search-button="false"
+						:show-search-button="true"
 						aria-label="Sök på webbplatsen"
 					/>
 
 					<!-- Language selector placeholder -->
 					<div class="relative">
 						<select
-							class="appearance-none bg-white border border-neutral-300 dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg py-2 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
+							class="appearance-none bg-white border border-neutral-300 dark:bg-dark-bg-tertiary dark:border-dark-border-primary rounded-lg py-1 pl-3 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:text-dark-text-primary"
 							aria-label="Välj språk"
 						>
 							<option value="sv">Svenska</option>
