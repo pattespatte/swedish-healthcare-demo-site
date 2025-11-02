@@ -27,10 +27,46 @@ const breadcrumbs = computed<BreadcrumbItem[]>(() => {
 	pathArray.forEach((segment, index) => {
 		currentPath += `/${segment}`;
 
-		// Convert URL segment to readable name (kebab-case to Title Case)
-		const readableName = segment
+		// Convert URL segment to readable name (kebab-case to sentence case for Swedish)
+		// Handle special Swedish characters that might be encoded in URLs
+		let readableSegment = segment;
+
+		// Special case mappings for Swedish characters in URLs
+		const swedishMappings: { [key: string]: string } = {
+			vard: "vård",
+			formaner: "förmåner",
+			avgifter: "avgifter", // No special chars but keeping for consistency
+			karriarvagar: "karriärvägar",
+			tjanster: "tjänster",
+			hemsjukvard: "hemsjukvård",
+			labbprov: "labbprov", // No special chars
+			specialistmottagningar: "specialistmottagningar", // No special chars
+			mottagningar: "mottagningar", // No special chars
+			vardgaranti: "vårdgaranti",
+			integritetspolicy: "integritetspolicy", // No special chars
+			cookies: "cookies", // No special chars
+		};
+
+		// Apply Swedish character mappings
+		for (const [urlSegment, swedishSegment] of Object.entries(
+			swedishMappings
+		)) {
+			if (readableSegment.includes(urlSegment)) {
+				readableSegment = readableSegment.replace(
+					urlSegment,
+					swedishSegment
+				);
+				break; // Only apply first match to avoid conflicts
+			}
+		}
+
+		const readableName = readableSegment
 			.split("-")
-			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+			.map((word, index) =>
+				index === 0
+					? word.charAt(0).toUpperCase() + word.slice(1)
+					: word.toLowerCase()
+			)
 			.join(" ");
 
 		// Check if this is the last segment (current page)

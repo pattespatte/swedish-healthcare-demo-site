@@ -129,7 +129,7 @@ const props = withDefaults(defineProps<Props>(), {
 	size: "medium",
 	disabled: false,
 	clearable: true,
-	showSearchButton: false,
+	showSearchButton: true,
 	ariaLabel: "Sök",
 });
 
