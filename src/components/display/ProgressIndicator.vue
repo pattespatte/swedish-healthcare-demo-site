@@ -37,11 +37,11 @@
 						class="ml-4 min-w-0 relative z-10"
 					>
 						<p
-							class="text-sm font-medium"
+							class="text-sm font-medium px-2 py-1 rounded inline-block"
 							:class="
 								index <= currentStep
-									? 'text-primary-700'
-									: 'text-neutral-500'
+									? 'text-primary-700 bg-white'
+									: 'text-neutral-500 bg-white'
 							"
 						>
 							{{ labels[index] }}

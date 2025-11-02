@@ -28,6 +28,7 @@
 		>
 			<div
 				v-if="visible"
+				ref="modalElement"
 				class="fixed inset-0 z-50 flex items-center justify-center p-4"
 				role="dialog"
 				aria-modal="true"
@@ -96,7 +97,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, onMounted, onBeforeUnmount } from "vue";
 
 // Props
 interface Props {
@@ -123,6 +124,11 @@ const titleId = ref(
 	`modal-title-${Math.random().toString(36).substring(2, 9)}`
 );
 
+// Reference to the modal element
+const modalElement = ref<HTMLElement>();
+// Store the element that had focus before modal opened
+const previousFocusElement = ref<HTMLElement | null>(null);
+
 // Compute modal size classes
 const modalSizeClasses = computed(() => {
 	switch (props.size) {
@@ -144,31 +150,113 @@ const handleBackdropClick = () => {
 };
 
 // Handle escape key
-const handleEscapeKey = () => {
-	if (props.closable) {
+const handleEscapeKey = (event: KeyboardEvent) => {
+	if (event.key === "Escape" && props.closable) {
+		event.preventDefault();
 		emit("update:visible", false);
 	}
 };
 
-// Focus trap when modal is open
+// Global ESC key handler
+const globalEscapeHandler = (event: KeyboardEvent) => {
+	if (event.key === "Escape" && props.visible && props.closable) {
+		event.preventDefault();
+		emit("update:visible", false);
+	}
+};
+
+// Get all focusable elements within the modal
+const getFocusableElements = (): HTMLElement[] => {
+	if (!modalElement.value) return [];
+
+	const focusableSelectors = [
+		"button:not([disabled])",
+		"[href]",
+		"input:not([disabled])",
+		"select:not([disabled])",
+		"textarea:not([disabled])",
+		'[tabindex]:not([tabindex="-1"])',
+	].join(", ");
+
+	return Array.from(
+		modalElement.value.querySelectorAll(focusableSelectors)
+	) as HTMLElement[];
+};
+
+// Trap focus within the modal
+const trapFocus = (event: KeyboardEvent) => {
+	if (event.key !== "Tab") return;
+
+	const focusableElements = getFocusableElements();
+	if (focusableElements.length === 0) return;
+
+	const firstElement = focusableElements[0];
+	const lastElement = focusableElements[focusableElements.length - 1];
+
+	// If shift + tab and focus is on first element, move to last
+	if (event.shiftKey && document.activeElement === firstElement) {
+		event.preventDefault();
+		lastElement.focus();
+	}
+	// If tab and focus is on last element, move to first
+	else if (!event.shiftKey && document.activeElement === lastElement) {
+		event.preventDefault();
+		firstElement.focus();
+	}
+};
+
+// Set up focus trapping and event listeners when modal opens
+const setupModalFocus = () => {
+	// Store the currently focused element
+	previousFocusElement.value = document.activeElement as HTMLElement;
+
+	// Add global ESC key listener
+	document.addEventListener("keydown", globalEscapeHandler);
+
+	// Focus the first focusable element after a short delay
+	setTimeout(() => {
+		const focusableElements = getFocusableElements();
+		if (focusableElements.length > 0) {
+			focusableElements[0].focus();
+		}
+	}, 100);
+
+	// Add focus trap listener
+	document.addEventListener("keydown", trapFocus);
+};
+
+// Clean up when modal closes
+const cleanupModalFocus = () => {
+	// Remove global ESC key listener
+	document.removeEventListener("keydown", globalEscapeHandler);
+
+	// Remove focus trap listener
+	document.removeEventListener("keydown", trapFocus);
+
+	// Return focus to the element that opened the modal
+	if (previousFocusElement.value) {
+		setTimeout(() => {
+			previousFocusElement.value?.focus();
+		}, 100);
+	}
+};
+
+// Watch for modal visibility changes
 watch(
 	() => props.visible,
 	(newVal) => {
 		if (newVal) {
-			// Store the currently focused element
-			const activeElement = document.activeElement as HTMLElement;
-			if (activeElement) {
-				// Return focus to this element when modal closes
-				setTimeout(() => {
-					const firstFocusable = document.querySelector(
-						'[role="dialog"] button, [role="dialog"] input, [role="dialog"] select, [role="dialog"] textarea'
-					) as HTMLElement;
-					if (firstFocusable) {
-						firstFocusable.focus();
-					}
-				}, 100);
-			}
+			setupModalFocus();
+		} else {
+			cleanupModalFocus();
 		}
 	}
 );
+
+// Clean up on component unmount
+onBeforeUnmount(() => {
+	if (props.visible) {
+		cleanupModalFocus();
+	}
+});
 </script>
