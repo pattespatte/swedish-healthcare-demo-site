@@ -31,40 +31,24 @@ export function useSearch() {
 	const searchIndex = ref<SearchIndexItem[]>([])
 	const isIndexLoaded = ref(false)
 
-	// Load search index from public directory
+	// 🔸 Updated function
 	const loadSearchIndex = async () => {
 		if (isIndexLoaded.value) return
-
 		try {
 			isLoading.value = true
+			if (typeof window === 'undefined') return
 
-			// Handle different environments
-			let searchIndexUrl = '/search-index.json'
-
-			// During SSR/build time, we need to handle this differently
-			if (typeof window === 'undefined') {
-				// Skip loading during SSR, but don't mark as loaded
-				// This prevents search from trying to run on server
-				return
-			}
-
-			// In browser environment, use absolute URL to ensure proper loading
-			if (typeof window !== 'undefined' && window.location) {
-				const baseUrl = window.location.origin
-				// Add cache-busting parameter to prevent browser caching issues
-				const timestamp = Date.now()
-				searchIndexUrl = `${baseUrl}/search-index.json?t=${timestamp}`
-			}
+			const baseUrl = import.meta.env.BASE_URL || '/'
+			const timestamp = Date.now()
+			const searchIndexUrl = `${baseUrl}search-index.json?t=${timestamp}`
 
 			const response = await fetch(searchIndexUrl)
-			if (!response.ok) {
-				throw new Error('Failed to load search index')
-			}
+			if (!response.ok) throw new Error(`Failed to load search index`)
 			const data = await response.json()
+
 			searchIndex.value = data
 			isIndexLoaded.value = true
 		} catch (error) {
-			// Only log error in browser environment
 			if (typeof window !== 'undefined') {
 				console.error('Error loading search index:', error)
 			}
