@@ -292,7 +292,9 @@ const copyToClipboard = (text: string) => {
 					<h3 class="text-lg font-semibold text-blue-800 mb-3">
 						Användningsriktlinjer för färger
 					</h3>
-					<ul class="list-disc space-y-2 text-sm text-blue-700 px-4">
+					<ul
+						class="list-disc space-y-2 text-sm text-primary-700 px-4"
+					>
 						<li>
 							Primära färger bör användas för huvudsakliga
 							UI-element som knappar, länkar och viktiga
