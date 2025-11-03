@@ -16,33 +16,47 @@ import Breadcrumbs from "../components/common/Breadcrumbs.vue";
 			</p>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-700 mb-3">
-						Boka tid
-					</h2>
-					<p class="text-neutral-700">
-						Boka tid hos läkare, sjuksköterska eller annan
-						vårdpersonal.
-					</p>
-				</div>
+				<router-link to="/boka-tid" class="block">
+					<div
+						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
+					>
+						<h2 class="text-xl font-semibold text-primary-600 mb-3">
+							Boka tid
+						</h2>
+						<p class="text-neutral-700">
+							Boka tid hos läkare, sjuksköterska eller annan
+							vårdpersonal.
+						</p>
+					</div>
+				</router-link>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-700 mb-3">
-						E-tjänster
-					</h2>
-					<p class="text-neutral-700">
-						Få tillgång till dina journaler, provsvar och recept.
-					</p>
-				</div>
+				<router-link to="/tjanster" class="block">
+					<div
+						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
+					>
+						<h2 class="text-xl font-semibold text-primary-600 mb-3">
+							E-tjänster
+						</h2>
+						<p class="text-neutral-700">
+							Få tillgång till dina journaler, provsvar och
+							recept.
+						</p>
+					</div>
+				</router-link>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-primary-700 mb-3">
-						Kontakta oss
-					</h2>
-					<p class="text-neutral-700">
-						Ställ frågor eller kontakta vården via 1177 Vårdguiden.
-					</p>
-				</div>
+				<router-link to="/kontakt" class="block">
+					<div
+						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
+					>
+						<h2 class="text-xl font-semibold text-primary-700 mb-3">
+							Kontakta oss
+						</h2>
+						<p class="text-neutral-700">
+							Ställ frågor eller kontakta vården via 1177
+							Vårdguiden.
+						</p>
+					</div>
+				</router-link>
 			</div>
 		</div>
 	</div>
