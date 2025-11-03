@@ -7,14 +7,14 @@
 		>
 			<button
 				type="button"
-				class="flex justify-between items-center w-full py-4 px-2 text-left font-medium text-neutral-800 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-md transition-colors"
+				class="flex justify-between items-center w-full py-4 px-2 text-left font-medium text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-dark-bg-secondary focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-md transition-colors"
 				:aria-expanded="isItemOpen(item.id)"
 				:aria-controls="`accordion-content-${item.id}`"
 				@click="toggleItem(item.id)"
 			>
 				<span>{{ item.title }}</span>
 				<svg
-					class="w-5 h-5 text-neutral-500 transition-transform duration-300"
+					class="w-5 h-5 text-neutral-500 dark:text-neutral-400 transition-transform duration-300"
 					:class="{ 'rotate-180': isItemOpen(item.id) }"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
@@ -40,7 +40,7 @@
 				<div
 					v-show="isItemOpen(item.id)"
 					:id="`accordion-content-${item.id}`"
-					class="pb-4 px-2 text-neutral-700"
+					class="pb-4 px-2 text-neutral-700 dark:text-neutral-300"
 				>
 					<div class="pt-2">
 						{{ item.content }}
