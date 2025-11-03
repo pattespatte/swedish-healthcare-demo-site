@@ -67,13 +67,16 @@ const {
 	hasResults,
 	performSearch,
 	searchIndex,
+	loadSearchIndex,
 } = useSearch();
 
 // Initialize search query from route parameter
-onMounted(() => {
+onMounted(async () => {
 	const query = route.query.q as string;
 	if (query) {
 		searchQuery.value = query;
+		// Wait for search index to load before performing search
+		await loadSearchIndex();
 		// Perform a full search without limiting results for the dedicated results page
 		performFullSearch(query);
 	}
@@ -82,9 +85,11 @@ onMounted(() => {
 // Watch for route changes
 watch(
 	() => route.query.q,
-	(newQuery) => {
+	async (newQuery) => {
 		if (newQuery) {
 			searchQuery.value = newQuery as string;
+			// Wait for search index to load before performing search
+			await loadSearchIndex();
 			// Perform a full search without limiting results for the dedicated results page
 			performFullSearch(newQuery as string);
 		}

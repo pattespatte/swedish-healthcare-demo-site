@@ -36,7 +36,14 @@ export function useSearch() {
 		if (isIndexLoaded.value) return
 		try {
 			isLoading.value = true
-			if (typeof window === 'undefined') return
+
+			// Only load on client-side
+			if (typeof window === 'undefined') {
+				// During SSR, we'll skip loading but mark as loaded to prevent retries
+				isIndexLoaded.value = true
+				isLoading.value = false
+				return
+			}
 
 			const baseUrl = import.meta.env.BASE_URL || '/'
 			const timestamp = Date.now()
