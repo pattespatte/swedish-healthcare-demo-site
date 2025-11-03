@@ -45,16 +45,19 @@
 					<!-- Result title -->
 					<div
 						class="font-medium text-sm text-primary-700 dark:text-primary-400 truncate"
-					>
-						{{ highlightText(result.title, searchQuery) }}
-					</div>
+						v-html="highlightText(result.title, searchQuery)"
+					></div>
 
 					<!-- Result snippet -->
 					<div
 						class="text-xs text-neutral-600 dark:text-dark-text-muted mt-1 line-clamp-2"
-					>
-						{{ result.snippet || result.description }}
-					</div>
+						v-html="
+							highlightText(
+								result.snippet || result.description || '',
+								searchQuery
+							)
+						"
+					></div>
 
 					<!-- Result URL -->
 					<div
@@ -175,11 +178,19 @@ const viewAllResults = () => {
 const highlightText = (text: string, query: string): string => {
 	if (!query.trim()) return text;
 
+	// Decode HTML entities if we're on the client side
+	let decodedText = text;
+	if (typeof window !== "undefined" && document) {
+		const tempElement = document.createElement("textarea");
+		tempElement.innerHTML = text;
+		decodedText = tempElement.value;
+	}
+
 	const regex = new RegExp(
 		`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
 		"gi"
 	);
-	return text.replace(
+	return decodedText.replace(
 		regex,
 		'<mark class="bg-yellow-200 dark:bg-yellow-800">$1</mark>'
 	);
