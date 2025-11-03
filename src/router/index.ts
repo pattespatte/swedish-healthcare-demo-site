@@ -227,6 +227,15 @@ const routes: Array<RouteRecordRaw> = [
 		}
 	},
 	{
+		path: '/sok',
+		name: 'SearchResults',
+		component: () => import('@/views/SearchResultsPage.vue'),
+		meta: {
+			title: 'Sökresultat - Vårdcentralen Vårdportalen',
+			description: 'Sökresultat för din sökning'
+		}
+	},
+	{
 		// Catch all 404 routes
 		path: '/:pathMatch(.*)*',
 		name: 'NotFound',

@@ -167,6 +167,7 @@ const selectResult = (result: SearchResult) => {
 
 // View all results
 const viewAllResults = () => {
+	console.log("View all results button clicked in SearchResults component");
 	emit("view-all-results");
 };
 

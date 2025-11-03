@@ -110,6 +110,7 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
+import { useRouter } from "vue-router";
 import { useSearch } from "@/composables/useSearch";
 import SearchResults from "./SearchResults.vue";
 import type { SearchResult } from "@/composables/useSearch";
@@ -133,7 +134,8 @@ const props = withDefaults(defineProps<Props>(), {
 	ariaLabel: "Sök",
 });
 
-// Use search composable
+// Use router and search composable
+const router = useRouter();
 const {
 	searchQuery,
 	searchResults,
@@ -184,9 +186,14 @@ const handleResultSelect = (result: SearchResult | null) => {
 
 // Handle view all results
 const handleViewAllResults = () => {
-	// This could navigate to a dedicated search results page in the future
-	// For now, just clear the search
-	clearSearch();
+	console.log("View all results clicked with query:", searchQuery.value);
+	if (searchQuery.value.trim()) {
+		// Navigate to search results page with the query
+		router.push({
+			name: "SearchResults",
+			query: { q: searchQuery.value.trim() },
+		});
+	}
 };
 
 // Handle keyboard navigation

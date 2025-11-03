@@ -272,6 +272,7 @@ export function useSearch() {
 		isIndexLoaded,
 		hasResults,
 		searchAnalytics,
+		searchIndex,
 		performSearch,
 		navigateToResult,
 		clearSearch,

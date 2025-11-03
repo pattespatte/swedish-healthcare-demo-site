@@ -683,6 +683,22 @@
     ]
   },
   {
+    "id": "/sok",
+    "title": "Sökresultat - Vårdcentralen Vårdportalen",
+    "url": "/sok",
+    "content": "Sökresultat för \"\" Söker... Inga sökresultat för \"\" Hittade resultat",
+    "description": "Sökresultat för din sökning",
+    "keywords": [
+      "sökresultat",
+      "vårdcentralen",
+      "vårdportalen",
+      "söker",
+      "inga",
+      "hittade",
+      "resultat"
+    ]
+  },
+  {
     "id": "/:pathMatch(.*)*",
     "title": "Sidan hittades inte - Vårdcentralen Vårdportalen",
     "url": "/:pathMatch(.*)*",
