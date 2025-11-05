@@ -35,11 +35,12 @@
 					</div>
 				</div>
 				<div class="text-center">
-					<button
-						class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					<router-link
+						to="/om-oss/lediga-tjanster"
+						class="inline-block bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Se alla lediga jobb
-					</button>
+					</router-link>
 				</div>
 			</div>
 		</div>

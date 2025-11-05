@@ -128,11 +128,12 @@
 				</div>
 
 				<div class="text-center">
-					<button
-						class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors mr-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					<router-link
+						to="/kontakt"
+						class="inline-block bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors mr-4 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Kontakta oss
-					</button>
+					</router-link>
 					<button
 						class="bg-neutral-600 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
 					>

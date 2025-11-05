@@ -329,7 +329,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									:to="link.path"
 									class="text-slate-200 hover:text-white font-medium transition-colors duration-200 block py-2 flex-1"
 									:class="{
-										'font-semibold active-nav-link':
+										'text-yellow-100 font-bold active-nav-link':
 											isActive(link.path) ||
 											(link.hasDropdown &&
 												isDropdownActive(
@@ -417,7 +417,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 									:to="link.path"
 									class="text-slate-200 hover:text-white font-medium transition-colors duration-200 block py-4 flex-1"
 									:class="{
-										'font-semibold active-nav-link':
+										'text-yellow-100 font-bold active-nav-link':
 											isActive(link.path) ||
 											(link.hasDropdown &&
 												isDropdownActive(
@@ -556,7 +556,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 								:to="link.path"
 								class="flex-1 px-4 py-3 block text-white hover:text-white font-medium transition-colors duration-200"
 								:class="{
-									'font-semibold active-nav-link':
+									'text-yellow-100 font-bold active-nav-link':
 										isActive(link.path) ||
 										(link.hasDropdown &&
 											isDropdownActive(
@@ -704,7 +704,7 @@ const isDropdownActive = (dropdownItems: any[]) => {
 @media (min-width: 1024px) {
 	/* Adjust the active nav link positioning for the second row */
 	nav .active-nav-link::after {
-		bottom: 0.2rem; /* Slight adjustment for better visual alignment in second row */
+		bottom: 0.4rem; /* Slight adjustment for better visual alignment in second row */
 	}
 }
 </style>

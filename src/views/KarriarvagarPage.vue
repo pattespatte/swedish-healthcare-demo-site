@@ -124,7 +124,7 @@
 						<h2 class="text-xl font-semibold mb-3 text-yellow-800">
 							Kompetensutveckling
 						</h2>
-						<ul class="list-disc space-y-2 text-gray-700">
+						<ul class="list-disc space-y-2 text-gray-700 px-4">
 							<li>Individuell utvecklingsplan</li>
 							<li>Regelbundna utvecklingssamtal</li>
 							<li>Internutbildningar</li>
@@ -137,7 +137,7 @@
 						<h2 class="text-xl font-semibold mb-3 text-purple-800">
 							Ledarskapsutveckling
 						</h2>
-						<ul class="list-disc space-y-2 text-gray-700">
+						<ul class="list-disc space-y-2 text-gray-700 px-4">
 							<li>Grundläggande ledarskapsutbildning</li>
 							<li>Avancerad ledarskapsutbildning</li>
 							<li>Coaching och handledning</li>
