@@ -1,0 +1,107 @@
+[
+  {
+    "url": "http://localhost:5174/",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/om-oss",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/om-oss/jobba-hos-oss",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/om-oss/lediga-tjanster",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/om-oss/karriarvagar",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/om-oss/formaner",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/tjanster",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/mottagningar",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/tjanster/specialistmottagningar",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/tjanster/labbprov",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/tjanster/hemsjukvard",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/patientinformation",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/patientinformation/vardgaranti",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/patientinformation/avgifter",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/patientinformation/din-vardkontakt",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/boka-tid",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/mina-sidor",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/kontakt",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/integritetspolicy",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/cookies",
+    "violations": [],
+    "count": 0
+  },
+  {
+    "url": "http://localhost:5174/tillganglighet",
+    "violations": [],
+    "count": 0
+  }
+]

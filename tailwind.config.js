@@ -57,9 +57,9 @@ export default {
 					200: '#99CEFF', // Medium-light primary blue
 					300: '#66B8FF', // Medium primary blue
 					400: '#33A5FF', // Medium-dark primary blue
-					500: '#0092FF', // Primary blue (brand color)
-					600: '#007CE8', // Dark primary blue
-					700: '#0066CC', // Darker primary blue
+					500: '#0077CC', // Primary blue (darkened for WCAG AA compliance)
+					600: '#005FA3', // Dark primary blue
+					700: '#004D88', // Darker primary blue
 					800: '#232948', // Darkest primary blue
 					900: '#081130', // Almost black primary blue
 				},
