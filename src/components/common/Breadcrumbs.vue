@@ -85,8 +85,17 @@
 			<ol class="flex items-center space-x-2 text-sm">
 				<li v-for="(crumb, index) in breadcrumbs" :key="crumb.path" class="flex items-center">
 					<!-- Breadcrumb Item -->
+					<!-- Special case: Hide "Start" text on home page but keep container for layout -->
+					<span
+						v-if="crumb.path === '/' && route.path === '/'"
+						class="font-medium text-neutral-800"
+						aria-current="page"
+					>
+						&nbsp;
+						<!-- Empty span to maintain layout structure -->
+					</span>
 					<button
-						v-if="!crumb.isCurrent"
+						v-else-if="!crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
 						class="text-primary-700 transition-colors duration-200 hover:text-primary-800 hover:underline dark:text-primary-400 dark:hover:text-primary-300"
 						:aria-current="crumb.isCurrent ? 'page' : undefined"

@@ -1,106 +1,106 @@
 [
   {
-    "url": "http://localhost:5174/",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/om-oss",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/om-oss",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/om-oss/jobba-hos-oss",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/om-oss/jobba-hos-oss",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/om-oss/lediga-tjanster",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/om-oss/lediga-tjanster",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/om-oss/karriarvagar",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/om-oss/karriarvagar",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/om-oss/formaner",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/om-oss/formaner",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/tjanster",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/tjanster",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/mottagningar",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/mottagningar",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/tjanster/specialistmottagningar",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/tjanster/specialistmottagningar",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/tjanster/labbprov",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/tjanster/labbprov",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/tjanster/hemsjukvard",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/tjanster/hemsjukvard",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/patientinformation",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/patientinformation",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/patientinformation/vardgaranti",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/patientinformation/vardgaranti",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/patientinformation/avgifter",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/patientinformation/avgifter",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/patientinformation/din-vardkontakt",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/patientinformation/din-vardkontakt",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/boka-tid",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/boka-tid",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/mina-sidor",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/mina-sidor",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/kontakt",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/kontakt",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/integritetspolicy",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/integritetspolicy",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/cookies",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/cookies",
     "violations": [],
     "count": 0
   },
   {
-    "url": "http://localhost:5174/tillganglighet",
+    "url": "http://localhost:4173/swedish-healthcare-demo-site/tillganglighet",
     "violations": [],
     "count": 0
   }
