@@ -5,6 +5,7 @@ const isDarkMode = ref(false)
 
 // Key for localStorage
 const DARK_MODE_KEY = 'dark-mode'
+const USER_PREFERENCE_KEY = 'user-dark-mode-preference'
 
 // Check if user prefers dark mode
 const prefersDarkMode = (): boolean => {
@@ -17,9 +18,9 @@ const prefersDarkMode = (): boolean => {
 // Load dark mode preference from localStorage
 const loadDarkModePreference = (): boolean => {
 	if (typeof window !== 'undefined') {
-		const stored = localStorage.getItem(DARK_MODE_KEY)
-		if (stored !== null) {
-			return stored === 'true'
+		const userPreference = localStorage.getItem(USER_PREFERENCE_KEY)
+		if (userPreference !== null) {
+			return userPreference === 'true'
 		}
 	}
 	return prefersDarkMode()
@@ -28,7 +29,7 @@ const loadDarkModePreference = (): boolean => {
 // Save dark mode preference to localStorage
 const saveDarkModePreference = (value: boolean): void => {
 	if (typeof window !== 'undefined') {
-		localStorage.setItem(DARK_MODE_KEY, value.toString())
+		localStorage.setItem(USER_PREFERENCE_KEY, value.toString())
 	}
 }
 
@@ -71,7 +72,7 @@ if (typeof window !== 'undefined') {
 	const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 	const handleChange = (e: MediaQueryListEvent) => {
 		// Only update if user hasn't explicitly set a preference
-		if (localStorage.getItem(DARK_MODE_KEY) === null) {
+		if (localStorage.getItem(USER_PREFERENCE_KEY) === null) {
 			isDarkMode.value = e.matches
 		}
 	}

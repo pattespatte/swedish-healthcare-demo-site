@@ -75,22 +75,22 @@ A modern, responsive Vue.js-based website for a Swedish healthcare practice, bui
 swedish-healthcare-demo-site/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # GitHub Actions deployment workflow
-├── public/                     # Static assets
+│       └── deploy.yml       # GitHub Actions deployment workflow
+├── public/                  # Static assets
 ├── src/
-│   ├── assets/                 # Project assets (images, CSS, etc.)
-│   ├── components/             # Vue components
-│   │   ├── common/            # Shared components (Header, Footer, etc.)
-│   │   ├── display/           # Display components (Cards, Tables, etc.)
-│   │   ├── forms/             # Form components (Inputs, Buttons, etc.)
-│   │   └── interactive/       # Interactive components (Modal, Tabs, etc.)
-│   ├── router/               # Vue Router configuration
-│   ├── store/                # Pinia store files
-│   ├── views/                # Page components
-│   ├── App.vue               # Root component
-│   ├── env.d.ts              # TypeScript environment definitions
-│   └── main.ts               # Application entry point
-├── .env.production           # Production environment variables
+│   ├── assets/              # Project assets (images, CSS, etc.)
+│   ├── components/          # Vue components
+│   │   ├── common/          # Shared components (Header, Footer, etc.)
+│   │   ├── display/         # Display components (Cards, Tables, etc.)
+│   │   ├── forms/           # Form components (Inputs, Buttons, etc.)
+│   │   └── interactive/     # Interactive components (Modal, Tabs, etc.)
+│   ├── router/              # Vue Router configuration
+│   ├── store/               # Pinia store files
+│   ├── views/               # Page components
+│   ├── App.vue              # Root component
+│   ├── env.d.ts             # TypeScript environment definitions
+│   └── main.ts              # Application entry point
+├── .env.production          # Production environment variables
 ├── .gitignore               # Git ignore rules
 ├── index.html               # HTML template
 ├── package.json             # Project dependencies and scripts
