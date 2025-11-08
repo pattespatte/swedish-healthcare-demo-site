@@ -15,6 +15,22 @@
 	"plugins": ["prettier-plugin-tailwindcss"],
 	"overrides": [
 		{
+			"files": "*.html",
+			"options": {
+				"parser": "html",
+				"htmlWhitespaceSensitivity": "ignore"
+			}
+		},
+		{
+			"files": "index.html",
+			"options": {
+				"parser": "html",
+				"htmlWhitespaceSensitivity": "ignore",
+				"requirePragma": false,
+				"proseWrap": "preserve"
+			}
+		},
+		{
 			"files": "*.vue",
 			"options": {
 				"parser": "vue"

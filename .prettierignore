@@ -63,3 +63,6 @@ update-titles.js
 
 # GitHub workflows
 .github/
+
+# Main HTML file to preserve formatting
+index.html

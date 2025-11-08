@@ -3,6 +3,8 @@ import pluginVue from 'eslint-plugin-vue'
 import * as vueParser from 'vue-eslint-parser'
 import tsParser from '@typescript-eslint/parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
+import htmlPlugin from '@html-eslint/eslint-plugin'
+import htmlParser from '@html-eslint/parser'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
@@ -117,7 +119,7 @@ export default [
 				'error',
 				{
 					html: {
-						void: 'never',
+						void: 'always',
 						normal: 'always',
 						component: 'always'
 					},
@@ -234,6 +236,20 @@ export default [
 			'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 			'prefer-const': 'error',
 			'no-var': 'error'
+		}
+	},
+
+	// Configuration for HTML files
+	{
+		files: ['**/*.html'],
+		languageOptions: {
+			parser: htmlParser
+		},
+		plugins: {
+			'@html-eslint': htmlPlugin
+		},
+		rules: {
+			'@html-eslint/require-doctype': 'error'
 		}
 	},
 
