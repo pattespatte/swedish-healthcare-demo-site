@@ -71,7 +71,7 @@
 							id="name"
 							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="Ditt namn"
-						/>
+						>
 					</div>
 
 					<div>
@@ -81,7 +81,7 @@
 							id="email"
 							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="din.epost@exempel.se"
-						/>
+						>
 					</div>
 
 					<div>
@@ -91,7 +91,7 @@
 							id="phone"
 							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="070-123 45 67"
-						/>
+						>
 					</div>
 
 					<div>

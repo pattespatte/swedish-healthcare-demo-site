@@ -4,9 +4,16 @@
 	>
 		<div v-if="image || $slots.image" class="flex h-48 items-center justify-center bg-neutral-100">
 			<slot name="image">
-				<img v-if="image" :src="image" :alt="title" class="h-full w-full object-cover" />
+				<img v-if="image"
+:src="image"
+:alt="title"
+class="h-full w-full object-cover" >
 				<div v-else class="text-neutral-400">
-					<svg class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+					<svg class="h-16 w-16"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor"
+aria-hidden="true">
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -25,8 +32,14 @@
 				</h3>
 				<div v-if="link" class="ml-4 flex-shrink-0">
 					<a :href="link" class="text-primary-700 hover:text-primary-800" aria-label="Läs mer om {{ title }}">
-						<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						<svg class="h-5 w-5"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
+							<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M9 5l7 7-7 7" />
 						</svg>
 					</a>
 				</div>
@@ -53,8 +66,14 @@
 			<div v-if="link" class="mt-6">
 				<a :href="link" class="inline-flex items-center text-sm font-medium text-primary-700 hover:text-primary-800">
 					Läs mer
-					<svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+					<svg class="ml-1 h-4 w-4"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
+						<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M9 5l7 7-7 7" />
 					</svg>
 				</a>
 			</div>

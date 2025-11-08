@@ -196,7 +196,10 @@
 				<!-- Right side: Search and Language -->
 				<div class="hidden items-center space-x-4 md:flex">
 					<!-- Search functionality -->
-					<SearchBox size="medium" :clearable="true" :show-search-button="true" aria-label="Sök på webbplatsen" />
+					<SearchBox size="medium"
+:clearable="true"
+:show-search-button="true"
+aria-label="Sök på webbplatsen" />
 
 					<!-- Language selector placeholder -->
 					<div class="relative">
@@ -233,7 +236,10 @@
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
 					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
 					<svg
 						v-else
@@ -243,7 +249,10 @@
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
 					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</button>
 			</div>
@@ -256,7 +265,10 @@
 				<nav class="relative hidden md:flex" aria-label="Huvudnavigering">
 					<!-- Two-row layout for laptop screens (1024px or narrower) -->
 					<div class="grid grid-cols-2 gap-x-8 gap-y-2 lg:hidden">
-						<div v-for="link in navLinks" :key="link.path" class="relative" data-dropdown-container>
+						<div v-for="link in navLinks"
+:key="link.path"
+class="relative"
+data-dropdown-container>
 							<!-- Dropdown Menu for laptop view -->
 							<div
 								v-if="link.hasDropdown"
@@ -317,7 +329,10 @@
 										viewBox="0 0 24 24"
 										xmlns="http://www.w3.org/2000/svg"
 									>
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+										<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M19 9l-7 7-7-7" />
 									</svg>
 								</button>
 							</div>
@@ -326,7 +341,10 @@
 
 					<!-- Single row layout for larger screens -->
 					<div class="hidden space-x-8 lg:flex">
-						<div v-for="link in navLinks" :key="link.path" class="relative" data-dropdown-container>
+						<div v-for="link in navLinks"
+:key="link.path"
+class="relative"
+data-dropdown-container>
 							<!-- Dropdown Menu for desktop view -->
 							<div
 								v-if="link.hasDropdown"
@@ -387,7 +405,10 @@
 										viewBox="0 0 24 24"
 										xmlns="http://www.w3.org/2000/svg"
 									>
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+										<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M19 9l-7 7-7-7" />
 									</svg>
 								</button>
 							</div>
@@ -492,7 +513,10 @@
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
 								>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+									<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M19 9l-7 7-7-7" />
 								</svg>
 							</button>
 						</div>
@@ -501,7 +525,10 @@
 
 				<!-- Mobile Search -->
 				<div class="mt-4">
-					<SearchBox size="large" :clearable="true" :show-search-button="true" aria-label="Sök på webbplatsen" />
+					<SearchBox size="large"
+:clearable="true"
+:show-search-button="true"
+aria-label="Sök på webbplatsen" />
 				</div>
 
 				<!-- Mobile Language Selector -->

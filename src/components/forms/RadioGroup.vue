@@ -19,7 +19,7 @@
 						:class="['h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500', error ? 'border-red-500' : '']"
 						@change="$emit('update:modelValue', option.value)"
 						@blur="$emit('blur')"
-					/>
+					>
 					<label :for="`${id}-${option.value}`" class="ml-2 block text-sm text-gray-700">
 						{{ option.label }}
 					</label>

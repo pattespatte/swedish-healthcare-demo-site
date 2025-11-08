@@ -1,15 +1,24 @@
 <template>
 	<nav aria-label="Framstegsindikator">
 		<ol class="flex items-center">
-			<li v-for="(step, index) in steps" :key="index" class="relative" :class="{ 'flex-1': index < steps.length - 1 }">
+			<li v-for="(step, index) in steps"
+:key="index"
+class="relative"
+:class="{ 'flex-1': index < steps.length - 1 }">
 				<div class="flex items-center">
 					<div
 						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2"
 						:class="getStepClasses(index)"
 					>
 						<span v-if="index < currentStep" class="text-white">
-							<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							<svg class="h-5 w-5"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
+								<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M5 13l4 4L19 7" />
 							</svg>
 						</span>
 						<span v-else class="text-sm font-medium">

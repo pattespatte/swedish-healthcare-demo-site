@@ -10,6 +10,7 @@ export default defineConfig({
 			'@': fileURLToPath(new URL('./src', import.meta.url))
 		}
 	},
+	assetsInclude: ['**/*.svg'],
 	base: process.env.NODE_ENV === 'production' ? '/swedish-healthcare-demo-site/' : '/',
 	build: {
 		outDir: 'dist',
@@ -19,7 +20,7 @@ export default defineConfig({
 			external: [],
 			output: {
 				// Include search-index.json in build output
-				manualChunks(id: string): string[] | undefined {
+				manualChunks: (id: string) => {
 					if (id === 'search-index') {
 						return ['search-index.json']
 					}
@@ -38,9 +39,9 @@ export default defineConfig({
 	server:
 		process.env.NODE_ENV === 'development'
 			? {
-					fs: {
-						strict: false
-					}
+				fs: {
+					strict: false
 				}
+			}
 			: undefined
 })

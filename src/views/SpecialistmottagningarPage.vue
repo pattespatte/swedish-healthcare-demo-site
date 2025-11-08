@@ -228,7 +228,10 @@
 						<div v-if="clinic.requiresReferral" class="mt-2">
 							<Badge text="Remiss krävs" variant="warning" />
 						</div>
-						<FormButton text="Ansök om remiss" variant="primary" @click="handleBooking(clinic.name)" class="mt-3" />
+						<FormButton text="Ansök om remiss"
+variant="primary"
+@click="handleBooking(clinic.name)"
+class="mt-3" />
 					</div>
 				</ServiceCard>
 			</div>
@@ -255,7 +258,10 @@
 							{{ clinic.hours }}
 						</p>
 						<div class="flex flex-wrap gap-1">
-							<Badge v-for="tag in clinic.tags" :key="tag" :text="tag" variant="primary" />
+							<Badge v-for="tag in clinic.tags"
+:key="tag"
+:text="tag"
+variant="primary" />
 						</div>
 					</div>
 				</ContactCard>
@@ -393,13 +399,13 @@
 						<p class="text-sm text-gray-700">
 							<strong>Mottagning:</strong>
 							{{ selectedClinic }}
-							<br />
+							<br >
 							<strong>Anledning:</strong>
 							Remiss för specialistvård
-							<br />
+							<br >
 							<strong>Personuppgifter:</strong>
 							[Dina uppgifter]
-							<br />
+							<br >
 							<strong>Symptom:</strong>
 							[Dina symptom]
 						</p>
@@ -410,12 +416,21 @@
 			<template #footer>
 				<div class="flex justify-between">
 					<div>
-						<FormButton v-if="bookingStep > 1" text="Föregående" variant="secondary" @click="bookingStep--" />
+						<FormButton v-if="bookingStep > 1"
+text="Föregående"
+variant="secondary"
+@click="bookingStep--" />
 					</div>
 					<div class="flex space-x-3">
 						<FormButton text="Avbryt" variant="secondary" @click="showBookingModal = false" />
-						<FormButton v-if="bookingStep < 4" text="Nästa" variant="primary" @click="bookingStep++" />
-						<FormButton v-else text="Skicka ansökan" variant="primary" @click="submitBooking" />
+						<FormButton v-if="bookingStep < 4"
+text="Nästa"
+variant="primary"
+@click="bookingStep++" />
+						<FormButton v-else
+text="Skicka ansökan"
+variant="primary"
+@click="submitBooking" />
 					</div>
 				</div>
 			</template>

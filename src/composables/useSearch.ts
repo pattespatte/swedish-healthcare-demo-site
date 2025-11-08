@@ -47,7 +47,7 @@ export function useSearch() {
 				return
 			}
 
-			const baseUrl = import.meta.env.BASE_URL || '/'
+			const baseUrl = import.meta.env?.BASE_URL || '/'
 			const timestamp = Date.now()
 			const searchIndexUrl = `${baseUrl}search-index.json?t=${timestamp}`
 

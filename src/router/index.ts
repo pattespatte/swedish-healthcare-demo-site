@@ -248,7 +248,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-	history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(import.meta.env.BASE_URL),
+	history: import.meta.env?.SSR ? createMemoryHistory() : createWebHistory(import.meta.env?.BASE_URL || '/'),
 	routes
 })
 

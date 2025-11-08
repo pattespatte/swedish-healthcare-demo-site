@@ -30,7 +30,7 @@
 				@keydown="handleKeydown"
 				:disabled="disabled"
 				:aria-label="ariaLabel"
-			/>
+			>
 
 			<div v-if="searchQuery && clearable" class="absolute inset-y-0 right-0 flex items-center pr-3">
 				<button

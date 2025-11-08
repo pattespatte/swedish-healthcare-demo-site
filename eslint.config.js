@@ -289,4 +289,7 @@ export default [
 			yoda: 'error'
 		}
 	}
+
+	// Markdown files are excluded from ESLint to allow natural formatting
+	// They will be handled by Prettier instead
 ]
