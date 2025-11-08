@@ -1,63 +1,40 @@
 <script setup lang="ts">
-import Breadcrumbs from "../components/common/Breadcrumbs.vue";
+  import Breadcrumbs from '../components/common/Breadcrumbs.vue'
+  import CardContainer from '../components/layout/CardContainer.vue'
 </script>
 
 <template>
-	<Breadcrumbs />
+  <Breadcrumbs />
 
-	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
-		<div class="max-w-4xl mx-auto">
-			<h1 class="text-3xl font-bold text-gray-800 mb-6">
-				Välkommen till Vårdportalen
-			</h1>
-			<p class="text-lg text-neutral-800 mb-8">
-				Här kan du enkelt boka tider, kontakta vården och hantera dina
-				vårdärenden.
-			</p>
+  <div class="container mx-auto mb-8 px-4 py-4 md:mb-16 lg:mb-24">
+    <div class="mx-auto max-w-4xl">
+      <h1 class="mb-6 text-3xl font-bold text-gray-800">Välkommen till Vårdportalen</h1>
+      <p class="mb-8 text-lg text-neutral-800">
+        Här kan du enkelt boka tider, kontakta vården och hantera dina vårdärenden.
+      </p>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<router-link to="/boka-tid" class="block">
-					<div
-						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
-					>
-						<h2 class="text-xl font-semibold text-primary-700 mb-3">
-							Boka tid
-						</h2>
-						<p class="text-neutral-700">
-							Boka tid hos läkare, sjuksköterska eller annan
-							vårdpersonal.
-						</p>
-					</div>
-				</router-link>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <router-link to="/boka-tid" class="block">
+          <CardContainer class="h-full" hoverable>
+            <h2 class="mb-3 text-xl font-semibold text-primary-700">Boka tid</h2>
+            <p class="text-neutral-700">Boka tid hos läkare, sjuksköterska eller annan vårdpersonal.</p>
+          </CardContainer>
+        </router-link>
 
-				<router-link to="/tjanster" class="block">
-					<div
-						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
-					>
-						<h2 class="text-xl font-semibold text-primary-700 mb-3">
-							E-tjänster
-						</h2>
-						<p class="text-neutral-700">
-							Få tillgång till dina journaler, provsvar och
-							recept.
-						</p>
-					</div>
-				</router-link>
+        <router-link to="/tjanster" class="block">
+          <CardContainer class="h-full" hoverable>
+            <h2 class="mb-3 text-xl font-semibold text-primary-700">E-tjänster</h2>
+            <p class="text-neutral-700">Få tillgång till dina journaler, provsvar och recept.</p>
+          </CardContainer>
+        </router-link>
 
-				<router-link to="/kontakt" class="block">
-					<div
-						class="bg-white rounded-lg shadow-md p-6 h-full transition-transform hover:scale-105 hover:shadow-lg cursor-pointer"
-					>
-						<h2 class="text-xl font-semibold text-primary-700 mb-3">
-							Kontakta oss
-						</h2>
-						<p class="text-neutral-700">
-							Ställ frågor eller kontakta vården via 1177
-							Vårdguiden.
-						</p>
-					</div>
-				</router-link>
-			</div>
-		</div>
-	</div>
+        <router-link to="/kontakt" class="block">
+          <CardContainer class="h-full" hoverable>
+            <h2 class="mb-3 text-xl font-semibold text-primary-700">Kontakta oss</h2>
+            <p class="text-neutral-700">Ställ frågor eller kontakta vården via 1177 Vårdguiden.</p>
+          </CardContainer>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>

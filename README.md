@@ -119,7 +119,8 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
 1. Go to [GitHub](https://github.com) and sign in to your account
 2. Click the "+" icon in the top-right corner and select "New repository"
 3. Fill in the repository details:
-   - **Repository name**: `swedish-healthcare-demo-site` (must match this name for the configuration to work)
+   - **Repository name**: `swedish-healthcare-demo-site` (must match this name for the configuration
+     to work)
    - **Description**: Swedish healthcare practice website
    - Set repository to **Public** (required for GitHub Pages)
    - **Initialize with README**: Uncheck (we already have one)
@@ -128,7 +129,8 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
 ### Step 2: Push Local Repository to GitHub
 
 1. After creating the repository, GitHub will show you a page with repository URL
-2. Copy the repository URL (it will look like: `https://github.com/your-username/swedish-healthcare-demo-site.git`)
+2. Copy the repository URL (it will look like:
+   `https://github.com/your-username/swedish-healthcare-demo-site.git`)
 3. In your terminal, navigate to the project directory and run:
 
 ```bash
@@ -146,7 +148,8 @@ Replace `your-username` with your actual GitHub username.
 2. Click on the "Settings" tab
 3. In the left sidebar, click on "Pages"
 4. Under "Build and deployment", select "GitHub Actions" as the source
-5. GitHub Pages is now enabled and will automatically deploy your site using the GitHub Actions workflow
+5. GitHub Pages is now enabled and will automatically deploy your site using the GitHub Actions
+   workflow
 
 ### Step 4: Verify Deployment
 
@@ -155,7 +158,8 @@ Replace `your-username` with your actual GitHub username.
    - Go to the "Actions" tab in your repository
    - Click on the "Deploy to GitHub Pages" workflow
    - You should see a green checkmark if the deployment was successful
-3. Once completed, your site will be available at: `https://your-username.github.io/swedish-healthcare-demo-site/`
+3. Once completed, your site will be available at:
+   `https://your-username.github.io/swedish-healthcare-demo-site/`
 
 ## Configuration Details
 
@@ -183,7 +187,8 @@ The `src/router/index.ts` file is configured with:
 
 - `createWebHistory(import.meta.env.BASE_URL)` to work with GitHub Pages
 - This ensures all routes work correctly with the GitHub Pages URL structure
-- Routes include: Home, About, Services, Contact, FAQ, Healthcare Guide, Book Appointment, My Pages, Accessibility, Clinics, Patient Information, and Careers
+- Routes include: Home, About, Services, Contact, FAQ, Healthcare Guide, Book Appointment, My Pages,
+  Accessibility, Clinics, Patient Information, and Careers
 
 ### Environment Variables
 
@@ -220,7 +225,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 404 Errors on Page Refresh
 
-If you encounter 404 errors when refreshing pages on GitHub Pages, this is normal behavior for single-page applications on GitHub Pages. The GitHub Pages workflow includes a 404.html file that redirects to the index page, which should handle this issue.
+If you encounter 404 errors when refreshing pages on GitHub Pages, this is normal behavior for
+single-page applications on GitHub Pages. The GitHub Pages workflow includes a 404.html file that
+redirects to the index page, which should handle this issue.
 
 ### Build Failures
 

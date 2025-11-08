@@ -7,193 +7,207 @@
 
 /* Apply Noto Sans as the default font globally */
 body {
-	font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 /* Apply Roboto Slab to all h1 elements */
 h1 {
-	font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
 }
 
 /* Dark mode transitions and custom properties */
 html {
-	transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body {
-	transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Custom dark mode CSS variables */
+/* Custom dark mode CSS variables - using Tailwind color palette */
 :root {
-	--dark-bg-primary: #0f172a;
-	--dark-bg-secondary: #1e293b;
-	--dark-bg-tertiary: #334155;
-	--dark-bg-quaternary: #475569;
-	--dark-text-primary: #f8fafc;
-	--dark-text-secondary: #e2e8f0;
-	--dark-text-muted: #94a3b8;
-	--dark-border-primary: #334155;
-	--dark-border-secondary: #475569;
-	--dark-hover-bg: #1e293b;
+  --dark-bg-primary: #0f172a; /* slate-900 */
+  --dark-bg-secondary: #1e293b; /* slate-800 */
+  --dark-bg-tertiary: #334155; /* slate-700 */
+  --dark-bg-quaternary: #475569; /* slate-600 */
+  --dark-text-primary: #f8fafc; /* slate-50 */
+  --dark-text-secondary: #e2e8f0; /* slate-200 */
+  --dark-text-muted: #94a3b8; /* slate-400 */
+  --dark-border-primary: #334155; /* slate-700 */
+  --dark-border-secondary: #475569; /* slate-600 */
+  --dark-hover-bg: #1e293b; /* slate-800 */
+  /* Primary color variables */
+  --primary-500: #0077cc; /* primary-500 from Tailwind config */
+  --primary-400: #33a5ff; /* primary-400 from Tailwind config */
+  --primary-300: #66b8ff; /* primary-300 from Tailwind config */
 }
 
 /* Dark mode styles */
 .dark {
-	background-color: var(--dark-bg-primary);
-	color: var(--dark-text-primary);
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
 }
 
 /* Smooth transitions for all interactive elements */
 .dark * {
-	transition: background-color 0.3s ease, border-color 0.3s ease,
-		color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Ensure proper contrast for form elements in dark mode */
 .dark input,
 .dark select,
 .dark textarea {
-	background-color: var(--dark-bg-tertiary);
-	color: var(--dark-text-primary);
-	border-color: var(--dark-border-primary);
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-border-primary);
 }
 
 .dark input:focus,
 .dark select:focus,
 .dark textarea:focus {
-	border-color: var(--primary-500);
-	outline-color: var(--primary-500);
+  border-color: var(--primary-500);
+  outline-color: var(--primary-500);
 }
 
 /* Dark mode for router-link active states */
 .dark .active-nav-link::after {
-	background-color: var(--primary-400);
+  background-color: var(--primary-400);
 }
 
 /* Enhanced dark mode text contrast */
 .dark .text-neutral-900 {
-	color: var(--dark-text-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 .dark .text-neutral-800 {
-	color: var(--dark-text-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 .dark .text-neutral-700 {
-	color: var(--dark-text-secondary) !important;
+  color: var(--dark-text-secondary) !important;
 }
 
 .dark .text-neutral-600 {
-	color: var(--dark-text-secondary) !important;
+  color: var(--dark-text-secondary) !important;
 }
 
 /* Dark mode for cards and containers */
 .dark .bg-white {
-	background-color: var(--dark-bg-tertiary) !important;
+  background-color: var(--dark-bg-tertiary) !important;
 }
 
 .dark .bg-neutral-100 {
-	background-color: var(--dark-bg-secondary) !important;
+  background-color: var(--dark-bg-secondary) !important;
 }
 
 .dark .bg-neutral-50 {
-	background-color: var(--dark-bg-secondary) !important;
+  background-color: var(--dark-bg-secondary) !important;
 }
 
 /* Dark mode for colored backgrounds */
 .dark .bg-blue-50 {
-	background-color: var(--dark-bg-tertiary) !important;
+  background-color: var(--dark-bg-tertiary) !important;
 }
 
 .dark .bg-green-50 {
-	background-color: var(--dark-bg-tertiary) !important;
+  background-color: var(--dark-bg-tertiary) !important;
 }
 
 .dark .bg-yellow-50 {
-	background-color: var(--dark-bg-tertiary) !important;
+  background-color: var(--dark-bg-tertiary) !important;
 }
 
 .dark .bg-gray-50 {
-	background-color: var(--dark-bg-tertiary) !important;
+  background-color: var(--dark-bg-tertiary) !important;
 }
 
 /* Enhanced dark mode for primary colors */
 .dark .text-primary-600 {
-	color: var(--primary-400) !important;
+  color: var(--primary-400) !important;
 }
 
 .dark .text-primary-700 {
-	color: var(--primary-400) !important;
+  color: var(--primary-400) !important;
 }
 
 /* Enhanced dark mode for gray text */
 .dark .text-gray-600 {
-	color: var(--dark-text-secondary) !important;
+  color: var(--dark-text-secondary) !important;
 }
 
 .dark .text-gray-700 {
-	color: var(--dark-text-secondary) !important;
+  color: var(--dark-text-secondary) !important;
 }
 
 .dark .text-gray-800 {
-	color: var(--dark-text-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 /* Enhanced dark mode for colored text */
 .dark .text-blue-800 {
-	color: var(--primary-300) !important;
+  color: var(--primary-300) !important;
 }
 
 .dark .text-green-800 {
-	color: var(--primary-300) !important;
+  color: var(--primary-300) !important;
 }
 
 .dark .text-yellow-800 {
-	color: var(--primary-300) !important;
+  color: var(--primary-300) !important;
 }
 
 /* Dark mode borders */
 .dark .border-neutral-200 {
-	border-color: var(--dark-border-primary) !important;
+  border-color: var(--dark-border-primary) !important;
 }
 
 .dark .border-neutral-300 {
-	border-color: var(--dark-border-primary) !important;
+  border-color: var(--dark-border-primary) !important;
 }
 
-/* Scrollbar styling for light mode */
+/* Scrollbar styling for light mode - using Tailwind colors */
 ::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #f1f5f9;
+  background: #f1f5f9; /* slate-100 */
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #d1d5db;
-	border-radius: 4px;
+  background: #d1d5db; /* gray-300 */
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #9ca3af;
+  background: #9ca3af; /* gray-400 */
 }
 
 /* Scrollbar styling for dark mode */
 .dark::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 .dark::-webkit-scrollbar-track {
-	background: var(--dark-bg-secondary);
+  background: var(--dark-bg-secondary);
 }
 
 .dark::-webkit-scrollbar-thumb {
-	background: var(--dark-bg-quaternary);
-	border-radius: 4px;
+  background: var(--dark-bg-quaternary);
+  border-radius: 4px;
 }
 
 .dark::-webkit-scrollbar-thumb:hover {
-	background: var(--dark-border-secondary);
+  background: var(--dark-border-secondary);
 }

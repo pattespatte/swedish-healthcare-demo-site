@@ -1,61 +1,57 @@
 <template>
-	<SecondaryNavigation />
-	<Breadcrumbs />
-	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
-		<div class="max-w-4xl mx-auto">
-			<h1 class="text-3xl font-bold text-gray-800 mb-6">Jobba hos oss</h1>
-			<div class="bg-white rounded-lg shadow-md p-6">
-				<p class="text-gray-600 mb-6">
-					Vill du bli en del av vårt team? Här hittar du information
-					om lediga tjänster och vad det innebär att arbeta hos oss.
-				</p>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-					<div class="bg-blue-50 rounded-lg p-6">
-						<h2 class="text-xl font-semibold mb-3 text-blue-800">
-							Varför välja oss?
-						</h2>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-2">
-							<li>Utvecklande arbetsmiljö</li>
-							<li>Konkurrenskraftiga villkor</li>
-							<li>Möjlighet till fortbildning</li>
-							<li>Moderna lokaler och utrustning</li>
-						</ul>
-					</div>
-					<div class="bg-green-50 rounded-lg p-6">
-						<h2 class="text-xl font-semibold mb-3 text-green-800">
-							Lediga tjänster
-						</h2>
-						<p class="text-gray-700 mb-3">Just nu söker vi:</p>
-						<ul class="list-disc pl-5 text-neutral-700 space-y-2">
-							<li>Specialistsjuksköterskor</li>
-							<li>Läkare inom olika specialiteter</li>
-							<li>Undersköterskor</li>
-							<li>Administrativ personal</li>
-						</ul>
-					</div>
-				</div>
-				<div class="text-center">
-					<router-link
-						to="/om-oss/lediga-tjanster"
-						class="inline-block bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-					>
-						Se alla lediga jobb
-					</router-link>
-				</div>
-			</div>
-		</div>
-	</div>
+  <SecondaryNavigation />
+  <Breadcrumbs />
+  <div class="container mx-auto mb-8 px-4 py-4 md:mb-16 lg:mb-24">
+    <div class="mx-auto max-w-4xl">
+      <h1 class="mb-6 text-3xl font-bold text-gray-800">Jobba hos oss</h1>
+      <div class="rounded-lg bg-white p-6 shadow-md">
+        <p class="mb-6 text-gray-600">
+          Vill du bli en del av vårt team? Här hittar du information om lediga tjänster och vad det innebär att arbeta
+          hos oss.
+        </p>
+        <div class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div class="rounded-lg bg-blue-50 p-6">
+            <h2 class="mb-3 text-xl font-semibold text-blue-800">Varför välja oss?</h2>
+            <ul class="list-disc space-y-2 pl-5 text-neutral-700">
+              <li>Utvecklande arbetsmiljö</li>
+              <li>Konkurrenskraftiga villkor</li>
+              <li>Möjlighet till fortbildning</li>
+              <li>Moderna lokaler och utrustning</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-green-50 p-6">
+            <h2 class="mb-3 text-xl font-semibold text-green-800">Lediga tjänster</h2>
+            <p class="mb-3 text-gray-700">Just nu söker vi:</p>
+            <ul class="list-disc space-y-2 pl-5 text-neutral-700">
+              <li>Specialistsjuksköterskor</li>
+              <li>Läkare inom olika specialiteter</li>
+              <li>Undersköterskor</li>
+              <li>Administrativ personal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center">
+          <router-link
+            to="/om-oss/lediga-tjanster"
+            class="inline-block rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          >
+            Se alla lediga jobb
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import SecondaryNavigation from "@/components/common/SecondaryNavigation.vue";
-import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
+  import SecondaryNavigation from '@/components/common/SecondaryNavigation.vue'
+  import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
-export default {
-	name: "JobbaHosOssPage",
-	components: {
-		SecondaryNavigation,
-		Breadcrumbs,
-	},
-};
+  export default {
+    name: 'JobbaHosOssPage',
+    components: {
+      SecondaryNavigation,
+      Breadcrumbs
+    }
+  }
 </script>

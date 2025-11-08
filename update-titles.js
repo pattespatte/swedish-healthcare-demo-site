@@ -55,7 +55,7 @@ function updateAllTitles() {
 
 	// Update other HTML files
 	for (const [route, title] of Object.entries(pageTitles)) {
-		if (route === '/') continue
+		if (route === '/') {continue}
 
 		// Convert route to file path
 		let filePath

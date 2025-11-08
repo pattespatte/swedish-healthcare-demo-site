@@ -1,83 +1,58 @@
 <script setup lang="ts">
-import Breadcrumbs from "../components/common/Breadcrumbs.vue";
+  import Breadcrumbs from '../components/common/Breadcrumbs.vue'
+  import CardContainer from '../components/layout/CardContainer.vue'
 </script>
 
 <template>
-	<Breadcrumbs />
+  <Breadcrumbs />
 
-	<div class="container mx-auto px-4 py-4 mb-8 md:mb-16 lg:mb-24">
-		<div class="max-w-4xl mx-auto">
-			<h1 class="text-3xl font-bold text-gray-800 mb-6">Våra Tjänster</h1>
-			<p class="text-lg text-neutral-800 mb-8">
-				Här hittar du information om alla de tjänster och vårdinsatser
-				som vi erbjuder på vår vårdcentral.
-			</p>
+  <div class="container mx-auto mb-8 px-4 py-4 md:mb-16 lg:mb-24">
+    <div class="mx-auto max-w-4xl">
+      <h1 class="mb-6 text-3xl font-bold text-gray-800">Våra Tjänster</h1>
+      <p class="mb-8 text-lg text-neutral-800">
+        Här hittar du information om alla de tjänster och vårdinsatser som vi erbjuder på vår vårdcentral.
+      </p>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2
-						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
-					>
-						Allmänmedicin
-					</h2>
-					<p class="text-neutral-700">
-						Vi erbjuder allmänmedicinsk vård för vuxna och barn. Hos
-						oss kan du få hjälp med vanliga sjukdomar,
-						hälsokontroller och rådgivning.
-					</p>
-				</div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <CardContainer>
+          <h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Allmänmedicin</h2>
+          <p class="text-neutral-700">
+            Vi erbjuder allmänmedicinsk vård för vuxna och barn. Hos oss kan du få hjälp med vanliga sjukdomar,
+            hälsokontroller och rådgivning.
+          </p>
+        </CardContainer>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2
-						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
-					>
-						Barnmorskemottagning
-					</h2>
-					<p class="text-neutral-700">
-						Vår barnmorskemottagning erbjuder mödrahälsovård,
-						preventivmedelsrådgivning och cellprovtagning.
-					</p>
-				</div>
+        <CardContainer>
+          <h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Barnmorskemottagning</h2>
+          <p class="text-neutral-700">
+            Vår barnmorskemottagning erbjuder mödrahälsovård, preventivmedelsrådgivning och cellprovtagning.
+          </p>
+        </CardContainer>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2
-						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
-					>
-						BVC (Barnavårdscentral)
-					</h2>
-					<p class="text-neutral-700">
-						Vi erbjuder barnhälsovård för barn från födseln tills de
-						börjar skolan. Hos oss får ditt barn regelbundna
-						hälsokontroller och vaccinationer.
-					</p>
-				</div>
+        <CardContainer>
+          <h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">BVC (Barnavårdscentral)</h2>
+          <p class="text-neutral-700">
+            Vi erbjuder barnhälsovård för barn från födseln tills de börjar skolan. Hos oss får ditt barn regelbundna
+            hälsokontroller och vaccinationer.
+          </p>
+        </CardContainer>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2
-						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
-					>
-						Laboratorium
-					</h2>
-					<p class="text-neutral-700">
-						Vi har ett eget laboratorium där vi tar de vanligaste
-						proverna. Du behöver inte boka tid för provtagning om du
-						har remiss.
-					</p>
-				</div>
+        <CardContainer>
+          <h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Laboratorium</h2>
+          <p class="text-neutral-700">
+            Vi har ett eget laboratorium där vi tar de vanligaste proverna. Du behöver inte boka tid för provtagning om
+            du har remiss.
+          </p>
+        </CardContainer>
 
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2
-						class="text-xl font-semibold text-primary-700 dark:text-primary-400 mb-3"
-					>
-						Psykiatri
-					</h2>
-					<p class="text-neutral-700">
-						Vi erbjuder psykiatrisk vård för vuxna. Hos oss kan du
-						få hjälp med depression, ångest och andra psykiska
-						besvär.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <CardContainer>
+          <h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Psykiatri</h2>
+          <p class="text-neutral-700">
+            Vi erbjuder psykiatrisk vård för vuxna. Hos oss kan du få hjälp med depression, ångest och andra psykiska
+            besvär.
+          </p>
+        </CardContainer>
+      </div>
+    </div>
+  </div>
 </template>

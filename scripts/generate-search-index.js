@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // Extract text content from Vue SFC template
 function extractTextFromTemplate(template) {
 	// Remove Vue directives and special syntax
-	let cleanTemplate = template
+	const cleanTemplate = template
 		.replace(/v-[a-zA-Z-]+="[^"]*"/g, '') // Remove v-* directives
 		.replace(/@[a-zA-Z-]+="[^"]*"/g, '') // Remove @event handlers
 		.replace(/:[a-zA-Z-]+="[^"]*"/g, '') // Remove :bindings
