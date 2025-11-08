@@ -248,10 +248,7 @@
 							<span class="font-medium">Telefon:</span>
 							{{ clinic.phone }}
 						</div>
-						<FormButton text="Boka tid"
-variant="primary"
-@click="handleBooking(clinic.name)"
-class="mt-3" />
+						<FormButton text="Boka tid" variant="primary" @click="handleBooking(clinic.name)" class="mt-3" />
 					</div>
 				</ServiceCard>
 			</div>
@@ -308,11 +305,7 @@ class="mt-3" />
 					</p>
 				</div>
 
-				<TextInput id="patient-name"
-name="patient-name"
-label="Namn"
-placeholder="Ditt namn"
-required />
+				<TextInput id="patient-name" name="patient-name" label="Namn" placeholder="Ditt namn" required />
 
 				<TextInput
 					id="patient-phone"

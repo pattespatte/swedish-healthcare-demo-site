@@ -44,7 +44,7 @@
 							:disabled="disabled"
 							@change="handleFileChange"
 							@blur="$emit('blur')"
-						>
+						/>
 					</label>
 					<p class="pl-1">eller dra och släpp</p>
 				</div>
@@ -60,18 +60,9 @@
 			<ul class="mt-1 text-sm text-gray-500">
 				<li v-for="(file, index) in files" :key="index" class="flex items-center justify-between py-1">
 					<span>{{ file.name }} ({{ formatFileSize(file.size) }})</span>
-					<button v-if="!disabled"
-type="button"
-class="text-red-500 hover:text-red-700"
-@click="removeFile(index)">
-						<svg class="h-4 w-4"
-fill="none"
-viewBox="0 0 24 24"
-stroke="currentColor">
-							<path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
-d="M6 18L18 6M6 6l12 12" />
+					<button v-if="!disabled" type="button" class="text-red-500 hover:text-red-700" @click="removeFile(index)">
+						<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 						</svg>
 					</button>
 				</li>

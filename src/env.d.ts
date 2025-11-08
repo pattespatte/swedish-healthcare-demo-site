@@ -15,3 +15,27 @@ declare module '*.vue' {
 	const component: DefineComponent<{}, {}, any>
 	export default component
 }
+
+// SVG module declaration
+declare module '*.svg' {
+	const content: string
+	export default content
+}
+
+// PNG module declaration
+declare module '*.png' {
+	const src: string
+	export default src
+}
+
+// JPG module declaration
+declare module '*.jpg' {
+	const src: string
+	export default src
+}
+
+// GIF module declaration
+declare module '*.gif' {
+	const src: string
+	export default src
+}

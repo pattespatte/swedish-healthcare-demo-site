@@ -39,9 +39,9 @@ export default defineConfig({
 	server:
 		process.env.NODE_ENV === 'development'
 			? {
-				fs: {
-					strict: false
+					fs: {
+						strict: false
+					}
 				}
-			}
 			: undefined
 })

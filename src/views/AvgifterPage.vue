@@ -129,10 +129,7 @@
 				<p class="mb-4 text-neutral-700">
 					Nedan ser du gällande avgifter för besök på vår vårdcentral. Alla priser är angivna i svenska kronor.
 				</p>
-				<DataTable :columns="feeColumns"
-:data="feeData"
-:sortable="true"
-:paginated="false" />
+				<DataTable :columns="feeColumns" :data="feeData" :sortable="true" :paginated="false" />
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
@@ -140,10 +137,7 @@
 				<p class="mb-4 text-neutral-700">
 					Nedan ser du gällande avgifter för specialistvård. Alla priser är angivna i svenska kronor.
 				</p>
-				<DataTable :columns="specialistColumns"
-:data="specialistData"
-:sortable="true"
-:paginated="false" />
+				<DataTable :columns="specialistColumns" :data="specialistData" :sortable="true" :paginated="false" />
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
@@ -152,10 +146,7 @@
 					Högkostnadsskyddet innebär att du betalar högst en viss summa under en 12-månadersperiod. När du har nått
 					gränsen får du frikort som ger fri vård under resterande del av perioden.
 				</p>
-				<DataTable :columns="highCostColumns"
-:data="highCostData"
-:sortable="false"
-:paginated="false" />
+				<DataTable :columns="highCostColumns" :data="highCostData" :sortable="false" :paginated="false" />
 			</div>
 
 			<div class="rounded-lg bg-white p-6 shadow-md">

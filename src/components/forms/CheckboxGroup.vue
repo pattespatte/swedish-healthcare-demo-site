@@ -22,7 +22,7 @@
 						]"
 						@change="handleCheckboxChange(option.value)"
 						@blur="$emit('blur')"
-					>
+					/>
 					<label :for="`${id}-${option.value}`" class="ml-2 block text-sm text-gray-700">
 						{{ option.label }}
 					</label>

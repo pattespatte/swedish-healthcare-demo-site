@@ -4,10 +4,7 @@
 			<div class="flex items-start">
 				<div v-if="image || $slots.image" class="flex-shrink-0">
 					<slot name="image">
-						<img v-if="image"
-:src="image"
-:alt="name"
-class="h-16 w-16 rounded-full object-cover" >
+						<img v-if="image" :src="image" :alt="name" class="h-16 w-16 rounded-full object-cover" />
 						<div v-else class="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-200">
 							<svg
 								class="h-8 w-8 text-neutral-500"

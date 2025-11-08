@@ -1,8 +1,5 @@
 <template>
-	<div v-if="isVisible"
-:class="alertClasses"
-role="alert"
-:aria-live="type === 'error' ? 'assertive' : 'polite'">
+	<div v-if="isVisible" :class="alertClasses" role="alert" :aria-live="type === 'error' ? 'assertive' : 'polite'">
 		<div class="flex items-start">
 			<div class="flex-shrink-0">
 				<svg

@@ -1,8 +1,5 @@
 <template>
-	<Modal :visible="visible"
-:title="title"
-size="small"
-@update:visible="$emit('update:visible', $event)">
+	<Modal :visible="visible" :title="title" size="small" @update:visible="$emit('update:visible', $event)">
 		<template #default>
 			<div class="py-2">
 				<p class="text-neutral-700">{{ message }}</p>

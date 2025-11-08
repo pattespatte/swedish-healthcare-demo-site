@@ -288,10 +288,7 @@
 							<span class="font-medium">Tillgänglighet:</span>
 							{{ test.availability }}
 						</div>
-						<FormButton text="Boka tid"
-variant="primary"
-@click="handleBooking(test.name)"
-class="mt-3" />
+						<FormButton text="Boka tid" variant="primary" @click="handleBooking(test.name)" class="mt-3" />
 					</div>
 				</ServiceCard>
 			</div>
@@ -319,10 +316,7 @@ class="mt-3" />
 					:description="instruction.description"
 				>
 					<template #icon>
-						<svg class="h-5 w-5 text-blue-500"
-fill="none"
-viewBox="0 0 24 24"
-stroke="currentColor">
+						<svg class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"

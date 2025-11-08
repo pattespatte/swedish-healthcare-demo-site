@@ -10,33 +10,33 @@ support.
 
 ```vue
 <template>
-  <!-- Basic usage -->
-  <CardContainer>
-    <h2>Card Title</h2>
-    <p>Card content goes here</p>
-  </CardContainer>
+	<!-- Basic usage -->
+	<CardContainer>
+		<h2>Card Title</h2>
+		<p>Card content goes here</p>
+	</CardContainer>
 
-  <!-- With additional CSS classes -->
-  <CardContainer class="mb-6 mt-4">
-    <h2>Card Title</h2>
-    <p>Card content goes here</p>
-  </CardContainer>
+	<!-- With additional CSS classes -->
+	<CardContainer class="mb-6 mt-4">
+		<h2>Card Title</h2>
+		<p>Card content goes here</p>
+	</CardContainer>
 
-  <!-- With hover effects (for interactive cards) -->
-  <CardContainer hoverable>
-    <h2>Interactive Card</h2>
-    <p>This card has hover effects</p>
-  </CardContainer>
+	<!-- With hover effects (for interactive cards) -->
+	<CardContainer hoverable>
+		<h2>Interactive Card</h2>
+		<p>This card has hover effects</p>
+	</CardContainer>
 
-  <!-- Combined with custom classes and hover effects -->
-  <CardContainer class="h-full" hoverable>
-    <h2>Full Height Interactive Card</h2>
-    <p>This card fills its container and has hover effects</p>
-  </CardContainer>
+	<!-- Combined with custom classes and hover effects -->
+	<CardContainer class="h-full" hoverable>
+		<h2>Full Height Interactive Card</h2>
+		<p>This card fills its container and has hover effects</p>
+	</CardContainer>
 </template>
 
 <script setup>
-  import CardContainer from '@/components/layout/CardContainer.vue'
+	import CardContainer from '@/components/layout/CardContainer.vue'
 </script>
 ```
 
@@ -60,7 +60,7 @@ Replace this pattern:
 
 ```html
 <div class="rounded-lg bg-white p-6 shadow-md">
-  <!-- content -->
+	<!-- content -->
 </div>
 ```
 
@@ -76,9 +76,9 @@ For cards with hover effects, replace:
 
 ```html
 <div
-  class="cursor-pointer rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105 hover:shadow-lg"
+	class="cursor-pointer rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105 hover:shadow-lg"
 >
-  <!-- content -->
+	<!-- content -->
 </div>
 ```
 
