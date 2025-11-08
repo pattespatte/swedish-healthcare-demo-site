@@ -69,12 +69,14 @@ const formatPhoneLink = (phone: string): string => {
 					<h3 class="text-base font-semibold mb-1 sm:mb-2">
 						Navigering
 					</h3>
-					<nav class="flex flex-col space-y-1 sm:space-y-2">
+					<nav
+						class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-4 lg:gap-y-2"
+					>
 						<router-link
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="text-neutral-300 dark:text-dark-text-secondary hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200 text-sm"
+							class="text-neutral-300 dark:text-dark-text-secondary hover:text-white dark:hover:text-dark-text-primary transition-colors duration-200 text-sm pr-3"
 						>
 							{{ link.name }}
 						</router-link>
