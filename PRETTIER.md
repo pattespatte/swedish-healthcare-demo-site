@@ -1,6 +1,7 @@
 # Prettier Configuration
 
-This project uses Prettier for consistent code formatting. The configuration is defined in `.prettierrc` and `.prettierignore` files in the root directory.
+This project uses Prettier for consistent code formatting. The configuration is defined in
+`.prettierrc` and `.prettierignore` files in the root directory.
 
 ## Configuration
 
@@ -10,19 +11,19 @@ The Prettier configuration is optimized for Vue 3, TypeScript, and Tailwind CSS:
 
 ```json
 {
-  "semi": false,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "none",
-  "printWidth": 120,
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "avoid",
-  "endOfLine": "lf",
-  "vueIndentScriptAndStyle": true,
-  "htmlWhitespaceSensitivity": "ignore",
-  "embeddedLanguageFormatting": "auto",
-  "plugins": ["prettier-plugin-tailwindcss"]
+	"semi": false,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"printWidth": 120,
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"arrowParens": "avoid",
+	"endOfLine": "lf",
+	"vueIndentScriptAndStyle": true,
+	"htmlWhitespaceSensitivity": "ignore",
+	"embeddedLanguageFormatting": "auto",
+	"plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
 
@@ -86,11 +87,11 @@ Add to your `.vscode/settings.json`:
 
 ```json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  }
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	}
 }
 ```
 

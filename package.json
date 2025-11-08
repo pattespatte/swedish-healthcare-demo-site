@@ -12,7 +12,7 @@
 		"lint": "eslint . --fix",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"lint:format": "npm run lint && npm run format:check",
+		"lint:format": "npm run lint && npm run format",
 		"generate-search-index": "node scripts/generate-search-index.js"
 	},
 	"dependencies": {

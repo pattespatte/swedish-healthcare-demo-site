@@ -1,6 +1,8 @@
 # Swedish Healthcare Practice Website
 
-A modern, responsive Vue.js-based website for a Swedish healthcare practice, built with TypeScript, Tailwind CSS, and Vue Router. This project provides a comprehensive digital presence for healthcare services with a focus on accessibility and user experience.
+A modern, responsive Vue.js-based website for a Swedish healthcare practice, built with TypeScript,
+Tailwind CSS, and Vue Router. This project provides a comprehensive digital presence for healthcare
+services with a focus on accessibility and user experience.
 
 ## Features
 
