@@ -64,7 +64,8 @@
 					{{ title }}
 				</component>
 				<div v-if="message" :class="title ? 'mt-2 text-sm' : 'text-sm'">
-					<p>{{ message }}</p>
+					<p v-if="htmlContent" v-html="message"></p>
+					<p v-else>{{ message }}</p>
 				</div>
 				<div v-if="$slots.default" class="mt-2 text-sm">
 					<slot />
@@ -105,12 +106,14 @@
 		message?: string
 		dismissible?: boolean
 		headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+		htmlContent?: boolean
 	}
 
 	const props = withDefaults(defineProps<Props>(), {
 		type: 'info',
 		dismissible: false,
-		headingLevel: 'h3'
+		headingLevel: 'h3',
+		htmlContent: false
 	})
 
 	const isVisible = ref(true)

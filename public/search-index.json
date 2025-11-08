@@ -397,6 +397,30 @@
     ]
   },
   {
+    "id": "/boka-tid/form",
+    "title": "Boka tid - Planerat besök - Vårdcentralen Vårdportalen",
+    "url": "/boka-tid/form",
+    "content": "Boka tid - Planerat besök Fyll i formuläret nedan för att boka en tid för ett planerat vårdbesök. Personuppgifter Format: ÅÅÅÅMMDD-XXXX (t.ex. 19850612-3456) Bokningsdetaljer Medicinsk information Preferenser och särskilda behov Samtycke och bekräftelse Du kan ladda upp remisser, tidigare journalutdrag eller andra relevanta dokument. Max storlek: 10MB per fil, max 3 filer.",
+    "description": "Formulär för att boka en tid för ett planerat vårdbesök",
+    "keywords": [
+      "boka",
+      "planerat",
+      "besök",
+      "vårdcentralen",
+      "vårdportalen",
+      "fyll",
+      "formuläret",
+      "nedan",
+      "vårdbesök",
+      "personuppgifter",
+      "format",
+      "ååååmmdd",
+      "xxxx",
+      "19850612",
+      "3456"
+    ]
+  },
+  {
     "id": "/mina-sidor",
     "title": "Mina Sidor - Vårdcentralen Vårdportalen",
     "url": "/mina-sidor",

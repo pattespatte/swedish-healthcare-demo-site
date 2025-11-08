@@ -27,9 +27,12 @@
 				<CardContainer>
 					<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Planerat besök</h2>
 					<p class="mb-4 text-neutral-700">Boka tid för planerat vårdbesök, hälsokontroll eller uppföljning.</p>
-					<button class="rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800">
+					<router-link
+						to="/boka-tid/form"
+						class="inline-block rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800"
+					>
 						Boka tid online
-					</button>
+					</router-link>
 				</CardContainer>
 
 				<CardContainer>

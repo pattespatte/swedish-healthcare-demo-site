@@ -128,6 +128,15 @@ const routes: Array<RouteRecordRaw> = [
 		}
 	},
 	{
+		path: '/boka-tid/form',
+		name: 'BookingForm',
+		component: () => import('@/views/BookingFormPage.vue'),
+		meta: {
+			title: 'Boka tid - Planerat besök - Vårdcentralen Vårdportalen',
+			description: 'Formulär för att boka en tid för ett planerat vårdbesök'
+		}
+	},
+	{
 		path: '/mina-sidor',
 		name: 'MyPages',
 		component: () => import('@/views/MyPagesPage.vue'),
