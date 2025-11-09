@@ -77,8 +77,8 @@
 		{ value: 'vaccination', label: 'Vaccination' },
 		{ value: 'lab', label: 'Laboratorieprovtagning' },
 		{ value: 'specialist', label: 'Specialistmottagning' },
-		{ value: 'physio', label: 'Fysioterapi/Sjukgymnastik' },
-		{ value: 'psychology', label: 'Psykolog/Psykoterapeut' },
+		{ value: 'physio', label: 'Fysioterapi/sjukgymnastik' },
+		{ value: 'psychology', label: 'Psykolog/psykoterapeut' },
 		{ value: 'other', label: 'Annat' }
 	]
 

@@ -1,6 +1,6 @@
 <template>
 	<div class="mb-4">
-		<label :for="id" class="mb-1 block text-sm font-medium text-gray-700">
+		<label :for="id" class="mb-1 block text-sm font-medium text-gray-700 dark:text-dark-text-primary">
 			{{ label }}
 			<span v-if="required" class="text-red-500">*</span>
 		</label>
@@ -8,13 +8,15 @@
 		<div
 			class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pb-6 pt-5"
 			:class="[
-				error ? 'border-red-500' : 'border-gray-300',
-				disabled ? 'cursor-not-allowed bg-gray-100' : 'hover:border-gray-400'
+				error ? 'border-red-500 dark:border-red-400' : 'border-gray-300 dark:border-slate-500',
+				disabled
+					? 'cursor-not-allowed bg-gray-100 dark:bg-dark-bg-quaternary'
+					: 'hover:border-gray-400 dark:hover:border-slate-400'
 			]"
 		>
 			<div class="space-y-1 text-center">
 				<svg
-					class="mx-auto h-12 w-12 text-gray-400"
+					class="mx-auto h-12 w-12 text-gray-400 dark:text-dark-text-muted"
 					stroke="currentColor"
 					fill="none"
 					viewBox="0 0 48 48"
@@ -27,10 +29,10 @@
 						stroke-linejoin="round"
 					/>
 				</svg>
-				<div class="flex text-sm text-gray-600">
+				<div class="flex text-sm text-gray-600 dark:text-dark-text-secondary">
 					<label
 						:for="id"
-						class="relative cursor-pointer rounded-md bg-white font-medium text-blue-600 focus-within:outline-none hover:text-blue-500"
+						class="relative cursor-pointer rounded-md bg-white font-medium text-blue-600 focus-within:outline-none hover:text-blue-500 dark:bg-dark-bg-secondary dark:text-primary-400 dark:hover:text-primary-300"
 					>
 						<span>Ladda upp en fil</span>
 						<input
@@ -46,9 +48,9 @@
 							@blur="$emit('blur')"
 						/>
 					</label>
-					<p class="pl-1">eller dra och släpp</p>
+					<p class="pl-1 dark:text-dark-text-secondary">eller dra och släpp</p>
 				</div>
-				<p class="text-xs text-gray-500">
+				<p class="text-xs text-gray-500 dark:text-dark-text-muted">
 					{{ fileTypeInfo }}
 				</p>
 			</div>
@@ -56,11 +58,16 @@
 
 		<!-- File list -->
 		<div v-if="files.length > 0" class="mt-2">
-			<h4 class="text-sm font-medium text-gray-700">Uppladdade filer:</h4>
-			<ul class="mt-1 text-sm text-gray-500">
+			<h4 class="text-sm font-medium text-gray-700 dark:text-dark-text-primary">Uppladdade filer:</h4>
+			<ul class="mt-1 text-sm text-gray-500 dark:text-dark-text-muted">
 				<li v-for="(file, index) in files" :key="index" class="flex items-center justify-between py-1">
 					<span>{{ file.name }} ({{ formatFileSize(file.size) }})</span>
-					<button v-if="!disabled" type="button" class="text-red-500 hover:text-red-700" @click="removeFile(index)">
+					<button
+						v-if="!disabled"
+						type="button"
+						class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+						@click="removeFile(index)"
+					>
 						<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 						</svg>

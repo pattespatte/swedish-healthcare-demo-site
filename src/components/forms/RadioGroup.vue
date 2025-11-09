@@ -1,7 +1,7 @@
 <template>
 	<div class="mb-4">
 		<fieldset :disabled="disabled">
-			<legend class="mb-2 block text-sm font-medium text-gray-700">
+			<legend class="mb-2 block text-sm font-medium text-gray-700 dark:text-dark-text-primary">
 				{{ label }}
 				<span v-if="required" class="text-red-500">*</span>
 			</legend>
@@ -16,11 +16,14 @@
 						:checked="modelValue === option.value"
 						:required="required"
 						:disabled="disabled"
-						:class="['h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500', error ? 'border-red-500' : '']"
+						:class="[
+							'h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-slate-500 dark:text-primary-400 dark:focus:ring-primary-400',
+							error ? 'border-red-500 dark:border-red-400' : ''
+						]"
 						@change="$emit('update:modelValue', option.value)"
 						@blur="$emit('blur')"
 					/>
-					<label :for="`${id}-${option.value}`" class="ml-2 block text-sm text-gray-700">
+					<label :for="`${id}-${option.value}`" class="ml-2 block text-sm text-gray-700 dark:text-dark-text-primary">
 						{{ option.label }}
 					</label>
 				</div>
