@@ -11,7 +11,7 @@
 					specialistläkare och annan vårdpersonal.
 				</p>
 
-				<div class="mb-6 rounded-lg bg-blue-50 p-6 dark:bg-dark-bg-tertiary">
+				<div class="dark:bg-dark-bg-tertiary mb-6 rounded-lg bg-blue-50 p-6">
 					<h2 class="mb-3 text-xl font-semibold text-blue-800">Aktuella tjänster</h2>
 					<div class="space-y-4">
 						<div class="border-l-4 border-blue-500 pl-4">
@@ -93,12 +93,12 @@
 				<div class="text-center">
 					<router-link
 						to="/kontakt"
-						class="mr-4 inline-block rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+						class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 mr-4 inline-block rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					>
 						Kontakta oss
 					</router-link>
 					<button
-						class="rounded-lg bg-neutral-600 px-6 py-3 text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
+						class="rounded-lg bg-neutral-600 px-6 py-3 text-white transition-colors hover:bg-neutral-700 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:outline-none"
 					>
 						Prenumerera på lediga jobb
 					</button>

@@ -75,21 +75,21 @@
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
 				<h2 class="mb-4 text-xl font-semibold">Kontaktvägar</h2>
 				<div class="space-y-4">
-					<div class="border border-l-4 border-blue-500 pb-4 pl-4 pt-2">
+					<div class="border border-l-4 border-blue-500 pt-2 pb-4 pl-4">
 						<h3 class="mb-2 text-lg font-semibold">Vårdcentralen</h3>
 						<p class="text-neutral-700">
 							Kontakta din vårdcentral för att boka tid, få rådgivning för kända sjukdomar, förnya recept eller för
 							uppföljning av tidigare behandlingar.
 						</p>
 					</div>
-					<div class="border border-l-4 border-green-500 pb-4 pl-4 pt-2">
+					<div class="border border-l-4 border-green-500 pt-2 pb-4 pl-4">
 						<h3 class="mb-2 text-lg font-semibold">1177 Vårdguiden</h3>
 						<p class="text-neutral-700">
 							Ring 1177 för sjukvårdsrådgivning dygnet runt. Du kan få råd om symtom, hjälp att hitta rätt
 							vårdmottagning och svar på medicinska frågor.
 						</p>
 					</div>
-					<div class="border border-l-4 border-red-500 pb-4 pl-4 pt-2">
+					<div class="border border-l-4 border-red-500 pt-2 pb-4 pl-4">
 						<h3 class="mb-2 text-lg font-semibold">Akutvård</h3>
 						<p class="text-neutral-700">
 							Vid livshotande tillstånd eller allvarliga skador, ring 112 direkt. För andra akuta besvär som inte kan

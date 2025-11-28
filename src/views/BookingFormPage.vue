@@ -429,7 +429,7 @@
 				<form @submit.prevent="handleSubmit">
 					<!-- Section 1: Personal Information -->
 					<section class="mb-8">
-						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Personuppgifter</h2>
+						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Personuppgifter</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 							<TextInput
 								v-model="formData.personalInfo.firstName"
@@ -497,7 +497,7 @@
 
 					<!-- Section 2: Appointment Details -->
 					<section class="mb-8">
-						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Bokningsdetaljer</h2>
+						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Bokningsdetaljer</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 							<div class="md:col-span-2">
 								<SelectInput
@@ -561,7 +561,7 @@
 
 					<!-- Section 3: Medical Information -->
 					<section class="mb-8">
-						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Medicinsk information</h2>
+						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Medicinsk information</h2>
 						<div class="space-y-4">
 							<Textarea
 								v-model="formData.medicalInfo.reason"
@@ -644,7 +644,7 @@
 
 					<!-- Section 4: Preferences and Special Requirements -->
 					<section class="mb-8">
-						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">
+						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">
 							Preferenser och särskilda behov
 						</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -712,7 +712,7 @@
 
 					<!-- Section 5: Consent and Confirmation -->
 					<section class="mb-8">
-						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Samtycke och bekräftelse</h2>
+						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Samtycke och bekräftelse</h2>
 						<div class="space-y-4">
 							<div class="space-y-2">
 								<label class="flex items-center">

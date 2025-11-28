@@ -58,7 +58,7 @@
 </script>
 
 <template>
-	<footer class="bg-slate-800 text-white dark:bg-dark-bg-primary dark:text-dark-text-primary" role="contentinfo">
+	<footer class="dark:bg-dark-bg-primary dark:text-dark-text-primary bg-slate-800 text-white" role="contentinfo">
 		<div class="container mx-auto px-4 py-4 sm:py-6">
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
 				<!-- Site Navigation -->
@@ -69,7 +69,7 @@
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white dark:text-dark-text-secondary dark:hover:text-dark-text-primary"
+							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white"
 						>
 							{{ link.name }}
 						</router-link>
@@ -79,13 +79,13 @@
 				<!-- Contact Information -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Kontakt</h3>
-					<address class="space-y-1 text-sm not-italic text-neutral-300 dark:text-dark-text-secondary sm:space-y-2">
+					<address class="dark:text-dark-text-secondary space-y-1 text-sm text-neutral-300 not-italic sm:space-y-2">
 						<p>{{ contactInfo.address }}</p>
 						<p>
 							Telefon:
 							<a
 								:href="formatPhoneLink(contactInfo.phone)"
-								class="transition-colors duration-200 hover:text-white dark:hover:text-dark-text-primary"
+								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
 							>
 								{{ contactInfo.phone }}
 							</a>
@@ -94,7 +94,7 @@
 							E-post:
 							<a
 								:href="`mailto:${contactInfo.email}`"
-								class="transition-colors duration-200 hover:text-white dark:hover:text-dark-text-primary"
+								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
 							>
 								{{ contactInfo.email }}
 							</a>
@@ -105,7 +105,7 @@
 				<!-- Opening Hours -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Öppettider</h3>
-					<div class="space-y-1 text-sm text-neutral-300 dark:text-dark-text-secondary sm:space-y-2">
+					<div class="dark:text-dark-text-secondary space-y-1 text-sm text-neutral-300 sm:space-y-2">
 						<div v-for="(item, index) in openingHours" :key="index" class="flex justify-between">
 							<span>{{ item.day }}</span>
 							<span>{{ item.hours }}</span>
@@ -122,10 +122,10 @@
 							:key="link.name"
 							:href="link.url"
 							:aria-label="`Följ oss på ${link.name}`"
-							class="text-neutral-300 transition-colors duration-200 hover:text-white dark:text-dark-text-secondary dark:hover:text-dark-text-primary"
+							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary text-neutral-300 transition-colors duration-200 hover:text-white"
 						>
 							<!-- Placeholder icons - in a real implementation, you would use actual icon components -->
-							<div class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 dark:bg-dark-bg-tertiary">
+							<div class="dark:bg-dark-bg-tertiary flex h-8 w-8 items-center justify-center rounded-full bg-slate-700">
 								<span class="text-xs font-semibold">{{ link.icon.charAt(0).toUpperCase() }}</span>
 							</div>
 						</a>
@@ -135,33 +135,33 @@
 
 			<!-- Bottom Section -->
 			<div
-				class="mt-4 flex flex-col items-center justify-between border-t border-neutral-700 pt-3 dark:border-dark-border-primary sm:mt-6 sm:pt-4 md:flex-row"
+				class="dark:border-dark-border-primary mt-4 flex flex-col items-center justify-between border-t border-neutral-700 pt-3 sm:mt-6 sm:pt-4 md:flex-row"
 			>
-				<div class="mb-3 text-xs text-neutral-400 dark:text-dark-text-muted md:mb-0">
+				<div class="dark:text-dark-text-muted mb-3 text-xs text-neutral-400 md:mb-0">
 					&copy; {{ currentYear }} Vårdportalen. Alla rättigheter förbehålls.
 				</div>
 				<div class="flex space-x-6">
 					<a
 						href="https://github.com/pattespatte/swedish-healthcare-demo-site"
-						class="text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
 						Källkod
 					</a>
 					<router-link
 						to="/integritetspolicy"
-						class="text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
 						Integritetspolicy
 					</router-link>
 					<router-link
 						to="/cookies"
-						class="text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
 						Cookies
 					</router-link>
 					<router-link
 						to="/tillganglighet"
-						class="text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
 						Tillgänglighet
 					</router-link>

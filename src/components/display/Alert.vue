@@ -74,7 +74,7 @@
 			<div v-if="dismissible" class="ml-auto pl-3">
 				<button
 					@click="dismiss"
-					class="inline-flex rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+					class="inline-flex rounded-md focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					:class="dismissButtonClasses"
 					aria-label="Stäng"
 				>

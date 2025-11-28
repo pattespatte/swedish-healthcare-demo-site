@@ -244,7 +244,7 @@
 									<h3 class="text-sm font-semibold text-gray-800">{{ colorCategory.name }}-{{ shade.name }}</h3>
 									<button
 										@click="copyToClipboard(shade.class)"
-										class="text-xs text-primary-700 transition-colors hover:text-primary-800"
+										class="text-primary-700 hover:text-primary-800 text-xs transition-colors"
 										title="Kopiera klassnamn"
 									>
 										Kopiera
@@ -266,7 +266,7 @@
 				<!-- Usage Guidelines -->
 				<div class="mt-12 rounded-lg border border-blue-200 bg-blue-50 p-6">
 					<h3 class="mb-3 text-lg font-semibold text-blue-800">Användningsriktlinjer för färger</h3>
-					<ul class="list-disc space-y-2 px-4 text-sm text-primary-700">
+					<ul class="text-primary-700 list-disc space-y-2 px-4 text-sm">
 						<li>Primära färger bör användas för huvudsakliga UI-element som knappar, länkar och viktiga markeringar</li>
 						<li>Sekundära färger är för stödjande element och mindre framträdande funktioner</li>
 						<li>Neutrala färger är idealiska för text, bakgrunder och kanter</li>

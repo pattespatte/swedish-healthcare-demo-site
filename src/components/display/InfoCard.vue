@@ -21,7 +21,7 @@
 			</slot>
 		</div>
 		<div class="ml-4 flex-1">
-			<h3 v-if="title" class="text-lg font-medium leading-6" :class="titleClasses">
+			<h3 v-if="title" class="text-lg leading-6 font-medium" :class="titleClasses">
 				{{ title }}
 			</h3>
 			<div v-if="content || $slots.default" class="mt-2">

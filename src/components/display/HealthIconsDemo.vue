@@ -4,8 +4,8 @@
 		<div class="mb-8">
 			<h2 class="mb-4 text-2xl font-bold text-gray-800">Health Icons Demo</h2>
 			<p class="text-gray-600">
-				This demo showcases various Health icons with different configurations including styles and categories.
-				Health Icons are free, open source health icons available for any use.
+				This demo showcases various Health icons with different configurations including styles and categories. Health
+				Icons are free, open source health icons available for any use.
 			</p>
 		</div>
 
@@ -216,31 +216,31 @@
 			<h3 class="mb-4 text-xl font-semibold text-gray-800">Nutrition Icons</h3>
 			<p class="mb-4 text-gray-600">Icons related to nutrition and diet:</p>
 			<div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'nutrition', 'fruits')" alt="Fruits" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Fruits</span>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'nutrition', 'fruits')" alt="Fruits" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Fruits</span>
+				</div>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'nutrition', 'hot_meal')" alt="Hot Meal" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Hot Meal</span>
+				</div>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'devices', 'treated_water')" alt="Water" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Water</span>
+				</div>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'people', 'lactation')" alt="Breastfeeding" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Breastfeeding</span>
+				</div>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'nutrition', 'baby_formula')" alt="Baby Formula" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Baby Formula</span>
+				</div>
+				<div class="flex flex-col items-center space-y-2">
+					<img :src="getIconPath('filled', 'nutrition', 'nutrition')" alt="Nutrition" class="h-8 w-8" />
+					<span class="text-xs text-gray-600">Nutrition</span>
+				</div>
 			</div>
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'nutrition', 'hot_meal')" alt="Hot Meal" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Hot Meal</span>
-			</div>
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'devices', 'treated_water')" alt="Water" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Water</span>
-			</div>
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'people', 'lactation')" alt="Breastfeeding" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Breastfeeding</span>
-			</div>
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'nutrition', 'baby_formula')" alt="Baby Formula" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Baby Formula</span>
-			</div>
-			<div class="flex flex-col items-center space-y-2">
-				<img :src="getIconPath('filled', 'nutrition', 'nutrition')" alt="Nutrition" class="h-8 w-8" />
-				<span class="text-xs text-gray-600">Nutrition</span>
-			</div>
-		</div>
 		</section>
 
 		<!-- Interactive Icons -->
@@ -292,15 +292,21 @@
 			<div class="mb-6">
 				<h4 class="mb-2 font-medium text-gray-700">Button with Icon</h4>
 				<div class="flex flex-wrap gap-4">
-					<button class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600">
+					<button
+						class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+					>
 						<img :src="getIconPath('filled', 'people', 'doctor')" alt="Doctor" class="h-5 w-5" />
 						<span>Book Appointment</span>
 					</button>
-					<button class="flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50">
+					<button
+						class="flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50"
+					>
 						<img :src="getIconPath('filled', 'devices', 'microscope')" alt="Lab" class="h-5 w-5" />
 						<span>View Results</span>
 					</button>
-					<button class="flex items-center space-x-2 rounded-lg border border-red-300 px-4 py-2 text-red-600 transition-colors hover:bg-red-50">
+					<button
+						class="flex items-center space-x-2 rounded-lg border border-red-300 px-4 py-2 text-red-600 transition-colors hover:bg-red-50"
+					>
 						<img :src="getIconPath('filled', 'symbols', 'alert')" alt="Warning" class="h-5 w-5" />
 						<span>Emergency</span>
 					</button>
@@ -316,7 +322,11 @@
 						<span class="text-sm text-gray-600">Completed</span>
 					</div>
 					<div class="flex items-center space-x-2">
-						<img :src="getIconPath('filled', 'symbols', 'alert_triangle')" alt="Warning" class="h-5 w-5 text-yellow-500" />
+						<img
+							:src="getIconPath('filled', 'symbols', 'alert_triangle')"
+							alt="Warning"
+							class="h-5 w-5 text-yellow-500"
+						/>
 						<span class="text-sm text-gray-600">Pending</span>
 					</div>
 					<div class="flex items-center space-x-2">
@@ -338,13 +348,17 @@
 			<div class="space-y-4">
 				<div class="rounded-lg bg-gray-50 p-4">
 					<h4 class="mb-2 font-medium text-gray-700">Basic Usage</h4>
-					<pre class="overflow-x-auto text-sm"><code><img :src="getIconPath('filled', 'people', 'doctor')" alt="Doctor" class="h-8 w-8" />
+					<pre
+						class="overflow-x-auto text-sm"
+					><code><img :src="getIconPath('filled', 'people', 'doctor')" alt="Doctor" class="h-8 w-8" />
 <img :src="getIconPath('outline', 'devices', 'stethoscope')" alt="Stethoscope" class="h-8 w-8" /></code></pre>
 				</div>
 
 				<div class="rounded-lg bg-gray-50 p-4">
 					<h4 class="mb-2 font-medium text-gray-700">Helper Function</h4>
-					<pre class="overflow-x-auto text-sm"><code>const getIconPath = (style: string, category: string, icon: string) => {
+					<pre
+						class="overflow-x-auto text-sm"
+					><code>const getIconPath = (style: string, category: string, icon: string) => {
   return `/node_modules/healthicons/public/icons/svg/${style}/${category}/${icon}.svg`
 }</code></pre>
 				</div>
@@ -365,67 +379,67 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+	import { ref } from 'vue'
 
-// Interactive icon states
-const isFavorite = ref(false)
-const hasNotification = ref(false)
-const isMaskOn = ref(false)
+	// Interactive icon states
+	const isFavorite = ref(false)
+	const hasNotification = ref(false)
+	const isMaskOn = ref(false)
 
-// Helper function to get icon path
-const getIconPath = (style: string, category: string, icon: string) => {
-  return `/node_modules/healthicons/public/icons/svg/${style}/${category}/${icon}.svg`
-}
+	// Helper function to get icon path
+	const getIconPath = (style: string, category: string, icon: string) => {
+		return `/node_modules/healthicons/public/icons/svg/${style}/${category}/${icon}.svg`
+	}
 
-// Interactive icon methods
-const toggleFavorite = () => {
-  isFavorite.value = !isFavorite.value
-}
+	// Interactive icon methods
+	const toggleFavorite = () => {
+		isFavorite.value = !isFavorite.value
+	}
 
-const toggleNotification = () => {
-  hasNotification.value = !hasNotification.value
-  if (hasNotification.value) {
-    setTimeout(() => {
-      hasNotification.value = false
-    }, 3000)
-  }
-}
+	const toggleNotification = () => {
+		hasNotification.value = !hasNotification.value
+		if (hasNotification.value) {
+			setTimeout(() => {
+				hasNotification.value = false
+			}, 3000)
+		}
+	}
 
-const toggleMask = () => {
-  isMaskOn.value = !isMaskOn.value
-}
+	const toggleMask = () => {
+		isMaskOn.value = !isMaskOn.value
+	}
 </script>
 
 <style scoped>
-/* Custom styles for Health Icons */
-img {
-  display: inline-block;
-  vertical-align: middle;
-}
+	/* Custom styles for Health Icons */
+	img {
+		display: inline-block;
+		vertical-align: middle;
+	}
 
-/* Ensure icons maintain their aspect ratio */
-img.h-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-}
+	/* Ensure icons maintain their aspect ratio */
+	img.h-6 {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
 
-img.h-8 {
-  height: 2rem;
-  width: 2rem;
-}
+	img.h-8 {
+		height: 2rem;
+		width: 2rem;
+	}
 
-img.h-12 {
-  height: 3rem;
-  width: 3rem;
-}
+	img.h-12 {
+		height: 3rem;
+		width: 3rem;
+	}
 
-img.h-16 {
-  height: 4rem;
-  width: 4rem;
-}
+	img.h-16 {
+		height: 4rem;
+		width: 4rem;
+	}
 
-img.h-5 {
-  height: 1.25rem;
-  width: 1.25rem;
-}
+	img.h-5 {
+		height: 1.25rem;
+		width: 1.25rem;
+	}
 </style>

@@ -71,14 +71,16 @@
 				{
 					name: 'PhosphorIconsDemo',
 					path: 'src/components/display/PhosphorIconsDemo.vue',
-					description: 'Comprehensive demo showcasing Phosphor icons with different sizes, colors, weights, and interactive examples.',
+					description:
+						'Comprehensive demo showcasing Phosphor icons with different sizes, colors, weights, and interactive examples.',
 					props: [],
 					example: '<PhosphorIconsDemo />'
 				},
 				{
 					name: 'HealthIconsDemo',
 					path: 'src/components/display/HealthIconsDemo.vue',
-					description: 'Demo showcasing healthcare-specific icons with different styles, colors, and medical-themed examples.',
+					description:
+						'Demo showcasing healthcare-specific icons with different styles, colors, and medical-themed examples.',
 					props: [],
 					example: '<HealthIconsDemo />'
 				}
@@ -307,7 +309,7 @@
 						>
 							<div class="p-6">
 								<div class="mb-4 flex items-start justify-between">
-									<h3 class="text-xl font-semibold text-primary-700">
+									<h3 class="text-primary-700 text-xl font-semibold">
 										{{ component.name }}
 									</h3>
 									<span class="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-500">
@@ -341,7 +343,7 @@
 								<div>
 									<h4 class="mb-2 text-sm font-medium text-gray-700">Example Usage:</h4>
 									<div class="overflow-x-auto rounded border border-neutral-200 bg-neutral-50 p-3">
-										<pre class="whitespace-pre-wrap text-xs text-neutral-700">{{ component.example }}</pre>
+										<pre class="text-xs whitespace-pre-wrap text-neutral-700">{{ component.example }}</pre>
 									</div>
 								</div>
 							</div>

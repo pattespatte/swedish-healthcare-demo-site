@@ -1,7 +1,7 @@
 <template>
 	<div class="mb-4">
 		<fieldset :disabled="disabled">
-			<legend class="mb-2 block text-sm font-medium text-gray-700 dark:text-dark-text-primary">
+			<legend class="dark:text-dark-text-primary mb-2 block text-sm font-medium text-gray-700">
 				{{ label }}
 				<span v-if="required" class="text-red-500">*</span>
 			</legend>
@@ -17,13 +17,13 @@
 						:required="required && !hasAnySelection"
 						:disabled="disabled"
 						:class="[
-							'h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-slate-500 dark:text-primary-400 dark:focus:ring-primary-400',
+							'dark:text-primary-400 dark:focus:ring-primary-400 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-slate-500',
 							error ? 'border-red-500 dark:border-red-400' : ''
 						]"
 						@change="handleCheckboxChange(option.value)"
 						@blur="$emit('blur')"
 					/>
-					<label :for="`${id}-${option.value}`" class="ml-2 block text-sm text-gray-700 dark:text-dark-text-primary">
+					<label :for="`${id}-${option.value}`" class="dark:text-dark-text-primary ml-2 block text-sm text-gray-700">
 						{{ option.label }}
 					</label>
 				</div>

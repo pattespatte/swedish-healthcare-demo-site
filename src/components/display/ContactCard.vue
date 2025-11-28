@@ -42,7 +42,7 @@
 			<div v-if="email || phone || address" class="mt-6 space-y-3">
 				<div v-if="email" class="flex items-start">
 					<svg
-						class="mr-3 mt-0.5 h-5 w-5 text-neutral-400"
+						class="mt-0.5 mr-3 h-5 w-5 text-neutral-400"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
@@ -55,14 +55,14 @@
 							d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 						/>
 					</svg>
-					<a :href="`mailto:${email}`" class="text-sm text-primary-700 hover:text-primary-800">
+					<a :href="`mailto:${email}`" class="text-primary-700 hover:text-primary-800 text-sm">
 						{{ email }}
 					</a>
 				</div>
 
 				<div v-if="phone" class="flex items-start">
 					<svg
-						class="mr-3 mt-0.5 h-5 w-5 text-neutral-400"
+						class="mt-0.5 mr-3 h-5 w-5 text-neutral-400"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
@@ -75,14 +75,14 @@
 							d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
 						/>
 					</svg>
-					<a :href="formatPhoneLink(phone)" class="text-sm text-primary-700 hover:text-primary-800">
+					<a :href="formatPhoneLink(phone)" class="text-primary-700 hover:text-primary-800 text-sm">
 						{{ phone }}
 					</a>
 				</div>
 
 				<div v-if="address" class="flex items-start">
 					<svg
-						class="mr-3 mt-0.5 h-5 w-5 text-neutral-400"
+						class="mt-0.5 mr-3 h-5 w-5 text-neutral-400"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
@@ -101,7 +101,7 @@
 							d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
 						/>
 					</svg>
-					<p class="whitespace-pre-line text-sm text-neutral-600">
+					<p class="text-sm whitespace-pre-line text-neutral-600">
 						{{ address }}
 					</p>
 				</div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PhosphorIconsDemo from '../components/display/PhosphorIconsDemo.vue'
-import Breadcrumbs from '../components/common/Breadcrumbs.vue'
+	import PhosphorIconsDemo from '../components/display/PhosphorIconsDemo.vue'
+	import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 </script>
 
 <template>
@@ -12,8 +12,8 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 				<div class="mb-8">
 					<h1 class="mb-4 text-3xl font-bold text-gray-800">Phosphor Icons Demo</h1>
 					<p class="mb-6 text-lg text-neutral-700">
-						This page demonstrates the Phosphor icons library integration in our Vue application.
-						Phosphor icons are globally registered and can be used throughout the application.
+						This page demonstrates the Phosphor icons library integration in our Vue application. Phosphor icons are
+						globally registered and can be used throughout the application.
 					</p>
 
 					<div class="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-6">
@@ -42,7 +42,7 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 								href="https://phosphoricons.com/"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="text-blue-600 hover:text-blue-800 underline"
+								class="text-blue-600 underline hover:text-blue-800"
 							>
 								Phosphor Icons Website →
 							</a>
@@ -53,7 +53,7 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 								href="https://github.com/phosphor-icons/vue"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="text-blue-600 hover:text-blue-800 underline"
+								class="text-blue-600 underline hover:text-blue-800"
 							>
 								@phosphor-icons/vue on GitHub →
 							</a>

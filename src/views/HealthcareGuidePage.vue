@@ -14,7 +14,7 @@
 			</p>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">När ska jag söka vård?</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">När ska jag söka vård?</h2>
 				<p class="mb-4 text-neutral-700">
 					Det kan vara svårt att veta när man ska söka vård och var man ska vända sig. Här är några riktlinjer:
 				</p>
@@ -40,7 +40,7 @@
 
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<div class="rounded-lg bg-white p-6 shadow-md">
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Förkylning och influensa</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Förkylning och influensa</h2>
 					<p class="mb-4 text-neutral-700">
 						Förkylning och influensa orsakas av virus och går oftast över av sig själv. Vila och mycket vätska är den
 						bästa behandlingen.
@@ -56,7 +56,7 @@
 				</div>
 
 				<div class="rounded-lg bg-white p-6 shadow-md">
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Mag- och tarminfektioner</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Mag- och tarminfektioner</h2>
 					<p class="mb-4 text-neutral-700">
 						Mag- och tarminfektioner (magsjuka) orsakas oftast av virus eller bakterier. Det är viktigt att dricka
 						mycket vätska för att undvika uttorkning.
@@ -72,7 +72,7 @@
 				</div>
 
 				<div class="rounded-lg bg-white p-6 shadow-md">
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Hudproblem</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Hudproblem</h2>
 					<p class="mb-4 text-neutral-700">
 						Eksem, psoriasis och andra hudproblem kan ofta behandlas med receptfria produkter. Undvik att använda starka
 						tvålparfymer.
@@ -88,7 +88,7 @@
 				</div>
 
 				<div class="rounded-lg bg-white p-6 shadow-md">
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Smärta i leder och muskler</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Smärta i leder och muskler</h2>
 					<p class="mb-4 text-neutral-700">
 						Led- och muskelsmärta kan bero på många orsaker, till exempel överbelastning, inflammation eller ålder.
 					</p>
@@ -104,7 +104,7 @@
 			</div>
 
 			<div class="mt-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Egenvårdsråd</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Egenvårdsråd</h2>
 				<p class="mb-4 text-neutral-700">För många vanliga besvär kan du själv göra mycket för att lindra symtomen:</p>
 				<ul class="list-disc space-y-2 pl-5 text-neutral-700">
 					<li>
@@ -131,7 +131,7 @@
 			</div>
 
 			<div class="mt-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Mer information</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Mer information</h2>
 				<p class="mb-4 text-neutral-700">
 					För mer detaljerad information om sjukdomar och besvär, besök 1177 Vårdguidens webbplats.
 				</p>
@@ -139,7 +139,7 @@
 					href="https://www.1177.se"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-block rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800"
+					class="bg-primary-700 hover:bg-primary-800 inline-block rounded-lg px-4 py-2 text-white transition-colors"
 				>
 					Besök 1177 Vårdguiden
 				</a>

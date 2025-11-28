@@ -1,16 +1,16 @@
 <template>
 	<div
-		class="overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-md dark:border-dark-border-primary dark:bg-dark-bg-tertiary"
+		class="dark:border-dark-border-primary dark:bg-dark-bg-tertiary overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-md"
 	>
 		<div class="overflow-x-auto" tabindex="0" role="region" aria-label="Tabell med data">
-			<table class="min-w-full divide-y divide-neutral-200 dark:divide-dark-border-primary">
-				<thead class="bg-neutral-50 dark:bg-dark-bg-secondary">
+			<table class="dark:divide-dark-border-primary min-w-full divide-y divide-neutral-200">
+				<thead class="dark:bg-dark-bg-secondary bg-neutral-50">
 					<tr>
 						<th
 							v-for="(column, index) in columns"
 							:key="index"
 							scope="col"
-							class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-neutral-500 dark:text-dark-text-muted"
+							class="dark:text-dark-text-muted px-6 py-3 text-left text-xs font-medium tracking-wider text-neutral-500 uppercase"
 							:class="{
 								'cursor-pointer hover:bg-neutral-100': sortable
 							}"
@@ -50,16 +50,16 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody class="divide-y divide-neutral-200 bg-white dark:divide-dark-border-primary dark:bg-dark-bg-tertiary">
+				<tbody class="dark:divide-dark-border-primary dark:bg-dark-bg-tertiary divide-y divide-neutral-200 bg-white">
 					<tr
 						v-for="(row, rowIndex) in paginatedData"
 						:key="rowIndex"
-						class="hover:bg-neutral-50 dark:hover:bg-dark-hover-bg"
+						class="dark:hover:bg-dark-hover-bg hover:bg-neutral-50"
 					>
 						<td
 							v-for="(column, colIndex) in columns"
 							:key="colIndex"
-							class="whitespace-nowrap px-6 py-4 text-sm"
+							class="px-6 py-4 text-sm whitespace-nowrap"
 							:class="getTextColorClass(column.key)"
 						>
 							<slot :name="`cell-${column.key}`" :row="row" :value="row[column.key]">
@@ -73,27 +73,27 @@
 
 		<div
 			v-if="paginated && totalPages > 1"
-			class="flex items-center justify-between border-t border-neutral-200 bg-white px-4 py-3 dark:border-dark-border-primary dark:bg-dark-bg-tertiary sm:px-6"
+			class="dark:border-dark-border-primary dark:bg-dark-bg-tertiary flex items-center justify-between border-t border-neutral-200 bg-white px-4 py-3 sm:px-6"
 		>
 			<div class="flex flex-1 justify-between sm:hidden">
 				<button
 					@click="prevPage"
 					:disabled="currentPage === 1"
-					class="relative inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-primary dark:hover:bg-dark-hover-bg"
+					class="dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-primary dark:hover:bg-dark-hover-bg relative inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50"
 				>
 					Föregående
 				</button>
 				<button
 					@click="nextPage"
 					:disabled="currentPage === totalPages"
-					class="relative ml-3 inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-primary dark:hover:bg-dark-hover-bg"
+					class="dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-primary dark:hover:bg-dark-hover-bg relative ml-3 inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50"
 				>
 					Nästa
 				</button>
 			</div>
 			<div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
 				<div>
-					<p class="text-sm text-neutral-700 dark:text-dark-text-secondary">
+					<p class="dark:text-dark-text-secondary text-sm text-neutral-700">
 						Visar
 						<span class="font-medium">{{ startIndex + 1 }}</span>
 						till
@@ -108,7 +108,7 @@
 						<button
 							@click="prevPage"
 							:disabled="currentPage === 1"
-							class="relative inline-flex items-center rounded-l-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg"
+							class="dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg relative inline-flex items-center rounded-l-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50"
 						>
 							<span class="sr-only">Föregående</span>
 							<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -123,8 +123,8 @@
 							class="relative inline-flex items-center border px-4 py-2 text-sm font-medium"
 							:class="
 								page === currentPage
-									? 'z-10 border-primary-500 bg-primary-50 text-primary-700'
-									: 'border-neutral-300 bg-white text-neutral-500 hover:bg-neutral-50 dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg'
+									? 'border-primary-500 bg-primary-50 text-primary-700 z-10'
+									: 'dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg border-neutral-300 bg-white text-neutral-500 hover:bg-neutral-50'
 							"
 						>
 							{{ page }}
@@ -133,7 +133,7 @@
 						<button
 							@click="nextPage"
 							:disabled="currentPage === totalPages"
-							class="relative inline-flex items-center rounded-r-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg"
+							class="dark:border-dark-border-primary dark:bg-dark-bg-quaternary dark:text-dark-text-muted dark:hover:bg-dark-hover-bg relative inline-flex items-center rounded-r-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50"
 						>
 							<span class="sr-only">Nästa</span>
 							<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -147,7 +147,7 @@
 
 		<div v-if="sortedData.length === 0" class="py-12 text-center">
 			<svg
-				class="mx-auto h-12 w-12 text-neutral-400 dark:text-dark-text-muted"
+				class="dark:text-dark-text-muted mx-auto h-12 w-12 text-neutral-400"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
@@ -160,8 +160,8 @@
 					d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 				/>
 			</svg>
-			<h3 class="mt-2 text-sm font-medium text-neutral-900 dark:text-dark-text-primary">Ingen data att visa</h3>
-			<p class="mt-1 text-sm text-neutral-500 dark:text-dark-text-muted">
+			<h3 class="dark:text-dark-text-primary mt-2 text-sm font-medium text-neutral-900">Ingen data att visa</h3>
+			<p class="dark:text-dark-text-muted mt-1 text-sm text-neutral-500">
 				Det finns ingen data tillgänglig för tillfället.
 			</p>
 		</div>

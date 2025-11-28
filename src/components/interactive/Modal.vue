@@ -11,7 +11,7 @@
 		>
 			<div
 				v-if="visible"
-				class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+				class="bg-opacity-50 fixed inset-0 z-50 flex items-center justify-center bg-black p-4"
 				@click="handleBackdropClick"
 				aria-hidden="true"
 			/>
@@ -49,7 +49,7 @@
 							<button
 								v-if="closable"
 								type="button"
-								class="rounded-full p-1 text-neutral-500 hover:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-primary-500"
+								class="focus:ring-primary-500 rounded-full p-1 text-neutral-500 hover:text-neutral-700 focus:ring-2 focus:outline-none"
 								@click="$emit('update:visible', false)"
 								aria-label="Stäng"
 							>

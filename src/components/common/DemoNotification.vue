@@ -14,7 +14,7 @@
 <template>
 	<div
 		v-if="isVisible"
-		class="relative border-b border-l-4 border-r border-t border-amber-400 bg-amber-50 p-4"
+		class="relative border-t border-r border-b border-l-4 border-amber-400 bg-amber-50 p-4"
 		role="alert"
 		aria-labelledby="demo-notification-message"
 	>
@@ -40,7 +40,7 @@
 					<button
 						@click="dismiss"
 						type="button"
-						class="inline-flex rounded-md bg-amber-50 p-1.5 text-amber-500 hover:bg-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-amber-50"
+						class="inline-flex rounded-md bg-amber-50 p-1.5 text-amber-500 hover:bg-amber-100 focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-amber-50 focus:outline-none"
 						aria-label="Stäng meddelande"
 					>
 						<span class="sr-only">Stäng</span>
@@ -56,11 +56,7 @@
 	</div>
 
 	<!-- Prototype Badge - Fixed positioned -->
-	<div v-if="isVisible" class="fixed right-8 top-24 z-50" aria-hidden="true">
-		<img
-			:src="prototypeBadge"
-			alt="Prototype badge"
-			class="w-[20vw] min-w-[240px] min-h-[300px] h-auto"
-		/>
+	<div v-if="isVisible" class="fixed top-24 right-8 z-50" aria-hidden="true">
+		<img :src="prototypeBadge" alt="Prototype badge" class="h-auto min-h-[300px] w-[20vw] min-w-[240px]" />
 	</div>
 </template>

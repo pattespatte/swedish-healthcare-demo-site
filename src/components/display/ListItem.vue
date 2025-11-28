@@ -28,7 +28,7 @@
 					</h3>
 					<div v-if="action || $slots.action" class="ml-4 flex-shrink-0">
 						<slot name="action">
-							<button v-if="action" @click="action" class="text-sm font-medium text-primary-700 hover:text-primary-800">
+							<button v-if="action" @click="action" class="text-primary-700 hover:text-primary-800 text-sm font-medium">
 								Hantera
 							</button>
 						</slot>

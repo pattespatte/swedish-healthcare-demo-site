@@ -221,7 +221,7 @@
 							<span class="font-medium">Specialister:</span>
 							<div class="mt-1">
 								<span v-for="(specialist, idx) in clinic.specialists" :key="idx" class="inline-block">
-									<Badge :text="specialist" variant="primary" class="mb-1 mr-1" />
+									<Badge :text="specialist" variant="primary" class="mr-1 mb-1" />
 								</span>
 							</div>
 						</div>

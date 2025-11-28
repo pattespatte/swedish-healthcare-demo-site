@@ -1,21 +1,21 @@
 <template>
 	<div
 		v-if="showResults"
-		class="absolute z-50 mt-1 max-h-96 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-dark-bg-tertiary sm:text-sm"
+		class="ring-opacity-5 dark:bg-dark-bg-tertiary absolute z-50 mt-1 max-h-96 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black focus:outline-none sm:text-sm"
 		role="listbox"
 		aria-labelledby="search-results-label"
 	>
 		<div
-			class="border-b border-neutral-200 px-3 py-2 text-xs font-medium text-neutral-500 dark:border-dark-border-primary dark:text-dark-text-muted"
+			class="dark:border-dark-border-primary dark:text-dark-text-muted border-b border-neutral-200 px-3 py-2 text-xs font-medium text-neutral-500"
 		>
 			Sökresultat
 		</div>
 
 		<!-- Loading state -->
-		<div v-if="isLoading" class="px-4 py-3 text-sm text-neutral-500 dark:text-dark-text-muted">Söker...</div>
+		<div v-if="isLoading" class="dark:text-dark-text-muted px-4 py-3 text-sm text-neutral-500">Söker...</div>
 
 		<!-- No results state -->
-		<div v-else-if="!hasResults && searchQuery" class="px-4 py-3 text-sm text-neutral-500 dark:text-dark-text-muted">
+		<div v-else-if="!hasResults && searchQuery" class="dark:text-dark-text-muted px-4 py-3 text-sm text-neutral-500">
 			Inga sökresultat för "{{ searchQuery }}"
 		</div>
 
@@ -24,7 +24,7 @@
 			<li
 				v-for="(result, index) in searchResults"
 				:key="result.id"
-				class="relative cursor-default select-none py-2 pl-3 pr-9 text-neutral-900 transition-colors duration-150 hover:bg-primary-50 dark:text-dark-text-primary dark:hover:bg-dark-hover-bg"
+				class="hover:bg-primary-50 dark:text-dark-text-primary dark:hover:bg-dark-hover-bg relative cursor-default py-2 pr-9 pl-3 text-neutral-900 transition-colors duration-150 select-none"
 				:class="{
 					'bg-primary-50 dark:bg-dark-hover-bg': selectedIndex === index
 				}"
@@ -35,18 +35,18 @@
 				<div class="flex flex-col">
 					<!-- Result title -->
 					<div
-						class="truncate text-sm font-medium text-primary-700 dark:text-primary-400"
+						class="text-primary-700 dark:text-primary-400 truncate text-sm font-medium"
 						v-html="highlightText(result.title, searchQuery)"
 					/>
 
 					<!-- Result snippet -->
 					<div
-						class="mt-1 line-clamp-2 text-xs text-neutral-600 dark:text-dark-text-muted"
+						class="dark:text-dark-text-muted mt-1 line-clamp-2 text-xs text-neutral-600"
 						v-html="highlightText(result.snippet || result.description || '', searchQuery)"
 					/>
 
 					<!-- Result URL -->
-					<div class="mt-1 text-xs text-neutral-400 dark:text-dark-text-muted">
+					<div class="dark:text-dark-text-muted mt-1 text-xs text-neutral-400">
 						{{ result.url }}
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 				<!-- Selected indicator -->
 				<span
 					v-if="selectedIndex === index"
-					class="absolute inset-y-0 right-0 flex items-center pr-4 text-primary-700 dark:text-primary-400"
+					class="text-primary-700 dark:text-primary-400 absolute inset-y-0 right-0 flex items-center pr-4"
 				>
 					<svg
 						class="h-5 w-5"
@@ -76,11 +76,11 @@
 		<!-- View all results link -->
 		<div
 			v-if="hasResults"
-			class="border-t border-neutral-200 px-3 py-2 text-center text-xs dark:border-dark-border-primary"
+			class="dark:border-dark-border-primary border-t border-neutral-200 px-3 py-2 text-center text-xs"
 		>
 			<button
 				@click="viewAllResults"
-				class="font-medium text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300"
+				class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium"
 			>
 				Visa alla resultat
 			</button>

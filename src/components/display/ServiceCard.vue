@@ -44,14 +44,14 @@
 				<span
 					v-for="(tag, index) in tags"
 					:key="index"
-					class="inline-flex items-center rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800"
+					class="bg-primary-100 text-primary-800 inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium"
 				>
 					{{ tag }}
 				</span>
 			</div>
 
 			<div v-if="link" class="mt-6">
-				<a :href="link" class="inline-flex items-center text-sm font-medium text-primary-700 hover:text-primary-800">
+				<a :href="link" class="text-primary-700 hover:text-primary-800 inline-flex items-center text-sm font-medium">
 					Läs mer
 					<svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

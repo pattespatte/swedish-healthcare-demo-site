@@ -15,45 +15,45 @@
 
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Akut tid</h2>
+					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Akut tid</h2>
 					<p class="mb-4 text-neutral-700">
 						För akuta besvär som inte kan vänta. Ring oss direkt på telefonnummer 08-123 456 78.
 					</p>
-					<button class="rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800">
+					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
 						Ring oss nu
 					</button>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Planerat besök</h2>
+					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Planerat besök</h2>
 					<p class="mb-4 text-neutral-700">Boka tid för planerat vårdbesök, hälsokontroll eller uppföljning.</p>
 					<router-link
 						to="/boka-tid/form"
-						class="inline-block rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800"
+						class="bg-primary-700 hover:bg-primary-800 inline-block rounded-lg px-4 py-2 text-white transition-colors"
 					>
 						Boka tid online
 					</router-link>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Vaccination</h2>
+					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Vaccination</h2>
 					<p class="mb-4 text-neutral-700">Boka tid för vaccination, inklusive influensa- och COVID-19-vaccin.</p>
-					<button class="rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800">
+					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
 						Boka vaccinationstid
 					</button>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Laboratorieprov</h2>
+					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Laboratorieprov</h2>
 					<p class="mb-4 text-neutral-700">Boka tid för provtagning. Observera att vissa prover kräver faste.</p>
-					<button class="rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800">
+					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
 						Boka provtagning
 					</button>
 				</CardContainer>
 			</div>
 
 			<CardContainer class="mt-6">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700 dark:text-primary-400">Information vid bokning</h2>
+				<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Information vid bokning</h2>
 				<ul class="list-disc space-y-2 pl-5 text-neutral-700">
 					<li>Ha ditt personnummer och bankID tillgängligt vid bokning</li>
 					<li>Om du behöver avboka din tid, gör det senast 24 timmar innan</li>

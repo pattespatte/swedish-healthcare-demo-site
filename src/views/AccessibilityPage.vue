@@ -14,7 +14,7 @@
 			</p>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Tillgänglighet på webbplatsen</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Tillgänglighet på webbplatsen</h2>
 				<p class="mb-4 text-neutral-700">
 					Vi arbetar kontinuerligt för att förbättra tillgängligheten på vår webbplats och följer riktlinjerna för Web
 					Content Accessibility Guidelines (WCAG) 2.1 på nivå AA.
@@ -29,7 +29,7 @@
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Bristande tillgänglighet</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Bristande tillgänglighet</h2>
 				<p class="mb-4 text-neutral-700">
 					Vi är medvetna om att det finns delar av vår webbplats som inte är fullt tillgängliga för alla användare. Vi
 					arbetar för att åtgärda dessa brister.
@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Rapportera brister i tillgänglighet</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Rapportera brister i tillgänglighet</h2>
 				<p class="mb-4 text-neutral-700">
 					Om du upptäcker brister i webbplatsens tillgänglighet är vi tacksamma om du rapporterar det till oss. Beskriv
 					så detaljerat som möjligt vilket innehåll det gäller och vilket problem du har upptäckt.
@@ -57,7 +57,7 @@
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Tillgänglighet i våra lokaler</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Tillgänglighet i våra lokaler</h2>
 				<p class="mb-4 text-neutral-700">
 					Vår vårdcentral är anpassad för att vara tillgänglig för personer med funktionsnedsättning.
 				</p>
@@ -90,7 +90,7 @@
 			</div>
 
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Tolk och hjälpmedel</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Tolk och hjälpmedel</h2>
 				<p class="mb-4 text-neutral-700">
 					Om du behöver tolk eller har behov av andra hjälpmedel vid ditt besök, meddela oss när du bokar tid så att vi
 					kan förbereda detta.
@@ -104,7 +104,7 @@
 			</div>
 
 			<div class="rounded-lg bg-white p-6 shadow-md">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Tillsynsmyndighet</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Tillsynsmyndighet</h2>
 				<p class="mb-4 text-neutral-700">
 					Om du inte är nöjd med hur vi hanterar dina synpunkter på tillgänglighet kan du kontakta Myndigheten för
 					digital förvaltning (DIGG) och påtala bristen.
@@ -120,7 +120,7 @@
 							href="https://digg.se"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-primary-700 underline hover:text-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+							class="text-primary-700 hover:text-primary-800 focus:ring-primary-500 underline focus:ring-2 focus:ring-offset-2 focus:outline-none"
 						>
 							digg.se
 						</a>

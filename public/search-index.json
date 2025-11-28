@@ -400,7 +400,7 @@
     "id": "/boka-tid/form",
     "title": "Boka tid - Planerat besök - Vårdcentralen Vårdportalen",
     "url": "/boka-tid/form",
-    "content": "Boka tid - Planerat besök Fyll i formuläret nedan för att boka en tid för ett planerat vårdbesök. Personuppgifter Format: ÅÅÅÅMMDD-XXXX (t.ex. 19850612-3456) Bokningsdetaljer Medicinsk information Preferenser och särskilda behov Samtycke och bekräftelse Du kan ladda upp remisser, tidigare journalutdrag eller andra relevanta dokument. Max storlek: 10MB per fil, max 3 filer.",
+    "content": "Boka tid &ndash; planerat besök Fyll i formuläret nedan för att boka en tid för ett planerat vårdbesök. Personuppgifter Format: ÅÅÅÅMMDD-XXXX (t.ex. 19850612-3456) Bokningsdetaljer Medicinsk information Preferenser och särskilda behov Samtycke och bekräftelse Du kan ladda upp remisser, tidigare journalutdrag eller andra relevanta dokument. Max storlek: 10MB per fil, max 3 filer.",
     "description": "Formulär för att boka en tid för ett planerat vårdbesök",
     "keywords": [
       "boka",
@@ -408,6 +408,7 @@
       "besök",
       "vårdcentralen",
       "vårdportalen",
+      "ndash",
       "fyll",
       "formuläret",
       "nedan",
@@ -416,8 +417,7 @@
       "format",
       "ååååmmdd",
       "xxxx",
-      "19850612",
-      "3456"
+      "19850612"
     ]
   },
   {
@@ -704,6 +704,55 @@
       "efter",
       "anpassade",
       "varumärkesfärger"
+    ]
+  },
+  {
+    "id": "/phosphor-icons",
+    "title": "Phosphor Ikoner - Vårdcentralen Vårdportalen",
+    "url": "/phosphor-icons",
+    "content": "Phosphor Icons Demo This page demonstrates the Phosphor icons library integration in our Vue application. Phosphor icons are globally registered and can be used throughout the application. About Phosphor Icons Phosphor is a flexible icon family with over 7,000 icons Multiple weights: Thin, Light, Regular, Bold, Fill, and Duotone Fully customizable with size, color, and CSS classes Optimized for web applications with SVG format Accessible with proper semantic markup Already globally registered in this Vue application Additional Resources Official Documentation Phosphor Icons Website → Vue Integration @phosphor-icons/vue on GitHub →",
+    "description": "Demo och exempel på Phosphor-ikoner i Vue-applikationen",
+    "keywords": [
+      "phosphor",
+      "ikoner",
+      "vårdcentralen",
+      "vårdportalen",
+      "icons",
+      "demo",
+      "this",
+      "page",
+      "demonstrates",
+      "library",
+      "integration",
+      "application",
+      "globally",
+      "registered",
+      "used"
+    ]
+  },
+  {
+    "id": "/health-icons",
+    "title": "Hälsoikoner - Vårdcentralen Vårdportalen",
+    "url": "/health-icons",
+    "content": "Health Icons Demo This page demonstrates the Health icons library integration in our Vue application. Health icons are specifically designed for healthcare applications and can be used throughout the application. About Health Icons Health Icons is a collection of over 4,000 free icons designed for healthcare projects Covers a wide range of medical concepts, procedures, and healthcare facilities Available in multiple styles and customizable with size and color Optimized for web applications with SVG format Designed with accessibility and semantic clarity in mind Perfect for healthcare applications like this Swedish healthcare demo site Additional Resources Official Documentation Health Icons Website → Icon Library Health Icons on GitHub →",
+    "description": "Demo och exempel på hälsoikoner i Vue-applikationen",
+    "keywords": [
+      "hälsoikoner",
+      "vårdcentralen",
+      "vårdportalen",
+      "health",
+      "icons",
+      "demo",
+      "this",
+      "page",
+      "demonstrates",
+      "library",
+      "integration",
+      "application",
+      "specifically",
+      "designed",
+      "healthcare",
+      "applications"
     ]
   },
   {

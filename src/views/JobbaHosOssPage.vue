@@ -33,7 +33,7 @@
 				<div class="text-center">
 					<router-link
 						to="/om-oss/lediga-tjanster"
-						class="inline-block rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+						class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 inline-block rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					>
 						Se alla lediga jobb
 					</router-link>

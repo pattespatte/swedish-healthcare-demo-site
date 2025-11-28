@@ -3,7 +3,7 @@
 		<div v-for="item in items" :key="item.id" class="border-b border-neutral-200 last:border-b-0">
 			<button
 				type="button"
-				class="flex w-full items-center justify-between rounded-md px-2 py-4 text-left font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:text-neutral-200 dark:hover:bg-dark-bg-secondary"
+				class="focus:ring-primary-500 dark:hover:bg-dark-bg-secondary flex w-full items-center justify-between rounded-md px-2 py-4 text-left font-medium text-neutral-800 transition-colors hover:bg-neutral-50 focus:ring-2 focus:outline-none dark:text-neutral-200"
 				:aria-expanded="isItemOpen(item.id)"
 				:aria-controls="`accordion-content-${item.id}`"
 				@click="toggleItem(item.id)"

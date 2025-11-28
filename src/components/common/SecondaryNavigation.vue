@@ -20,7 +20,7 @@
 
 <template>
 	<nav class="border-b border-blue-200 bg-neutral-800 px-4 py-4" aria-label="Sekundär navigering">
-		<ul class="flex flex-col space-y-2 md:flex-row md:space-x-6 md:space-y-0">
+		<ul class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-6">
 			<li v-for="item in navItems" :key="item.path">
 				<router-link
 					:to="item.path"

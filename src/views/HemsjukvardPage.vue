@@ -220,7 +220,7 @@
 		<Tabs :tabs="tabs" v-model:activeTab="activeTab" class="mb-6" />
 
 		<!-- Search and filter section -->
-		<div class="mb-6 rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div class="dark:bg-dark-bg-secondary mb-6 rounded-lg bg-white p-6 shadow-md">
 			<div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 				<TextInput
 					id="search"
@@ -241,7 +241,7 @@
 		</div>
 
 		<!-- Main content based on active tab -->
-		<div v-if="activeTab === 'overview'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-if="activeTab === 'overview'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<p class="mb-6 text-gray-600">
 				Vår hemsjukvård erbjuder professionell vård och behandling i ditt hem. Vi arbetar för att du ska kunna få den
 				vård du behöver med bibehållen självständighet och livskvalitet.
@@ -281,7 +281,7 @@
 		</div>
 
 		<!-- Eligibility view -->
-		<div v-else-if="activeTab === 'eligibility'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-else-if="activeTab === 'eligibility'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<h2 class="mb-4 text-xl font-semibold">Behov & rättigheter</h2>
 			<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
 				<ListItem
@@ -324,7 +324,7 @@
 		</div>
 
 		<!-- Contact view -->
-		<div v-else-if="activeTab === 'contact'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-else-if="activeTab === 'contact'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<h2 class="mb-4 text-xl font-semibold">Kontakta oss</h2>
 			<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
 				<ContactCard

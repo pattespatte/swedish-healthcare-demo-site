@@ -112,14 +112,14 @@
 					<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 						<div class="rounded-lg bg-white p-4 shadow-sm">
 							<h3 class="mb-2 font-semibold text-gray-800">Anna, överläkare</h3>
-							<p class="text-sm italic text-gray-600">
+							<p class="text-sm text-gray-600 italic">
 								"Jag började som AT-läkare här för 10 år sedan och har kunnat växa inom organisationen. Stödet för min
 								utveckling har varit fantastiskt."
 							</p>
 						</div>
 						<div class="rounded-lg bg-white p-4 shadow-sm">
 							<h3 class="mb-2 font-semibold text-gray-800">Erik, specialistsjuksköterska</h3>
-							<p class="text-sm italic text-gray-600">
+							<p class="text-sm text-gray-600 italic">
 								"Efter min examen fick jag gå ett introduktionsprogram som gav mig trygghet. Nu har jag specialiserat
 								mig inom intensivvård."
 							</p>
@@ -129,7 +129,7 @@
 
 				<div class="text-center">
 					<button
-						class="mr-4 rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+						class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 mr-4 rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					>
 						Kontakta karriärrådgivare
 					</button>

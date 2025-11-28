@@ -20,7 +20,7 @@
 					<div v-if="labels && labels[index]" class="relative z-10 ml-4 min-w-0">
 						<p
 							class="inline-block rounded px-2 py-1 text-sm font-medium"
-							:class="index <= currentStep ? 'bg-white text-primary-700' : 'bg-white text-neutral-500'"
+							:class="index <= currentStep ? 'text-primary-700 bg-white' : 'bg-white text-neutral-500'"
 						>
 							{{ labels[index] }}
 						</p>
@@ -29,7 +29,7 @@
 
 				<div
 					v-if="index < steps.length - 1"
-					class="absolute left-10 top-5 z-0 h-0.5 w-full"
+					class="absolute top-5 left-10 z-0 h-0.5 w-full"
 					:class="index < currentStep ? 'bg-primary-600' : 'bg-neutral-200'"
 					aria-hidden="true"
 				/>

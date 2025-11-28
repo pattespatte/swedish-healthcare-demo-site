@@ -20,7 +20,7 @@
 						:key="result.id"
 						class="rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
 					>
-						<h2 class="mb-2 text-xl font-semibold text-primary-700 dark:text-primary-400">
+						<h2 class="text-primary-700 dark:text-primary-400 mb-2 text-xl font-semibold">
 							<router-link :to="result.url" class="hover:underline">
 								{{ result.title }}
 							</router-link>

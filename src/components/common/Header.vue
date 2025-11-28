@@ -93,12 +93,6 @@
 			path: '/kontakt',
 			hasDropdown: false,
 			dropdownItems: []
-		},
-		{
-			name: 'Hälsoikoner',
-			path: '/health-icons',
-			hasDropdown: false,
-			dropdownItems: []
 		}
 	]
 
@@ -179,7 +173,7 @@
 	<header class="shadow-md" role="banner">
 		<!-- Row 1: Logo, empty space, search and language selector - Full width -->
 		<div
-			class="flex items-center justify-between border-b border-neutral-600 bg-slate-900 py-3 dark:border-dark-border-primary dark:bg-dark-bg-primary"
+			class="dark:border-dark-border-primary dark:bg-dark-bg-primary flex items-center justify-between border-b border-neutral-600 bg-slate-900 py-3"
 		>
 			<div class="container mx-auto flex items-center justify-between px-4">
 				<!-- Logo placeholder -->
@@ -191,7 +185,7 @@
 							VÅ
 						</span>
 					</div>
-					<span class="ml-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary-300">
+					<span class="group-hover:text-primary-300 ml-3 text-xl font-bold text-white transition-colors duration-300">
 						Vårdportalen
 					</span>
 				</router-link>
@@ -207,7 +201,7 @@
 					<!-- Language selector placeholder -->
 					<div class="relative">
 						<select
-							class="appearance-none rounded-lg border border-neutral-300 bg-white py-1 pl-3 pr-8 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary dark:text-dark-text-primary"
+							class="focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary dark:text-dark-text-primary appearance-none rounded-lg border border-neutral-300 bg-white py-1 pr-8 pl-3 focus:border-transparent focus:ring-2 focus:outline-none"
 							aria-label="Välj språk"
 						>
 							<option value="sv">Svenska</option>
@@ -215,7 +209,7 @@
 							<option value="fi">Suomi</option>
 						</select>
 						<div
-							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700 dark:text-dark-text-muted"
+							class="dark:text-dark-text-muted pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-700"
 						>
 							<svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
 								<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -227,7 +221,7 @@
 				<!-- Mobile menu button -->
 				<button
 					@click="toggleMenu"
-					class="text-white hover:text-primary-300 focus:outline-none md:hidden"
+					class="hover:text-primary-300 text-white focus:outline-none md:hidden"
 					aria-label="Öppna meny"
 					aria-expanded="false"
 				>
@@ -256,7 +250,7 @@
 		</div>
 
 		<!-- Row 2: Navigation links centered - Full width -->
-		<div class="hidden justify-center bg-slate-800 py-2 dark:bg-slate-800 md:flex">
+		<div class="hidden justify-center bg-slate-800 py-2 md:flex dark:bg-slate-800">
 			<div class="container mx-auto px-4">
 				<!-- Desktop Navigation -->
 				<nav class="relative hidden md:flex" aria-label="Huvudnavigering">
@@ -266,7 +260,7 @@
 							<!-- Dropdown Menu for laptop view -->
 							<div
 								v-if="link.hasDropdown"
-								class="absolute left-0 z-10 mt-0 w-56 rounded-b-lg bg-slate-600 shadow-lg dark:bg-dark-bg-tertiary"
+								class="dark:bg-dark-bg-tertiary absolute left-0 z-10 mt-0 w-56 rounded-b-lg bg-slate-600 shadow-lg"
 								:class="{
 									block: openDropdown === link.name,
 									hidden: openDropdown !== link.name
@@ -277,9 +271,9 @@
 									<li v-for="item in link.dropdownItems" :key="item.path">
 										<router-link
 											:to="item.path"
-											class="block px-4 py-3 text-white transition-colors duration-200 hover:text-slate-800 dark:text-dark-text-primary dark:hover:bg-dark-hover-bg"
+											class="dark:text-dark-text-primary dark:hover:bg-dark-hover-bg block px-4 py-3 text-white transition-colors duration-200 hover:text-slate-800"
 											:class="{
-												'bg-slate-800 font-medium text-white dark:bg-dark-bg-quaternary dark:text-dark-text-primary':
+												'dark:bg-dark-bg-quaternary dark:text-dark-text-primary bg-slate-800 font-medium text-white':
 													isActive(item.path)
 											}"
 											@click="closeDropdowns"
@@ -336,7 +330,7 @@
 							<!-- Dropdown Menu for desktop view -->
 							<div
 								v-if="link.hasDropdown"
-								class="absolute left-0 z-10 mt-0 w-56 rounded-b-lg bg-slate-700 shadow-lg dark:bg-dark-bg-tertiary"
+								class="dark:bg-dark-bg-tertiary absolute left-0 z-10 mt-0 w-56 rounded-b-lg bg-slate-700 shadow-lg"
 								:class="{
 									block: openDropdown === link.name,
 									hidden: openDropdown !== link.name
@@ -347,9 +341,9 @@
 									<li v-for="item in link.dropdownItems" :key="item.path">
 										<router-link
 											:to="item.path"
-											class="block px-4 py-3 text-white transition-colors duration-200 hover:bg-slate-900 dark:text-dark-text-primary dark:hover:bg-dark-hover-bg"
+											class="dark:text-dark-text-primary dark:hover:bg-dark-hover-bg block px-4 py-3 text-white transition-colors duration-200 hover:bg-slate-900"
 											:class="{
-												'bg-slate-800 font-medium text-white dark:bg-dark-bg-quaternary dark:text-dark-text-primary':
+												'dark:bg-dark-bg-quaternary dark:text-dark-text-primary bg-slate-800 font-medium text-white':
 													isActive(item.path)
 											}"
 											@click="closeDropdowns"
@@ -513,7 +507,7 @@
 				<!-- Mobile Language Selector -->
 				<div class="mt-4">
 					<select
-						class="w-full appearance-none rounded-lg border border-neutral-300 bg-white py-2 pl-3 pr-8 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary dark:text-dark-text-primary"
+						class="focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary dark:text-dark-text-primary w-full appearance-none rounded-lg border border-neutral-300 bg-white py-2 pr-8 pl-3 focus:border-transparent focus:ring-2 focus:outline-none"
 						aria-label="Välj språk"
 					>
 						<option value="sv">Svenska</option>

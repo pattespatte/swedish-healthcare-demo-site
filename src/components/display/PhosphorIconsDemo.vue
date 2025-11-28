@@ -192,46 +192,29 @@
 					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-gray-100"
 					@click="toggleHeart"
 				>
-					<PhHeart
-						:size="32"
-						:class="isHeartFilled ? 'text-red-500 fill-current' : 'text-gray-400'"
-					/>
+					<PhHeart :size="32" :class="isHeartFilled ? 'fill-current text-red-500' : 'text-gray-400'" />
 					<span class="text-xs text-gray-600">Click to Fill</span>
 				</button>
 				<button
 					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-gray-100"
 					@click="toggleStar"
 				>
-					<PhStar
-						:size="32"
-						:class="isStarFilled ? 'text-yellow-500 fill-current' : 'text-gray-400'"
-					/>
+					<PhStar :size="32" :class="isStarFilled ? 'fill-current text-yellow-500' : 'text-gray-400'" />
 					<span class="text-xs text-gray-600">Click to Fill</span>
 				</button>
 				<button
 					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-blue-50"
 					@click="showNotification"
 				>
-					<PhBell
-						:size="32"
-						:class="hasNotification ? 'text-blue-500' : 'text-gray-400'"
-					/>
+					<PhBell :size="32" :class="hasNotification ? 'text-blue-500' : 'text-gray-400'" />
 					<span class="text-xs text-gray-600">Notifications</span>
 				</button>
 				<button
 					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-gray-100"
 					@click="toggleTheme"
 				>
-					<PhMoon
-						v-if="!isDarkMode"
-						:size="32"
-						class="text-gray-600"
-					/>
-					<PhSun
-						v-else
-						:size="32"
-						class="text-yellow-500"
-					/>
+					<PhMoon v-if="!isDarkMode" :size="32" class="text-gray-600" />
+					<PhSun v-else :size="32" class="text-yellow-500" />
 					<span class="text-xs text-gray-600">Toggle Theme</span>
 				</button>
 			</div>
@@ -265,15 +248,21 @@
 			<div class="mb-6">
 				<h4 class="mb-2 font-medium text-gray-700">Button with Icon</h4>
 				<div class="flex flex-wrap gap-4">
-					<button class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600">
+					<button
+						class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+					>
 						<PhPlus size="20" />
 						<span>Add New</span>
 					</button>
-					<button class="flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50">
+					<button
+						class="flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50"
+					>
 						<PhEye size="20" />
 						<span>View Details</span>
 					</button>
-					<button class="flex items-center space-x-2 rounded-lg border border-red-300 px-4 py-2 text-red-600 transition-colors hover:bg-red-50">
+					<button
+						class="flex items-center space-x-2 rounded-lg border border-red-300 px-4 py-2 text-red-600 transition-colors hover:bg-red-50"
+					>
 						<PhTrash size="20" />
 						<span>Delete</span>
 					</button>
@@ -285,19 +274,19 @@
 				<h4 class="mb-2 font-medium text-gray-700">Input with Icon</h4>
 				<div class="flex max-w-md flex-col space-y-4">
 					<div class="relative">
-						<PhEnvelope class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size="20" />
+						<PhEnvelope class="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" size="20" />
 						<input
 							type="email"
 							placeholder="Enter your email"
-							class="w-full rounded-lg border border-gray-300 pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+							class="focus:ring-opacity-50 w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
 						/>
 					</div>
 					<div class="relative">
-						<PhLock class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size="20" />
+						<PhLock class="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" size="20" />
 						<input
 							type="password"
 							placeholder="Enter your password"
-							class="w-full rounded-lg border border-gray-300 pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+							class="focus:ring-opacity-50 w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
 						/>
 					</div>
 				</div>
@@ -362,49 +351,50 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+	import { ref } from 'vue'
 
-// Interactive icon states
-const isHeartFilled = ref(false)
-const isStarFilled = ref(false)
-const hasNotification = ref(false)
-const isDarkMode = ref(false)
+	// Interactive icon states
+	const isHeartFilled = ref(false)
+	const isStarFilled = ref(false)
+	const hasNotification = ref(false)
+	const isDarkMode = ref(false)
 
-// Interactive icon methods
-const toggleHeart = () => {
-	isHeartFilled.value = !isHeartFilled.value
-}
-
-const toggleStar = () => {
-	isStarFilled.value = !isStarFilled.value
-}
-
-const showNotification = () => {
-	hasNotification.value = !hasNotification.value
-	if (hasNotification.value) {
-		setTimeout(() => {
-			hasNotification.value = false
-		}, 3000)
+	// Interactive icon methods
+	const toggleHeart = () => {
+		isHeartFilled.value = !isHeartFilled.value
 	}
-}
 
-const toggleTheme = () => {
-	isDarkMode.value = !isDarkMode.value
-}
+	const toggleStar = () => {
+		isStarFilled.value = !isStarFilled.value
+	}
+
+	const showNotification = () => {
+		hasNotification.value = !hasNotification.value
+		if (hasNotification.value) {
+			setTimeout(() => {
+				hasNotification.value = false
+			}, 3000)
+		}
+	}
+
+	const toggleTheme = () => {
+		isDarkMode.value = !isDarkMode.value
+	}
 </script>
 
 <style scoped>
-/* Custom animations for icons */
-@keyframes pulse {
-	0%, 100% {
-		opacity: 1;
+	/* Custom animations for icons */
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.5;
+		}
 	}
-	50% {
-		opacity: 0.5;
-	}
-}
 
-.animate-pulse {
-	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+	.animate-pulse {
+		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	}
 </style>

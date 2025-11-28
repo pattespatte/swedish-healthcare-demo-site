@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HealthIconsDemo from '../components/display/HealthIconsDemo.vue'
-import Breadcrumbs from '../components/common/Breadcrumbs.vue'
+	import HealthIconsDemo from '../components/display/HealthIconsDemo.vue'
+	import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 </script>
 
 <template>
@@ -12,8 +12,8 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 				<div class="mb-8">
 					<h1 class="mb-4 text-3xl font-bold text-gray-800">Health Icons Demo</h1>
 					<p class="mb-6 text-lg text-neutral-700">
-						This page demonstrates the Health icons library integration in our Vue application.
-						Health icons are specifically designed for healthcare applications and can be used throughout the application.
+						This page demonstrates the Health icons library integration in our Vue application. Health icons are
+						specifically designed for healthcare applications and can be used throughout the application.
 					</p>
 
 					<div class="mb-8 rounded-lg border border-green-200 bg-green-50 p-6">
@@ -42,7 +42,7 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 								href="https://healthicons.org/"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="text-blue-600 hover:text-blue-800 underline"
+								class="text-blue-600 underline hover:text-blue-800"
 							>
 								Health Icons Website →
 							</a>
@@ -53,7 +53,7 @@ import Breadcrumbs from '../components/common/Breadcrumbs.vue'
 								href="https://github.com/resolvetosavelives/healthicons"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="text-blue-600 hover:text-blue-800 underline"
+								class="text-blue-600 underline hover:text-blue-800"
 							>
 								Health Icons on GitHub →
 							</a>

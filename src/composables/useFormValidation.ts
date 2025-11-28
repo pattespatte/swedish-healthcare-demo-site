@@ -64,7 +64,9 @@ export function useFormValidation() {
 
 	const validateName = (value: string, fieldName: string): string | null => {
 		const requiredError = validateRequired(value, fieldName)
-		if (requiredError) return requiredError
+		if (requiredError) {
+			return requiredError
+		}
 
 		if (value.length < 2) {
 			return `${fieldName} måste innehålla minst 2 tecken`
@@ -83,7 +85,9 @@ export function useFormValidation() {
 
 	const validatePersonalNumber = (value: string): string | null => {
 		const requiredError = validateRequired(value, 'personnummer')
-		if (requiredError) return requiredError
+		if (requiredError) {
+			return requiredError
+		}
 
 		// Check format: YYYYMMDD-XXXX or YYMMDD-XXXX
 		const regex = /^(\d{2}|\d{4})(\d{2})(\d{2})[-+]?\d{4}$/
@@ -102,7 +106,9 @@ export function useFormValidation() {
 
 	const validatePhone = (value: string): string | null => {
 		const requiredError = validateRequired(value, 'telefonnummer')
-		if (requiredError) return requiredError
+		if (requiredError) {
+			return requiredError
+		}
 
 		const cleanPhone = value.replace(/[-\s]/g, '')
 
@@ -115,7 +121,9 @@ export function useFormValidation() {
 
 	const validateEmail = (value: string): string | null => {
 		const requiredError = validateRequired(value, 'e-postadress')
-		if (requiredError) return requiredError
+		if (requiredError) {
+			return requiredError
+		}
 
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 		if (!emailRegex.test(value)) {
@@ -134,7 +142,9 @@ export function useFormValidation() {
 
 	const validateDate = (value: string): string | null => {
 		const requiredError = validateRequired(value, 'datum')
-		if (requiredError) return requiredError
+		if (requiredError) {
+			return requiredError
+		}
 
 		const selectedDate = new Date(value)
 		const today = new Date()
@@ -182,7 +192,9 @@ export function useFormValidation() {
 
 	// Field validation
 	const validateField = (fieldName: string, value: any, fieldType: string, required: boolean = true): string | null => {
-		if (!required && !value) return null
+		if (!required && !value) {
+			return null
+		}
 
 		switch (fieldType) {
 			case 'firstName':

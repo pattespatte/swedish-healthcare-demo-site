@@ -195,7 +195,7 @@
 		<Tabs :tabs="tabs" v-model:activeTab="activeTab" class="mb-6" />
 
 		<!-- Search and filter section -->
-		<div class="mb-6 rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div class="dark:bg-dark-bg-secondary mb-6 rounded-lg bg-white p-6 shadow-md">
 			<div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 				<TextInput
 					id="search"
@@ -215,7 +215,7 @@
 		</div>
 
 		<!-- Main content based on active tab -->
-		<div v-if="activeTab === 'overview'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-if="activeTab === 'overview'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<p class="mb-6 text-gray-600">
 				Här hittar du information om våra olika mottagningar och kliniker. Vi erbjuder specialistvård inom de flesta
 				medicinska områden med erfarna läkare och sjuksköterskor.
@@ -255,7 +255,7 @@
 		</div>
 
 		<!-- Waiting times view -->
-		<div v-else-if="activeTab === 'waiting-times'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-else-if="activeTab === 'waiting-times'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<h2 class="mb-4 text-xl font-semibold">Aktuella väntetider</h2>
 			<div class="space-y-3">
 				<ListItem
@@ -272,7 +272,7 @@
 		</div>
 
 		<!-- Contact view -->
-		<div v-else-if="activeTab === 'contact'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
+		<div v-else-if="activeTab === 'contact'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
 			<h2 class="mb-4 text-xl font-semibold">Kontaktinformation</h2>
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 				<ContactCard

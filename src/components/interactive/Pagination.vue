@@ -3,7 +3,7 @@
 		<div class="flex flex-1 justify-between sm:hidden">
 			<button
 				type="button"
-				class="relative inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+				class="focus:ring-primary-500 relative inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 				:disabled="currentPage === 1"
 				@click="goToPage(currentPage - 1)"
 			>
@@ -11,7 +11,7 @@
 			</button>
 			<button
 				type="button"
-				class="relative ml-3 inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+				class="focus:ring-primary-500 relative ml-3 inline-flex items-center rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 				:disabled="currentPage === totalPages"
 				@click="goToPage(currentPage + 1)"
 			>
@@ -37,7 +37,7 @@
 					<!-- First page button -->
 					<button
 						type="button"
-						class="relative inline-flex items-center rounded-l-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+						class="focus:ring-primary-500 relative inline-flex items-center rounded-l-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 						:disabled="currentPage === 1"
 						@click="goToPage(1)"
 						aria-label="Första sidan"
@@ -60,7 +60,7 @@
 					<!-- Previous page button -->
 					<button
 						type="button"
-						class="relative inline-flex items-center border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+						class="focus:ring-primary-500 relative inline-flex items-center border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 						:disabled="currentPage === 1"
 						@click="goToPage(currentPage - 1)"
 						aria-label="Föregående sida"
@@ -87,10 +87,10 @@
 								v-if="page !== '...'"
 								:key="`page-${page}`"
 								type="button"
-								class="relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary-500"
+								class="focus:ring-primary-500 relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:ring-2 focus:outline-none"
 								:class="[
 									page === currentPage
-										? 'z-10 border-primary-500 bg-primary-50 text-primary-700'
+										? 'border-primary-500 bg-primary-50 text-primary-700 z-10'
 										: 'border-neutral-300 bg-white text-neutral-500 hover:bg-neutral-50'
 								]"
 								@click="typeof page === 'number' && goToPage(page)"
@@ -111,7 +111,7 @@
 					<!-- Next page button -->
 					<button
 						type="button"
-						class="relative inline-flex items-center border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+						class="focus:ring-primary-500 relative inline-flex items-center border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 						:disabled="currentPage === totalPages"
 						@click="goToPage(currentPage + 1)"
 						aria-label="Nästa sida"
@@ -134,7 +134,7 @@
 					<!-- Last page button -->
 					<button
 						type="button"
-						class="relative inline-flex items-center rounded-r-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+						class="focus:ring-primary-500 relative inline-flex items-center rounded-r-md border border-neutral-300 bg-white px-2 py-2 text-sm font-medium text-neutral-500 hover:bg-neutral-50 focus:ring-2 focus:outline-none"
 						:disabled="currentPage === totalPages"
 						@click="goToPage(totalPages)"
 						aria-label="Sista sidan"

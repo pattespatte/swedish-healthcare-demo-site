@@ -10,14 +10,14 @@
 			<div class="flex justify-end space-x-3">
 				<button
 					type="button"
-					class="rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					class="focus:ring-primary-500 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					@click="handleCancel"
 				>
 					{{ cancelText }}
 				</button>
 				<button
 					type="button"
-					class="rounded-md border border-transparent bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					class="bg-primary-500 hover:bg-primary-600 focus:ring-primary-500 rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					@click="handleConfirm"
 				>
 					{{ confirmText }}

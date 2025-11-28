@@ -20,7 +20,7 @@
 			<input
 				ref="searchInput"
 				type="text"
-				class="block w-full rounded-md border border-neutral-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-neutral-500 focus:border-primary-500 focus:placeholder-neutral-400 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary sm:text-sm"
+				class="focus:border-primary-500 focus:ring-primary-500 dark:border-dark-border-primary dark:bg-dark-bg-tertiary block w-full rounded-md border border-neutral-300 bg-white py-2 pr-3 pl-10 leading-5 placeholder-neutral-500 focus:placeholder-neutral-400 focus:ring-1 focus:outline-none sm:text-sm"
 				:class="[size === 'small' ? 'py-1 text-sm' : size === 'large' ? 'py-3 text-base' : 'py-2 text-sm']"
 				:placeholder="placeholder"
 				:value="searchQuery"
@@ -35,7 +35,7 @@
 			<div v-if="searchQuery && clearable" class="absolute inset-y-0 right-0 flex items-center pr-3">
 				<button
 					type="button"
-					class="rounded-full p-1 text-neutral-400 hover:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+					class="focus:ring-primary-500 rounded-full p-1 text-neutral-400 hover:text-neutral-500 focus:ring-2 focus:outline-none"
 					@click="handleClear"
 					aria-label="Rensa sökning"
 				>
@@ -58,7 +58,7 @@
 			<div v-if="showSearchButton" class="absolute inset-y-0 right-0 flex items-center">
 				<button
 					type="button"
-					class="relative inline-flex items-center rounded-r-md border border-transparent bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					class="bg-primary-500 hover:bg-primary-600 focus:ring-primary-500 relative inline-flex items-center rounded-r-md border border-transparent px-4 py-2 text-sm font-medium text-white focus:ring-2 focus:ring-offset-2 focus:outline-none"
 					:class="[size === 'small' ? 'py-1 text-xs' : size === 'large' ? 'py-3 text-base' : 'py-2 text-sm']"
 					@click="handleSearch"
 					:disabled="disabled || !searchQuery"

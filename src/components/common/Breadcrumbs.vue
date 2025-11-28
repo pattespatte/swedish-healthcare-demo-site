@@ -97,7 +97,7 @@
 					<button
 						v-else-if="!crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
-						class="text-primary-700 transition-colors duration-200 hover:text-primary-800 hover:underline dark:text-primary-400 dark:hover:text-primary-300"
+						class="text-primary-700 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200 hover:underline"
 						:aria-current="crumb.isCurrent ? 'page' : undefined"
 					>
 						{{ crumb.name }}

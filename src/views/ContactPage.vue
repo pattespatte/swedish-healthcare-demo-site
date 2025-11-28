@@ -16,7 +16,7 @@
 
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Kontaktinformation</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Kontaktinformation</h2>
 					<div class="space-y-3 text-neutral-700">
 						<p>
 							<span class="font-medium">Adress:</span>
@@ -38,7 +38,7 @@
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="mb-3 text-xl font-semibold text-primary-700">Akuta ärenden</h2>
+					<h2 class="text-primary-700 mb-3 text-xl font-semibold">Akuta ärenden</h2>
 					<p class="mb-4 text-neutral-700">För akuta ärenden utanför vår öppettid, kontakta:</p>
 					<div class="space-y-3 text-neutral-700">
 						<p>
@@ -58,7 +58,7 @@
 			</div>
 
 			<CardContainer class="mt-6">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Kontakta oss via formulär</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Kontakta oss via formulär</h2>
 				<p class="mb-4 text-neutral-700">
 					Fyll i formuläret nedan så kontaktar vi dig. Observera att detta formulär inte är för akuta ärenden.
 				</p>
@@ -69,7 +69,7 @@
 						<input
 							type="text"
 							id="name"
-							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
+							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:outline-none"
 							placeholder="Ditt namn"
 						/>
 					</div>
@@ -79,7 +79,7 @@
 						<input
 							type="email"
 							id="email"
-							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
+							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:outline-none"
 							placeholder="din.epost@exempel.se"
 						/>
 					</div>
@@ -89,7 +89,7 @@
 						<input
 							type="tel"
 							id="phone"
-							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
+							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:outline-none"
 							placeholder="070-123 45 67"
 						/>
 					</div>
@@ -99,7 +99,7 @@
 						<textarea
 							id="message"
 							rows="4"
-							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
+							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:outline-none"
 							placeholder="Skriv ditt meddelande här..."
 						/>
 					</div>
@@ -107,7 +107,7 @@
 					<div class="text-right">
 						<button
 							type="submit"
-							class="rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800"
+							class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors"
 						>
 							Skicka meddelande
 						</button>
@@ -116,7 +116,7 @@
 			</CardContainer>
 
 			<CardContainer class="mt-6">
-				<h2 class="mb-3 text-xl font-semibold text-primary-700">Hitta hit</h2>
+				<h2 class="text-primary-700 mb-3 text-xl font-semibold">Hitta hit</h2>
 				<p class="mb-4 text-neutral-700">Vår vårdcentral ligger centralt i Stockholm med goda kommunikationer.</p>
 				<div class="flex h-64 items-center justify-center rounded-lg bg-neutral-200">
 					<p class="font-medium text-neutral-700">Karta över vår vårdcentral</p>
