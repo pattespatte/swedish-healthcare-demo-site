@@ -245,6 +245,15 @@ const routes: Array<RouteRecordRaw> = [
 		}
 	},
 	{
+		path: '/health-icons',
+		name: 'HealthIcons',
+		component: () => import('@/views/HealthIconsPage.vue'),
+		meta: {
+			title: 'Hälsoikoner - Vårdcentralen Vårdportalen',
+			description: 'Demo och exempel på hälsoikoner i Vue-applikationen'
+		}
+	},
+	{
 		path: '/sok',
 		name: 'SearchResults',
 		component: () => import('@/views/SearchResultsPage.vue'),

@@ -74,6 +74,13 @@
 					description: 'Comprehensive demo showcasing Phosphor icons with different sizes, colors, weights, and interactive examples.',
 					props: [],
 					example: '<PhosphorIconsDemo />'
+				},
+				{
+					name: 'HealthIconsDemo',
+					path: 'src/components/display/HealthIconsDemo.vue',
+					description: 'Demo showcasing healthcare-specific icons with different styles, colors, and medical-themed examples.',
+					props: [],
+					example: '<HealthIconsDemo />'
 				}
 			]
 		},

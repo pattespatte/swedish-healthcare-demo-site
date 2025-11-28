@@ -93,6 +93,12 @@
 			path: '/kontakt',
 			hasDropdown: false,
 			dropdownItems: []
+		},
+		{
+			name: 'Hälsoikoner',
+			path: '/health-icons',
+			hasDropdown: false,
+			dropdownItems: []
 		}
 	]
 
