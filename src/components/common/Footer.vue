@@ -1,14 +1,19 @@
 <script setup lang="ts">
+	// Helper function to get Health Icons path
+	const getIconPath = (style: string, category: string, icon: string) => {
+		return `/node_modules/healthicons/public/icons/svg/${style}/${category}/${icon}.svg`
+	}
+
 	// Navigation links for the footer
 	const footerNavLinks = [
-		{ name: 'Start', path: '/' },
-		{ name: 'Om oss', path: '/om-oss' },
-		{ name: 'Tjänster', path: '/tjanster' },
-		{ name: 'Mottagningar', path: '/mottagningar' },
-		{ name: 'Patientinformation', path: '/patientinformation' },
-		{ name: 'Boka tid', path: '/boka-tid' },
-		{ name: 'Kontakt', path: '/kontakt' },
-		{ name: 'Jobba hos oss', path: '/om-oss/jobba-hos-oss' }
+		{ name: 'Start', path: '/', icon: 'PhHouse' },
+		{ name: 'Om oss', path: '/om-oss', icon: 'PhUsers' },
+		{ name: 'Tjänster', path: '/tjanster', icon: 'PhStethoscope' },
+		{ name: 'Mottagningar', path: '/mottagningar', icon: 'PhHospital' },
+		{ name: 'Patientinformation', path: '/patientinformation', icon: 'PhFileText' },
+		{ name: 'Boka tid', path: '/boka-tid', icon: 'PhCalendar' },
+		{ name: 'Kontakt', path: '/kontakt', icon: 'PhPhone' },
+		{ name: 'Jobba hos oss', path: '/om-oss/jobba-hos-oss', icon: 'PhBriefcase' }
 	]
 
 	// Contact information
@@ -25,11 +30,11 @@
 		{ day: 'Söndag', hours: 'Stängt' }
 	]
 
-	// Social media links (placeholders)
+	// Social media links with Phosphor icons
 	const socialLinks = [
-		{ name: 'Facebook', icon: 'facebook', url: '#' },
-		{ name: 'Instagram', icon: 'instagram', url: '#' },
-		{ name: 'Twitter', icon: 'twitter', url: '#' }
+		{ name: 'Facebook', icon: 'PhFacebookLogo', url: '#' },
+		{ name: 'Instagram', icon: 'PhInstagramLogo', url: '#' },
+		{ name: 'Twitter', icon: 'PhTwitterLogo', url: '#' }
 	]
 
 	// Current year for copyright
@@ -69,8 +74,9 @@
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white"
+							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary flex items-center pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white"
 						>
+							<component :is="link.icon" size="16" class="mr-2" />
 							{{ link.name }}
 						</router-link>
 					</nav>
@@ -79,34 +85,41 @@
 				<!-- Contact Information -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Kontakt</h3>
-					<address class="dark:text-dark-text-secondary space-y-1 text-sm text-neutral-300 not-italic sm:space-y-2">
-						<p>{{ contactInfo.address }}</p>
-						<p>
-							Telefon:
+					<address class="dark:text-dark-text-secondary space-y-2 text-sm text-neutral-300 not-italic sm:space-y-3">
+						<div class="flex items-start">
+							<PhMapPin size="16" class="mr-2 mt-0.5 flex-shrink-0" />
+							<span>{{ contactInfo.address }}</span>
+						</div>
+						<div class="flex items-center">
+							<PhPhone size="16" class="mr-2 flex-shrink-0" />
 							<a
 								:href="formatPhoneLink(contactInfo.phone)"
 								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
 							>
 								{{ contactInfo.phone }}
 							</a>
-						</p>
-						<p>
-							E-post:
+						</div>
+						<div class="flex items-center">
+							<PhEnvelope size="16" class="mr-2 flex-shrink-0" />
 							<a
 								:href="`mailto:${contactInfo.email}`"
 								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
 							>
 								{{ contactInfo.email }}
 							</a>
-						</p>
+						</div>
 					</address>
 				</div>
 
 				<!-- Opening Hours -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Öppettider</h3>
-					<div class="dark:text-dark-text-secondary space-y-1 text-sm text-neutral-300 sm:space-y-2">
-						<div v-for="(item, index) in openingHours" :key="index" class="flex justify-between">
+					<div class="dark:text-dark-text-secondary space-y-2 text-sm text-neutral-300 sm:space-y-3">
+						<div class="flex items-center mb-3">
+							<PhClock size="16" class="mr-2 flex-shrink-0" />
+							<span class="font-medium">Våra öppettider</span>
+						</div>
+						<div v-for="(item, index) in openingHours" :key="index" class="flex justify-between ml-6">
 							<span>{{ item.day }}</span>
 							<span>{{ item.hours }}</span>
 						</div>
@@ -122,12 +135,9 @@
 							:key="link.name"
 							:href="link.url"
 							:aria-label="`Följ oss på ${link.name}`"
-							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary text-neutral-300 transition-colors duration-200 hover:text-white"
+							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary dark:bg-dark-bg-tertiary flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 text-neutral-300 transition-colors duration-200 hover:text-white"
 						>
-							<!-- Placeholder icons - in a real implementation, you would use actual icon components -->
-							<div class="dark:bg-dark-bg-tertiary flex h-8 w-8 items-center justify-center rounded-full bg-slate-700">
-								<span class="text-xs font-semibold">{{ link.icon.charAt(0).toUpperCase() }}</span>
-							</div>
+							<component :is="link.icon" size="16" />
 						</a>
 					</div>
 				</div>
@@ -143,26 +153,30 @@
 				<div class="flex space-x-6">
 					<a
 						href="https://github.com/pattespatte/swedish-healthcare-demo-site"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
+						<PhGithubLogo size="14" class="mr-1" />
 						Källkod
 					</a>
 					<router-link
 						to="/integritetspolicy"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
+						<PhShieldCheck size="14" class="mr-1" />
 						Integritetspolicy
 					</router-link>
 					<router-link
 						to="/cookies"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
+						<PhCookie size="14" class="mr-1" />
 						Cookies
 					</router-link>
 					<router-link
 						to="/tillganglighet"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
 					>
+						<PhUniversalAccess size="14" class="mr-1" />
 						Tillgänglighet
 					</router-link>
 				</div>

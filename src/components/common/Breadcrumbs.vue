@@ -77,6 +77,31 @@
 			router.push(path)
 		}
 	}
+
+	// Get appropriate icon for breadcrumb based on page name
+	const getBreadcrumbIcon = (name: string) => {
+		const iconMap: { [key: string]: any } = {
+			'Tjänster': 'PhStethoscope',
+			'Mottagningar': 'PhHospital',
+			'Specialistmottagningar': 'PhFirstAid',
+			'Labbprov': 'PhTestTube',
+			'Hemsjukvård': 'PhHouseSimple',
+			'Patientinformation': 'PhFileText',
+			'Vårdgaranti': 'PhShieldCheck',
+			'Avgifter': 'PhCurrencySek',
+			'Din vårdkontakt': 'PhPhone',
+			'Boka tid': 'PhCalendar',
+			'Mina sidor': 'PhUser',
+			'Om oss': 'PhUsers',
+			'Jobba hos oss': 'PhBriefcase',
+			'Lediga tjänster': 'PhBriefcase',
+			'Karriärvägar': 'PhArrowUp',
+			'Förmåner': 'PhGift',
+			'Kontakt': 'PhPhone',
+			'Hemsjukvard': 'PhHouseSimple'
+		}
+		return iconMap[name] || null
+	}
 </script>
 
 <template>
@@ -85,15 +110,24 @@
 			<ol class="flex items-center space-x-2 text-sm">
 				<li v-for="(crumb, index) in breadcrumbs" :key="crumb.path" class="flex items-center">
 					<!-- Breadcrumb Item -->
-					<!-- Special case: Hide "Start" text on home page but keep container for layout -->
+					<!-- Special case: Show home icon on home page -->
 					<span
 						v-if="crumb.path === '/' && route.path === '/'"
 						class="font-medium text-neutral-800"
 						aria-current="page"
 					>
-						&nbsp;
-						<!-- Empty span to maintain layout structure -->
+						<PhHouse size="16" />
 					</span>
+					<!-- Show home icon for first breadcrumb on other pages -->
+					<button
+						v-else-if="crumb.path === '/' && !crumb.isCurrent"
+						@click="navigateTo(crumb.path)"
+						class="text-primary-700 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200 hover:underline flex items-center"
+						:aria-current="crumb.isCurrent ? 'page' : undefined"
+					>
+						<PhHouse size="16" />
+					</button>
+					<!-- Regular breadcrumb items -->
 					<button
 						v-else-if="!crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
@@ -103,22 +137,25 @@
 						{{ crumb.name }}
 					</button>
 
-					<span v-else class="font-medium text-neutral-800" aria-current="page">
+					<!-- Current page breadcrumb -->
+					<span v-else class="font-medium text-neutral-800 flex items-center" aria-current="page">
+						<!-- Add contextual icons for common pages -->
+						<component
+							:is="getBreadcrumbIcon(crumb.name)"
+							v-if="getBreadcrumbIcon(crumb.name)"
+							size="16"
+							class="mr-1"
+						/>
 						{{ crumb.name }}
 					</span>
 
 					<!-- Separator (not shown after last item) -->
-					<svg
+					<PhCaretRight
 						v-if="index < breadcrumbs.length - 1"
-						class="ml-2 h-4 w-4 text-neutral-500"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
+						class="ml-2 text-neutral-500"
+						size="16"
 						aria-hidden="true"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-					</svg>
+					/>
 				</li>
 			</ol>
 		</div>

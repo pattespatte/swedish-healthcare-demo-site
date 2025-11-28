@@ -9,21 +9,16 @@
 		]"
 		@click="$emit('click')"
 	>
-		<!-- Loading spinner -->
-		<svg
-			v-if="loading"
-			class="mr-2 -ml-1 h-4 w-4 animate-spin"
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-		>
-			<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
-			<path
-				class="opacity-75"
-				fill="currentColor"
-				d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-			/>
-		</svg>
+		<!-- Loading spinner with Phosphor icon -->
+		<PhSpinner v-if="loading" size="16" class="mr-2 -ml-1 animate-spin" />
+		
+		<!-- Button icon based on type/variant -->
+		<component
+			v-if="!loading && showIcon"
+			:is="getButtonIcon()"
+			:size="16"
+			class="mr-2"
+		/>
 
 		<!-- Button content -->
 		<slot>
@@ -41,6 +36,7 @@
 		disabled?: boolean
 		loading?: boolean
 		text?: string
+		showIcon?: boolean
 	}
 
 	interface Emits {
@@ -52,7 +48,8 @@
 		variant: 'primary',
 		disabled: false,
 		loading: false,
-		text: ''
+		text: '',
+		showIcon: true
 	})
 
 	const emit = defineEmits<Emits>()
@@ -73,6 +70,35 @@
 				return props.variant === 'primary' ? 'Fortsätt' : 'Avbryt'
 		}
 	})
+
+	// Get appropriate icon based on button type and variant
+	const getButtonIcon = () => {
+		if (props.loading) return null
+		
+		switch (props.type) {
+			case 'submit':
+				return props.variant === 'primary' ? 'PhPaperPlaneRight' : 'PhPaperPlaneRight'
+			case 'reset':
+				return 'PhArrowCounterClockwise'
+			case 'button':
+			default:
+				if (props.text) {
+					// Try to infer icon from text content
+					const text = props.text.toLowerCase()
+					if (text.includes('boka') || text.includes('book')) return 'PhCalendarPlus'
+					if (text.includes('kontakta') || text.includes('contact')) return 'PhPhone'
+					if (text.includes('logga') || text.includes('login')) return 'PhSignIn'
+					if (text.includes('spara') || text.includes('save')) return 'PhFloppyDisk'
+					if (text.includes('avboka') || text.includes('cancel')) return 'PhX'
+					if (text.includes('radera') || text.includes('delete')) return 'PhTrash'
+					if (text.includes('ändra') || text.includes('edit')) return 'PhPencil'
+					if (text.includes('visa') || text.includes('view')) return 'PhEye'
+					if (text.includes('ladda') || text.includes('download')) return 'PhDownload'
+					if (text.includes('sök') || text.includes('search')) return 'PhMagnifyingGlass'
+				}
+				return props.variant === 'primary' ? 'PhArrowRight' : 'PhArrowRight'
+		}
+	}
 
 	// CSS classes based on variant
 	const variantClasses = computed(() => {

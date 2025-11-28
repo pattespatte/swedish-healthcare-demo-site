@@ -15,50 +15,97 @@
 
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<CardContainer>
-					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Akut tid</h2>
-					<p class="mb-4 text-neutral-700">
-						För akuta besvär som inte kan vänta. Ring oss direkt på telefonnummer 08-123 456 78.
-					</p>
-					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
-						Ring oss nu
-					</button>
+					<div class="flex items-start space-x-4">
+						<div class="flex-shrink-0">
+							<PhWarningCircle size="32" class="text-red-600" weight="fill" />
+						</div>
+						<div class="flex-1">
+							<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Akut tid</h2>
+							<p class="mb-4 text-neutral-700">
+								För akuta besvär som inte kan vänta. Ring oss direkt på telefonnummer 08-123 456 78.
+							</p>
+							<button class="bg-red-600 hover:bg-red-700 flex items-center rounded-lg px-4 py-2 text-white transition-colors">
+								<PhPhone size="18" class="mr-2" />
+								Ring oss nu
+							</button>
+						</div>
+					</div>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Planerat besök</h2>
-					<p class="mb-4 text-neutral-700">Boka tid för planerat vårdbesök, hälsokontroll eller uppföljning.</p>
-					<router-link
-						to="/boka-tid/form"
-						class="bg-primary-700 hover:bg-primary-800 inline-block rounded-lg px-4 py-2 text-white transition-colors"
-					>
-						Boka tid online
-					</router-link>
+					<div class="flex items-start space-x-4">
+						<div class="flex-shrink-0">
+							<PhCalendarCheck size="32" class="text-blue-600" weight="fill" />
+						</div>
+						<div class="flex-1">
+							<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Planerat besök</h2>
+							<p class="mb-4 text-neutral-700">Boka tid för planerat vårdbesök, hälsokontroll eller uppföljning.</p>
+							<router-link
+								to="/boka-tid/form"
+								class="bg-primary-700 hover:bg-primary-800 flex items-center inline-block rounded-lg px-4 py-2 text-white transition-colors"
+							>
+								<PhCalendarPlus size="18" class="mr-2" />
+								Boka tid online
+							</router-link>
+						</div>
+					</div>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Vaccination</h2>
-					<p class="mb-4 text-neutral-700">Boka tid för vaccination, inklusive influensa- och COVID-19-vaccin.</p>
-					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
-						Boka vaccinationstid
-					</button>
+					<div class="flex items-start space-x-4">
+						<div class="flex-shrink-0">
+							<PhSyringe size="32" class="text-green-600" weight="fill" />
+						</div>
+						<div class="flex-1">
+							<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Vaccination</h2>
+							<p class="mb-4 text-neutral-700">Boka tid för vaccination, inklusive influensa- och COVID-19-vaccin.</p>
+							<button class="bg-green-600 hover:bg-green-700 flex items-center rounded-lg px-4 py-2 text-white transition-colors">
+								<PhSyringe size="18" class="mr-2" />
+								Boka vaccinationstid
+							</button>
+						</div>
+					</div>
 				</CardContainer>
 
 				<CardContainer>
-					<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Laboratorieprov</h2>
-					<p class="mb-4 text-neutral-700">Boka tid för provtagning. Observera att vissa prover kräver faste.</p>
-					<button class="bg-primary-700 hover:bg-primary-800 rounded-lg px-4 py-2 text-white transition-colors">
-						Boka provtagning
-					</button>
+					<div class="flex items-start space-x-4">
+						<div class="flex-shrink-0">
+							<PhTestTube size="32" class="text-purple-600" weight="fill" />
+						</div>
+						<div class="flex-1">
+							<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Laboratorieprov</h2>
+							<p class="mb-4 text-neutral-700">Boka tid för provtagning. Observera att vissa prover kräver faste.</p>
+							<button class="bg-purple-600 hover:bg-purple-700 flex items-center rounded-lg px-4 py-2 text-white transition-colors">
+								<PhTestTube size="18" class="mr-2" />
+								Boka provtagning
+							</button>
+						</div>
+					</div>
 				</CardContainer>
 			</div>
 
 			<CardContainer class="mt-6">
-				<h2 class="text-primary-700 dark:text-primary-400 mb-3 text-xl font-semibold">Information vid bokning</h2>
-				<ul class="list-disc space-y-2 pl-5 text-neutral-700">
-					<li>Ha ditt personnummer och bankID tillgängligt vid bokning</li>
-					<li>Om du behöver avboka din tid, gör det senast 24 timmar innan</li>
-					<li>Vid akuta besvär, ring oss istället för att boka online</li>
-					<li>Medtag giltig legitimation vid ditt besök</li>
+				<div class="flex items-center space-x-3 mb-4">
+					<PhInfo size="24" class="text-blue-600" weight="fill" />
+					<h2 class="text-primary-700 dark:text-primary-400 text-xl font-semibold">Information vid bokning</h2>
+				</div>
+				<ul class="list-disc space-y-3 pl-5 text-neutral-700">
+					<li class="flex items-start">
+						<PhIdentificationCard size="16" class="mr-2 mt-0.5 text-gray-500 flex-shrink-0" />
+						<span>Ha ditt personnummer och bankID tillgängligt vid bokning</span>
+					</li>
+					<li class="flex items-start">
+						<PhClockCounterClockwise size="16" class="mr-2 mt-0.5 text-gray-500 flex-shrink-0" />
+						<span>Om du behöver avboka din tid, gör det senast 24 timmar innan</span>
+					</li>
+					<li class="flex items-start">
+						<PhWarning size="16" class="mr-2 mt-0.5 text-gray-500 flex-shrink-0" />
+						<span>Vid akuta besvär, ring oss istället för att boka online</span>
+					</li>
+					<li class="flex items-start">
+						<PhIdentificationCard size="16" class="mr-2 mt-0.5 text-gray-500 flex-shrink-0" />
+						<span>Medtag giltig legitimation vid ditt besök</span>
+					</li>
 				</ul>
 			</CardContainer>
 		</div>

@@ -176,14 +176,12 @@
 			class="dark:border-dark-border-primary dark:bg-dark-bg-primary flex items-center justify-between border-b border-neutral-600 bg-slate-900 py-3"
 		>
 			<div class="container mx-auto flex items-center justify-between px-4">
-				<!-- Logo placeholder -->
+				<!-- Logo with health icon -->
 				<router-link to="/" class="group flex items-center">
 					<div
 						class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-600 transition-all duration-300 group-hover:scale-105 group-hover:bg-slate-500"
 					>
-						<span class="text-xl font-bold text-neutral-300 transition-colors duration-300 group-hover:text-white">
-							VÅ
-						</span>
+						<PhFirstAid size="28" class="text-neutral-300 transition-colors duration-300 group-hover:text-white" weight="fill" />
 					</div>
 					<span class="group-hover:text-primary-300 ml-3 text-xl font-bold text-white transition-colors duration-300">
 						Vårdportalen
@@ -225,26 +223,8 @@
 					aria-label="Öppna meny"
 					aria-expanded="false"
 				>
-					<svg
-						v-if="!isMenuOpen"
-						class="h-6 w-6"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-					</svg>
-					<svg
-						v-else
-						class="h-6 w-6"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-					</svg>
+					<PhList v-if="!isMenuOpen" size="24" />
+					<PhX v-else size="24" />
 				</button>
 			</div>
 		</div>
@@ -307,18 +287,13 @@
 									:aria-label="`Visa undermeny för ${link.name}`"
 									data-dropdown-toggle
 								>
-									<svg
-										class="h-4 w-4 transition-transform duration-200"
+									<PhCaretDown
+										class="transition-transform duration-200"
 										:class="{
 											'rotate-180': openDropdown === link.name
 										}"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-									</svg>
+										size="16"
+									/>
 								</button>
 							</div>
 						</div>
@@ -377,18 +352,13 @@
 									:aria-label="`Visa undermeny för ${link.name}`"
 									data-dropdown-toggle
 								>
-									<svg
-										class="h-4 w-4 transition-transform duration-200"
+									<PhCaretDown
+										class="transition-transform duration-200"
 										:class="{
 											'rotate-180': openDropdown === link.name
 										}"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-									</svg>
+										size="16"
+									/>
 								</button>
 							</div>
 						</div>
@@ -400,38 +370,8 @@
 							:aria-label="isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'"
 							title="Växla tema"
 						>
-							<!-- Sun icon for light mode -->
-							<svg
-								v-if="!isDarkMode"
-								class="h-5 w-5"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-								/>
-							</svg>
-							<!-- Moon icon for dark mode -->
-							<svg
-								v-else
-								class="h-5 w-5"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-								/>
-							</svg>
+							<PhSun v-if="!isDarkMode" size="20" />
+							<PhMoon v-else size="20" />
 						</button>
 					</div>
 				</nav>
@@ -482,18 +422,13 @@
 								:aria-label="`Visa undermeny för ${link.name}`"
 								data-dropdown-toggle
 							>
-								<svg
-									class="h-4 w-4 transition-transform duration-200"
+								<PhCaretDown
+									class="transition-transform duration-200"
 									:class="{
 										'rotate-180': openDropdown === link.name
 									}"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-								</svg>
+									size="16"
+								/>
 							</button>
 						</div>
 					</div>
@@ -525,38 +460,8 @@
 						:aria-label="isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'"
 						title="Växla tema"
 					>
-						<!-- Sun icon for light mode -->
-						<svg
-							v-if="!isDarkMode"
-							class="h-5 w-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-							/>
-						</svg>
-						<!-- Moon icon for dark mode -->
-						<svg
-							v-else
-							class="h-5 w-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-							/>
-						</svg>
+						<PhSun v-if="!isDarkMode" size="20" />
+						<PhMoon v-else size="20" />
 					</button>
 				</div>
 			</div>

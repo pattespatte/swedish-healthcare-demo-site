@@ -16,8 +16,8 @@
 		"generate-search-index": "node scripts/generate-search-index.js"
 	},
 	"dependencies": {
-		"@phosphor-icons/vue": "^2.2.1",
 		"axe-playwright": "^2.2.2",
+		"@phosphor-icons/vue": "^2.2.1",
 		"healthicons": "^2.0.0",
 		"pinia": "^2.3.1",
 		"playwright": "^1.57.0",
