@@ -3,6 +3,7 @@ import { createPinia } from 'pinia'
 import type { RouteLocationNormalized } from 'vue-router'
 import App from './App.vue'
 import { routes } from './router'
+import PhosphorIconsVue from '@phosphor-icons/vue'
 
 import './assets/main.css'
 
@@ -17,6 +18,7 @@ export const createApp = ViteSSG(
 		// install plugins
 		const app = ctx.app
 		app.use(createPinia())
+		app.use(PhosphorIconsVue)
 
 		// Set up head management for SSG
 		if (ctx.router) {

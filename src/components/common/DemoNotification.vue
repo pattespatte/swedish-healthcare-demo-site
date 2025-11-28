@@ -57,6 +57,10 @@
 
 	<!-- Prototype Badge - Fixed positioned -->
 	<div v-if="isVisible" class="fixed right-8 top-24 z-50" aria-hidden="true">
-		<img :src="prototypeBadge" alt="Prototype badge" width="240" height="300" />
+		<img
+			:src="prototypeBadge"
+			alt="Prototype badge"
+			class="w-[20vw] min-w-[240px] min-h-[300px] h-auto"
+		/>
 	</div>
 </template>

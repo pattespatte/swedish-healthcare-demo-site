@@ -67,6 +67,13 @@
 					description: 'Card component for displaying services with image, title, description, tags, and link.',
 					props: ['title', 'description', 'image', 'link', 'tags'],
 					example: '<ServiceCard title="Service" description="Service description" :tags="[\'tag1\', \'tag2\']" />'
+				},
+				{
+					name: 'PhosphorIconsDemo',
+					path: 'src/components/display/PhosphorIconsDemo.vue',
+					description: 'Comprehensive demo showcasing Phosphor icons with different sizes, colors, weights, and interactive examples.',
+					props: [],
+					example: '<PhosphorIconsDemo />'
 				}
 			]
 		},

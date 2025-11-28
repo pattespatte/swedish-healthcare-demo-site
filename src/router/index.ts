@@ -236,6 +236,15 @@ const routes: Array<RouteRecordRaw> = [
 		}
 	},
 	{
+		path: '/phosphor-icons',
+		name: 'PhosphorIcons',
+		component: () => import('@/views/PhosphorIconsPage.vue'),
+		meta: {
+			title: 'Phosphor Ikoner - Vårdcentralen Vårdportalen',
+			description: 'Demo och exempel på Phosphor-ikoner i Vue-applikationen'
+		}
+	},
+	{
 		path: '/sok',
 		name: 'SearchResults',
 		component: () => import('@/views/SearchResultsPage.vue'),
