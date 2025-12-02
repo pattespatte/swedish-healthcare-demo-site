@@ -42,7 +42,7 @@
 							<p class="mb-4 text-neutral-700">Boka tid för planerat vårdbesök, hälsokontroll eller uppföljning.</p>
 							<router-link
 								to="/boka-tid/form"
-								class="bg-primary-700 hover:bg-primary-800 flex items-center inline-block rounded-lg px-4 py-2 text-white transition-colors"
+								class="bg-blue-600 hover:bg-blue-700 flex items-center inline-flex rounded-lg px-4 py-2 text-white transition-colors"
 							>
 								<PhCalendarPlus size="18" class="mr-2" />
 								Boka tid online
