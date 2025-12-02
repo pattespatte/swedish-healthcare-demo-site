@@ -42,6 +42,28 @@ export const createApp = ViteSSG(
 							content: to.meta.description as string
 						})
 					}
+
+					// Add robots meta tag to prevent indexing
+					const robotsMeta = ctx.head.meta.find((meta: any) => meta.name === 'robots')
+					if (robotsMeta) {
+						robotsMeta.content = 'noindex, nofollow'
+					} else {
+						ctx.head.meta.push({
+							name: 'robots',
+							content: 'noindex, nofollow'
+						})
+					}
+
+					// Add googlebot meta tag to prevent indexing
+					const googlebotMeta = ctx.head.meta.find((meta: any) => meta.name === 'googlebot')
+					if (googlebotMeta) {
+						googlebotMeta.content = 'noindex, nofollow'
+					} else {
+						ctx.head.meta.push({
+							name: 'googlebot',
+							content: 'noindex, nofollow'
+						})
+					}
 				}
 				next()
 			})
