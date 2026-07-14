@@ -25,3 +25,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI harness / coding agent files
+AGENTS.md
+CLAUDE.md
+.zcode/
+.agents/
+.claude/
