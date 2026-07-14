@@ -29,9 +29,6 @@ export default defineConfig({
 			}
 		}
 	},
-	ssr: {
-		noExternal: []
-	},
 	css: {
 		postcss: './postcss.config.js'
 	},
