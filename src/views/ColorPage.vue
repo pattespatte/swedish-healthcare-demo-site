@@ -13,9 +13,9 @@
 				{ name: '200', value: '#99CEFF', class: 'bg-primary-200' },
 				{ name: '300', value: '#66B8FF', class: 'bg-primary-300' },
 				{ name: '400', value: '#33A5FF', class: 'bg-primary-400' },
-				{ name: '500', value: '#0092FF', class: 'bg-primary-500' },
-				{ name: '600', value: '#007CE8', class: 'bg-primary-600' },
-				{ name: '700', value: '#0066CC', class: 'bg-primary-700' },
+				{ name: '500', value: '#0077CC', class: 'bg-primary-500' },
+				{ name: '600', value: '#005FA3', class: 'bg-primary-600' },
+				{ name: '700', value: '#004D88', class: 'bg-primary-700' },
 				{ name: '800', value: '#232948', class: 'bg-primary-800' },
 				{ name: '900', value: '#081130', class: 'bg-primary-900' }
 			]
@@ -37,18 +37,15 @@
 		},
 		{
 			name: 'Komplementära färger',
-			description: 'Beige och ljusblå för bakgrunder',
-			shades: [
-				{ name: 'Beige', value: '#F0ECE4', class: 'bg-beige' },
-				{ name: 'Ljusblå', value: '#D3DEEA', class: 'bg-lightblue' }
-			]
+			description: 'Beige för bakgrunder',
+			shades: [{ name: 'Beige', value: '#F0ECE4', class: 'bg-beige' }]
 		},
 		{
 			name: 'Funktionsfärger',
 			description: 'Specifika färger för olika funktioner',
 			shades: [
 				{ name: 'Success', value: '#10B981', class: 'bg-success' },
-				{ name: 'Info', value: '#3B82F6', class: 'bg-info' },
+				{ name: 'Info', value: '#0077CC', class: 'bg-info' },
 				{ name: 'Warning', value: '#F59E0B', class: 'bg-warning' },
 				{ name: 'Error', value: '#EF4444', class: 'bg-error' }
 			]
@@ -57,12 +54,6 @@
 			name: 'Grafikfärger',
 			description: 'Färger för illustrationer och diagram',
 			shades: [
-				{ name: 'Blå', value: '#1849A9', class: 'bg-graphics-blue' },
-				{
-					name: 'Ljusblå',
-					value: '#598DFF',
-					class: 'bg-graphics-lightblue'
-				},
 				{ name: 'Grön', value: '#077353', class: 'bg-graphics-green' },
 				{
 					name: 'Ljusgrön',
@@ -95,22 +86,6 @@
 				{ name: '700', value: '#374151', class: 'bg-gray-700' },
 				{ name: '800', value: '#1f2937', class: 'bg-gray-800' },
 				{ name: '900', value: '#111827', class: 'bg-gray-900' }
-			]
-		},
-		{
-			name: 'Blue',
-			description: 'Standard blue color palette',
-			shades: [
-				{ name: '50', value: '#eff6ff', class: 'bg-blue-50' },
-				{ name: '100', value: '#dbeafe', class: 'bg-blue-100' },
-				{ name: '200', value: '#bfdbfe', class: 'bg-blue-200' },
-				{ name: '300', value: '#93c5fd', class: 'bg-blue-300' },
-				{ name: '400', value: '#60a5fa', class: 'bg-blue-400' },
-				{ name: '500', value: '#3b82f6', class: 'bg-blue-500' },
-				{ name: '600', value: '#2563eb', class: 'bg-blue-600' },
-				{ name: '700', value: '#1d4ed8', class: 'bg-blue-700' },
-				{ name: '800', value: '#1e40af', class: 'bg-blue-800' },
-				{ name: '900', value: '#1e3a8a', class: 'bg-blue-900' }
 			]
 		},
 		{
@@ -244,7 +219,7 @@
 									<h3 class="text-sm font-semibold text-gray-800">{{ colorCategory.name }}-{{ shade.name }}</h3>
 									<button
 										@click="copyToClipboard(shade.class)"
-										class="text-primary-700 hover:text-primary-800 text-xs transition-colors"
+										class="text-xs text-primary-700 transition-colors hover:text-primary-800"
 										title="Kopiera klassnamn"
 									>
 										Kopiera
@@ -264,9 +239,9 @@
 				</div>
 
 				<!-- Usage Guidelines -->
-				<div class="mt-12 rounded-lg border border-blue-200 bg-blue-50 p-6">
-					<h3 class="mb-3 text-lg font-semibold text-blue-800">Användningsriktlinjer för färger</h3>
-					<ul class="text-primary-700 list-disc space-y-2 px-4 text-sm">
+				<div class="mt-12 rounded-lg border border-primary-200 bg-primary-50 p-6">
+					<h3 class="mb-3 text-lg font-semibold text-primary-700">Användningsriktlinjer för färger</h3>
+					<ul class="list-disc space-y-2 px-4 text-sm text-primary-700">
 						<li>Primära färger bör användas för huvudsakliga UI-element som knappar, länkar och viktiga markeringar</li>
 						<li>Sekundära färger är för stödjande element och mindre framträdande funktioner</li>
 						<li>Neutrala färger är idealiska för text, bakgrunder och kanter</li>

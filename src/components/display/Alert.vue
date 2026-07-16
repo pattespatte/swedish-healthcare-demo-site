@@ -1,37 +1,19 @@
 <template>
 	<div v-if="isVisible" :class="alertClasses" role="alert" :aria-live="type === 'error' ? 'assertive' : 'polite'">
-	<div class="flex items-start">
-		<div class="flex-shrink-0">
-			<!-- Phosphor Icons for different alert types -->
-			<PhInfo
-				v-if="type === 'info'"
-				size="20"
-				class="text-blue-400"
-				weight="fill"
-				aria-hidden="true"
-			/>
-			<PhCheckCircle
-				v-else-if="type === 'success'"
-				size="20"
-				class="text-green-400"
-				weight="fill"
-				aria-hidden="true"
-			/>
-			<PhWarning
-				v-else-if="type === 'warning'"
-				size="20"
-				class="text-yellow-400"
-				weight="fill"
-				aria-hidden="true"
-			/>
-			<PhXCircle
-				v-else-if="type === 'error'"
-				size="20"
-				class="text-red-400"
-				weight="fill"
-				aria-hidden="true"
-			/>
-		</div>
+		<div class="flex items-start">
+			<div class="flex-shrink-0">
+				<!-- Phosphor Icons for different alert types -->
+				<PhInfo v-if="type === 'info'" size="20" class="text-primary-600" weight="fill" aria-hidden="true" />
+				<PhCheckCircle
+					v-else-if="type === 'success'"
+					size="20"
+					class="text-green-400"
+					weight="fill"
+					aria-hidden="true"
+				/>
+				<PhWarning v-else-if="type === 'warning'" size="20" class="text-yellow-400" weight="fill" aria-hidden="true" />
+				<PhXCircle v-else-if="type === 'error'" size="20" class="text-red-400" weight="fill" aria-hidden="true" />
+			</div>
 			<div class="ml-3 flex-1">
 				<component v-if="title" :is="headingTag" class="text-sm font-medium">
 					{{ title }}
@@ -47,7 +29,7 @@
 			<div v-if="dismissible" class="ml-auto pl-3">
 				<button
 					@click="dismiss"
-					class="inline-flex rounded-md focus:ring-2 focus:ring-offset-2 focus:outline-none"
+					class="inline-flex rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
 					:class="dismissButtonClasses"
 					aria-label="Stäng"
 				>
@@ -98,7 +80,7 @@
 
 		switch (props.type) {
 			case 'info':
-				return `${baseClasses} bg-blue-50 border border-blue-200`
+				return `${baseClasses} bg-primary-50 border border-primary-200`
 			case 'success':
 				return `${baseClasses} bg-green-50 border border-green-200`
 			case 'warning':
@@ -106,14 +88,14 @@
 			case 'error':
 				return `${baseClasses} bg-red-50 border border-red-200`
 			default:
-				return `${baseClasses} bg-blue-50 border border-blue-200`
+				return `${baseClasses} bg-primary-50 border border-primary-200`
 		}
 	})
 
 	const dismissButtonClasses = computed(() => {
 		switch (props.type) {
 			case 'info':
-				return 'text-blue-400 hover:bg-blue-100 focus:ring-blue-500 focus:ring-offset-blue-50'
+				return 'text-primary-600 hover:bg-primary-100 focus:ring-primary-500 focus:ring-offset-primary-50'
 			case 'success':
 				return 'text-green-400 hover:bg-green-100 focus:ring-green-500 focus:ring-offset-green-50'
 			case 'warning':
@@ -121,7 +103,7 @@
 			case 'error':
 				return 'text-red-400 hover:bg-red-100 focus:ring-red-500 focus:ring-offset-red-50'
 			default:
-				return 'text-blue-400 hover:bg-blue-100 focus:ring-blue-500 focus:ring-offset-blue-50'
+				return 'text-primary-600 hover:bg-primary-100 focus:ring-primary-500 focus:ring-offset-primary-50'
 		}
 	})
 

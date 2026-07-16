@@ -45,9 +45,9 @@ body {
 	--dark-border-secondary: #475569; /* slate-600 */
 	--dark-hover-bg: #1e293b; /* slate-800 */
 	/* Primary color variables */
-	--primary-500: #0077cc; /* primary-500 from Tailwind config */
-	--primary-400: #33a5ff; /* primary-400 from Tailwind config */
-	--primary-300: #66b8ff; /* primary-300 from Tailwind config */
+	--primary-500: #0077cc; /* primary-500 — single source of truth (tailwind.config.js) */
+	--primary-400: #33a5ff; /* primary-400 — dark-mode text/focus only */
+	--primary-300: #66b8ff; /* primary-300 — dark-mode light accent */
 }
 
 /* Dark mode styles */
@@ -116,7 +116,7 @@ body {
 }
 
 /* Dark mode for colored backgrounds */
-.dark .bg-blue-50 {
+.dark .bg-primary-50 {
 	background-color: var(--dark-bg-tertiary) !important;
 }
 
@@ -155,10 +155,6 @@ body {
 }
 
 /* Enhanced dark mode for colored text */
-.dark .text-blue-800 {
-	color: var(--primary-300) !important;
-}
-
 .dark .text-green-800 {
 	color: var(--primary-300) !important;
 }

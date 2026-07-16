@@ -16,34 +16,34 @@
 
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<CardContainer>
-					<div class="flex items-center space-x-3 mb-4">
-						<PhAddressBook size="24" class="text-blue-600" weight="fill" />
-						<h2 class="text-primary-700 text-xl font-semibold">Kontaktinformation</h2>
+					<div class="mb-4 flex items-center space-x-3">
+						<PhAddressBook size="24" class="text-primary-700" weight="fill" />
+						<h2 class="text-xl font-semibold text-primary-700">Kontaktinformation</h2>
 					</div>
 					<div class="space-y-4 text-neutral-700">
 						<div class="flex items-start space-x-3">
-							<PhMapPin size="20" class="text-gray-500 mt-0.5 flex-shrink-0" />
+							<PhMapPin size="20" class="mt-0.5 flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">Adress:</span>
 								<p>Storgatan 12, 123 45 Stockholm</p>
 							</div>
 						</div>
 						<div class="flex items-center space-x-3">
-							<PhPhone size="20" class="text-gray-500 flex-shrink-0" />
+							<PhPhone size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">Telefon:</span>
 								<p>08-123 456 78</p>
 							</div>
 						</div>
 						<div class="flex items-center space-x-3">
-							<PhEnvelope size="20" class="text-gray-500 flex-shrink-0" />
+							<PhEnvelope size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">E-post:</span>
 								<p>info@vardcentralen.se</p>
 							</div>
 						</div>
 						<div class="flex items-center space-x-3">
-							<PhClock size="20" class="text-gray-500 flex-shrink-0" />
+							<PhClock size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">Öppettider:</span>
 								<p>måndag-fredag 08:00-17:00</p>
@@ -53,28 +53,28 @@
 				</CardContainer>
 
 				<CardContainer>
-					<div class="flex items-center space-x-3 mb-4">
+					<div class="mb-4 flex items-center space-x-3">
 						<PhWarningCircle size="24" class="text-red-600" weight="fill" />
-						<h2 class="text-primary-700 text-xl font-semibold">Akuta ärenden</h2>
+						<h2 class="text-xl font-semibold text-primary-700">Akuta ärenden</h2>
 					</div>
 					<p class="mb-4 text-neutral-700">För akuta ärenden utanför vår öppettid, kontakta:</p>
 					<div class="space-y-4 text-neutral-700">
 						<div class="flex items-center space-x-3">
-							<PhPhone size="20" class="text-gray-500 flex-shrink-0" />
+							<PhPhone size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">1177 Vårdguiden:</span>
 								<p>1177</p>
 							</div>
 						</div>
 						<div class="flex items-center space-x-3">
-							<PhHospital size="20" class="text-gray-500 flex-shrink-0" />
+							<PhHospital size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">Akutmottagning:</span>
 								<p>Södersjukhuset, Stockholm</p>
 							</div>
 						</div>
 						<div class="flex items-center space-x-3">
-							<PhPoliceCar size="20" class="text-gray-500 flex-shrink-0" />
+							<PhPoliceCar size="20" class="flex-shrink-0 text-gray-500" />
 							<div>
 								<span class="font-medium">Nödnummer:</span>
 								<p>112</p>
@@ -85,9 +85,9 @@
 			</div>
 
 			<CardContainer class="mt-6">
-				<div class="flex items-center space-x-3 mb-4">
+				<div class="mb-4 flex items-center space-x-3">
 					<PhEnvelopeSimple size="24" class="text-green-600" weight="fill" />
-					<h2 class="text-primary-700 text-xl font-semibold">Kontakta oss via formulär</h2>
+					<h2 class="text-xl font-semibold text-primary-700">Kontakta oss via formulär</h2>
 				</div>
 				<p class="mb-4 text-neutral-700">
 					Fyll i formuläret nedan så kontaktar vi dig. Observera att detta formulär inte är för akuta ärenden.
@@ -102,7 +102,7 @@
 						<input
 							type="text"
 							id="name"
-							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:ring-2 focus:outline-none"
+							class="w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="Ditt namn"
 						/>
 					</div>
@@ -115,7 +115,7 @@
 						<input
 							type="email"
 							id="email"
-							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:ring-2 focus:outline-none"
+							class="w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="din.epost@exempel.se"
 						/>
 					</div>
@@ -128,7 +128,7 @@
 						<input
 							type="tel"
 							id="phone"
-							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:ring-2 focus:outline-none"
+							class="w-full rounded-lg border border-neutral-300 px-3 py-2 pl-10 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="070-123 45 67"
 						/>
 					</div>
@@ -141,7 +141,7 @@
 						<textarea
 							id="message"
 							rows="4"
-							class="focus:ring-primary-500 w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:outline-none"
+							class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
 							placeholder="Skriv ditt meddelande här..."
 						/>
 					</div>
@@ -149,7 +149,7 @@
 					<div class="text-right">
 						<button
 							type="submit"
-							class="bg-primary-700 hover:bg-primary-800 flex items-center rounded-lg px-4 py-2 text-white transition-colors"
+							class="flex items-center rounded-lg bg-primary-700 px-4 py-2 text-white transition-colors hover:bg-primary-800"
 						>
 							<PhPaperPlaneRight size="18" class="mr-2" />
 							Skicka meddelande
@@ -159,14 +159,14 @@
 			</CardContainer>
 
 			<CardContainer class="mt-6">
-				<div class="flex items-center space-x-3 mb-4">
+				<div class="mb-4 flex items-center space-x-3">
 					<PhMapTrifold size="24" class="text-purple-600" weight="fill" />
-					<h2 class="text-primary-700 text-xl font-semibold">Hitta hit</h2>
+					<h2 class="text-xl font-semibold text-primary-700">Hitta hit</h2>
 				</div>
 				<p class="mb-4 text-neutral-700">Vår vårdcentral ligger centralt i Stockholm med goda kommunikationer.</p>
 				<div class="flex h-64 items-center justify-center rounded-lg bg-neutral-200">
 					<div class="text-center">
-						<PhMapPin size="32" class="text-gray-500 mx-auto mb-2" />
+						<PhMapPin size="32" class="mx-auto mb-2 text-gray-500" />
 						<p class="font-medium text-neutral-700">Karta över vår vårdcentral</p>
 					</div>
 				</div>

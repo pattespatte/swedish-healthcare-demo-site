@@ -260,13 +260,13 @@
 					<span class="text-xs text-gray-600">Toggle Favorite</span>
 				</button>
 				<button
-					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-blue-50"
+					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-primary-50"
 					@click="toggleNotification"
 				>
 					<img
 						:src="getIconPath('filled', 'symbols', 'alert')"
 						alt="Alert"
-						:class="hasNotification ? 'h-8 w-8 text-blue-500' : 'h-8 w-8 text-gray-400'"
+						:class="hasNotification ? 'h-8 w-8 text-primary-600' : 'h-8 w-8 text-gray-400'"
 					/>
 					<span class="text-xs text-gray-600">Notifications</span>
 				</button>
@@ -293,7 +293,7 @@
 				<h4 class="mb-2 font-medium text-gray-700">Button with Icon</h4>
 				<div class="flex flex-wrap gap-4">
 					<button
-						class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+						class="flex items-center space-x-2 rounded-lg bg-primary-500 px-4 py-2 text-white transition-colors hover:bg-primary-600"
 					>
 						<img :src="getIconPath('filled', 'people', 'doctor')" alt="Doctor" class="h-5 w-5" />
 						<span>Book Appointment</span>
@@ -334,7 +334,7 @@
 						<span class="text-sm text-gray-600">Urgent</span>
 					</div>
 					<div class="flex items-center space-x-2">
-						<img :src="getIconPath('filled', 'symbols', 'info')" alt="Info" class="h-5 w-5 text-blue-500" />
+						<img :src="getIconPath('filled', 'symbols', 'info')" alt="Info" class="h-5 w-5 text-primary-600" />
 						<span class="text-sm text-gray-600">Information</span>
 					</div>
 				</div>

@@ -19,12 +19,12 @@
 </script>
 
 <template>
-	<nav class="border-b border-blue-200 bg-neutral-800 px-4 py-4" aria-label="Sekundär navigering">
-		<ul class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-6">
+	<nav class="border-b border-primary-200 bg-neutral-800 px-4 py-4" aria-label="Sekundär navigering">
+		<ul class="flex flex-col space-y-2 md:flex-row md:space-x-6 md:space-y-0">
 			<li v-for="item in navItems" :key="item.path">
 				<router-link
 					:to="item.path"
-					class="relative py-1 font-medium text-white transition-colors duration-200 hover:text-blue-200"
+					class="relative py-1 font-medium text-white transition-colors duration-200 hover:text-primary-300"
 					:class="{
 						'active-nav-link font-bold text-yellow-100': isActive(item.path)
 					}"
@@ -48,7 +48,7 @@
 		left: 0;
 		width: 100%;
 		height: 4px; /* 4px thick underline */
-		background-color: #2e60ff; /* Blue color from the palette */
+		background-color: #33a5ff; /* primary-400 — active nav underline, matches Header */
 	}
 
 	/* For desktop screens (md and up) */

@@ -220,7 +220,7 @@
 		<Tabs :tabs="tabs" v-model:activeTab="activeTab" class="mb-6" />
 
 		<!-- Search and filter section -->
-		<div class="dark:bg-dark-bg-secondary mb-6 rounded-lg bg-white p-6 shadow-md">
+		<div class="mb-6 rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
 			<div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 				<TextInput
 					id="search"
@@ -241,7 +241,7 @@
 		</div>
 
 		<!-- Main content based on active tab -->
-		<div v-if="activeTab === 'overview'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
+		<div v-if="activeTab === 'overview'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
 			<p class="mb-6 text-gray-600">
 				Vår hemsjukvård erbjuder professionell vård och behandling i ditt hem. Vi arbetar för att du ska kunna få den
 				vård du behöver med bibehållen självständighet och livskvalitet.
@@ -281,7 +281,7 @@
 		</div>
 
 		<!-- Eligibility view -->
-		<div v-else-if="activeTab === 'eligibility'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
+		<div v-else-if="activeTab === 'eligibility'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
 			<h2 class="mb-4 text-xl font-semibold">Behov & rättigheter</h2>
 			<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
 				<ListItem
@@ -291,7 +291,7 @@
 					:description="criteria.description"
 				>
 					<template #icon>
-						<svg class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<svg class="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
@@ -324,7 +324,7 @@
 		</div>
 
 		<!-- Contact view -->
-		<div v-else-if="activeTab === 'contact'" class="dark:bg-dark-bg-secondary rounded-lg bg-white p-6 shadow-md">
+		<div v-else-if="activeTab === 'contact'" class="rounded-lg bg-white p-6 shadow-md dark:bg-dark-bg-secondary">
 			<h2 class="mb-4 text-xl font-semibold">Kontakta oss</h2>
 			<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
 				<ContactCard
@@ -344,20 +344,20 @@
 				</ContactCard>
 			</div>
 
-			<div class="rounded-md bg-blue-50 p-4">
-				<h3 class="mb-2 text-lg font-medium text-blue-800">Akut hemsjukvård</h3>
-				<p class="mb-3 text-sm text-blue-700">
+			<div class="rounded-md bg-primary-50 p-4">
+				<h3 class="mb-2 text-lg font-medium text-primary-700">Akut hemsjukvård</h3>
+				<p class="mb-3 text-sm text-primary-700">
 					För akut hemsjukvård utanför ordinarie arbetstid, ring vår akutmottagning på 08-123 456 80.
 				</p>
-				<p class="text-sm text-blue-700">Vid livshotande tillstånd, ring alltid 112.</p>
+				<p class="text-sm text-primary-700">Vid livshotande tillstånd, ring alltid 112.</p>
 			</div>
 		</div>
 
 		<!-- Contact Modal -->
 		<Modal title="Kontakta oss om hemsjukvård" v-model:visible="showContactModal" size="medium">
 			<div class="space-y-4">
-				<div class="rounded-md bg-blue-50 p-4">
-					<p class="text-sm text-blue-800">
+				<div class="rounded-md bg-primary-50 p-4">
+					<p class="text-sm text-primary-700">
 						Du kontaktar oss gällande:
 						<strong>{{ selectedService }}</strong>
 					</p>

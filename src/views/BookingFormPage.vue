@@ -429,7 +429,7 @@
 				<form @submit.prevent="handleSubmit">
 					<!-- Section 1: Personal Information -->
 					<section class="mb-8">
-						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Personuppgifter</h2>
+						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Personuppgifter</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 							<TextInput
 								v-model="formData.personalInfo.firstName"
@@ -497,7 +497,7 @@
 
 					<!-- Section 2: Appointment Details -->
 					<section class="mb-8">
-						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Bokningsdetaljer</h2>
+						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Bokningsdetaljer</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 							<div class="md:col-span-2">
 								<SelectInput
@@ -561,7 +561,7 @@
 
 					<!-- Section 3: Medical Information -->
 					<section class="mb-8">
-						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Medicinsk information</h2>
+						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Medicinsk information</h2>
 						<div class="space-y-4">
 							<Textarea
 								v-model="formData.medicalInfo.reason"
@@ -644,7 +644,7 @@
 
 					<!-- Section 4: Preferences and Special Requirements -->
 					<section class="mb-8">
-						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">
+						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">
 							Preferenser och särskilda behov
 						</h2>
 						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -712,14 +712,14 @@
 
 					<!-- Section 5: Consent and Confirmation -->
 					<section class="mb-8">
-						<h2 class="text-primary-700 dark:text-primary-400 mb-4 text-xl font-semibold">Samtycke och bekräftelse</h2>
+						<h2 class="mb-4 text-xl font-semibold text-primary-700 dark:text-primary-400">Samtycke och bekräftelse</h2>
 						<div class="space-y-4">
 							<div class="space-y-2">
 								<label class="flex items-center">
 									<input
 										type="checkbox"
 										v-model="formData.consent.privacyPolicy"
-										class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+										class="h-4 w-4 rounded border-gray-300 text-primary-700 focus:ring-primary-500"
 										@change="handleBlur('integritetspolicy', formData.consent.privacyPolicy, 'consent')"
 									/>
 									<span class="ml-2 text-sm text-gray-700">{{ consentOptions[0].label }}</span>
@@ -730,7 +730,7 @@
 									<input
 										type="checkbox"
 										v-model="formData.consent.dataProcessing"
-										class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+										class="h-4 w-4 rounded border-gray-300 text-primary-700 focus:ring-primary-500"
 										@change="handleBlur('datahantering', formData.consent.dataProcessing, 'consent')"
 									/>
 									<span class="ml-2 text-sm text-gray-700">{{ consentOptions[1].label }}</span>
@@ -741,7 +741,7 @@
 									<input
 										type="checkbox"
 										v-model="formData.consent.smsReminder"
-										class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+										class="h-4 w-4 rounded border-gray-300 text-primary-700 focus:ring-primary-500"
 									/>
 									<span class="ml-2 text-sm text-gray-700">{{ consentOptions[2].label }}</span>
 								</label>

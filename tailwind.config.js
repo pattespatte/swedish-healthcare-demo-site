@@ -64,7 +64,6 @@ export default {
 		'border-secondary-800',
 		// Complementary colors
 		'bg-beige',
-		'bg-lightblue',
 		// Functional colors
 		'bg-success',
 		'bg-info',
@@ -79,20 +78,14 @@ export default {
 		'border-warning',
 		'border-error',
 		// Graphics colors
-		'bg-graphics-blue',
-		'bg-graphics-lightblue',
 		'bg-graphics-green',
 		'bg-graphics-lightgreen',
 		'bg-graphics-brown',
 		'bg-graphics-lightbrown',
-		'text-graphics-blue',
-		'text-graphics-lightblue',
 		'text-graphics-green',
 		'text-graphics-lightgreen',
 		'text-graphics-brown',
 		'text-graphics-lightbrown',
-		'border-graphics-blue',
-		'border-graphics-lightblue',
 		'border-graphics-green',
 		'border-graphics-lightgreen',
 		'border-graphics-brown',
@@ -168,16 +161,13 @@ export default {
 				},
 				// Complementary Colors
 				beige: '#F0ECE4', // Beige background
-				lightblue: '#D3DEEA', // Light blue background
 				// Functional Colors
 				success: '#10B981', // Success (brand color)
-				info: '#3B82F6', // Info (brand color)
+				info: '#0077CC', // Info — alias of primary-500 (single blue ramp)
 				warning: '#F59E0B', // Warning (brand color)
 				error: '#EF4444', // Error (brand color)
 				// Graphics Colors
 				graphics: {
-					blue: '#1849A9', // Graphics blue
-					lightblue: '#598DFF', // Graphics light blue
 					green: '#077353', // Graphics green
 					lightgreen: '#2DA682', // Graphics light green
 					brown: '#964100', // Graphics brown

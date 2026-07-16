@@ -42,10 +42,10 @@
 				kontakt med vården.
 			</p>
 
-			<div class="mb-8 border-2 border-l-4 border-blue-100 bg-blue-50 p-4">
+			<div class="mb-8 border-2 border-l-4 border-primary-100 bg-primary-50 p-4">
 				<div class="flex">
 					<div class="flex-shrink-0">
-						<svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+						<svg class="h-5 w-5 text-primary-600" viewBox="0 0 20 20" fill="currentColor">
 							<path
 								fill-rule="evenodd"
 								d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
@@ -54,7 +54,7 @@
 						</svg>
 					</div>
 					<div class="ml-3">
-						<p class="text-sm text-blue-800">
+						<p class="text-sm text-primary-700">
 							<strong>Viktigt:</strong>
 							Kom alltid i tid till ditt besök. Om du behöver avboka, gör det minst 24 timmar i förväg så att någon
 							annan kan få din tid.
@@ -75,21 +75,21 @@
 			<div class="mb-6 rounded-lg bg-white p-6 shadow-md">
 				<h2 class="mb-4 text-xl font-semibold">Kontaktvägar</h2>
 				<div class="space-y-4">
-					<div class="border border-l-4 border-blue-500 pt-2 pb-4 pl-4">
+					<div class="border border-l-4 border-primary-500 pb-4 pl-4 pt-2">
 						<h3 class="mb-2 text-lg font-semibold">Vårdcentralen</h3>
 						<p class="text-neutral-700">
 							Kontakta din vårdcentral för att boka tid, få rådgivning för kända sjukdomar, förnya recept eller för
 							uppföljning av tidigare behandlingar.
 						</p>
 					</div>
-					<div class="border border-l-4 border-green-500 pt-2 pb-4 pl-4">
+					<div class="border border-l-4 border-green-500 pb-4 pl-4 pt-2">
 						<h3 class="mb-2 text-lg font-semibold">1177 Vårdguiden</h3>
 						<p class="text-neutral-700">
 							Ring 1177 för sjukvårdsrådgivning dygnet runt. Du kan få råd om symtom, hjälp att hitta rätt
 							vårdmottagning och svar på medicinska frågor.
 						</p>
 					</div>
-					<div class="border border-l-4 border-red-500 pt-2 pb-4 pl-4">
+					<div class="border border-l-4 border-red-500 pb-4 pl-4 pt-2">
 						<h3 class="mb-2 text-lg font-semibold">Akutvård</h3>
 						<p class="text-neutral-700">
 							Vid livshotande tillstånd eller allvarliga skador, ring 112 direkt. För andra akuta besvär som inte kan

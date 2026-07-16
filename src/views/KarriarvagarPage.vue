@@ -11,10 +11,10 @@
 					stöd för din professionella utveckling.
 				</p>
 
-				<div class="mb-6 rounded-lg bg-blue-50 p-6">
-					<h2 class="mb-3 text-xl font-semibold text-blue-800">Karriärsteg för läkare</h2>
+				<div class="mb-6 rounded-lg bg-primary-50 p-6">
+					<h2 class="mb-3 text-xl font-semibold text-primary-700">Karriärsteg för läkare</h2>
 					<div class="space-y-4">
-						<div class="border-l-4 border-blue-500 pl-4">
+						<div class="border-l-4 border-primary-500 pl-4">
 							<h3 class="font-semibold text-gray-800">AT-läkare</h3>
 							<p class="text-gray-600">
 								Börja din karriär hos oss med din allmäntjänstgöring. Vi erbjuder en strukturerad AT-tjänstgöring med
@@ -22,7 +22,7 @@
 							</p>
 						</div>
 
-						<div class="border-l-4 border-blue-500 pl-4">
+						<div class="border-l-4 border-primary-500 pl-4">
 							<h3 class="font-semibold text-gray-800">ST-läkare</h3>
 							<p class="text-gray-600">
 								Specialisera dig inom ditt intresseområde. Vi har ST-tjänster inom de flesta specialiteter med erfarna
@@ -30,21 +30,21 @@
 							</p>
 						</div>
 
-						<div class="border-l-4 border-blue-500 pl-4">
+						<div class="border-l-4 border-primary-500 pl-4">
 							<h3 class="font-semibold text-gray-800">Specialistläkare</h3>
 							<p class="text-gray-600">
 								Arbeta som specialist hos oss med möjlighet till vidareutbildning och sub-specialisering.
 							</p>
 						</div>
 
-						<div class="border-l-4 border-blue-500 pl-4">
+						<div class="border-l-4 border-primary-500 pl-4">
 							<h3 class="font-semibold text-gray-800">Överläkare</h3>
 							<p class="text-gray-600">
 								Ta ett större ansvar för verksamhetsutveckling och ledarskap inom din specialitet.
 							</p>
 						</div>
 
-						<div class="border-l-4 border-blue-500 pl-4">
+						<div class="border-l-4 border-primary-500 pl-4">
 							<h3 class="font-semibold text-gray-800">Klinikchef</h3>
 							<p class="text-gray-600">
 								Ledare för en hel klinik med ansvar för personal, ekonomi och verksamhetsutveckling.
@@ -112,14 +112,14 @@
 					<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 						<div class="rounded-lg bg-white p-4 shadow-sm">
 							<h3 class="mb-2 font-semibold text-gray-800">Anna, överläkare</h3>
-							<p class="text-sm text-gray-600 italic">
+							<p class="text-sm italic text-gray-600">
 								"Jag började som AT-läkare här för 10 år sedan och har kunnat växa inom organisationen. Stödet för min
 								utveckling har varit fantastiskt."
 							</p>
 						</div>
 						<div class="rounded-lg bg-white p-4 shadow-sm">
 							<h3 class="mb-2 font-semibold text-gray-800">Erik, specialistsjuksköterska</h3>
-							<p class="text-sm text-gray-600 italic">
+							<p class="text-sm italic text-gray-600">
 								"Efter min examen fick jag gå ett introduktionsprogram som gav mig trygghet. Nu har jag specialiserat
 								mig inom intensivvård."
 							</p>
@@ -129,7 +129,7 @@
 
 				<div class="text-center">
 					<button
-						class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 mr-4 rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+						class="mr-4 rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Kontakta karriärrådgivare
 					</button>

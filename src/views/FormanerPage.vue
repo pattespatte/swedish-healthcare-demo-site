@@ -12,8 +12,8 @@
 				</p>
 
 				<div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-					<div class="rounded-lg bg-blue-50 p-6">
-						<h2 class="mb-3 text-xl font-semibold text-blue-800">Hälsa och välmående</h2>
+					<div class="rounded-lg bg-primary-50 p-6">
+						<h2 class="mb-3 text-xl font-semibold text-primary-700">Hälsa och välmående</h2>
 						<ul class="list-disc space-y-2 pl-5 text-gray-700">
 							<li>Friskvårdsbidrag på 5000 kr/år</li>
 							<li>Subventionerad träning på lokala gym</li>
@@ -99,8 +99,8 @@
 					</div>
 				</div>
 
-				<div class="mb-6 rounded-lg bg-blue-50 p-6">
-					<h2 class="mb-3 text-xl font-semibold text-blue-800">Förmånshandbok</h2>
+				<div class="mb-6 rounded-lg bg-primary-50 p-6">
+					<h2 class="mb-3 text-xl font-semibold text-primary-700">Förmånshandbok</h2>
 					<p class="mb-4 text-gray-600">
 						Som ny medarbetare får du tillgång till vår förmånshandbok där alla förmåner beskrivs i detalj. Handboken
 						uppdateras regelbundet och innehåller all information du behöver för att kunna nyttja dina förmåner på bästa
@@ -108,12 +108,12 @@
 					</p>
 					<div class="flex space-x-4">
 						<button
-							class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+							class="rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 						>
 							Ladda ner förmånshandbok (PDF)
 						</button>
 						<button
-							class="rounded-lg bg-neutral-600 px-6 py-3 text-white transition-colors hover:bg-neutral-700 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:outline-none"
+							class="rounded-lg bg-neutral-600 px-6 py-3 text-white transition-colors hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
 						>
 							Kontakta HR
 						</button>

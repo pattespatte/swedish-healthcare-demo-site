@@ -316,7 +316,7 @@
 					:description="instruction.description"
 				>
 					<template #icon>
-						<svg class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<svg class="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
@@ -377,8 +377,8 @@
 		<!-- Booking Modal -->
 		<Modal title="Boka tid för provtagning" v-model:visible="showBookingModal" size="medium">
 			<div class="space-y-4">
-				<div class="rounded-md bg-blue-50 p-4">
-					<p class="text-sm text-blue-800">
+				<div class="rounded-md bg-primary-50 p-4">
+					<p class="text-sm text-primary-700">
 						Du bokar tid för:
 						<strong>{{ selectedTest }}</strong>
 					</p>

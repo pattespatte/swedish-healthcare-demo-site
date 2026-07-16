@@ -10,8 +10,8 @@
 					hos oss.
 				</p>
 				<div class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-					<div class="rounded-lg bg-blue-50 p-6">
-						<h2 class="mb-3 text-xl font-semibold text-blue-800">Varför välja oss?</h2>
+					<div class="rounded-lg bg-primary-50 p-6">
+						<h2 class="mb-3 text-xl font-semibold text-primary-700">Varför välja oss?</h2>
 						<ul class="list-disc space-y-2 pl-5 text-neutral-700">
 							<li>Utvecklande arbetsmiljö</li>
 							<li>Konkurrenskraftiga villkor</li>
@@ -33,7 +33,7 @@
 				<div class="text-center">
 					<router-link
 						to="/om-oss/lediga-tjanster"
-						class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-500 inline-block rounded-lg px-6 py-3 text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+						class="inline-block rounded-lg bg-primary-700 px-6 py-3 text-white transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						Se alla lediga jobb
 					</router-link>

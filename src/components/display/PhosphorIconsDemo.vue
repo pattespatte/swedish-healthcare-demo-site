@@ -87,7 +87,7 @@
 					<span class="text-xs text-gray-600">Green</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
-					<PhStar size="32" class="text-blue-500" />
+					<PhStar size="32" class="text-primary-600" />
 					<span class="text-xs text-gray-600">Blue</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
@@ -165,7 +165,7 @@
 					<span class="text-xs text-gray-600">Heartbeat</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
-					<PhPrescription size="32" class="text-blue-500" />
+					<PhPrescription size="32" class="text-primary-600" />
 					<span class="text-xs text-gray-600">Prescription</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
@@ -173,7 +173,7 @@
 					<span class="text-xs text-gray-600">Test Tube</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
-					<PhHospital size="32" class="text-blue-500" />
+					<PhHospital size="32" class="text-primary-600" />
 					<span class="text-xs text-gray-600">Hospital</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
@@ -203,10 +203,10 @@
 					<span class="text-xs text-gray-600">Click to Fill</span>
 				</button>
 				<button
-					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-blue-50"
+					class="flex flex-col items-center space-y-2 rounded-lg p-4 transition-all duration-200 hover:bg-primary-50"
 					@click="showNotification"
 				>
-					<PhBell :size="32" :class="hasNotification ? 'text-blue-500' : 'text-gray-400'" />
+					<PhBell :size="32" :class="hasNotification ? 'text-primary-600' : 'text-gray-400'" />
 					<span class="text-xs text-gray-600">Notifications</span>
 				</button>
 				<button
@@ -226,7 +226,7 @@
 			<p class="mb-4 text-gray-600">Icons with CSS animations:</p>
 			<div class="flex flex-wrap gap-6">
 				<div class="flex flex-col items-center space-y-2">
-					<PhSpinner size="32" class="animate-spin text-blue-500" />
+					<PhSpinner size="32" class="animate-spin text-primary-600" />
 					<span class="text-xs text-gray-600">Loading</span>
 				</div>
 				<div class="flex flex-col items-center space-y-2">
@@ -249,7 +249,7 @@
 				<h4 class="mb-2 font-medium text-gray-700">Button with Icon</h4>
 				<div class="flex flex-wrap gap-4">
 					<button
-						class="flex items-center space-x-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+						class="flex items-center space-x-2 rounded-lg bg-primary-500 px-4 py-2 text-white transition-colors hover:bg-primary-600"
 					>
 						<PhPlus size="20" />
 						<span>Add New</span>
@@ -274,19 +274,19 @@
 				<h4 class="mb-2 font-medium text-gray-700">Input with Icon</h4>
 				<div class="flex max-w-md flex-col space-y-4">
 					<div class="relative">
-						<PhEnvelope class="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" size="20" />
+						<PhEnvelope class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size="20" />
 						<input
 							type="email"
 							placeholder="Enter your email"
-							class="focus:ring-opacity-50 w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+							class="w-full rounded-lg border border-gray-300 py-2 pl-10 pr-4 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
 						/>
 					</div>
 					<div class="relative">
-						<PhLock class="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" size="20" />
+						<PhLock class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size="20" />
 						<input
 							type="password"
 							placeholder="Enter your password"
-							class="focus:ring-opacity-50 w-full rounded-lg border border-gray-300 py-2 pr-4 pl-10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+							class="w-full rounded-lg border border-gray-300 py-2 pl-10 pr-4 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
 						/>
 					</div>
 				</div>
@@ -309,7 +309,7 @@
 						<span class="text-sm text-gray-600">Urgent</span>
 					</div>
 					<div class="flex items-center space-x-2">
-						<PhInfo size="20" class="text-blue-500" />
+						<PhInfo size="20" class="text-primary-600" />
 						<span class="text-sm text-gray-600">Information</span>
 					</div>
 				</div>
@@ -324,7 +324,7 @@
 				<div class="rounded-lg bg-gray-50 p-4">
 					<h4 class="mb-2 font-medium text-gray-700">Basic Usage</h4>
 					<pre class="overflow-x-auto text-sm"><code><PhHouse size="32" />
-<PhUser size="24" class="text-blue-500" /></code></pre>
+<PhUser size="24" class="text-primary-600" /></code></pre>
 				</div>
 
 				<div class="rounded-lg bg-gray-50 p-4">

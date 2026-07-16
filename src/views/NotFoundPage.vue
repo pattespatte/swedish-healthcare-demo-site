@@ -69,7 +69,7 @@
 			<main class="text-center">
 				<!-- 404 Error Icon and Message -->
 				<div class="mb-8">
-					<div class="text-primary-700 mx-auto mb-6 h-32 w-32">
+					<div class="mx-auto mb-6 h-32 w-32 text-primary-700">
 						<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<path
 								fill-rule="evenodd"
@@ -114,10 +114,10 @@
 						<div
 							v-for="page in popularPages"
 							:key="page.path"
-							class="hover:border-primary-300 cursor-pointer rounded-lg border border-neutral-200 p-4 transition-all duration-200 hover:shadow-sm"
+							class="cursor-pointer rounded-lg border border-neutral-200 p-4 transition-all duration-200 hover:border-primary-300 hover:shadow-sm"
 							@click="navigateToPage(page.path)"
 						>
-							<h3 class="text-primary-700 mb-2 font-semibold">
+							<h3 class="mb-2 font-semibold text-primary-700">
 								{{ page.name }}
 							</h3>
 							<p class="text-sm text-neutral-600">
@@ -128,13 +128,13 @@
 				</div>
 
 				<!-- Contact Information -->
-				<div class="mt-10 rounded-lg bg-blue-50 p-6">
+				<div class="mt-10 rounded-lg bg-primary-50 p-6">
 					<h2 class="mb-4 text-xl font-semibold text-gray-800">Behöver du hjälp?</h2>
 					<p class="mb-4 text-neutral-700">Om du inte hittar det du söker kan du kontakta oss:</p>
 					<div class="flex flex-col justify-center gap-4 sm:flex-row">
 						<a
 							href="tel:08-123 456 78"
-							class="text-primary-700 hover:text-primary-800 flex items-center justify-center font-medium"
+							class="flex items-center justify-center font-medium text-primary-700 hover:text-primary-800"
 						>
 							<svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -145,7 +145,7 @@
 						</a>
 						<a
 							href="mailto:info@vardcentralen.se"
-							class="text-primary-700 hover:text-primary-800 flex items-center justify-center font-medium"
+							class="flex items-center justify-center font-medium text-primary-700 hover:text-primary-800"
 						>
 							<svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

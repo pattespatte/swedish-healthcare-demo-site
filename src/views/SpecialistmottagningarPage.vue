@@ -221,7 +221,7 @@
 							<span class="font-medium">Specialister:</span>
 							<div class="mt-1">
 								<span v-for="(specialist, idx) in clinic.specialists" :key="idx" class="inline-block">
-									<Badge :text="specialist" variant="primary" class="mr-1 mb-1" />
+									<Badge :text="specialist" variant="primary" class="mb-1 mr-1" />
 								</span>
 							</div>
 						</div>
@@ -303,8 +303,8 @@
 				/>
 
 				<div v-if="bookingStep === 1" class="space-y-4">
-					<div class="rounded-md bg-blue-50 p-4">
-						<p class="text-sm text-blue-800">
+					<div class="rounded-md bg-primary-50 p-4">
+						<p class="text-sm text-primary-700">
 							Du ansöker om remiss till:
 							<strong>{{ selectedClinic }}</strong>
 						</p>
