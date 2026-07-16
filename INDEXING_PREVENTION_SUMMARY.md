@@ -1,6 +1,8 @@
 # Indexing Prevention Summary for Swedish Healthcare Demo Site
 
-This document summarizes all the measures implemented to prevent search engine indexing of the Swedish Healthcare Demo Site deployed at <https://pattespatte.github.io/swedish-healthcare-demo-site/>
+This document summarizes all the measures implemented to prevent search engine indexing of the
+Swedish Healthcare Demo Site deployed at
+<https://pattespatte.github.io/swedish-healthcare-demo-site/>
 
 ## Implemented Measures
 
@@ -52,13 +54,16 @@ This document summarizes all the measures implemented to prevent search engine i
 
 - **Location**: `vite.config.ts`
 - **Configuration**: `base: '/swedish-healthcare-demo-site/'` for production
-- **Importance**: Ensures all assets and links work correctly when deployed to the GitHub Pages subdirectory
+- **Importance**: Ensures all assets and links work correctly when deployed to the GitHub Pages
+  subdirectory
 
 ## Deployment Verification
 
-When the site is deployed to GitHub Pages at <https://pattespatte.github.io/swedish-healthcare-demo-site/>, the following will be in effect:
+When the site is deployed to GitHub Pages at
+<https://pattespatte.github.io/swedish-healthcare-demo-site/>, the following will be in effect:
 
-1. The `robots.txt` file will be available at `https://pattespatte.github.io/swedish-healthcare-demo-site/robots.txt`
+1. The `robots.txt` file will be available at
+   `https://pattespatte.github.io/swedish-healthcare-demo-site/robots.txt`
 2. All HTML pages will contain the noindex meta tags
 3. All served files will include the `X-Robots-Tag: noindex, nofollow` HTTP header
 4. The `.nojekyll` file ensures proper processing of GitHub Pages-specific files
@@ -70,10 +75,15 @@ The implementation uses multiple, redundant approaches to ensure the site is not
 1. **robots.txt** - The first line of defense, respected by most crawlers
 2. **Meta tags** - Page-level instructions that work even if robots.txt is bypassed
 3. **HTTP headers** - Server-level instructions that apply to all content types
-4. **Specific AI crawler rules** - Targets modern AI/ML crawlers that might ignore standard directives
+4. **Specific AI crawler rules** - Targets modern AI/ML crawlers that might ignore standard
+   directives
 
-This multi-layered approach ensures that even if a crawler ignores one method, the others will still prevent indexing.
+This multi-layered approach ensures that even if a crawler ignores one method, the others will still
+prevent indexing.
 
 ## Conclusion
 
-All necessary measures are in place to prevent search engine indexing of the Swedish Healthcare Demo Site. The implementation follows best practices for demo/prototype sites and includes specific protections against modern AI crawlers. The configuration is compatible with GitHub Pages deployment and will function correctly at the intended URL.
+All necessary measures are in place to prevent search engine indexing of the Swedish Healthcare Demo
+Site. The implementation follows best practices for demo/prototype sites and includes specific
+protections against modern AI crawlers. The configuration is compatible with GitHub Pages deployment
+and will function correctly at the intended URL.

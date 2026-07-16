@@ -63,7 +63,7 @@
 </script>
 
 <template>
-	<footer class="dark:bg-dark-bg-primary dark:text-dark-text-primary bg-slate-800 text-white" role="contentinfo">
+	<footer class="bg-slate-800 text-white dark:bg-dark-bg-primary dark:text-dark-text-primary" role="contentinfo">
 		<div class="container mx-auto px-4 py-4 sm:py-6">
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
 				<!-- Site Navigation -->
@@ -74,7 +74,7 @@
 							v-for="link in footerNavLinks"
 							:key="link.path"
 							:to="link.path"
-							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary flex items-center pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white"
+							class="flex items-center pr-3 text-sm text-neutral-300 transition-colors duration-200 hover:text-white dark:text-dark-text-secondary dark:hover:text-dark-text-primary"
 						>
 							<component :is="link.icon" size="16" class="mr-2" />
 							{{ link.name }}
@@ -85,7 +85,7 @@
 				<!-- Contact Information -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Kontakt</h3>
-					<address class="dark:text-dark-text-secondary space-y-2 text-sm text-neutral-300 not-italic sm:space-y-3">
+					<address class="space-y-2 text-sm not-italic text-neutral-300 dark:text-dark-text-secondary sm:space-y-3">
 						<div class="flex items-start">
 							<PhMapPin size="16" class="mr-2 mt-0.5 flex-shrink-0" />
 							<span>{{ contactInfo.address }}</span>
@@ -94,7 +94,7 @@
 							<PhPhone size="16" class="mr-2 flex-shrink-0" />
 							<a
 								:href="formatPhoneLink(contactInfo.phone)"
-								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
+								class="transition-colors duration-200 hover:text-white dark:hover:text-dark-text-primary"
 							>
 								{{ contactInfo.phone }}
 							</a>
@@ -103,7 +103,7 @@
 							<PhEnvelope size="16" class="mr-2 flex-shrink-0" />
 							<a
 								:href="`mailto:${contactInfo.email}`"
-								class="dark:hover:text-dark-text-primary transition-colors duration-200 hover:text-white"
+								class="transition-colors duration-200 hover:text-white dark:hover:text-dark-text-primary"
 							>
 								{{ contactInfo.email }}
 							</a>
@@ -114,12 +114,12 @@
 				<!-- Opening Hours -->
 				<div>
 					<h3 class="mb-1 text-base font-semibold sm:mb-2">Öppettider</h3>
-					<div class="dark:text-dark-text-secondary space-y-2 text-sm text-neutral-300 sm:space-y-3">
-						<div class="flex items-center mb-3">
+					<div class="space-y-2 text-sm text-neutral-300 dark:text-dark-text-secondary sm:space-y-3">
+						<div class="mb-3 flex items-center">
 							<PhClock size="16" class="mr-2 flex-shrink-0" />
 							<span class="font-medium">Våra öppettider</span>
 						</div>
-						<div v-for="(item, index) in openingHours" :key="index" class="flex justify-between ml-6">
+						<div v-for="(item, index) in openingHours" :key="index" class="ml-6 flex justify-between">
 							<span>{{ item.day }}</span>
 							<span>{{ item.hours }}</span>
 						</div>
@@ -135,7 +135,7 @@
 							:key="link.name"
 							:href="link.url"
 							:aria-label="`Följ oss på ${link.name}`"
-							class="dark:text-dark-text-secondary dark:hover:text-dark-text-primary dark:bg-dark-bg-tertiary flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 text-neutral-300 transition-colors duration-200 hover:text-white"
+							class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 text-neutral-300 transition-colors duration-200 hover:text-white dark:bg-dark-bg-tertiary dark:text-dark-text-secondary dark:hover:text-dark-text-primary"
 						>
 							<component :is="link.icon" size="16" />
 						</a>
@@ -145,36 +145,36 @@
 
 			<!-- Bottom Section -->
 			<div
-				class="dark:border-dark-border-primary mt-4 flex flex-col items-center justify-between border-t border-neutral-700 pt-3 sm:mt-6 sm:pt-4 md:flex-row"
+				class="mt-4 flex flex-col items-center justify-between border-t border-neutral-700 pt-3 dark:border-dark-border-primary sm:mt-6 sm:pt-4 md:flex-row"
 			>
-				<div class="dark:text-dark-text-muted mb-3 text-xs text-neutral-400 md:mb-0">
+				<div class="mb-3 text-xs text-neutral-400 dark:text-dark-text-muted md:mb-0">
 					&copy; {{ currentYear }} Vårdportalen. Alla rättigheter förbehålls.
 				</div>
 				<div class="flex space-x-6">
 					<a
 						href="https://github.com/pattespatte/swedish-healthcare-demo-site"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
 					>
 						<PhGithubLogo size="14" class="mr-1" />
 						Källkod
 					</a>
 					<router-link
 						to="/integritetspolicy"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
 					>
 						<PhShieldCheck size="14" class="mr-1" />
 						Integritetspolicy
 					</router-link>
 					<router-link
 						to="/cookies"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
 					>
 						<PhCookie size="14" class="mr-1" />
 						Cookies
 					</router-link>
 					<router-link
 						to="/tillganglighet"
-						class="dark:text-dark-text-muted dark:hover:text-dark-text-primary flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white"
+						class="flex items-center text-xs text-neutral-400 transition-colors duration-200 hover:text-white dark:text-dark-text-muted dark:hover:text-dark-text-primary"
 					>
 						<PhUniversalAccess size="14" class="mr-1" />
 						Tillgänglighet

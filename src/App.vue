@@ -10,10 +10,10 @@
 </script>
 
 <template>
-	<div class="dark:bg-dark-bg-primary flex min-h-screen flex-col bg-neutral-100">
+	<div class="flex min-h-screen flex-col bg-neutral-100 dark:bg-dark-bg-primary">
 		<DemoNotification />
 		<Header />
-		<main class="dark:text-dark-text-primary flex-grow text-neutral-900" id="main-content">
+		<main class="flex-grow text-neutral-900 dark:text-dark-text-primary" id="main-content">
 			<RouterView />
 		</main>
 		<Footer />

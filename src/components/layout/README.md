@@ -17,7 +17,7 @@ support.
 	</CardContainer>
 
 	<!-- With additional CSS classes -->
-	<CardContainer class="mt-4 mb-6">
+	<CardContainer class="mb-6 mt-4">
 		<h2>Card Title</h2>
 		<p>Card content goes here</p>
 	</CardContainer>

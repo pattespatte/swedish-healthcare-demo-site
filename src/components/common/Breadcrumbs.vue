@@ -81,24 +81,24 @@
 	// Get appropriate icon for breadcrumb based on page name
 	const getBreadcrumbIcon = (name: string) => {
 		const iconMap: { [key: string]: any } = {
-			'Tjänster': 'PhStethoscope',
-			'Mottagningar': 'PhHospital',
-			'Specialistmottagningar': 'PhFirstAid',
-			'Labbprov': 'PhTestTube',
-			'Hemsjukvård': 'PhHouseSimple',
-			'Patientinformation': 'PhFileText',
-			'Vårdgaranti': 'PhShieldCheck',
-			'Avgifter': 'PhCurrencySek',
+			Tjänster: 'PhStethoscope',
+			Mottagningar: 'PhHospital',
+			Specialistmottagningar: 'PhFirstAid',
+			Labbprov: 'PhTestTube',
+			Hemsjukvård: 'PhHouseSimple',
+			Patientinformation: 'PhFileText',
+			Vårdgaranti: 'PhShieldCheck',
+			Avgifter: 'PhCurrencySek',
 			'Din vårdkontakt': 'PhPhone',
 			'Boka tid': 'PhCalendar',
 			'Mina sidor': 'PhUser',
 			'Om oss': 'PhUsers',
 			'Jobba hos oss': 'PhBriefcase',
 			'Lediga tjänster': 'PhBriefcase',
-			'Karriärvägar': 'PhArrowUp',
-			'Förmåner': 'PhGift',
-			'Kontakt': 'PhPhone',
-			'Hemsjukvard': 'PhHouseSimple'
+			Karriärvägar: 'PhArrowUp',
+			Förmåner: 'PhGift',
+			Kontakt: 'PhPhone',
+			Hemsjukvard: 'PhHouseSimple'
 		}
 		return iconMap[name] || null
 	}
@@ -122,7 +122,7 @@
 					<button
 						v-else-if="crumb.path === '/' && !crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
-						class="text-primary-700 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200 hover:underline flex items-center"
+						class="flex items-center text-primary-700 transition-colors duration-200 hover:text-primary-800 hover:underline dark:text-primary-400 dark:hover:text-primary-300"
 						:aria-current="crumb.isCurrent ? 'page' : undefined"
 					>
 						<PhHouse size="16" />
@@ -131,14 +131,14 @@
 					<button
 						v-else-if="!crumb.isCurrent"
 						@click="navigateTo(crumb.path)"
-						class="text-primary-700 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200 hover:underline"
+						class="text-primary-700 transition-colors duration-200 hover:text-primary-800 hover:underline dark:text-primary-400 dark:hover:text-primary-300"
 						:aria-current="crumb.isCurrent ? 'page' : undefined"
 					>
 						{{ crumb.name }}
 					</button>
 
 					<!-- Current page breadcrumb -->
-					<span v-else class="font-medium text-neutral-800 flex items-center" aria-current="page">
+					<span v-else class="flex items-center font-medium text-neutral-800" aria-current="page">
 						<!-- Add contextual icons for common pages -->
 						<component
 							:is="getBreadcrumbIcon(crumb.name)"

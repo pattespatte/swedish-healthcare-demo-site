@@ -5,7 +5,7 @@
 <template>
 	<div class="container mx-auto mb-8 px-4 py-4 md:mb-16 lg:mb-24">
 		<div class="mx-auto max-w-4xl">
-			<h1 class="mt-10 mb-6 text-3xl font-bold text-gray-800">Välkommen till Vårdportalen</h1>
+			<h1 class="mb-6 mt-10 text-3xl font-bold text-gray-800">Välkommen till Vårdportalen</h1>
 			<p class="mb-8 text-lg text-neutral-800">
 				Här kan du enkelt boka tider, kontakta vården och hantera dina vårdärenden.
 			</p>

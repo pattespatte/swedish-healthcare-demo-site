@@ -3,7 +3,7 @@
 		<!-- Tab navigation -->
 		<div class="relative pl-1">
 			<!-- Tab border line (behind tabs) -->
-			<div class="dark:bg-dark-border-primary absolute right-0 bottom-0 left-0 z-0 h-px bg-neutral-200" />
+			<div class="absolute bottom-0 left-0 right-0 z-0 h-px bg-neutral-200 dark:bg-dark-border-primary" />
 
 			<nav class="relative z-10 flex min-w-max" aria-label="Flikar">
 				<button
@@ -11,13 +11,13 @@
 					:key="tab.id"
 					:id="`tab-${tab.id}`"
 					type="button"
-					class="focus:ring-primary-500 px-4 py-4 text-sm font-medium whitespace-nowrap transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
+					class="whitespace-nowrap px-4 py-4 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					:class="[
 						tab.id === activeTab
-							? 'text-primary-700 dark:border-dark-border-primary dark:border-b-dark-bg-secondary dark:bg-dark-bg-secondary dark:text-primary-400 relative z-20 -mb-px rounded-t-md border border-neutral-200 border-b-white bg-white'
+							? 'relative z-20 -mb-px rounded-t-md border border-neutral-200 border-b-white bg-white text-primary-700 dark:border-dark-border-primary dark:border-b-dark-bg-secondary dark:bg-dark-bg-secondary dark:text-primary-400'
 							: tab.disabled
-								? 'dark:text-dark-text-muted cursor-not-allowed border-transparent text-neutral-400'
-								: 'dark:text-dark-text-secondary dark:hover:border-dark-border-primary dark:hover:text-dark-text-primary border-transparent text-neutral-600 hover:border-neutral-300 hover:text-neutral-900',
+								? 'cursor-not-allowed border-transparent text-neutral-400 dark:text-dark-text-muted'
+								: 'border-transparent text-neutral-600 hover:border-neutral-300 hover:text-neutral-900 dark:text-dark-text-secondary dark:hover:border-dark-border-primary dark:hover:text-dark-text-primary',
 						index === 0 ? 'ml-0' : '-ml-px'
 					]"
 					:aria-controls="`tabpanel-${tab.id}`"
@@ -33,7 +33,7 @@
 
 		<!-- Tab panels with border -->
 		<div
-			class="dark:border-dark-border-primary dark:bg-dark-bg-secondary rounded-b-md border border-t-0 border-neutral-200 bg-white p-4"
+			class="rounded-b-md border border-t-0 border-neutral-200 bg-white p-4 dark:border-dark-border-primary dark:bg-dark-bg-secondary"
 		>
 			<div
 				v-for="tab in tabs"

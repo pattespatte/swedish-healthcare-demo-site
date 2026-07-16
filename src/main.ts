@@ -12,7 +12,9 @@ import './assets/main.css'
 // is taken after these have executed, so the static HTML inherits the right
 // head per route.
 function upsertMetaTag(name: string, content: string): void {
-	if (typeof document === 'undefined') return
+	if (typeof document === 'undefined') {
+		return
+	}
 	let tag = document.querySelector(`meta[name="${name}"]`)
 	if (!tag) {
 		tag = document.createElement('meta')

@@ -57,7 +57,7 @@ function discoverRoutes() {
 // --- static file server over dist/ -----------------------------------------
 
 function startStaticServer(basePath) {
-	return new Promise((resolve) => {
+	return new Promise(resolve => {
 		const server = http.createServer((req, res) => {
 			try {
 				let urlPath = decodeURIComponent(req.url.split('?')[0])
@@ -148,11 +148,7 @@ async function main() {
 			await page.waitForSelector('#app:not(:empty)', { timeout: 10000 })
 			if (route.title) {
 				try {
-					await page.waitForFunction(
-						(expected) => document.title === expected,
-						route.title,
-						{ timeout: 5000 }
-					)
+					await page.waitForFunction(expected => document.title === expected, route.title, { timeout: 5000 })
 				} catch {
 					// title didn't match expected — snapshot anyway so the content
 					// is still captured; the title will be flagged below
@@ -175,7 +171,7 @@ async function main() {
 	console.log(`[prerender] wrote ${written} static HTML files to dist/`)
 }
 
-main().catch((err) => {
+main().catch(err => {
 	console.error('[prerender] failed:', err)
 	process.exit(1)
 })
