@@ -100,7 +100,7 @@ function generateSearchIndex() {
 	// Also include the home page
 	const homePath = path.join(viewsDir, 'HomeView.vue')
 	if (fs.existsSync(homePath)) {
-		const homeItem = extractContentFromComponent(homePath, '/', 'Vårdcentralen Vårdportalen - Start')
+		const homeItem = extractContentFromComponent(homePath, '/', 'Vårdcentralen Vårdportalen DEMOWEBB - Start')
 		homeItem.description = 'Boka tid, kontakta vården och hantera dina vårdärenden'
 		searchIndex.unshift(homeItem)
 	}

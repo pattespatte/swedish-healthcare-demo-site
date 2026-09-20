@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Home',
 		component: () => import('@/views/HomeView.vue'),
 		meta: {
-			title: 'Vårdcentralen Vårdportalen - Start',
+			title: 'Vårdcentralen Vårdportalen DEMOWEBB - Start',
 			description: 'Boka tid, kontakta vården och hantera dina vårdärenden'
 		}
 	},
@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'About',
 		component: () => import('@/views/AboutView.vue'),
 		meta: {
-			title: 'Om Oss - Vårdcentralen Vårdportalen',
+			title: 'Om Oss - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om Vårdcentralen Vårdportalen och vår verksamhet'
 		}
 	},
@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'JobbaHosOss',
 		component: () => import('@/views/JobbaHosOssPage.vue'),
 		meta: {
-			title: 'Jobba Hos Oss - Vårdcentralen Vårdportalen',
+			title: 'Jobba Hos Oss - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Lediga tjänster och karriärmöjligheter inom vården'
 		}
 	},
@@ -33,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'LedigaTjanster',
 		component: () => import('@/views/LedigaTjansterPage.vue'),
 		meta: {
-			title: 'Lediga Tjänster - Vårdcentralen Vårdportalen',
+			title: 'Lediga Tjänster - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Se alla lediga tjänster inom svensk vård'
 		}
 	},
@@ -42,7 +42,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Formaner',
 		component: () => import('@/views/FormanerPage.vue'),
 		meta: {
-			title: 'Formaner - Vårdcentralen Vårdportalen',
+			title: 'Formaner - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Ansök till utbildningar och tjänster inom vården'
 		}
 	},
@@ -51,7 +51,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Karriarvagar',
 		component: () => import('@/views/KarriarvagarPage.vue'),
 		meta: {
-			title: 'Karriär - Vårdcentralen Vårdportalen',
+			title: 'Karriär - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Karriärmöjligheter och utvecklingsmöjligheter'
 		}
 	},
@@ -60,7 +60,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Services',
 		component: () => import('@/views/ServicesPage.vue'),
 		meta: {
-			title: 'Tjänster - Vårdcentralen Vårdportalen',
+			title: 'Tjänster - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Våra tjänster och behandlingar'
 		}
 	},
@@ -69,7 +69,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Specialistmottagningar',
 		component: () => import('@/views/SpecialistmottagningarPage.vue'),
 		meta: {
-			title: 'Specialistmottagningar - Vårdcentralen Vårdportalen',
+			title: 'Specialistmottagningar - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Specialiserad vård och mottagning'
 		}
 	},
@@ -78,7 +78,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Labbprov',
 		component: () => import('@/views/LabbprovPage.vue'),
 		meta: {
-			title: 'Labbprov - Vårdcentralen Vårdportalen',
+			title: 'Labbprov - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om laboratorieprov och analyser'
 		}
 	},
@@ -87,7 +87,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Hemsjukvard',
 		component: () => import('@/views/HemsjukvardPage.vue'),
 		meta: {
-			title: 'Hemsjukvård - Vårdcentralen Vårdportalen',
+			title: 'Hemsjukvård - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Vård och behandling i hemmet'
 		}
 	},
@@ -96,7 +96,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Contact',
 		component: () => import('@/views/ContactPage.vue'),
 		meta: {
-			title: 'Kontakt - Vårdcentralen Vårdportalen',
+			title: 'Kontakt - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Kontaktuppgifter och kontaktinformation'
 		}
 	},
@@ -105,7 +105,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'FAQ',
 		component: () => import('@/views/FaqPage.vue'),
 		meta: {
-			title: 'FAQ - Vårdcentralen Vårdportalen',
+			title: 'FAQ - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Vanliga frågor och svar om vården'
 		}
 	},
@@ -114,7 +114,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'HealthcareGuide',
 		component: () => import('@/views/HealthcareGuidePage.vue'),
 		meta: {
-			title: 'Vårdguide - Vårdcentralen Vårdportalen',
+			title: 'Vårdguide - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Guide till svensk vård'
 		}
 	},
@@ -123,7 +123,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'BookAppointment',
 		component: () => import('@/views/BookAppointmentPage.vue'),
 		meta: {
-			title: 'Boka Tid - Vårdcentralen Vårdportalen',
+			title: 'Boka Tid - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Boka tid hos läkare och mottagningar'
 		}
 	},
@@ -132,7 +132,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'BookingForm',
 		component: () => import('@/views/BookingFormPage.vue'),
 		meta: {
-			title: 'Boka tid - Planerat besök - Vårdcentralen Vårdportalen',
+			title: 'Boka tid - Planerat besök - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Formulär för att boka en tid för ett planerat vårdbesök'
 		}
 	},
@@ -141,7 +141,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'MyPages',
 		component: () => import('@/views/MyPagesPage.vue'),
 		meta: {
-			title: 'Mina Sidor - Vårdcentralen Vårdportalen',
+			title: 'Mina Sidor - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Personlig vårdinformation och journaler'
 		}
 	},
@@ -150,7 +150,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Accessibility',
 		component: () => import('@/views/AccessibilityPage.vue'),
 		meta: {
-			title: 'Tillgänglighet - Vårdcentralen Vårdportalen',
+			title: 'Tillgänglighet - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om tillgänglighet och rättigheter'
 		}
 	},
@@ -159,7 +159,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Mottagningar',
 		component: () => import('@/views/MottagningarPage.vue'),
 		meta: {
-			title: 'Mottagningar - Vårdcentralen Vårdportalen',
+			title: 'Mottagningar - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Våra mottagningar och specialistkliniker'
 		}
 	},
@@ -168,7 +168,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Patientinformation',
 		component: () => import('@/views/PatientinformationPage.vue'),
 		meta: {
-			title: 'Patientinformation - Vårdcentralen Vårdportalen',
+			title: 'Patientinformation - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om patientdata och journaler'
 		}
 	},
@@ -177,7 +177,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Vardgaranti',
 		component: () => import('@/views/VardgarantiPage.vue'),
 		meta: {
-			title: 'Vårdgaranti - Vårdcentralen Vårdportalen',
+			title: 'Vårdgaranti - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om vårdgaranti och dina rättigheter'
 		}
 	},
@@ -186,7 +186,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Avgifter',
 		component: () => import('@/views/AvgifterPage.vue'),
 		meta: {
-			title: 'Avgifter - Vårdcentralen Vårdportalen',
+			title: 'Avgifter - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om avgifter och kostnader'
 		}
 	},
@@ -195,7 +195,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'DinVardkontakt',
 		component: () => import('@/views/DinVardkontaktPage.vue'),
 		meta: {
-			title: 'Din Vårdkontakt - Vårdcentralen Vårdportalen',
+			title: 'Din Vårdkontakt - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Dina personliga vårdkontakter och journaler'
 		}
 	},
@@ -204,7 +204,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Integritetspolicy',
 		component: () => import('@/views/IntegritetspolicyPage.vue'),
 		meta: {
-			title: 'Integritetspolicy - Vårdcentralen Vårdportalen',
+			title: 'Integritetspolicy - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Policy för hantering av personuppgifter och integritet'
 		}
 	},
@@ -213,7 +213,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Cookies',
 		component: () => import('@/views/CookiesPage.vue'),
 		meta: {
-			title: 'Cookies - Vårdcentralen Vårdportalen',
+			title: 'Cookies - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Information om cookies och användarvillkor'
 		}
 	},
@@ -222,7 +222,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Components',
 		component: () => import('@/views/ComponentsPage.vue'),
 		meta: {
-			title: 'Komponenter - Vårdcentralen Vårdportalen',
+			title: 'Komponenter - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Översikt av alla komponenter och deras funktioner'
 		}
 	},
@@ -231,7 +231,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Colors',
 		component: () => import('@/views/ColorPage.vue'),
 		meta: {
-			title: 'Färger - Vårdcentralen Vårdportalen',
+			title: 'Färger - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Testa olika färgkombinationer och teman'
 		}
 	},
@@ -240,7 +240,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'PhosphorIcons',
 		component: () => import('@/views/PhosphorIconsPage.vue'),
 		meta: {
-			title: 'Phosphor Ikoner - Vårdcentralen Vårdportalen',
+			title: 'Phosphor Ikoner - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Demo och exempel på Phosphor-ikoner i Vue-applikationen'
 		}
 	},
@@ -249,7 +249,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'HealthIcons',
 		component: () => import('@/views/HealthIconsPage.vue'),
 		meta: {
-			title: 'Hälsoikoner - Vårdcentralen Vårdportalen',
+			title: 'Hälsoikoner - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Demo och exempel på hälsoikoner i Vue-applikationen'
 		}
 	},
@@ -258,7 +258,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'SearchResults',
 		component: () => import('@/views/SearchResultsPage.vue'),
 		meta: {
-			title: 'Sökresultat - Vårdcentralen Vårdportalen',
+			title: 'Sökresultat - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Sökresultat för din sökning'
 		}
 	},
@@ -268,7 +268,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'NotFound',
 		component: () => import('@/views/NotFoundPage.vue'),
 		meta: {
-			title: 'Sidan hittades inte - Vårdcentralen Vårdportalen',
+			title: 'Sidan hittades inte - Vårdcentralen Vårdportalen DEMOWEBB',
 			description: 'Sidan du letar efter kunde inte hittas'
 		}
 	}

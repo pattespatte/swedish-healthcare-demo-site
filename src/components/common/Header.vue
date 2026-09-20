@@ -188,7 +188,7 @@
 						/>
 					</div>
 					<span class="ml-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary-300">
-						Vårdportalen
+						Vårdportalen DEMOWEBB
 					</span>
 				</router-link>
 

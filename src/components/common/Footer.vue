@@ -148,7 +148,7 @@
 				class="mt-4 flex flex-col items-center justify-between border-t border-neutral-700 pt-3 dark:border-dark-border-primary sm:mt-6 sm:pt-4 md:flex-row"
 			>
 				<div class="mb-3 text-xs text-neutral-400 dark:text-dark-text-muted md:mb-0">
-					&copy; {{ currentYear }} Vårdportalen. Alla rättigheter förbehålls.
+					&copy; {{ currentYear }} Vårdportalen DEMOWEBB. Alla rättigheter förbehålls.
 				</div>
 				<div class="flex space-x-6">
 					<a

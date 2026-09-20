@@ -13,107 +13,107 @@ const pageTitle = ref<PageTitle>({
 // Define page titles for all routes
 const pageTitles: Record<string, PageTitle> = {
 	'/': {
-		title: 'Vårdcentralen Vårdportalen - Start',
+		title: 'Vårdcentralen Vårdportalen DEMOWEBB - Start',
 		description: 'Boka tid, kontakta vården och hantera dina vårdärenden'
 	},
 	'/om-oss': {
-		title: 'Om Oss - Vårdcentralen Vårdportalen',
+		title: 'Om Oss - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om Vårdcentralen Vårdportalen och vår verksamhet'
 	},
 	'/om-oss/jobba-hos-oss': {
-		title: 'Jobba Hos Oss - Vårdcentralen Vårdportalen',
+		title: 'Jobba Hos Oss - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Lediga tjänster och karriärmöjligheter inom vården'
 	},
 	'/om-oss/lediga-tjanster': {
-		title: 'Lediga Tjänster - Vårdcentralen Vårdportalen',
+		title: 'Lediga Tjänster - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Se alla lediga tjänster inom svensk vård'
 	},
 	'/om-oss/formaner': {
-		title: 'Formaner - Vårdcentralen Vårdportalen',
+		title: 'Formaner - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Ansök till utbildningar och tjänster inom vården'
 	},
 	'/om-oss/karriarvagar': {
-		title: 'Karriär - Vårdcentralen Vårdportalen',
+		title: 'Karriär - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Karriärmöjligheter och utvecklingsmöjligheter'
 	},
 	'/tjanster': {
-		title: 'Tjänster - Vårdcentralen Vårdportalen',
+		title: 'Tjänster - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Våra tjänster och behandlingar'
 	},
 	'/om-oss/specialistmottagningar': {
-		title: 'Specialistmottagningar - Vårdcentralen Vårdportalen',
+		title: 'Specialistmottagningar - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Våra specialistmottagningar och mottagningar'
 	},
 	'/tjanster/specialistmottagningar': {
-		title: 'Specialistmottagningar - Vårdcentralen Vårdportalen',
+		title: 'Specialistmottagningar - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Specialiserad vård och mottagning'
 	},
 	'/tjanster/labbprov': {
-		title: 'Labbprov - Vårdcentralen Vårdportalen',
+		title: 'Labbprov - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om laboratorieprov och analyser'
 	},
 	'/tjanster/hemsjukvard': {
-		title: 'Hemsjukvård - Vårdcentralen Vårdportalen',
+		title: 'Hemsjukvård - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Vård och behandling i hemmet'
 	},
 	'/mottagningar': {
-		title: 'Mottagningar - Vårdcentralen Vårdportalen',
+		title: 'Mottagningar - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Våra mottagningar och specialistkliniker'
 	},
 	'/kontakt': {
-		title: 'Kontakt - Vårdcentralen Vårdportalen',
+		title: 'Kontakt - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Kontaktuppgifter och kontaktinformation'
 	},
 	'/fragor-och-svar': {
-		title: 'FAQ - Vårdcentralen Vårdportalen',
+		title: 'FAQ - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Vanliga frågor och svar om vården'
 	},
 	'/vardguide': {
-		title: 'Vårdguide - Vårdcentralen Vårdportalen',
+		title: 'Vårdguide - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Guide till svensk vård'
 	},
 	'/boka-tid': {
-		title: 'Boka Tid - Vårdcentralen Vårdportalen',
+		title: 'Boka Tid - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Boka tid hos läkare och mottagningar'
 	},
 	'/mina-sidor': {
-		title: 'Mina Sidor - Vårdcentralen Vårdportalen',
+		title: 'Mina Sidor - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Personlig vårdinformation och journaler'
 	},
 	'/tillganglighet': {
-		title: 'Tillgänglighet - Vårdcentralen Vårdportalen',
+		title: 'Tillgänglighet - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om tillgänglighet och rättigheter'
 	},
 	'/patientinformation': {
-		title: 'Patientinformation - Vårdcentralen Vårdportalen',
+		title: 'Patientinformation - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om patientdata och journaler'
 	},
 	'/patientinformation/vardgaranti': {
-		title: 'Vårdgaranti - Vårdcentralen Vårdportalen',
+		title: 'Vårdgaranti - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om vårdgaranti och dina rättigheter'
 	},
 	'/patientinformation/avgifter': {
-		title: 'Avgifter - Vårdcentralen Vårdportalen',
+		title: 'Avgifter - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om avgifter och kostnader'
 	},
 	'/patientinformation/din-vardkontakt': {
-		title: 'Din Vårdkontakt - Vårdcentralen Vårdportalen',
+		title: 'Din Vårdkontakt - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Dina personliga vårdkontakter och journaler'
 	},
 	'/integritetspolicy': {
-		title: 'Integritetspolicy - Vårdcentralen Vårdportalen',
+		title: 'Integritetspolicy - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Policy för hantering av personuppgifter och integritet'
 	},
 	'/cookies': {
-		title: 'Cookies - Vårdcentralen Vårdportalen',
+		title: 'Cookies - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Information om cookies och användarvillkor'
 	},
 	'/components': {
-		title: 'Komponenter - Vårdcentralen Vårdportalen',
+		title: 'Komponenter - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Översikt av alla komponenter och deras funktioner'
 	},
 	'/colors': {
-		title: 'Färger - Vårdcentralen Vårdportalen',
+		title: 'Färger - Vårdcentralen Vårdportalen DEMOWEBB',
 		description: 'Testa olika färgkombinationer och teman'
 	}
 }
